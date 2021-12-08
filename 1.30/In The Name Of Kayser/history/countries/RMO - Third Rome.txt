@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = turkish_government
+mercantilism = 10
+technology_group = western
+religion = catholic
+primary_culture = turkish
+add_accepted_culture = serbian
+capital = 151	# Constantinople
+historical_rival = POL
+historical_friend = FRA

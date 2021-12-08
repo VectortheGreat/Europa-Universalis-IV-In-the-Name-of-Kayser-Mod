@@ -1,0 +1,24 @@
+turkish_government_monarchy = {
+	rank = {
+		1 = BEYLIK
+		2 = KRALLIK
+		3 = IMPARATORLUK
+	}
+
+	ruler_male = {
+		1 = BEY
+		2 = SULTAN
+		3 = IMPARATOR
+	}
+
+	ruler_female = {
+		1 = HATUN
+		2 = SULTANA
+		3 = IMPAROTRICE
+	}
+
+	trigger = {
+		has_reform = turkish_government_reform
+		tag = RMO
+	}
+}

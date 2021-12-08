@@ -1,0 +1,71 @@
+country_decisions = {
+
+	provincial_system = {
+		potential = {
+			tag = TUR
+			NOT = { has_country_modifier = the_provincial_system }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			adm_tech = 5
+			ADM = 4
+			adm_power = 50
+		}
+		effect = {
+			add_country_modifier = {
+				name = "the_provincial_system"
+				duration = -1
+			}
+			add_adm_power = -50
+			set_country_flag = the_provincial_system
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { mil_power = 100 }
+			}
+		}
+	}
+
+
+	disband_the_janissaries = {
+		major = yes
+		potential = {
+			has_disaster = janissary_decadence
+			normal_or_historical_nations = yes
+		}
+		allow = {
+			has_disaster = janissary_decadence
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				OR = {
+					NOT = { janissary_percentage = 0.05 }
+					NOT = { num_of_janissaries = 3 }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = tur_janissary
+				}
+				remove_country_modifier = tur_janissary
+			}
+			else = {
+				set_country_flag = yoklama
+				custom_tooltip = yoklama_effect_tooltip
+			}
+			end_disaster = janissary_decadence
+			country_event = { id = janissary_decadence.100 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

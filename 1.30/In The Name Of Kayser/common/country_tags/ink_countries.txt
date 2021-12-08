@@ -1,0 +1,3 @@
+RMO	= "countries/ThirdRome.txt"
+ITR = "countries/ImperiumTurcicum.txt"
+TEK = "countries/TheEasternKnigts.txt"
