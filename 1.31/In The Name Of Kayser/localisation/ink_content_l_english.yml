@@ -1,0 +1,11 @@
+﻿l_english:
+ holy_order_tt:0 "§YThe Holy Order§! will be established in §Y[151.GetName]§!, giving the following effects:\nManpower In True Faith Provinces: §G+15%§!\nAggressive Expansion : §G-10%§!"
+ adm_konstantinopolis_library_tt:0 "§YThe The Konstantinopolis Library - Administrative Edition§! will be established in §Y[151.GetName]§!, giving the following effects:\nAdministrative Technology Cost: §G-5%§!\nDevelopment Cost: §G-10%§!"
+ dip_konstantinopolis_library_tt:0 "§YThe The Konstantinopolis Library - Diplomatic Edition§! will be established in §Y[151.GetName]§!, giving the following effects:\nDiplomatic Technology Cost: §G-5%§!\nDiplomatic Reputation: §G+1§! \nDiplomatic Relations: §G+1§!"
+ mil_konstantinopolis_library_tt:0 "§YThe The Konstantinopolis Library - Military Edition§! will be established in §Y[151.GetName]§!, giving the following effects:\nMilitary Technology Cost: §G-5%§!\nYearly Army Tradition Decay: §G-1%§!"
+ turkish_civil_war_ended_tt:0 "Turkish Civil War Ended"
+ turkish_civil_war_ended:0 "Turkic Civil War Ended"
+ turkish_civil_war_started:0 "Turkic Civil Started"
+ mil_konstantinopolis_library:0 "Military Art Library"
+ dip_konstantinopolis_library:0 "Diplomatic Library"
+ adm_konstantinopolis_library:0 "Christian Administrative Library"

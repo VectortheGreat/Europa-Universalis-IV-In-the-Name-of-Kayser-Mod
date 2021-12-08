@@ -1,0 +1,307 @@
+ink_1 = {
+	reinforce_cost_modifier = -0.10
+	land_maintenance_modifier = -0.10
+}
+
+ink_2 = {
+	legitimacy = 2
+}
+
+ink_3 = {
+	ae_impact = -0.20
+}
+
+ink_4 = {
+	global_manpower_modifier = 0.10
+	manpower_recovery_speed = 0.20
+}
+	
+ink_5 = {
+	fire_damage = 0.05
+}
+ink_6 = {
+	siege_ability = 0.20
+}
+ink_7 = {
+	local_development_cost = -0.2
+	local_build_cost = -0.25
+	local_build_time = -0.25
+}
+ink_8 = {
+	global_missionary_strength = 0.03
+	missionary_maintenance_cost = -0.5
+}
+ink_9 = {
+	yearly_patriarch_authority = 0.02
+}
+ink_10 = {
+	tolerance_own = 2
+	tolerance_heathen = -4
+}
+ink_11 = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
+}
+ink_12 = {
+	discipline = 0.10
+	land_maintenance_modifier = -0.10
+}
+ink_13 = {
+	army_tradition_decay = -0.01
+	army_tradition_from_battle = 0.20
+}
+ink_14 = {
+	galley_power = 0.25
+}
+ink_15 = {
+	leader_naval_fire = 1
+	naval_tradition_from_battle = 0.25
+	navy_tradition_decay = -0.01
+}
+ink_16 = {
+	technology_cost = -0.1
+	global_institution_spread = 0.25
+}
+ink_17 = {
+	interest = -1
+	inflation_reduction = 0.1
+	build_cost = -0.20
+	build_time = -0.25
+}
+ink_18 = {
+	administrative_efficiency = 0.10
+}
+ink_19 = {
+	num_accepted_cultures = 4
+	promote_culture_cost = -0.50
+}
+ink_20 = {
+	heavy_ship_power = 0.15
+}
+ink_21 = {
+	local_friendly_movement_speed = 0.2
+	local_institution_spread = 0.25
+	province_trade_power_value = 0.25
+}
+ink_22 = {
+	global_unrest = -2
+	stability_cost_modifier = -0.25
+	years_of_nationalism = -5
+}
+ink_23 = {
+	trade_efficiency = 0.1
+	global_prov_trade_power_modifier = 0.2
+}
+ink_24 = {
+	merchants = 2
+}
+ink_25 = {
+	caravan_power = 0.1
+	global_trade_power = 0.1
+}
+ink_26 = {
+	trade_goods_size_modifier = 0.10
+}
+ink_27 = {
+	production_efficiency = 0.10
+}
+ink_28 = {
+	land_morale = 0.10
+	land_attrition = -0.10
+}
+ink_29 = {
+	cavalry_power = 0.10
+	cavalry_shock = 1
+}
+ink_30 = {
+	all_power_cost = -0.20
+}
+ink_31 = {
+	prestige_from_land = 0.10
+}
+ink_32 = {
+	land_attrition = -0.20
+}
+ink_33 = {
+	promote_culture_cost = -0.25
+	
+}
+ink_100 = {
+	manpower_recovery_speed = 0.10
+	global_manpower_modifier = 0.10
+}
+ink_101 = {
+	papal_influence = 1
+	prestige_decay = -0.01
+}
+ink_102 = {
+	global_religious_conversion_resistance = 0.3
+}
+ink_103 = {
+	papal_influence = 4
+	warscore_cost_vs_other_religion = -0.25
+}
+ink_104 = {
+	missionary_maintenance_cost = -0.5
+}
+ink_105 = {
+	global_unrest = -2
+	discipline = 0.05
+}
+ink_106 = {
+	mercenary_discipline = 0.10	
+}
+ink_107 = {
+	mercenary_manpower= 0.10
+	mercenary_cost = -0.20
+}
+ink_108 = {
+	colonists = 1
+	global_colonial_growth = 30
+}
+ink_109 = {
+	colonist_placement_chance = 0.10
+	native_assimilation = 0.25
+}
+ink_110 = {
+	treasure_fleet_income = 0.5
+	global_tariffs = 0.40
+}
+ink_111 = {
+	liberty_desire_from_subject_development = -0.25
+	global_trade_power = 0.25
+}
+ink_112 = {
+	religious_unity = 0.25
+	global_heretic_missionary_strength = 0.03
+}
+ink_113 = {
+	colonists = 1
+	range = 0.5
+}
+ink_114 = {
+	global_tax_modifier = -0.3
+}
+ink_115 = {
+	papal_influence = 2
+	prestige = 1.5
+}
+ink_116 = {
+	diplomatic_upkeep = 1
+	improve_relation_modifier = 0.25
+}
+ink_117 = {
+	prestige_decay = -0.02
+	imperial_authority_value = 0.2
+}
+ink_118 = {
+	max_absolutism = 10
+	yearly_absolutism = 0.1
+}
+ink_120 = {
+	diplomatic_reputation = 2
+	reduced_liberty_desire = 10
+}
+ink_121 = {
+	global_heretic_missionary_strength = 0.03
+}
+ink_122 = {
+	navy_tradition = 2
+	galley_power = 0.15
+}
+ink_123 = {
+	harsh_treatment_cost = -0.2
+	unrest_catholic_provinces = -2
+	years_of_nationalism = -5
+}
+ink_124 = {
+	stability_cost_modifier = -0.3
+	global_unrest = -1
+}
+ink_125 = {
+	relation_with_heretics = -40
+	devotion = 1
+	church_loyalty_modifier = 0.1
+}
+ink_126 = {
+	ae_impact = -0.15
+	devotion = 1
+}
+ink_127 = {
+	culture_conversion_cost = -0.25
+}
+ink_128 = {
+	warscore_cost_vs_other_religion = -0.25
+	global_heathen_missionary_strength = 0.03
+}
+ink_129 = {
+	num_accepted_cultures = 4
+	promote_culture_cost = -0.50
+}
+ink_130 = {
+	mercenary_discipline = 0.10
+	mercenary_cost = -0.20
+}
+ink_131 = {
+	light_ship_power = 0.15
+	sailors_recovery_speed = 0.2
+}
+ink_132 = {
+	global_trade_power = 0.25
+	global_own_trade_power = 0.2
+}
+ink_133 = {
+	global_foreign_trade_power = 0.1
+	caravan_power = 0.2
+}
+ink_134 = {
+	merchants = 2
+	placed_merchant_power = 10
+}
+ink_135 = {
+	native_uprising_chance = -0.50
+	native_assimilation = 0.50
+}
+ink_136 = {
+	harsh_treatment_cost = -0.2
+	max_absolutism = 20
+	global_tax_income = 30
+}
+ink_137 = {
+	war_taxes_cost_modifier = -1
+	global_tax_modifier = 0.20
+}
+ink_138 = {
+	global_tariffs = 0.25
+}
+ink_139 = {
+	global_trade_power = 0.2
+	ship_power_propagation = 0.2
+}
+ink_140 = {
+	colonists = 2
+	global_tax_modifier = -0.3
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 40
+}
+ink_141 = {
+	colonists = 1
+	global_tax_modifier = -0.15
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 20
+}
+ink_143 = {
+	missionaries = 2
+	global_heretic_missionary_strength = 0.03
+}
+ink_144 = {
+	missionaries = 1
+	global_heretic_missionary_strength = 0.05
+}
+ink_145 = {
+	global_tax_modifier = 0.15
+	devotion = 2.5
+}
+ink_146 = {
+	land_attrition = -0.20
+}

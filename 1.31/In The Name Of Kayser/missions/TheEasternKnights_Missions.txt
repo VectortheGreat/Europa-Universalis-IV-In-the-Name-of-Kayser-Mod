@@ -1,0 +1,1837 @@
+#Missions for The Eastern Knights
+
+tek_religion_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		tag = TEK
+	}	
+	potential = {
+		tag = TEK
+		has_country_flag = third_rome
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	tek_religion_mission_1 = {		#Found the Holy Order
+		icon = temple
+		required_missions = { } 
+		position = 1
+		provinces_to_highlight = {
+				province_id = 151
+				NOT = { religion = coptic }
+			}	
+		trigger = {
+			religious_unity = 0
+			151 = {			#Constantinople
+						religion = coptic
+			}
+		}
+		effect = {
+			country_event = {
+				id = ttest.2
+			}
+			define_advisor = {
+				type = inquisitor
+				skill = 2
+				discount = yes
+				religion = coptic
+			}
+			add_country_modifier = {
+				name = "ink_144"
+				duration = 5478
+			}
+		}
+	}
+	tek_religion_mission_2 = {		#Convert Balkans
+		icon = convert_anatolia
+		required_missions = { tek_religion_mission_1 }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+					province_id = 151
+					province_id = 148
+					province_id = 146
+					province_id = 149
+					province_id = 3001
+					province_id = 3000
+					province_id = 1766
+				}
+				NOT = { religion = coptic }
+		}
+		trigger = {
+				AND = {
+					151 = {			#Constantinople
+						religion = coptic
+					}
+					148 = {			#Selanik
+						religion = coptic
+					}
+					146 = {			#Athens
+						religion = coptic
+					}
+					149 = {			#Edirne
+						religion = coptic
+					}
+					3001 = {		#Skopje
+						religion = coptic
+					}
+					3000 = {		#Nis
+						religion = coptic
+					}
+					1766 = {		#Kosovo
+						religion = coptic
+					}
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_100"	#manpower
+				duration = 7300
+			}
+		}
+	}
+	tek_religion_mission_3 = {		#Convert Anatolia
+		icon = convert_anatolia
+		required_missions = { tek_religion_mission_2 }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+					province_id = 326
+					province_id = 328
+					province_id = 316
+					province_id = 317
+					province_id = 2297
+					province_id = 2298
+					province_id = 2301
+					province_id = 318
+					province_id = 331
+				}
+				NOT = { religion = coptic }
+		}
+		trigger = {
+				AND = {
+					326 = {			#Ankara
+						religion = coptic
+					}
+					328 = {			#Sinop
+						religion = coptic
+					}
+					316 = {			#Kocaeli
+						religion = coptic
+					}
+					317 = {			#Hüdavendigar
+						religion = coptic
+					}
+					2297 = {		#Saruhan
+						religion = coptic
+					}
+					2298 = {		#Tekke
+						religion = coptic
+					}
+					2301 = {		#Kayseri
+						religion = coptic
+					}
+					318 = {			#Sugla
+						religion = coptic
+					}
+					331 = {			#Erzurum
+						religion = coptic
+					}
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_1" #land morale
+				duration = 7300
+			}
+		}
+	}
+	tek_religion_mission_4 = {		#Convert Roma
+		icon = convert_roma
+		required_missions = { tek_religion_mission_3 } 
+		position = 4
+		provinces_to_highlight = {
+			province_id = 118
+			NOT = { religion = coptic }
+		}	
+		trigger = {
+			118 = {			#Roma
+				religion = coptic
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_125"
+				duration = -1
+			}
+			
+		}
+	}
+	tek_religion_mission_5 = {		#Convert Holy Lands
+		icon = holy_lands
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2313
+				province_id = 379
+			}
+			NOT = { religion = coptic }
+		}
+		trigger = {
+			379 = {
+				religion = coptic
+			}
+			2313 = {
+				religion = coptic
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_8"	#miss cost
+				duration = 3652
+			}
+			2313 = {
+				add_building = cathedral
+				owned_by = root
+			}
+			379 = {
+				add_building = cathedral
+				owned_by = root
+			}
+		}
+	}
+	tek_religion_mission_6 = {		#Crusader King
+		icon = crusader_king
+		required_missions = { tek_religion_mission_5 }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = syria_area
+				area = palestine_area
+				area = aleppo_area
+			}
+			NOT = { religion = coptic }
+		}
+		trigger = {
+			syria_area = {
+				type = all
+				religion = coptic
+			}
+			palestine_area = {
+				type = all
+				religion = coptic
+			}
+			aleppo_area = {
+				type = all
+				religion = coptic
+			}
+		}
+
+		effect = {
+			add_years_of_income = 4
+			add_prestige = 50
+			define_advisor = {
+				type = theologian
+				skill = 3
+				religion = coptic
+				discount = yes
+			}
+		}
+	}
+	tek_religion_mission_7 = {		#Convert Muslims
+		icon = convert_muslims
+		required_missions = { tek_religion_mission_6 }
+		position = 7
+		provinces_to_highlight = {
+				OR = {
+					province_id = 385
+					province_id = 384
+				}
+				NOT = { religion = coptic }
+		}
+		trigger = {
+			385 = {
+				religion = coptic
+			}
+			384 = {
+				religion = coptic
+			}
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_10"	#tolerance
+				duration = -1
+			}
+		}
+	}
+	tek_religion_mission_8 = {		#Recover Holy Sites
+		icon = holy_sites
+		required_missions = { tek_religion_mission_7 } 
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1227
+				province_id = 1234
+				province_id = 358
+				province_id = 2313
+				province_id = 419
+			}
+			NOT = { religion = coptic }
+		}
+		trigger = {
+			1227 = {
+				religion = coptic
+			}
+			1234 = {
+				religion = coptic
+			}
+			358 = {
+				religion = coptic
+			}
+			2313 = {
+				religion = coptic
+			}
+			419 = {
+				religion = coptic
+			}
+		}
+		effect = {
+			add_prestige = 50
+			change_adm = 3
+			add_country_modifier = {
+				name = "ink_126"
+				duration = 14610
+			}
+		}
+	}
+	tek_religion_mission_9 = {		#Destroy Islam
+		icon = destroy_islam
+		required_missions = { tek_religion_mission_8 } 
+		position = 9
+		trigger = {
+			NOT = {
+				any_province = {
+					OR = {
+						religion = sunni
+						religion = shiite
+						religion = ibadi
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_128"
+				duration = -1
+			}
+		}
+	}
+	tek_religion_mission_10 = {		#Assimilation
+		icon = assimilation
+		required_missions = {  } 
+		position = 10
+		trigger = {
+			dominant_culture = turkish
+			has_unified_culture_group = yes
+			num_of_owned_provinces_with = {
+				value = 75
+				culture = turkish
+				is_overseas = no
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_127"
+				duration = -1
+			}
+		}
+	}
+	tek_religion_mission_11 = {		#The Greatest Temple
+		icon = temple_2
+		required_missions = { tek_religion_mission_10 } 
+		position = 11
+		provinces_to_highlight = {
+			province_id = 151
+				NOT = { religion = coptic }
+				NOT = { culture = turkish }
+				has_cathedral_building_trigger = no
+		}
+		trigger = {
+			religious_unity = 1
+			151 = {
+				religion = coptic
+				culture = turkish
+				has_building = cathedral
+				development = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_137"
+				duration = 10957
+			}
+		}
+	}
+}
+
+tek_diplomatic_missions = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		tag = TEK
+	}	
+	potential = {
+		tag = TEK
+		has_country_flag = third_rome
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	tek_diplomatic_mission_1 = {		#Conquer South Balkans
+		icon = conquer_balkans
+		required_missions = {  } 
+		position = 1
+		provinces_to_highlight = {
+				OR = {
+					province_id = 141
+					province_id = 3000
+					province_id = 4176
+					province_id = 4757
+					area = rascia_area
+					area = albania_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			141 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3000 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4176 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4757 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rascia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_3"
+				duration = 3650
+			}
+			naples_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			calabria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			apulia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = NAP
+				}
+				add_casus_belli = {
+					target = NAP
+					type = cb_vassalize_mission
+				}
+			}
+		}
+	}
+	tek_diplomatic_mission_2 = {		#South Italy
+		icon = control_naples
+		required_missions = { tek_diplomatic_mission_1 } 
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = calabria_area
+				area = naples_area
+				area = apulia_area
+			}
+			NOT = {
+				ROOT = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 8
+						OR = {
+							area = calabria_area
+							area = naples_area
+							area = apulia_area
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				NAP = {	is_subject_of = TEK	}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8
+					OR = {
+						area = calabria_area
+						area = naples_area
+						area = apulia_area
+					}
+				}
+			}
+		}
+		effect = {
+			lazio_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_3 = {		#Mediterranean Sea
+		icon = reclaim_mediterranean
+		required_missions = { tek_administrative_mission_2 } 
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+					province_id = 164
+					province_id = 3003
+					province_id = 163
+			}
+			NOT = { is_core = root }
+		}
+		trigger = {
+			owns_core_province = 164
+			owns_core_province = 3003
+			owns_core_province = 163
+			if = {
+				limit = {
+					exists = KNI
+					
+				}
+				KNI = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = CYP
+					
+				}
+				CYP = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}	
+		effect = {
+			if = {
+				limit = {
+					exists = KNI
+				}
+				vassalize = KNI
+			}
+			if = {
+				limit = {
+					exists = CYP
+				}
+				vassalize = CYP
+			}
+			320 = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			321 = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			syria_area = {
+				limit = {					
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			palestine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			syrian_desert_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			aleppo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			trans_jordan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_4 = {		#Levant
+		icon = crusaders
+		required_missions = { tek_diplomatic_mission_3 } 
+		position = 4
+		provinces_to_highlight = {
+				OR = {
+					area = aleppo_area
+					area = syria_area
+					area = palestine_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		trigger = {
+			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			egypt_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_5 = {		#Egypt
+		icon = conquer_egypt
+		required_missions = { tek_diplomatic_mission_4 } 
+		position = 5
+		provinces_to_highlight = {
+			region = egypt_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = egypt_region
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_29"
+				duration = 3652
+			}
+			horn_of_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			arabia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_6 = {		#Ethiopia
+		icon = ethiopia
+		required_missions = { tek_diplomatic_mission_5 } 
+		position = 6
+		provinces_to_highlight = {
+			region = horn_of_africa_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				region = horn_of_africa_region
+				is_city = yes
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_prestige = 25
+		}
+	}
+	tek_diplomatic_mission_7 = {		#Arabia
+		icon = arabia
+		required_missions = {  } 
+		position = 7
+		provinces_to_highlight = {
+			region = arabia_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = arabia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			west_india_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_8 = {		#India 1
+		icon = india_1
+		required_missions = { tek_diplomatic_mission_7 } 
+		position = 8
+		provinces_to_highlight = {
+			region = west_india_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				region = west_india_region
+				is_city = yes
+			}
+		}
+		effect = {
+			deccan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hindusthan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_9 = {		#India 3
+		icon = india_3
+		required_missions = { tek_diplomatic_mission_8 } 
+		position = 9
+		provinces_to_highlight = {
+			region = deccan_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = deccan_region
+				is_city = yes
+			}
+		}
+		effect = {
+			coromandel_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_diplomatic_mission_10 = {		#India 5
+		icon = india_5
+		required_missions = { tek_diplomatic_mission_9 } 
+		position = 10
+		provinces_to_highlight = {
+			region = coromandel_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = coromandel_region
+				is_city = yes
+			}
+		}
+		effect = {
+			australia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = {
+				id = ttest.1
+			}
+		}
+	}
+	tek_diplomatic_mission_11 = {		#Australia
+		icon = north_colonies
+		required_missions = { tek_diplomatic_mission_10 } 
+		position = 11
+		provinces_to_highlight = {
+				region = australia_region
+				NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			colony = 1
+			australia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = "ink_138"
+				duration = 7300
+			}
+		}
+	}
+}
+
+tek_administrative_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		tag = TEK
+	}	
+	potential = {
+		tag = TEK
+		has_country_flag = third_rome
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	tek_administrative_mission_1 = {		#Turkish Civil War
+		icon = civil_war
+		required_missions = { }
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = turkish_civil_war_ended
+				OR = {
+					has_country_flag = end_of_turkish_civil_war
+					NOT = {
+						current_age = age_of_discovery
+					}
+				}
+			}			
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_124"
+				duration = 5478
+			}
+			add_splendor = 450
+			4699 = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			146 = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			anatolia_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			serbia_area = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			rascia_area = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			albania_area = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_2 = {		#Anatolia
+		icon = conquer_anatolia
+		required_missions = { tek_administrative_mission_1 } 
+		position = 2
+		provinces_to_highlight = {
+			region = anatolia_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = anatolia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_3 = {		#Caucasia
+		icon = caucasia
+		required_missions = { tek_administrative_mission_2 } 
+		position = 3
+		provinces_to_highlight = {
+			region = caucasia_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = caucasia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			add_dip_power = 150
+			add_country_modifier = {
+				name = "ink_146"
+				duration = 7305
+			}
+		}
+	}
+	tek_administrative_mission_4 = {		#Iraq
+		icon = iraq
+		required_missions = { tek_military_mission_3 } 
+		position = 4
+		provinces_to_highlight = {
+				OR = {
+					area = al_jazira_area
+					area = iraq_arabi_area
+					area = basra_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		trigger = {
+			al_jazira_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			persia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_5 = {		#Iran
+		icon = iran
+		required_missions = { tek_administrative_mission_4 } 
+		position = 5
+		provinces_to_highlight = {
+			region = persia_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region = persia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			khorasan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_6 = {		#Khorasan
+		icon = khorasan
+		required_missions = { tek_administrative_mission_5 } 
+		position = 6
+		provinces_to_highlight = {
+			region = khorasan_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = khorasan_region
+				is_city = yes
+			}
+		}
+		effect = {
+			central_asia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_7 = {		#Central Asia
+		icon = crimea
+		required_missions = { tek_administrative_mission_6 } 
+		position = 7
+		provinces_to_highlight = {
+			region = central_asia_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				region = central_asia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			mongolia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_8 = {		#Leader of the Turks
+		icon = leader_of_turks
+		required_missions = { tek_administrative_mission_7 } 
+		position = 8
+		provinces_to_highlight = {
+			region = mongolia_region
+			owner = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				region = mongolia_region
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_129"
+				duration = -1
+			}
+			tibet_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_9 = {		#India 2
+		icon = india_2
+		required_missions = { tek_diplomatic_mission_8 } 
+		position = 9
+		provinces_to_highlight = {
+			region = hindusthan_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 45
+				region = hindusthan_region
+				is_city = yes
+			}
+		}
+		effect = {
+			bengal_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_10 = {		#India 4
+		icon = india_4
+		required_missions = { tek_administrative_mission_9 } 
+		position = 10
+		provinces_to_highlight = {
+			region = bengal_region
+			owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				region = bengal_region
+				is_city = yes
+			}
+		}
+		effect = {
+			indonesia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			moluccas_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_administrative_mission_11 = {		#Indonesia
+		icon = indonesia
+		required_missions = { tek_administrative_mission_10 } 
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				region = indonesia_region
+				region = moluccas_region
+			}
+				owner = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = indonesia_region
+				is_city = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				region = moluccas_region
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_139"
+				duration = 10957
+			}
+		}
+	}
+	tek_administrative_mission_12 = {		#Lord of the East
+		icon = lord_of_east
+		required_missions = { tek_diplomatic_mission_11 tek_administrative_mission_11 tek_military_mission_11 } 
+		position = 12
+		trigger = {
+			religious_unity = 1
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				ROOT= {
+					is_hegemon = yes
+				}
+			}
+			is_defender_of_faith = yes
+			army_professionalism = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_136"
+				duration = -1
+			}
+		}
+	}
+}
+
+tek_military_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		tag = TEK
+	}	
+	potential = {
+		tag = TEK
+		has_country_flag = third_rome
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	tek_military_mission_1 = {		#Mercenaries
+		icon = mercenaries
+		required_missions = {  } 
+		position = 1
+		trigger = {
+			num_of_mercenaries = 6
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_130"
+				duration = 7300
+			}
+			define_general = {
+				shock = 5
+				fire = 3
+				manuever = 2
+				siege = 1
+			}
+		}
+	}
+	tek_military_mission_2 = {		#Disband the Mercenaries
+		icon = elite_army
+		required_missions = { tek_military_mission_1 } 
+		position = 2
+		trigger = {
+			NOT = { num_of_loans = 1 }
+			NOT = { num_of_mercenaries = 1 }
+			mil_tech = 5
+			army_size = 50
+		}
+		effect = {
+			add_army_professionalism = 0.10
+			add_army_tradition = 25
+		}
+	}
+	tek_military_mission_3 = {		#Urban's Cannons
+		icon = urbans_cannon
+		required_missions = { tek_military_mission_2 } 
+		position = 3
+		provinces_to_highlight = {
+				OR = {
+					province_id = 151
+					province_id = 146
+					province_id = 326
+				}
+				has_barracks_building_trigger = no
+		}
+		trigger = {
+			army_professionalism = 0.27
+			151 = {
+				owned_by = ROOT
+				has_building = barracks
+			}
+			146 = {
+				owned_by = ROOT
+				has_building = barracks
+			}
+			326 = {
+				owned_by = ROOT
+				has_building = barracks
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_6"
+				duration = 5478
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_military_mission_4 = {		#Professional Training
+		icon = training
+		required_missions = { tek_military_mission_3 } 
+		position = 4
+		trigger = {
+			barracks = 20
+			regimental_camp = 20
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_11"
+				duration = 10957
+			}
+		}
+	}
+	tek_military_mission_5 = {		#Elite Knights
+		icon = elite_knights
+		required_missions = { tek_military_mission_4 } 
+		position = 5
+		trigger = {
+			mil_tech = 7
+			army_size = 100
+			army_professionalism = 0.50
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_5"
+				duration = -1
+			}
+		}
+	}
+	tek_military_mission_6 = {		#Professional Army
+		icon = pro_army
+		required_missions = { tek_military_mission_5 } 
+		position = 6
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+				army_tradition = 80
+				army_professionalism = 0.7
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_13"
+				duration = 14610
+			}
+		}
+	}
+	tek_military_mission_7 = {		#Expand the Navy
+		icon = navy
+		required_missions = {  } 
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 408
+				province_id = 398
+				province_id = 2315
+			}
+			NOT = { is_core = root }
+		}
+		trigger = {
+			navy_size = 75
+			dock = 10
+			owns_core_province = 408
+			owns_core_province = 398
+			owns_core_province = 2315
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_131"
+				duration = 7300
+			}
+		}
+	}
+	tek_military_mission_8 = {		#Grand Navy
+		icon = navy_2
+		required_missions = { tek_military_mission_7 } 
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2100
+				province_id = 4419
+				province_id = 2039
+			}
+			NOT = { is_core = root }
+		}
+		trigger = {
+			navy_size = 200
+			owns_core_province = 2100
+			owns_core_province = 4419
+			owns_core_province = 2039
+		}
+		effect = {
+			burma_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			indo_china_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			malaya_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_military_mission_9 = {		#South East Asia
+		icon = south_east_asia
+		required_missions = { tek_military_mission_8 } 
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				region = burma_region
+				region = indo_china_region
+				region = malaya_region
+			}
+			NOT = {owned_by = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = burma_region
+				is_city = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = indo_china_region
+				is_city = yes
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = malaya_region
+				is_city = yes
+			}
+		}
+		effect = {
+			south_china_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_china_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_military_mission_10 = {		#China
+		icon = china
+		required_missions = { tek_military_mission_9 } 
+		position = 10
+		provinces_to_highlight = {
+			region = south_china_region
+			has_port = yes
+			NOT = {owned_by = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				region = south_china_region
+				has_port = yes
+			}
+			owns_all_provinces = {
+				region = north_china_region
+				has_port = yes
+			}
+		}
+		effect = {
+			japan_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			xinan_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tek_military_mission_11 = {		#Japan
+		icon = japan
+		required_missions = { tek_military_mission_10 } 
+		position = 11
+		provinces_to_highlight = {
+			region = japan_region
+			has_port = yes
+			NOT = {owned_by = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				region = japan_region
+				has_port = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_132"
+				duration = -1
+			}
+			korea_region = {
+				limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+tek_economic_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		tag = TEK
+	}	
+	potential = {
+		tag = TEK
+		has_country_flag = third_rome
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	tek_economic_mission_1 = {		#Enslave Muslims
+		icon = enslave_muslims
+		required_missions = {  } 
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = turkish_civil_war_ended
+				OR = {
+					has_country_flag = end_of_turkish_civil_war
+					NOT = {
+						current_age = age_of_discovery
+					}
+				}
+			}
+		}
+		effect = {
+			add_treasury = 500
+			add_country_modifier = {
+				name = "ink_145"
+				duration = 7300
+		}
+		}
+	}
+	tek_economic_mission_2 = {		#Rebuild the Capital
+		icon = rebuild_capital
+		required_missions = { tek_economic_mission_1 } 
+		position = 2
+		trigger = {
+			has_institution = renaissance
+			is_at_war = no
+			adm_tech = 5
+		}
+		effect = {
+			151 = {
+				add_province_modifier = {
+					name = "ink_7"
+					duration = 14610
+				}
+			}
+		}
+	}
+	tek_economic_mission_3 = {		#The Great Library
+		icon = the_great_library
+		required_missions = { tek_economic_mission_2 } 
+		position = 3
+		provinces_to_highlight = {
+				province_id = 151
+				NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			151 = {
+				development = 40
+				owned_by = root
+			}
+		}
+		effect = {
+			151 = {
+				add_building = university
+				owned_by = root
+			}
+			
+			set_country_flag = konstantinopolis_library_mission_flag
+			country_event = {
+				id = rtest.7
+			}
+		}
+	}
+	tek_economic_mission_4 = {		#Hagia Sophia
+		icon = ayasofya
+		required_missions = { tek_economic_mission_3 }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 151
+				NOT = { religion = coptic }
+				NOT = { culture = turkish }
+				has_temple_building_trigger = no
+		}
+		trigger = {
+			151 = {
+				religion = coptic
+				culture = turkish
+				has_building = temple
+				development = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_112"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+	}
+	tek_economic_mission_5 = {		#Improve Trade
+		icon = improve_trade
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+				OR = {
+					province_id = 151
+					province_id = 408
+					province_id = 2999
+				}
+				has_marketplace_building_trigger = no
+		}
+		trigger = {
+			151 = {
+				province_has_center_of_trade_of_level = 3
+				has_building = marketplace
+			}
+			408 = {
+				province_has_center_of_trade_of_level = 3
+				has_building = marketplace
+			}
+			2999 = {
+				province_has_center_of_trade_of_level = 3
+				has_building = marketplace
+			}
+		}
+		effect = {
+			add_mercantilism = 10
+			add_country_modifier = {
+				name = "ink_25"
+				duration = 3650
+			}
+		}
+	}
+	tek_economic_mission_6 = {		#Indian Trade
+		icon = trade
+		required_missions = { tek_economic_mission_5 }
+		position = 6
+		provinces_to_highlight = {
+				OR = {
+					province_id = 2100
+					province_id = 4457
+					province_id = 398
+					province_id = 2039
+				}
+		}
+		trigger = {
+			398 ={
+				has_most_province_trade_power = ROOT
+			}
+			4457 ={
+				has_most_province_trade_power = ROOT
+			}
+			2100 ={
+				has_most_province_trade_power = ROOT
+			}
+			2039 ={
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_133"
+				duration = 7300
+			}
+		}
+	}
+	tek_economic_mission_7 = {		#Far East Trade
+		icon = far_east_trade
+		required_missions = { tek_economic_mission_6 } 
+		position = 7
+		provinces_to_highlight = {
+				OR = {
+					province_id = 623
+					province_id = 668
+					province_id = 1822
+					province_id = 1030
+				}
+		}
+		trigger = {
+			623 ={
+				has_most_province_trade_power = ROOT
+			}
+			668 ={
+				has_most_province_trade_power = ROOT
+			}
+			1822 ={
+				has_most_province_trade_power = ROOT
+			}
+			1030 ={
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_134"
+				duration = -1
+			}
+		}
+	}
+	
+	tek_economic_mission_9 = {		#Coal Production
+		icon = coal
+		required_missions = { }
+		position = 10
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {					
+						has_building = furnace
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_27"
+				duration = 5478
+			}
+			
+		}
+	}
+	tek_economic_mission_10 = {		#Assimilate the Natives
+		icon = assimilate_natives
+		required_missions = {  } 
+		position = 11
+		trigger = {
+			num_of_colonists = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_135"
+				duration = 10957
+			}
+		}
+	}
+}

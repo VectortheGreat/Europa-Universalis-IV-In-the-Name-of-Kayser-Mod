@@ -1,0 +1,28 @@
+efficient_tax_farming_modifier = {
+	global_trade_goods_size_modifier = 0.10
+	build_cost = -0.15
+	great_project_upgrade_cost = -0.25
+}
+
+land_acquisition_modifier = {
+	diplomatic_upkeep = 2
+	unrest_catholic_provinces = -2
+	legitimacy = 1
+}
+
+lenient_taxation_modifier = {
+	discipline = 0.05
+	army_tradition = 1
+	reinforce_speed = 0.15
+}
+seize_clerical_holdings_modifier = {
+	diplomats = 1
+	build_cost = -0.15
+	global_tax_modifier = 0.10
+}
+
+invite_minorities_modifier = {
+	fort_level = 1
+	local_development_cost = -0.1
+	trade_goods_size_modifier = 0.25
+}

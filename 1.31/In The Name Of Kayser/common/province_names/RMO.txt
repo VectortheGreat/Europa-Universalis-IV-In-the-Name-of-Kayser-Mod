@@ -1,0 +1,8 @@
+151 = "Kostantinopolis"
+2313 = "Antioch"
+379 = "Jerusalem"
+149 = "Adrianople"
+316 = "Nikomedia"
+147 = "Thessaly"
+148 = "Macedonia"
+150= "Nikopol"

@@ -1,0 +1,82 @@
+spriteTypes = {
+
+		spriteType = {
+		name = "GFX_great_project_bolnisi_sioni"	
+		texturefile = "gfx//interface//great_projects//great_project_bolnisi_sioni.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_etchmiadzin_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_etchmiadzin_cathedral.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_great_market"	
+		texturefile = "gfx//interface//great_projects//great_project_great_market.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_holy_sepulchre"	
+		texturefile = "gfx//interface//great_projects//great_project_holy_sepulchre.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_john_baptist"	
+		texturefile = "gfx//interface//great_projects//great_project_john_baptist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_john_lateran"	
+		texturefile = "gfx//interface//great_projects//great_project_john_lateran.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_mary_zion"	
+		texturefile = "gfx//interface//great_projects//great_project_mary_zion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_oviedo_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_oviedo_cathedral.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_palace_konstantinopolis"	
+		texturefile = "gfx//interface//great_projects//great_project_palace_konstantinopolis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_port_athens"	
+		texturefile = "gfx//interface//great_projects//great_project_port_athens.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_saint_alincahan"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_alincahan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_saint_domnius"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_domnius.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_saint_peter"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_peter.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_saint_thaddeus"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_thaddeus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_san_vitale"	
+		texturefile = "gfx//interface//great_projects//great_project_san_vitale.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_santiago_compostela"	
+		texturefile = "gfx//interface//great_projects//great_project_santiago_compostela.dds"
+	}
+}

@@ -1,0 +1,29 @@
+ink_000 = {
+	local_missionary_strength = 0.10
+}
+
+ink_001 = {		#+
+	local_unrest = -4
+	local_friendly_movement_speed = 0.2
+	min_local_autonomy = 60
+	supply_limit_modifier = -0.25
+}
+ink_002 = {		#-
+	local_unrest = 5
+	local_friendly_movement_speed = -0.2
+	supply_limit_modifier = +0.25
+	local_manpower_modifier = 0.35
+	
+}
+
+ink_003 = {
+	global_tax_modifier = 0.15
+}
+
+ink_004 = {
+	local_unrest = -2
+}
+
+ink_005 = {
+	global_missionary_strength = 0.03
+}

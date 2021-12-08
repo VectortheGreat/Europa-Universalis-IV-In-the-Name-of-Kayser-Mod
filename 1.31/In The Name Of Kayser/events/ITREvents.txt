@@ -1,0 +1,144 @@
+########################################
+# ITR Events                           #
+########################################
+
+namespace = itest
+normal_or_historical_nations = yes
+
+country_event = {		#Help from pope
+	id = itest.1
+	title = "itest.1_title"
+	desc = "itest.1_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = itest1.a
+		add_treasury = 300
+		add_manpower = 3
+		hidden_effect = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_100
+				}
+				reverse_add_opinion = {
+					who = PAP
+					modifier = ink_10000
+				}
+		}
+	}
+}
+
+country_event = {	#Transfer Colonies
+	id = itest.2
+	title = "itest.2_title"
+	desc = "itest.2_desc"
+	picture = JESUTIS_IN_BRAZIL_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = itest2.a
+		every_subject_country = {   
+		# This changes the scope to all your subject countries, going through one by one
+			every_subject_country = {
+			# This changes the scope to all the subject countries of your subject
+				limit = {
+					is_colonial_nation = yes
+				}
+				# This limits it to only colonial nations, so only colonial subjects of your subject
+				ROOT = {
+					# This scopes back to you, so the game's looking at you again (once for every colonial subject of your subjects)
+					create_subject = {
+						subject_type = colony
+						subject = PREV
+					}
+					# This makes the PREVIOUS scope (so your subjects' colonial subjects) into your colonies (since the game's looking at you)
+				}
+			}
+		}
+	}
+}
+
+country_event = {		#Italian Heretics
+	id = itest.3
+	title = "itest.3_title"
+	desc = "itest.3_desc"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = itest3.a
+				tuscany_area = {
+				change_religion = protestant
+				add_province_modifier = {
+						name = "religious_zeal_at_conv"
+						duration = 3652
+				}
+				emilia_romagna_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				liguria_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				naples_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				calabria_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				apulia_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				lombardy_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				po_valley_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+				central_italy_area = {
+					change_religion = protestant
+					add_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 3652
+					}
+				}
+		}
+	}
+}

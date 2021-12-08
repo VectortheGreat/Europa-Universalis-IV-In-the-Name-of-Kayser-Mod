@@ -1,0 +1,63 @@
+########################################
+# Third Rome Events                    #
+########################################
+
+namespace = rtest
+normal_or_historical_nations = yes
+
+		
+
+country_event = {
+	id = rtest.7
+	title = konstantinopolis_library_title
+	desc = konstantinopolis_library_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	goto = 151
+	
+	trigger = {
+		if = {
+			has_country_flag = konstantinopolis_library_mission_flag
+		}
+		else = {
+			tag = RMO
+			tag = ITR
+			owns = 151
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 20000
+	}
+	
+	option = {
+		goto = 151
+		name = konstantinopolis.1
+		add_adm_power = 5
+		custom_tooltip = adm_konstantinopolis_library_tt
+		151 = {
+			add_province_triggered_modifier = adm_konstantinopolis_library
+		}
+	}
+	
+	option = {
+		goto = 151
+		name = konstantinopolis.2
+		add_dip_power = 5
+		custom_tooltip = dip_konstantinopolis_library_tt
+		151 = {
+			add_province_triggered_modifier = dip_konstantinopolis_library
+		}
+	}
+	option = {
+		goto = 151
+		name = konstantinopolis.3
+		add_mil_power = 5
+		custom_tooltip = mil_konstantinopolis_library_tt
+		151 = {
+			add_province_triggered_modifier = mil_konstantinopolis_library
+		}
+	}
+}

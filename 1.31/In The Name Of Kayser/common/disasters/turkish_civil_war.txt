@@ -1,0 +1,102 @@
+turkish_civil_war = {
+	potential = {
+		OR = {
+			tag = RMO
+			tag = TUR
+			tag = ITR
+			tag = TEK
+		}
+		OR = {
+			religion = catholic
+			religion = orthodox
+			religion = coptic
+		}
+		normal_or_historical_nations = yes
+		current_age = age_of_discovery
+
+	}
+	
+	can_start = {
+		current_age = age_of_discovery
+		NOT = { religious_unity = 0.85 }
+		NOT = { full_idea_group = religious_ideas }
+		NOT = {
+			OR = {
+				326 = {
+					religion_group = christian
+				}
+				316 = {
+					religion_group = christian
+				}
+				317 = {
+					religion_group = christian
+				}
+				2297 = {
+					religion_group = christian
+				}
+				2298 = {
+					religion_group = christian
+				}
+			}
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			religious_unity = 0.85
+			full_idea_group = religious_ideas
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 4
+			NOT = { religious_unity = 0.75 }
+			religious_unity = 0.5
+		} 		
+		modifier = {
+			factor = 6
+			NOT = { religious_unity = 0.5 }
+		} 
+		modifier = {
+			factor = 8
+			NOT = { stability = 0 }
+		}
+		
+		
+		
+		
+
+	}
+	
+	can_end = {
+				OR = {
+					religious_unity = 0.85
+					full_idea_group = religious_ideas
+				}
+	}
+	
+	modifier = {
+		global_tax_modifier = -0.10
+		stability_cost_modifier = 1.00
+		global_heathen_missionary_strength = -0.015
+	}
+	
+	on_start = tcwevents.9
+	on_end = tcwevents.8
+	
+	on_monthly = {
+		events = {
+			tcwevents.1 # rebels 1
+			tcwevents.2 # rebels 2
+			tcwevents.3 # rebels 3
+			tcwevents.4 # rebels 4
+			tcwevents.5 # rebels 5
+			tcwevents.6 # rebels 6
+			tcwevents.7 # rebels 7
+			tcwevents.10
+		}	
+	}
+	
+}

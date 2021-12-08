@@ -1,0 +1,31 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_faction_bg_ink_merchants"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_ink_merchants"	
+		texturefile = "gfx//interface//ink_merchants.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_ink_bureaucrats"
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_ink_bureaucrats"	
+		texturefile = "gfx//interface//ink_bureaucrats.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_ink_knights"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_ink_knights"	
+		texturefile = "gfx//interface//ink_knights.tga"
+	}	
+
+}

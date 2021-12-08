@@ -1,0 +1,451 @@
+########################################
+# Turkish Civil War Events             #
+########################################
+
+namespace = tcwevents
+normal_or_historical_nations = yes
+
+country_event = {		#Ankara Rebels
+	id = tcwevents.1
+	title = tcwevents.1_title
+	desc = tcwevents.1_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = civilwar_start
+			days = 45
+		}
+	}
+
+	option = {
+		name = tcwevents.1a
+		set_country_flag = rebels_1
+		clr_country_flag = civilwar_start
+		if = {
+			limit = {
+				any_owned_province = {
+					area = ankara_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = ankara_area
+				}
+				spawn_rebels = {
+					type = sunni_rebels
+					size = 25
+				}
+			}
+		}
+		ankara_area = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+
+country_event = {		#Hüdavengidar Rebels
+	id = tcwevents.2
+	title = tcwevents.2_title
+	desc = tcwevents.2_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_1
+			days = 180
+		}
+	}
+
+	option = {
+		name = tcwevents.2a
+		set_country_flag = rebels_2
+		clr_country_flag = rebels_1
+		if = {
+			limit = {
+				any_owned_province = {
+					area = hudavendigar_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = hudavendigar_area
+				}
+				spawn_rebels = {
+					type = sunni_rebels
+					size = 25
+				}
+			}
+		}
+		hudavendigar_area = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+country_event = {		#Aydın Rebels
+	id = tcwevents.3
+	title = tcwevents.3_title
+	desc = tcwevents.3_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_2
+			days = 180
+		}
+	}
+
+	option = {
+		name = tcwevents.3a
+		set_country_flag = rebels_3
+		clr_country_flag = rebels_2
+		if = {
+			limit = {
+				any_owned_province = {
+					area = aydin_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = aydin_area
+				}
+				spawn_rebels = {
+					type = sunni_rebels
+					size = 25
+				}
+			}
+		}
+		aydin_area = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+country_event = {		#Germiyan Rebels
+	id = tcwevents.4
+	title = tcwevents.4_title
+	desc = tcwevents.4_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_3
+			days = 180
+		}
+	}
+
+	option = {
+		name = tcwevents.4a
+		set_country_flag = rebels_4
+		clr_country_flag = rebels_3
+		if = {
+			limit = {
+				any_owned_province = {
+					area = germiyan_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = germiyan_area
+				}
+				spawn_rebels = {
+					type = sunni_rebels
+					size = 20
+				}
+			}
+		}
+		germiyan_area = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+country_event = {		#Bolu Rebels
+	id = tcwevents.5
+	title = tcwevents.5_title
+	desc = tcwevents.5_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_4
+			days = 180
+		}
+	}
+
+	option = {
+		name = tcwevents.5a
+		set_country_flag = rebels_5
+		clr_country_flag = rebels_4
+		2299 = {
+			spawn_rebels = {
+				type = sunni_rebels
+				size = 15
+			}
+		}
+		2299 = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+country_event = {		#Canik Rebels
+	id = tcwevents.6
+	title = tcwevents.6_title
+	desc = tcwevents.6_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_5
+			days = 100
+		}
+	}
+
+	option = {
+		name = tcwevents.6a
+		set_country_flag = rebels_6
+		clr_country_flag = rebels_5
+		2304 = {
+			spawn_rebels = {
+				type = sunni_rebels
+				size = 15
+			}
+		}
+		2304 = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+country_event = {		#Rum Rebels
+	id = tcwevents.7
+	title = tcwevents.7_title
+	desc = tcwevents.7_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = rebels_6
+			days = 100
+		}
+	}
+
+	option = {
+		name = tcwevents.7a
+		set_country_flag = rebels_7
+		clr_country_flag = rebels_6
+		if = {
+			limit = {
+				any_owned_province = {
+					area = rum_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = rum_area
+				}
+				spawn_rebels = {
+					type = sunni_rebels
+					size = 25
+				}
+			}
+		}
+		rum_area = {
+			add_province_modifier = {
+					name = ink_000
+					duration = 7300
+			}
+		}
+	}
+}
+
+
+country_event = {		# End of Civil War
+	id = tcwevents.8
+	title = "tcwevents.8_title"
+	desc = "tcwevents.8_desc"
+	picture = CONQUEST_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "tcwevents.8a"
+		add_stability = 1
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		clr_country_flag = rebels_7
+		set_country_flag = end_of_turkish_civil_war
+	}
+}
+	
+country_event = {		#Civil War Start
+	id = tcwevents.9
+	title = "tcwevents.9_title"
+	desc = "tcwevents.9_desc"
+	picture = RELIGIOUS_WARS_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "tcwevents.9a"
+		add_stability = -3
+		set_country_flag = civilwar_start
+		set_country_flag = civilwar_start2
+	}
+}
+
+country_event = {		#
+	id = tcwevents.10
+	title = "tcwevents.10_title"
+	desc = "tcwevents.10_desc"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		had_country_flag = {
+			flag = rebels_7
+			days = 45
+		}
+	}
+
+	option = {
+		name = "tcwevents.10a"
+		clr_country_flag = rebels_7
+		add_country_modifier = {
+				name = "ink_005"
+				duration = 3652
+		}
+		add_manpower = 8
+		ankara_area = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		hudavendigar_area = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		aydin_area = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		germiyan_area = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		rum_area = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		2299 = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+		2304 = {
+			add_province_modifier = {
+					name = ink_001
+					duration = 5478
+			}
+		}
+	}
+	option = {
+		name = "tcwevents.10b"
+		clr_country_flag = rebels_7
+		add_country_modifier = {
+				name = "ink_005"
+				duration = 3652
+		}
+		add_stability = 1
+		ankara_area = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		hudavendigar_area = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		aydin_area = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		germiyan_area = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		rum_area = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		2299 = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+		2304 = {
+			add_province_modifier = {
+					name = ink_002
+					duration = 5478
+			}
+		}
+	}
+}
+

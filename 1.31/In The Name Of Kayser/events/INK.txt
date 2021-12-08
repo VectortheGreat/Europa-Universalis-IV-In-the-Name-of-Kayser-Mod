@@ -1,0 +1,37 @@
+namespace = test
+normal_or_historical_nations = yes
+
+# Mehmed's Dream
+country_event = {
+	id = test.1
+	title = "test.1_title"
+	desc = "test.1_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger ={
+		tag = TUR
+		owns = 151
+		religion_group = muslim
+	}
+	
+	option = {
+		name = test1.a
+		ai_chance = { factor = 50 }
+		change_religion = orthodox
+		add_legitimacy = -25
+	}
+	option = {
+		name = test1.b
+		ai_chance = { factor = 25 }
+		change_religion = catholic
+		add_legitimacy = -35
+	}
+	option = {
+		name = test1.c
+		ai_chance = { factor = 25 }
+		change_religion = coptic
+		add_legitimacy = -20
+	}
+}
