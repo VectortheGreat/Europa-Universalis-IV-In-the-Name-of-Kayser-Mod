@@ -1,0 +1,1105 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_mission_entry_placeholder"
+		texturefile = "gfx//interface//mission_entry_placeholder.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+
+	spriteType = {
+		name = "GFX_mission_entry_conditions"
+		texturefile = "gfx//interface//mission_entry_conditions.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	
+	spriteType = {
+		name = "GFX_mission_entry_rewards"
+		texturefile = "gfx//interface//mission_entry_rewards.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	
+	spriteType = {
+		name = "GFX_country_mission_view_bg"
+		texturefile = "gfx//interface//country_mission_view_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_country_mission_view_bg_large"
+		texturefile = "gfx//interface//country_mission_view_bg_large.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_country_mission_view_bg_huge"
+		texturefile = "gfx//interface//country_mission_view_bg_huge.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}		
+	
+	spriteType = {
+		name = "GFX_missionsdecisions_choosemission_bg"
+		texturefile = "gfx//interface//country_missionsdecisions_choosemission_bg.dds"
+		transparencecheck = yes 
+	}
+	
+	spriteType = {
+		name = "GFX_mission_arrow_bottom"
+		texturefile = "gfx//interface//mission_arrow_half_bottom.dds"
+		transparencecheck = yes 
+	}
+	
+	spriteType = {
+		name = "GFX_mission_arrow_top"
+		texturefile = "gfx//interface//mission_arrow_half_top.dds"
+		transparencecheck = yes 
+	}
+	
+	spriteType = {
+		name = "GFX_mission_arrow_horizontal"
+		texturefile = "gfx//interface//mission_arrow_horizontal.dds"
+		transparencecheck = yes 
+	}
+	
+	spriteType = {
+		name = "GFX_mission_skip_tier"
+		texturefile = "gfx//interface//mission_arrow_skip_tier.dds"
+		transparencecheck = yes 
+	}
+
+#### Mission Arrow Parts ####	
+	
+	spriteType = {
+		name = "gfx_arrow_end"
+		texturefile = "gfx//interface//missions//arrow_end.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_horizontal_tile"
+		texturefile = "gfx//interface//missions//arrow_horizontal_tile.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_horizontal_skip_slot"
+		texturefile = "gfx//interface//missions//arrow_horizontal_skip_slot.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_left_out"
+		texturefile = "gfx//interface//missions//arrow_left_out.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_left_in"
+		texturefile = "gfx//interface//missions//arrow_left_in.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_right_in"
+		texturefile = "gfx//interface//missions//arrow_right_in.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_right_out"
+		texturefile = "gfx//interface//missions//arrow_right_out.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_verticall_tile"
+		texturefile = "gfx//interface//missions//arrow_verticall_tile.dds"
+	}
+	
+	spriteType = {
+		name = "gfx_arrow_verticall_skip_tier"
+		texturefile = "gfx//interface//missions//arrow_verticall_skip_tier.dds"
+	}
+	
+	
+#### Mission Frames & Icons ####		
+	
+	spriteType = {
+		name = "GFX_mission_icons_frame"
+		texturefile = "gfx//interface//missions//mission_icons_frame.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_mission_icons_frame_locked"
+		texturefile = "gfx//interface//missions//mission_icons_frame_locked.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_mission_icons_frame_complete"
+		texturefile = "gfx//interface//missions//mission_icons_frame_complete.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_mission_effect_glow"
+		texturefile = "gfx//interface//missions//mission_effect_glow.dds"
+		allwaystransparent = yes
+	}	
+
+	spriteType = {
+		name = "gfx_mission_effect"
+		texturefile = "gfx//interface//missions//mission_effect.dds"
+		noOfFrames = 3 
+	}
+	
+	spriteType = {
+		name = "gfx_mission_trigger"
+		texturefile = "gfx//interface//missions//mission_trigger.dds"
+	}
+	
+	
+	
+#### Generic Mission Icons ####
+	
+	spriteType = {
+		name = "far_east_trade"
+		texturefile = "gfx//interface//missions//far_east_trade.dds"
+	}
+	
+	spriteType = {
+		name = "assimilation"
+		texturefile = "gfx//interface//missions//assimilation.dds"
+	}
+	
+	spriteType = {
+		name = "navy_2"
+		texturefile = "gfx//interface//missions//navy_2.dds"
+	}
+	
+	spriteType = {
+		name = "temple"
+		texturefile = "gfx//interface//missions//temple.dds"
+	}
+	
+	spriteType = {
+		name = "holy_sites"
+		texturefile = "gfx//interface//missions//holy_sites.dds"
+	}
+	
+	spriteType = {
+		name = "destroy_islam"
+		texturefile = "gfx//interface//missions//destroy_islam.dds"
+	}
+	
+	spriteType = {
+		name = "temple_2"
+		texturefile = "gfx//interface//missions//temple_2.dds"
+	}
+	
+	spriteType = {
+		name = "crusaders"
+		texturefile = "gfx//interface//missions//crusaders.dds"
+	}
+	
+	spriteType = {
+		name = "ethiopia"
+		texturefile = "gfx//interface//missions//ethiopia.dds"
+	}
+	
+	spriteType = {
+		name = "arabia"
+		texturefile = "gfx//interface//missions//arabia.dds"
+	}
+	
+	spriteType = {
+		name = "india_1"
+		texturefile = "gfx//interface//missions//india_1.dds"
+	}
+	
+	spriteType = {
+		name = "india_3"
+		texturefile = "gfx//interface//missions//india_3.dds"
+	}
+	
+	spriteType = {
+		name = "india_5"
+		texturefile = "gfx//interface//missions//india_5.dds"
+	}
+	
+	spriteType = {
+		name = "iraq"
+		texturefile = "gfx//interface//missions//iraq.dds"
+	}
+	
+	spriteType = {
+		name = "iran"
+		texturefile = "gfx//interface//missions//iran.dds"
+	}
+	
+	spriteType = {
+		name = "khorasan"
+		texturefile = "gfx//interface//missions//khorasan.dds"
+	}
+	
+	spriteType = {
+		name = "leader_of_turks"
+		texturefile = "gfx//interface//missions//leader_of_turks.dds"
+	}
+	
+	spriteType = {
+		name = "india_2"
+		texturefile = "gfx//interface//missions//india_2.dds"
+	}
+	
+	spriteType = {
+		name = "india_4"
+		texturefile = "gfx//interface//missions//india_4.dds"
+	}
+	
+	spriteType = {
+		name = "indonesia"
+		texturefile = "gfx//interface//missions//indonesia.dds"
+	}
+	
+	spriteType = {
+		name = "lord_of_east"
+		texturefile = "gfx//interface//missions//lord_of_east.dds"
+	}
+	
+	spriteType = {
+		name = "elite_knights"
+		texturefile = "gfx//interface//missions//elite_knights.dds"
+	}
+	
+	spriteType = {
+		name = "south_east_asia"
+		texturefile = "gfx//interface//missions//south_east_asia.dds"
+	}
+	
+	spriteType = {
+		name = "china"
+		texturefile = "gfx//interface//missions//china.dds"
+	}
+	
+	spriteType = {
+		name = "japan"
+		texturefile = "gfx//interface//missions//japan.dds"
+	}
+	
+	spriteType = {
+		name = "enslave_muslims"
+		texturefile = "gfx//interface//missions//enslave_muslims.dds"
+	}
+	
+	spriteType = {
+		name = "assimilate_natives"
+		texturefile = "gfx//interface//missions//assimilate_natives.dds"
+	}
+	
+	spriteType = {
+		name = "mis"
+		texturefile = "gfx//interface//missions//mis.dds"
+	}
+	
+	spriteType = {
+		name = "crimea"
+		texturefile = "gfx//interface//missions//crimea.dds"
+	}
+	
+	spriteType = {
+		name = "catholicsm"
+		texturefile = "gfx//interface//missions//catholicsm.dds"
+	}
+	
+	spriteType = {
+		name = "colony_2"
+		texturefile = "gfx//interface//missions//colony_2.dds"
+	}
+	
+	spriteType = {
+		name = "colony_1"
+		texturefile = "gfx//interface//missions//colony_1.dds"
+	}
+	
+	spriteType = {
+		name = "ayasofya"
+		texturefile = "gfx//interface//missions//ayasofya.dds"
+	}
+	
+	spriteType = {
+		name = "usa"
+		texturefile = "gfx//interface//missions//usa.dds"
+	}
+	
+	spriteType = {
+		name = "south_colonies"
+		texturefile = "gfx//interface//missions//south_colonies.dds"
+	}
+	
+	spriteType = {
+		name = "north_colonies"
+		texturefile = "gfx//interface//missions//north_colonies.dds"
+	}
+	
+	spriteType = {
+		name = "mercenaries"
+		texturefile = "gfx//interface//missions//mercenaries.dds"
+	}
+	
+	spriteType = {
+		name = "latin_mercenaries"
+		texturefile = "gfx//interface//missions//latin_mercenaries.dds"
+	}
+	
+	spriteType = {
+		name = "holy_empire"
+		texturefile = "gfx//interface//missions//holy_empire.dds"
+	}
+	
+	spriteType = {
+		name = "horde"
+		texturefile = "gfx//interface//missions//horde.dds"
+	}
+	
+	spriteType = {
+		name = "ruthenia"
+		texturefile = "gfx//interface//missions//ruthenia.dds"
+	}
+	
+	spriteType = {
+		name = "winged_hussar"
+		texturefile = "gfx//interface//missions//winged_hussar.dds"
+	}
+	
+	spriteType = {
+		name = "caucasia"
+		texturefile = "gfx//interface//missions//caucasia.dds"
+	}
+	
+	spriteType = {
+		name = "black_sea"
+		texturefile = "gfx//interface//missions//black_sea.dds"
+	}
+	
+	spriteType = {
+		name = "empire"
+		texturefile = "gfx//interface//missions//empire.dds"
+	}
+	
+	spriteType = {
+		name = "conquer_anatolia"
+		texturefile = "gfx//interface//missions//conquer_anatolia.dds"
+	}
+	
+	spriteType = {
+		name = "electors"
+		texturefile = "gfx//interface//missions//electors.dds"
+	}
+	
+	spriteType = {
+		name = "hungary"
+		texturefile = "gfx//interface//missions//hungary.dds"
+	}
+	
+	spriteType = {
+		name = "pope"
+		texturefile = "gfx//interface//missions//pope.dds"
+	}
+	
+	spriteType = {
+		name = "latin"
+		texturefile = "gfx//interface//missions//latin.dds"
+	}
+	
+	spriteType = {
+		name = "protect_pope"
+		texturefile = "gfx//interface//missions//protect_pope.dds"
+	}
+	
+	spriteType = {
+		name = "crusader_king"
+		texturefile = "gfx//interface//missions//crusader_king.dds"
+	}
+	
+	spriteType = {
+		name = "italian_heretics"
+		texturefile = "gfx//interface//missions//italian_heretics.dds"
+	}
+	
+	spriteType = {
+		name = "protestants"
+		texturefile = "gfx//interface//missions//protestants.dds"
+	}
+	
+	spriteType = {
+		name = "help_from_pope"
+		texturefile = "gfx//interface//missions//help_from_pope.dds"
+	}
+	
+	spriteType = {
+		name = "pro_army"
+		texturefile = "gfx//interface//missions//pro_army.dds"
+	}
+	spriteType = {
+		name = "crusade"
+		texturefile = "gfx//interface//missions//crusade.dds"
+	}
+	spriteType = {
+		name = "trade"
+		texturefile = "gfx//interface//missions//trade.dds"
+	}
+	spriteType = {
+		name = "national_wealth"
+		texturefile = "gfx//interface//missions//national_wealth.dds"
+	}
+	spriteType = {
+		name = "hellenoturkism"
+		texturefile = "gfx//interface//missions//hellenoturkism.dds"
+	}
+	spriteType = {
+		name = "navy"
+		texturefile = "gfx//interface//missions//navy.dds"
+	}
+	spriteType = {
+		name = "greek_fire"
+		texturefile = "gfx//interface//missions//greek_fire.dds"
+	}
+	spriteType = {
+		name = "conquer_italy"
+		texturefile = "gfx//interface//missions//conquer_italy.dds"
+	}
+	spriteType = {
+		name = "culture"
+		texturefile = "gfx//interface//missions//culture.dds"
+	}
+	spriteType = {
+		name = "suez_canal"
+		texturefile = "gfx//interface//missions//suez_canal.dds"
+	}
+	spriteType = {
+		name = "all_roads"
+		texturefile = "gfx//interface//missions//all_roads.dds"
+	}
+	spriteType = {
+		name = "conquer_france"
+		texturefile = "gfx//interface//missions//conquer_france.dds"
+	}
+	spriteType = {
+		name = "tunis"
+		texturefile = "gfx//interface//missions//tunis.dds"
+	}
+	spriteType = {
+		name = "legionnaires"
+		texturefile = "gfx//interface//missions//legionnaires.dds"
+	}
+	spriteType = {
+		name = "venice"
+		texturefile = "gfx//interface//missions//venice.dds"
+	}
+	spriteType = {
+		name = "training"
+		texturefile = "gfx//interface//missions//training.dds"
+	}
+	spriteType = {
+		name = "defeat_serbs"
+		texturefile = "gfx//interface//missions//defeat_serbs.dds"
+	}
+	spriteType = {
+		name = "urbans_cannon"
+		texturefile = "gfx//interface//missions//urbans_cannon.dds"
+	}
+	spriteType = {
+		name = "elite_army"
+		texturefile = "gfx//interface//missions//elite_army.dds"
+	}
+	spriteType = {
+		name = "we_are_all_orthodox"
+		texturefile = "gfx//interface//missions//we_are_all_orthodox.dds"
+	}
+	spriteType = {
+		name = "neither_holy"
+		texturefile = "gfx//interface//missions//neither_holy.dds"
+	}
+	spriteType = {
+		name = "coal"
+		texturefile = "gfx//interface//missions//coal.dds"
+	}
+	spriteType = {
+		name = "absolutism"
+		texturefile = "gfx//interface//missions//absolutism.dds"
+	}
+	spriteType = {
+		name = "universities"
+		texturefile = "gfx//interface//missions//universities.dds"
+	}
+	spriteType = {
+		name = "expand_navy"
+		texturefile = "gfx//interface//missions//expand_navy.dds"
+	}
+	spriteType = {
+		name = "improve_trade"
+		texturefile = "gfx//interface//missions//improve_trade.dds"
+	}
+	spriteType = {
+		name = "sentinel"
+		texturefile = "gfx//interface//missions//sentinel.dds"
+	}
+	spriteType = {
+		name = "roman_empire"
+		texturefile = "gfx//interface//missions//roman_empire.dds"
+	}
+	spriteType = {
+		name = "crush_revolution"
+		texturefile = "gfx//interface//missions//crush_revolution.dds"
+	}	
+	spriteType = {
+		name = "civilization"
+		texturefile = "gfx//interface//missions//civilization.dds"
+	}
+	
+	spriteType = {
+		name = "balkan_volunteers"
+		texturefile = "gfx//interface//missions//balkan_volunteers.dds"
+	}
+	
+	spriteType = {
+		name = "skanderbeg"
+		texturefile = "gfx//interface//missions//skanderbeg.dds"
+	}
+	
+	spriteType = {
+		name = "the_great_library"
+		texturefile = "gfx//interface//missions//the_great_library.dds"
+	}
+	
+	spriteType = {
+		name = "alpine_wall"
+		texturefile = "gfx//interface//missions//alpine_wall.dds"
+	}
+	
+	spriteType = {
+		name = "reclaim_mediterranean"
+		texturefile = "gfx//interface//missions//reclaim_mediterranean.dds"
+	}
+	
+	spriteType = {
+		name = "call_italians"
+		texturefile = "gfx//interface//missions//call_italians.dds"
+	}
+	
+	spriteType = {
+		name = "control_naples"
+		texturefile = "gfx//interface//missions//control_naples.dds"
+	}
+	
+	spriteType = {
+		name = "royal_marriage"
+		texturefile = "gfx//interface//missions//royal_marriage.dds"
+	}
+	
+	spriteType = {
+		name = "mare_nostrum"
+		texturefile = "gfx//interface//missions//mare_nostrum.dds"
+	}
+	
+	spriteType = {
+		name = "conquer_iberia"
+		texturefile = "gfx//interface//missions//conquer_iberia.dds"
+	}
+	
+	spriteType = {
+		name = "conquer_africa"
+		texturefile = "gfx//interface//missions//conquer_africa.dds"
+	}
+	
+	spriteType = {
+		name = "conquer_balkans"
+		texturefile = "gfx//interface//missions//conquer_balkans.dds"
+	}
+	
+	spriteType = {
+		name = "conquer_egypt"
+		texturefile = "gfx//interface//missions//conquer_egypt.dds"
+	}
+	
+	spriteType = {
+		name = "civil_war"
+		texturefile = "gfx//interface//missions//civil_war.dds"
+	}
+	
+
+	spriteType = {
+		name = "conquer_levant"
+		texturefile = "gfx//interface//missions//conquer_levant.dds"
+	}
+	
+	spriteType = {
+		name = "rebuild_capital"
+		texturefile = "gfx//interface//missions//rebuild_capital.dds"
+	}
+	
+	spriteType = {
+		name = "convert_anatolia"
+		texturefile = "gfx//interface//missions//convert_anatolia.dds"
+	}
+
+	spriteType = {
+		name = "convert_alexandria"
+		texturefile = "gfx//interface//missions//convert_alexandria.dds"
+	}
+
+	spriteType = {
+		name = "convert_muslims"
+		texturefile = "gfx//interface//missions//convert_muslims.dds"
+	}
+
+	spriteType = {
+		name = "convert_roma"
+		texturefile = "gfx//interface//missions//convert_roma.dds"
+	}
+
+	spriteType = {
+		name = "holy_lands"
+		texturefile = "gfx//interface//missions//holy_lands.dds"
+	}
+
+	spriteType = {
+		name = "restore_pentarchy"
+		texturefile = "gfx//interface//missions//restore_pentarchy.dds"
+	}
+	
+	
+	spriteType = {
+		name = "cross"
+		texturefile = "gfx//interface//missions//cross.dds"
+	}
+
+	spriteType = {
+		name = "mission_alliances"
+		texturefile = "gfx//interface//missions//mission_alliances.dds"
+	}
+
+	spriteType = {
+		name = "mission_assemble_an_army"
+		texturefile = "gfx//interface//missions//mission_assemble_an_army.dds"
+	}
+
+	spriteType = {
+		name = "mission_build_up_to_force_limit"
+		texturefile = "gfx//interface//missions//mission_build_up_to_force_limit.dds"
+	}
+
+	spriteType = {
+		name = "mission_conquer_5_states"
+		texturefile = "gfx//interface//missions//mission_conquer_5_states.dds"
+	}
+
+	spriteType = {
+		name = "mission_conquer_50_development"
+		texturefile = "gfx//interface//missions//mission_conquer_50_development.dds"
+	}
+
+	spriteType = {
+		name = "mission_dominate_home_trade_node"
+		texturefile = "gfx//interface//missions//mission_dominate_home_trade_node.dds"
+	}
+
+	spriteType = {
+		name = "mission_early_game_buildings"
+		texturefile = "gfx//interface//missions//mission_early_game_buildings.dds"
+	}
+
+	spriteType = {
+		name = "mission_empire"
+		texturefile = "gfx//interface//missions//mission_empire.dds"
+	}
+
+	spriteType = {
+		name = "mission_establish_high_seas_navy"
+		texturefile = "gfx//interface//missions//mission_establish_high_seas_navy.dds"
+	}
+
+	spriteType = {
+		name = "mission_have_manufactories"
+		texturefile = "gfx//interface//missions//mission_have_manufactories.dds"
+	}
+
+	spriteType = {
+		name = "mission_have_two_subjects"
+		texturefile = "gfx//interface//missions//mission_have_two_subjects.dds"
+	}
+
+	spriteType = {
+		name = "mission_high_income"
+		texturefile = "gfx//interface//missions//mission_high_income.dds"
+	}
+
+	spriteType = {
+		name = "mission_trade_company_region_abroad"
+		texturefile = "gfx//interface//missions//mission_trade_company_region_abroad.dds"
+	}
+
+	spriteType = {
+		name = "mission_unite_home_region"
+		texturefile = "gfx//interface//missions//mission_unite_home_region.dds"
+	}
+
+	spriteType = {
+		name = "mission_war_chest"
+		texturefile = "gfx//interface//missions//mission_war_chest.dds"
+	}
+	
+	spriteType = {
+		name = "mission_cannons_firing"
+		texturefile = "gfx//interface//missions//mission_cannons_firing.dds"
+	}
+	
+	spriteType = {
+		name = "mission_colonial"
+		texturefile = "gfx//interface//missions//mission_colonial.dds"
+	}
+	
+	spriteType = {
+		name = "mission_european_church"
+		texturefile = "gfx//interface//missions//mission_european_church.dds"
+	}
+	
+	spriteType = {
+		name = "mission_galleys_in_port"
+		texturefile = "gfx//interface//missions//mission_galleys_in_port.dds"
+	}
+	
+	spriteType = {
+		name = "mission_monarch_in_throne_room"
+		texturefile = "gfx//interface//missions//mission_monarch_in_throne_room.dds"
+	}
+	
+	spriteType = {
+		name = "mission_non-western_cavalry_raid"
+		texturefile = "gfx//interface//missions//mission_non-western_cavalry_raid.dds"
+	}
+	
+		spriteType = {
+		name = "mission_non-western_soldiers"
+		texturefile = "gfx//interface//missions//mission_non-western_soldiers.dds"
+	}
+	
+		spriteType = {
+		name = "mission_religious"
+		texturefile = "gfx//interface//missions//mission_religious.dds"
+	}
+	
+		spriteType = {
+		name = "mission_sea_battles"
+		texturefile = "gfx//interface//missions//mission_sea_battles.dds"
+	}
+	
+		spriteType = {
+		name = "mission_arabian_fort"
+		texturefile = "gfx//interface//missions//mission_arabian_fort.dds"
+	}
+	
+		spriteType = {
+		name = "mission_african_soldier"
+		texturefile = "gfx//interface//missions//mission_african_soldier.dds"
+	}
+	
+		spriteType = {
+		name = "mission_indian_soldier_elephant"
+		texturefile = "gfx//interface//missions//mission_indian_soldier_elephant.dds"
+	}
+	
+		spriteType = {
+		name = "mission_mosque"
+		texturefile = "gfx//interface//missions//mission_mosque.dds"
+	}
+	
+		spriteType = {
+		name = "mission_invade_island"
+		texturefile = "gfx//interface//missions//mission_invade_island.dds"
+	}
+	
+		spriteType = {
+		name = "mission_hands_praying"
+		texturefile = "gfx//interface//missions//mission_hands_praying.dds"
+	}
+	
+		spriteType = {
+		name = "mission_cossack_cavalry"
+		texturefile = "gfx//interface//missions//mission_cossack_cavalry.dds"
+	}
+	
+	spriteType = {
+		name = "mission_buddhist_monk_praying"
+		texturefile = "gfx//interface//missions//mission_buddhist_monk_praying.dds"
+	}
+	
+	spriteType = {
+		name = "mission_chinese_general_riding"
+		texturefile = "gfx//interface//missions//mission_chinese_general_riding.dds"
+	}
+	
+	spriteType = {
+		name = "mission_great_wall"
+		texturefile = "gfx//interface//missions//mission_great_wall.dds"
+	}
+	
+	spriteType = {
+		name = "mission_japanese_fort"
+		texturefile = "gfx//interface//missions//mission_japanese_fort.dds"
+	}
+	
+	spriteType = {
+		name = "mission_rice_field"
+		texturefile = "gfx//interface//missions//mission_rice_field.dds"
+	}
+	
+	spriteType = {
+		name = "mission_asian_trader"
+		texturefile = "gfx//interface//missions//mission_asian_trader.dds"
+	}
+	
+		spriteType = {
+		name = "mission_market_place_with_asian_traders"
+		texturefile = "gfx//interface//missions//mission_market_place_with_asian_traders.dds"
+	}
+	
+	### New for 1.27 ###
+	
+	spriteType = {
+		name = "mission_bedouins"
+		texturefile = "gfx//interface//missions//mission_bedouins.dds"
+	}
+	
+	spriteType = {
+		name = "mission_central_asian_city"
+		texturefile = "gfx//interface//missions//mission_central_asian_city.dds"
+	}
+	
+	spriteType = {
+		name = "mission_crusade_for_varna"
+		texturefile = "gfx//interface//missions//mission_crusade_for_varna.dds"
+	}
+	
+	spriteType = {
+		name = "mission_early_modern_university"
+		texturefile = "gfx//interface//missions//mission_early_modern_university.dds"
+	}
+	
+	spriteType = {
+		name = "mission_eastern_european_city"
+		texturefile = "gfx//interface//missions//mission_eastern_european_city.dds"
+	}
+	
+	spriteType = {
+		name = "mission_egyptian_mamluk_soldier"
+		texturefile = "gfx//interface//missions//mission_egyptian_mamluk_soldier.dds"
+	}
+	
+	spriteType = {
+		name = "mission_hanseatic_city"
+		texturefile = "gfx//interface//missions//mission_hanseatic_city.dds"
+	}
+	
+	spriteType = {
+		name = "mission_iberian_conquistador"
+		texturefile = "gfx//interface//missions//mission_iberian_conquistador.dds"
+	}
+	
+	spriteType = {
+		name = "mission_impaled_soldies"
+		texturefile = "gfx//interface//missions//mission_impaled_soldies.dds"
+	}
+	
+	spriteType = {
+		name = "mission_indian_stateman"
+		texturefile = "gfx//interface//missions//mission_indian_stateman.dds"
+	}
+	
+	spriteType = {
+		name = "mission_iroquois_warriors"
+		texturefile = "gfx//interface//missions//mission_iroquois_warriors.dds"
+	}
+	
+	spriteType = {
+		name = "mission_italian_condottiere"
+		texturefile = "gfx//interface//missions//mission_italian_condottiere.dds"
+	}
+	
+	spriteType = {
+		name = "mission_japanese_samurai"
+		texturefile = "gfx//interface//missions//mission_japanese_samurai.dds"
+	}
+	
+	spriteType = {
+		name = "mission_junk_boat"
+		texturefile = "gfx//interface//missions//mission_junk_boat.dds"
+	}
+	
+	spriteType = {
+		name = "mission_landsknecht_soldier"
+		texturefile = "gfx//interface//missions//mission_landsknecht_soldier.dds"
+	}
+	
+	spriteType = {
+		name = "mission_luther_theses"
+		texturefile = "gfx//interface//missions//mission_luther_theses.dds"
+	}
+	
+	spriteType = {
+		name = "mission_manchu_warrior"
+		texturefile = "gfx//interface//missions//mission_manchu_warrior.dds"
+	}
+	
+	spriteType = {
+		name = "mission_noble_council"
+		texturefile = "gfx//interface//missions//mission_noble_council.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ottoman_harem"
+		texturefile = "gfx//interface//missions//mission_ottoman_harem.dds"
+	}
+	
+	spriteType = {
+		name = "mission_persian_soldiers"
+		texturefile = "gfx//interface//missions//mission_persian_soldiers.dds"
+	}
+	
+	spriteType = {
+		name = "mission_settlers_north_america"
+		texturefile = "gfx//interface//missions//mission_settlers_north_america.dds"
+	}
+	
+	spriteType = {
+		name = "mission_steppe_warriors"
+		texturefile = "gfx//interface//missions//mission_steppe_warriors.dds"
+	}
+	
+	spriteType = {
+		name = "mission_teutonic_knights"
+		texturefile = "gfx//interface//missions//mission_teutonic_knights.dds"
+	}
+	
+	### New for 1.31 ###
+
+	spriteType = {
+		name = "mission_control_unrest"
+		texturefile = "gfx/interface/missions/control_unrest.dds"
+	}
+	
+	spriteType = {
+		name = "mission_gain_mana"
+		texturefile = "gfx/interface/missions/gain_mana.dds"
+	}
+	
+	spriteType = {
+		name = "mission_oceania_build_army_mission"
+		texturefile = "gfx/interface/missions/oceania_build_army_mission.dds"
+	}
+	
+	spriteType = {
+		name = "mission_oceania_assemble_an_army"
+		texturefile = "gfx/interface/missions/oceania_assemble_an_army.dds"
+	}
+	
+	spriteType = {
+		name = "mission_oceania_dev_capital"
+		texturefile = "gfx/interface/missions/oceania_dev_capital.dds"
+	}
+	
+	spriteType = {
+		name = "mission_oceania_royal_marriage"
+		texturefile = "gfx/interface/missions/oceania_royal_marriage.dds"
+	}
+
+	spriteType = {
+		name = "mission_polynesian_navy_build"
+		texturefile = "gfx/interface/missions/polynesian_navy_build.dds"
+	}
+	
+	spriteType = {
+		name = "mission_polynesian_grand_navy"
+		texturefile = "gfx/interface/missions/polynesian_grand_navy.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ne_birch_bark_canoes"
+		texturefile = "gfx/interface/missions/mission_ne_birch_bark_canoes.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ne_palisades"
+		texturefile = "gfx/interface/missions/mission_ne_palisades.dds"
+	}
+	
+	spriteType = {
+		name = "mission_se_birdmen"
+		texturefile = "gfx/interface/missions/mission_se_birdmen.dds"
+	}
+	
+	spriteType = {
+		name = "mission_se_medicine_wheel"
+		texturefile = "gfx/interface/missions/mission_se_medicine_wheel.dds"
+	}
+
+	spriteType = {
+		name = "mission_sw_against_the_desert"
+		texturefile = "gfx/interface/missions/mission_sw_against_the_desert.dds"
+	}
+	
+	spriteType = {
+		name = "mission_sw_torquoise_mining"
+		texturefile = "gfx/interface/missions/mission_sw_torquoise_mining.dds"
+	}
+	
+	spriteType = {
+		name = "mission_sw_yucca_plants"
+		texturefile = "gfx/interface/missions/mission_sw_yucca_plants.dds"
+	}
+	
+	spriteType = {
+		name = "mission_native_build_army_mission"
+		texturefile = "gfx/interface/missions/native_build_army_mission.dds"
+	}
+	
+	spriteType = {
+		name = "mission_native_dev_capital"
+		texturefile = "gfx/interface/missions/native_dev_capital.dds"
+	}
+
+	spriteType = {
+		name = "native_royal_marriage"
+		texturefile = "gfx/interface/missions/native_royal_marriage.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ne_agriculture"
+		texturefile = "gfx/interface/missions/ne_agriculture.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ne_longhouses"
+		texturefile = "gfx/interface/missions/ne_longhouses.dds"
+	}
+	
+	spriteType = {
+		name = "mission_ne_great_lakes_conquest"
+		texturefile = "gfx/interface/missions/ne_great_lakes_conquest.dds"
+	}
+	
+	spriteType = {
+		name = "mission_se_platform_mounds"
+		texturefile = "gfx/interface/missions/se_platform_mounds.dds"
+	}
+
+	spriteType = {
+		name = "mission_se_along_the_river"
+		texturefile = "gfx/interface/missions/se_along_the_river.dds"
+	}
+
+	spriteType = {
+		name = "mission_sw_paquime"
+		texturefile = "gfx/interface/missions/sw_paquime.dds"
+	}
+	
+	spriteType = {
+		name = "mission_unknown_mission"
+		texturefile = "gfx/interface/missions/mission_unknown_mission.dds"
+	}
+}

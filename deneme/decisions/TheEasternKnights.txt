@@ -1,0 +1,66 @@
+country_decisions = {
+
+	form_the_holy_order = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = TEK }
+			NOT = { tag = ITR }
+			NOT = { tag = RMO }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			religion = coptic
+			
+			accepted_culture = turkish
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns = 151		# Constantinople
+		}
+		effect = {
+			change_tag = TEK
+			change_government = theocracy
+			hidden_effect = {
+				add_historical_rival = QAR
+				add_historical_rival = TIM
+				add_historical_rival = MNG
+				add_historical_rival = MAM
+				add_historical_friend = KNI
+				add_historical_friend = CYP
+			}
+			151 = {
+				move_capital_effect = yes
+				add_core = TEK
+				change_culture = turkish 
+				change_religion = coptic
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TEK_ideas }
+				}
+				country_event = { id = ideagroups.1 } #New Ideas
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = the_great_temple_reform
+			restore_country_name = yes
+			}
+			set_country_flag = third_rome
+			swap_non_generic_missions = yes
+			ai_will_do = {
+				factor = 1
+			}
+		}
+}
+}

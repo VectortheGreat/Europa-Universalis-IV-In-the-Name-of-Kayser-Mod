@@ -1,0 +1,64 @@
+country_decisions = {
+
+	form_the_catholic_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = ITR }
+			NOT = { tag = TEK }
+			NOT = { tag = RMO }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+		}
+		allow = {
+			religion = catholic
+			accepted_culture = turkish
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns = 151		# Constantinople
+		}
+		effect = {
+			change_tag = ITR
+			hidden_effect = {
+				add_historical_friend = PAP
+				add_historical_rival = HAB
+				add_historical_rival = VEN
+				add_historical_rival = MAM
+			}
+			change_technology_group = western
+			change_unit_type = western
+			151 = {
+				move_capital_effect = yes
+				add_core = ITR
+				change_culture = turkish 
+				change_religion = catholic
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ITR_ideas }
+				}
+				country_event = { id = ideagroups.1 } #New Ideas
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = magna_turcorum_dynastia
+			restore_country_name = yes
+			}
+			set_country_flag = third_rome
+			swap_non_generic_missions = yes
+			ai_will_do = {
+				factor = 1
+			}
+		}
+}
+}

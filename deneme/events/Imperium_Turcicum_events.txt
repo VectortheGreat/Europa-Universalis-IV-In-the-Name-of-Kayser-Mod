@@ -1,0 +1,1391 @@
+########################################
+# Imperium Turcicum Events             #
+########################################
+
+namespace = itr
+normal_or_historical_nations = yes
+
+###Alexander's Events###
+country_event = {	#Mysterious Priest
+	id = itr.1
+	title = "itr.1_title"
+	desc = "itr.1_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITR
+		317 = {
+			has_missionary = yes
+			days = 20
+		}
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	option = {
+		name = itr1.a
+		317 = {	
+			add_province_modifier = { 
+				name = "ink_pr1"
+				duration = 360
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { reform_desire = 0.1 }
+				add_reform_desire = -0.1
+			}
+		}
+		set_country_flag = aziz_iskender
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Born of Alexander
+	id = itr.2
+	title = "itr.2_title"
+	desc = "itr.2_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = aziz_iskender
+			days = 9131
+		}
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	option = {
+		name = itr2.a
+		set_country_flag = aziz_iskender2
+		clr_country_flag = aziz_iskender
+		hidden_effect = {
+			if = {
+				limit = { reform_desire = 0.75 }
+				add_reform_desire = -0.3
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Alexander's Vatican Theological Education
+	id = itr.3
+	title = "itr.3_title"
+	desc = "itr.3_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = aziz_iskender2
+			days = 10957
+		}
+		NOT = { is_religion_enabled = protestant }
+	}
+	
+	option = {
+		name = itr3.a
+		clr_country_flag = aziz_iskender2
+		if = {
+			limit = {
+				NOT = { num_of_cardinals = 8 }
+			}
+			random_owned_province  = { 
+				limit = { religion = catholic }
+				add_cardinal = yes
+			}
+		}
+		else = {
+			add_papal_influence = 20
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+###Reform Events###
+country_event = {		#Protestants
+	id = itr.4
+	title = "itr.4_title"
+	desc = "itr.4_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITR
+		is_religion_enabled = protestant
+	}
+	
+	option = {
+		name = itr4.a	#Send Alexander to research them
+		set_country_flag = itr_reform1
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Alexander's return from Germany
+	id = itr.5
+	title = "itr.5_title"
+	desc = "itr.5_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITR
+		had_country_flag = {
+			flag = itr_reform1
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr5.a	#We should imitate them
+		set_country_flag = itr_reformissue
+		add_papal_influence = -10
+		ai_chance = { factor = 70 }	
+	}
+	option = {
+		name = itr5.b	#We must protect ourselves from the heretics
+		set_country_flag = itr_antireform1
+		add_papal_influence = 10
+		ai_chance = { factor = 30 }	
+	}
+}
+
+### REFORM PATH ###
+country_event = {		#Reform Issue
+	id = itr.6
+	title = "itr.6_title"
+	desc = "itr.6_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITR
+		is_religion_enabled = anglican
+		has_country_flag = itr_reformissue
+	}
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_reformissue
+		}
+	}
+	option = {
+		name = itr6.a	#Protestant Path
+		set_country_flag = itr_protestant_way
+		add_papal_influence = -30
+		ai_chance = { factor = 20 }
+	}
+	option = {
+		name = itr6.b	#Reformed Path
+		set_country_flag = itr_reformed_way
+		add_papal_influence = -30
+		ai_chance = { factor = 20 }	
+	}
+	option = {
+		name = itr6.c	#Hussite Path
+		set_country_flag = itr_hussite_way
+		add_papal_influence = -30
+		ai_chance = { factor = 20 }	
+	}
+	option = {
+		name = itr6.d	#Iskenderian Path
+		set_country_flag = itr_iskenderian_way
+		add_papal_influence = -30
+		ai_chance = { factor = 20 }	
+	}
+	option = {
+		name = itr6.e	#Anglican Path
+		set_country_flag = itr_anglican_way
+		add_papal_influence = -30
+		ai_chance = { factor = 20 }	
+	}
+}
+
+country_event = {		#Protestant Path
+	id = itr.11
+	title = "itr.11_title"
+	desc = "itr.11_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_protestant_way
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr11.a	#We must support the Protestant idea.
+		set_country_flag = itr_boost_protestants
+		set_country_flag = itr_reformsinprovinces
+		set_country_flag = itr_protestant_way2
+		add_years_of_income = -0.30
+		add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+		}
+		every_owned_province = {
+			limit = { has_cardinal = yes }
+			remove_cardinal = yes
+		}
+		ai_chance = { factor = 90 }	
+	}
+	option = {
+		name = itr11.b	#Do not support or interfere with them.
+		set_country_flag = itr_reformsinprovinces
+		add_papal_influence = -10
+		ai_chance = { factor = 10 }	
+	}
+}
+
+country_event = {		#Protestants Rise
+	id = itr.12
+	title = "itr.12_title"
+	desc = "itr.12_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_flag = itr_protestant_way2	
+		num_of_religion = {
+			religion = protestant
+			value = 0.25
+		}
+	}
+	
+	option = {
+		name = itr.12a	#We'll be Protestant.
+		change_religion = protestant
+		clr_country_flag = itr_reformsinprovinces
+		set_country_flag = religion_reformed_pr	#missions
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+				name = "ink_009"
+				duration = 3652
+		}
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr.12b	#Catholic path
+		clr_country_flag = itr_reformsinprovinces
+		if = {
+			limit = {
+				has_country_modifier = "ink_008"
+			}
+			remove_country_modifier = "ink_008"
+		}
+		set_country_flag = itr_hereticsrise
+		ai_chance = { factor = 0 }	
+	}
+}
+
+country_event = {		#Reformed Path
+	id = itr.13
+	title = "itr.13_title"
+	desc = "itr.13_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_reformed_way
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr13.a	#We must support the Reformed idea.
+		add_country_modifier = {
+				name = "ink_006"
+				duration = 3200
+		}
+		set_country_flag = itr_boost_protestants
+		set_country_flag = itr_reformsinprovinces2
+		set_country_flag = itr_reformed_way2
+		add_years_of_income = -0.30
+		add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+		}
+		every_owned_province = {
+			limit = { has_cardinal = yes }
+			remove_cardinal = yes
+		}
+		ai_chance = { factor = 90 }	
+	}
+	option = {
+		name = itr13.b	#Do not support or interfere with them.
+		add_papal_influence = -10
+		set_country_flag = itr_reformsinprovinces2
+		ai_chance = { factor = 10 }	
+	}
+}
+
+country_event = {		#Reformed Rise
+	id = itr.14
+	title = "itr.14_title"
+	desc = "itr.14_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_flag = itr_protestant_way2	
+		num_of_religion = {
+			religion = reformed
+			value = 0.25
+		}
+	}
+	
+	option = {
+		name = itr14.a	#We'll be Protestant.
+		change_religion = reformed
+		clr_country_flag = itr_reformsinprovinces2
+		set_country_flag = religion_reformed_pr	#missions
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+				name = "ink_010"
+				duration = 3652
+		}
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr14.b	#Ignore them
+		clr_country_flag = itr_reformsinprovinces2
+		set_country_flag = itr_hereticsrise
+		if = {
+			limit = {
+				has_country_modifier = "ink_008"
+			}
+			remove_country_modifier = "ink_008"
+		}
+		ai_chance = { factor = 0 }	
+	}
+}
+
+country_event = {		#Iskenderian Path
+	id = itr.15
+	title = "itr.15_title"
+	desc = "itr.15_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_iskenderian_way
+			days = 30
+		}
+	}
+	
+	
+	option = {
+		name = itr15.a	#Alexander is right in his ideas. We need support him.
+		add_years_of_income = -0.5
+		317 = {
+			change_religion = phaedrusian
+			add_reform_center = phaedrusian
+		}
+		add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+		}
+		every_owned_province = {
+			limit = { has_cardinal = yes }
+			remove_cardinal = yes
+		}
+		set_country_flag = itr_protestant_way2
+		set_country_flag = itr_reformsinprovinces5
+		set_country_flag = itr_boost_protestants
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr15.b	#It's his own problem
+		set_country_flag = itr_reformsinprovinces5
+		add_papal_influence = -10
+		ai_chance = { factor = 0 }	
+	}
+}
+country_event = {		#Iskenderian Rise
+	id = itr.16
+	title = "itr.16_title"
+	desc = "itr.16_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_flag = itr_protestant_way2	
+		num_of_religion = {
+			religion = reformed
+			value = 0.25
+		}
+	}
+	
+	option = {
+		name = itr16.a	#We'll be Protestant.
+		change_religion = phaedrusian
+		set_country_flag = religion_reformed_isk	#missions
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes	
+		add_country_modifier = {
+				name = "ink_009"
+				duration = 3652
+		}
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr16.b	#Ignore them.
+		clr_country_flag = itr_reformsinprovinces5
+		set_country_flag = itr_hereticsrise
+		if = {
+			limit = {
+				has_country_modifier = "ink_008"
+			}
+			remove_country_modifier = "ink_008"
+		}
+		ai_chance = { factor = 0 }	
+	}
+}
+
+country_event = {		#Hussite Path
+	id = itr.17
+	title = "itr.17_title"
+	desc = "itr.17_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_hussite_way
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr17.a	#Alexander is right in his ideas. We need support him.
+		if = {
+			limit = {
+				BOH = {
+					religion = hussite
+				}
+			}
+			ITR = {
+				add_opinion = {
+					who = BOH
+					modifier = ink_10001
+				}
+			}
+			BOH = {
+				add_opinion = {
+					who = ITR
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way3
+			set_country_flag = itr_reformsinprovinces3
+		}
+		else = {
+			add_papal_influence = -10
+			set_country_flag = itr_protestant_way3
+			set_country_flag = itr_reformsinprovinces3
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+country_event = {		#Hussite Rise
+	id = itr.18
+	title = "itr.18_title"
+	desc = "itr.18_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_flag = itr_protestant_way3
+		num_of_religion = {
+			religion = hussite
+			value = 0.10
+		}
+	}
+	
+	option = {
+		name = itr18.a	#We'll be Protestant.
+		change_religion = hussite
+		set_country_flag = religion_reformed_hus	#missions
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+		clr_country_flag = itr_reformsinprovinces3
+		add_country_modifier = {
+				name = "ink_009"
+				duration = 3652
+		}
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr18.b	#Ignore them.
+		clr_country_flag = itr_reformsinprovinces
+		set_country_flag = itr_hereticsrise
+		if = {
+			limit = {
+				has_country_modifier = "ink_008"
+			}
+			remove_country_modifier = "ink_008"
+		}
+		ai_chance = { factor = 0 }	
+	}
+}
+
+country_event = {		#Anglican Path
+	id = itr.19
+	title = "itr.19_title"
+	desc = "itr.19_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_anglican_way
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr19.a	#Alexander is right in his ideas. We need support him.
+		if = { 
+			limit = {
+				ENG = {
+					religion = anglican
+				}
+			}
+			ITR = {
+				add_opinion = {
+					who = ENG
+					modifier = ink_10001
+				}
+			}
+			ENG = {
+				add_opinion = {
+					who = ITR
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way4
+		set_country_flag = itr_reformsinprovinces4
+		}
+		else_if = {
+			limit = {
+				GBR = {
+					religion = anglican
+				}
+			}
+			ITR = {
+				add_opinion = {
+					who = GBR
+					modifier = ink_10001
+				}
+			}
+			GBR = {
+				add_opinion = {
+					who = ITR
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way4
+		set_country_flag = itr_reformsinprovinces4
+		}
+		else = {
+			set_country_flag = itr_protestant_way4
+			set_country_flag = itr_reformsinprovinces4
+			add_papal_influence = -10
+		}		
+		ai_chance = { factor = 100 }	
+		
+	}
+}
+country_event = {		#Anglican Rise
+	id = itr.20
+	title = "itr.20_title"
+	desc = "itr.20_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+
+	trigger = {
+		has_country_flag = itr_protestant_way4
+		num_of_religion = {
+			religion = anglican
+			value = 0.10
+		}
+	}
+	
+	option = {
+		name = itr20.a	#We'll be Protestant.
+		change_religion = anglican
+		set_country_flag = religion_reformed_ang	#missions
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes	
+		clr_country_flag = itr_reformsinprovinces4
+		add_country_modifier = {
+				name = "ink_009"
+				duration = 3652
+		}
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+	option = {
+		name = itr20.b	#Ignore them.
+		clr_country_flag = itr_reformsinprovinces4
+		set_country_flag = itr_hereticsrise
+		if = {
+			limit = {
+				has_country_modifier = "ink_008"
+			}
+			remove_country_modifier = "ink_008"
+		}
+		ai_chance = { factor = 0 }	
+	}
+}
+
+
+
+### ANTI-REOFRM PATH ###
+country_event = {		#Second Luther
+	id = itr.7
+	title = "itr.7_title"
+	desc = "itr.7_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		had_country_flag = {
+			flag = itr_antireform1
+			days = 30
+		}
+	}
+	
+	option = {
+		name = itr7.a	#Immediately excommunicate him.
+		add_papal_influence = 10
+		set_country_flag = religion_reformed_ct
+		set_country_flag = itr_antireform2
+		set_country_flag = itr_cath_protestants1
+		ai_chance = { factor = 80 }	
+	}
+	option = {
+		name = itr7.b	#Ignore him.
+		add_reform_desire = 0.05
+		set_country_flag = itr_antireform3
+		set_country_flag = itr_cath_protestants2
+		ai_chance = { factor = 20 }	
+	}
+}
+
+country_event = {		#Heretics Rise
+	id = itr.8
+	title = "itr.8_title"
+	desc = "itr.8_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ITR
+		religion = catholic
+		OR = {
+			has_country_flag = itr_antireform2
+			has_country_flag = itr_antireform3
+			has_country_flag = itr_hereticsrise
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1.2
+			has_country_flag = itr_antireform3
+		}
+		modifier = {
+			factor = 2.4
+			has_country_flag = itr_antireform2
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = itr_hereticsrise
+		}
+	}
+	option = {
+		name = itr8.a	#Immediately excommunicate him.
+		add_country_modifier = {
+				name = "ink_011"
+				duration = -1
+		}
+		add_stability = -3
+		set_country_flag = itr_rebelsofiskender
+		set_country_flag = religion_reformed_ct	#missions
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_isk
+		swap_non_generic_missions = yes
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Rebels of Iskender
+	id = itr.9
+	title = "itr.9_title"
+	desc = "itr.9_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = catholic
+		has_country_flag = itr_rebelsofiskender
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {	#16 + 22,4 + 29,12 + 34,9 + 38,4. Max 38 monhts, min 10 monhts
+			factor = 1.6
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 1.4
+			religious_unity = 0.9
+		}
+		modifier = {
+			factor = 1.3
+			religious_unity = 0.8
+		}
+		modifier = {
+			factor = 1.2
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 1,1
+			religious_unity = 0.6
+		}
+	}
+	
+	option = {
+		name = itr9.a	#Immediately excommunicate him.
+		set_country_flag = itr_iskenders_rebel
+		add_country_modifier = {
+				name = "ink_012"
+				duration = 730
+		}
+		if = {
+			limit = {
+				OR = {
+					total_development = 600
+					has_country_flag = itr_hereticsrise
+					NOT = { religious_unity = 0.75 }
+				}
+			}
+			random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 30
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 20
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = balkan_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 30
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = balkan_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 20
+					}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					NOT = { total_development = 600 }
+					religious_unity = 0.75
+				}
+			}
+			random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 15
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = anatolia_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 10
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = balkan_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 15
+					}
+			}
+			random_owned_province = {
+					limit = {
+						region = balkan_region
+					}
+					spawn_rebels = {
+						type = protestant_rebels
+						size = 10
+					}
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Defeat of Iskender
+	id = itr.10
+	title = "itr.10_title"
+	desc = "itr.10_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = itr_iskenders_rebel
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+	}
+	option = {
+		name = itr10.a	#Immediately excommunicate him.
+		add_stability = 3
+		if = {
+			limit = {
+				has_country_modifier = "ink_011"
+			}
+			remove_country_modifier = "ink_011"
+		}
+		set_country_flag = heretics_were_defeated
+		ai_chance = { factor = 70 }	
+	}
+	option = {
+		name = itr10.b	#Immediately excommunicate him.
+		if = {
+			limit = {
+				has_country_modifier = "ink_011"
+			}
+			remove_country_modifier = "ink_011"
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = "ink_pr1"
+			}
+			remove_province_modifier = "ink_pr1"
+		}
+		set_country_flag = heretics_were_defeated
+		ai_chance = { factor = 30 }	
+	}
+}
+
+### Provnince Religion Change Events ###
+country_event = {		#Protestantism is spreading
+	id = itr.999
+	title = "itr.999_title"
+	desc = "itr.999_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_reformsinprovinces
+		NOT = { 
+				num_of_religion = {
+				religion = protestant
+				value = 0.60
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1 #5 months witf cf, 10 monhts
+			
+			religious_unity = 0.6
+		}
+		modifier = {
+			factor = 1 #3.5 months witf cf , 7 months
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 0.5	#2.5 months with cf, 5 months
+			religious_unity = 0.80
+		}
+		modifier = {
+			factor = 0.1 #15 days witf cf, 1 months
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_protestants
+		}
+	}
+	option = {
+		name = itr999.a	#
+		random_owned_province = {
+			limit = {
+				religion = catholic
+			}
+			change_religion = protestant
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Reformism is spreading
+	id = itr.998
+	title = "itr.998_title"
+	desc = "itr.998_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_reformsinprovinces2
+		NOT = { 
+				num_of_religion = {
+				religion = reformed
+				value = 0.40
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1 #5 months witf cf, 10 monhts
+			
+			religious_unity = 0.6
+		}
+		modifier = {
+			factor = 1 #3.5 months witf cf , 7 months
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 0.5	#2.5 months with cf, 5 months
+			religious_unity = 0.80
+		}
+		modifier = {
+			factor = 0.1 #15 days witf cf, 1 months
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_protestants
+		}
+	}
+	option = {
+		name = itr998.a	#
+		random_owned_province = {
+			limit = {
+				religion = catholic
+			}
+			change_religion = reformed
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Hussite is spreading
+	id = itr.997
+	title = "itr.997_title"
+	desc = "itr.997_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_reformsinprovinces3
+		NOT = { 
+				num_of_religion = {
+				religion = hussite
+				value = 0.40
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1 #5 months witf cf, 10 monhts
+			
+			religious_unity = 0.6
+		}
+		modifier = {
+			factor = 1 #3.5 months witf cf , 7 months
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 0.5	#2.5 months with cf, 5 months
+			religious_unity = 0.80
+		}
+		modifier = {
+			factor = 0.1 #15 days witf cf, 1 months
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_protestants
+		}
+	}
+	option = {
+		name = itr997.a	#
+		random_owned_province = {
+			limit = {
+				religion = catholic
+			}
+			change_religion = hussite
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Anglican is spreading
+	id = itr.996
+	title = "itr.996_title"
+	desc = "itr.996_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_reformsinprovinces4
+		NOT = { 
+				num_of_religion = {
+				religion = anglican
+				value = 0.40
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1 #5 months witf cf, 10 monhts
+			
+			religious_unity = 0.6
+		}
+		modifier = {
+			factor = 1 #3.5 months witf cf , 7 months
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 0.5	#2.5 months with cf, 5 months
+			religious_unity = 0.80
+		}
+		modifier = {
+			factor = 0.1 #15 days witf cf, 1 months
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_protestants
+		}
+	}
+	option = {
+		name = itr996.a	#
+		random_owned_province = { 
+			limit = {
+				religion = catholic
+			}
+			change_religion = anglican
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Iskenderian is spreading
+	id = itr.995
+	title = "itr.995_title"
+	desc = "itr.995_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_reformsinprovinces5
+		NOT = { 
+				num_of_religion = {
+				religion = phaedrusian
+				value = 0.40
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1 #5 months witf cf, 10 monhts
+			
+			religious_unity = 0.6
+		}
+		modifier = {
+			factor = 1 #3.5 months witf cf , 7 months
+			religious_unity = 0.7
+		}
+		modifier = {
+			factor = 0.5	#2.5 months with cf, 5 months
+			religious_unity = 0.80
+		}
+		modifier = {
+			factor = 0.1 #15 days witf cf, 1 months
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_protestants
+		}
+	}
+	option = {
+		name = itr995.a	#
+		random_owned_province = { 
+			limit = {
+				religion = catholic
+			}
+			change_religion = phaedrusian
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Protestantism is spreading- catholic path
+	id = itr.994
+	title = "itr.994_title"
+	desc = "itr.994_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		tag = ITR
+		OR = {
+			has_country_flag = itr_cath_protestants1
+			has_country_flag = itr_cath_protestants2
+		}
+		NOT = { 
+			num_of_religion = {
+				religion = protestant
+				value = 0.5
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 10
+		modifier = {
+			factor = 1
+			has_country_flag = itr_cath_protestants1
+		}
+		modifier = {
+			factor = 0.6
+			has_country_flag = itr_cath_protestants2	#boost
+		}
+	}
+	option = {
+		name = itr994.a	#
+		random_owned_area = {
+			limit = {
+				religion = catholic
+			}
+			change_religion = protestant
+			add_province_modifier = { 
+				name = "ink_pr2"
+				duration = 3652
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Gezgin Priests
+	id = itr.994
+	title = "itr.994_title"
+	desc = "itr.994_desc"
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		has_country_flag = itr_gezgin_priests
+	}
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 1
+			religion = catholic
+		}
+		modifier = {
+			factor = 2
+			religion = orthodox
+		}
+		modifier = {
+			factor = 2
+			religion = coptic
+		}
+		modifier = {
+			factor = 1.5
+			religion = hussite
+		}
+		modifier = {
+			factor = 1
+			religion = anglican
+		}
+		modifier = {
+			factor = 0.7
+			religion = reformed
+		}
+		modifier = {
+			factor = 0.7
+			religion = protestant
+		}
+		modifier = {
+			factor = 0.5
+			has_country_flag = itr_boost_gezgin_priests	#boost
+		}
+	}
+	option = {
+		name = itr994.a	#
+		random_owned_province = {
+			limit = {
+				religion_group = christian
+			}
+			change_religion = phaedrusian
+			add_province_modifier = {
+				name = "ink_pr2"
+				duration = 7305
+			}
+		}
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Gezgin Priests cancel
+	id = itr.993
+	title = "itr.993_title"
+	desc = "itr.993_desc"
+	picture = ORTHODOX_eventPicture
+	
+	
+
+	trigger = {
+		OR = {
+			any_country = {
+				war_with = ROOT
+				religion = phaedrusian
+			}
+			had_country_flag = {
+				flag = itr_gezgin_priests
+				days = 5478
+			}
+		}			
+	}
+	option = {
+		name = itr999.a	#
+		clr_country_flag = itr_gezgin_priests
+		clr_country_flag = itr_boost_gezgin_priests
+		ai_chance = { factor = 100 }	
+	}
+}

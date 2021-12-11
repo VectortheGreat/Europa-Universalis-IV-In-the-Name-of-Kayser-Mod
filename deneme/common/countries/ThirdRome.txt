@@ -1,0 +1,101 @@
+#Third Rome
+
+graphical_culture = easterngfx
+
+color = { 94 0 45 }
+
+historical_idea_groups = {
+	maritime_ideas
+	religious_ideas
+	defensive_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Iskender #7" = 10
+	"Kutay #5" = 10
+	"Gökhan #10" = 10
+	"Saltuk #4" = 10
+	"Selçuk #1" = 10
+	"Tugrul #4" = 10
+	"Alp Arslan #0" = 10
+	"Alptigin #2" = 10
+	"Aydogan #9" = 10
+	"Çagri #0" = 10
+	"Berkan #0" = 10
+	"Demir #0" = 10
+	"Dogukan #2" = 10
+	"Ertugrul #2" = 10
+	"Gunduz #6" = 10
+	"Baytas #1" = 5
+	"Korkut #2" = 5
+	"Kutlug #1" = 5
+	"Mengucek #3" = 5
+	"Meliksah #2"= 5
+	"Sökmen #2" = 5
+	"Sencer #3" = 5
+	"Umur #1" = 5
+	"Yakut #3" = 5
+	"Yinal #1" = 5
+	"Ayaz #3" = 15
+	"Alp Yurek #0" = 5
+	
+	"Bensu #1" = -1
+	"Eylül #1" = -1
+	"Ceylan #1" = -1
+	"Ece #1" = -1
+	"Nagihan #1" = -1
+	"Gökçe #1" = -1
+	"Gözde #1" = -1
+	"Hazal #1" = -1
+	"Sevilay #1" = -1
+	"Çiçek #1" = -1
+	"Çilen #1" = -1
+	"Dilek #1" = -1
+	"Yildiz #1" = -1
+}
+
+leader_names = {
+    Çagri Çaka "Alp Arslan" "Alp Yurek" Alptigin Artuk Ayaz 
+	Aydin Aydogan Aydogdu Aytekin Böru Bahadir Balaban Basbuga Batuhan Baturay Baybars 
+	Baytas Belek Berkan Berkiyaruk Bozan Bugra Burak Demir Dogan Dogukan Dukak Erdem Ertekin Ertugrul Gunduz
+	Iskender Alexander Kurboga Kara Karatay Kaya Kaytun 
+	Kiliç Korkut Kutalmis Kutay Kutlug Meliksah Mengucek
+	Söbuk Sökmen Sönmez Saltuk 
+	Saruca Savtekin Selçuk Sencer Tanrivermis Tekin Timurtas Togay 
+	Togtekin Toktamis Tolun Toruntay Tugrul Tunga Turgut Turhan Tutus Uluç Umur Yakut Yaman Yinal 
+}
+
+ship_names = {
+    Tengri "Kayra Han" Ülgen "Ak Ana" Erlik "Mergen Tanri" Kýzagan "Yayik Han" "Umay Ana" Karlik Suyla Utkuuçi Ayizit "Oghuz Khagan"
+	"Ay Han" "Dag Han" "Deniz Han" "Gök Han" "Gün Han" "Yildiz Han" "Ürüng Ayig Toyon" "Su Ýyesi" "Kübey Hatun" "Semrük Bürküt"
+	"Kartal Ana" Asena "Al Basti" "Alp Er Tunga" "Ötüken" "Od Ana" "Sigun Geyik" "Gök Kurt" "Bügü Tekin"
+}
+
+army_names = {
+    "Anadolu Ordusu" "Balkan Ordusu" "Mîsîr Ordusu" "Kîrîm Ordusu" "$PROVINCE$ Ordusu"
+}
+
+fleet_names = {
+    "Karadeniz Donanmasî" "Ege Donanmasî" "Akdeniz Donanmasî" "Kîzîldeniz Donanmasî" "$PROVINCE$ Donanmasî"
+}

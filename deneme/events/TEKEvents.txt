@@ -1,0 +1,61 @@
+########################################
+# TEK Events                           #
+########################################
+
+namespace = ttest
+normal_or_historical_nations = yes
+
+country_event = {		#Colonist	
+	id = ttest.1
+	title = "ttest.1_title"
+	desc = "ttest.1_desc"
+	picture = FLAGSHIP_CAPTURED_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ttest1.a
+		add_country_modifier = {
+				name = "ink_140"
+				duration = 21915
+		}
+	}
+	option = {
+		name = ttest1.b
+		add_country_modifier = {
+				name = "ink_141"
+				duration = 27393
+		}
+	}
+	option = {
+		name = ttest1.c
+		add_prestige = 15
+	}
+}
+
+country_event = {		#Holy Order
+	id = ttest.2
+	title = ttest.2_title
+	desc = ttest.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	goto = 151
+	
+	mean_time_to_happen = {
+		months = 20000
+	}
+	
+	option = {
+		goto = 151
+		name = holy_order1
+		add_treasury = -100
+		custom_tooltip = holy_order_tt
+		151 = {
+			add_province_triggered_modifier = holy_order
+		}
+	}
+}

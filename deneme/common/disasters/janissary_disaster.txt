@@ -1,0 +1,79 @@
+janissary_disaster = {
+	potential = {
+		OR = {
+			tag = RMO
+			tag = TUR
+			tag = ITR
+			tag = TEK
+		}
+		OR = {
+			religion = catholic
+			religion = orthodox
+			religion = coptic
+		}
+		normal_or_historical_nations = yes
+
+	}
+	
+	can_start = {
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			num_of_janissaries = 1
+		}
+	}
+	
+	can_stop = {
+		NOT = { num_of_janissaries = 1 }
+	}
+	
+	progress = {
+		modifier = {
+			factor = 10
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				janissary_percentage = 0.3
+				else = { always = no }
+			}
+		}
+		modifier = {
+			factor = 8
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				janissary_percentage = 0.2
+				else = { always = no }
+			}
+		}
+		modifier = {
+			factor = 6
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				janissary_percentage = 0.1
+				else = { always = no }
+			}
+		}
+		
+
+	}
+	
+	can_end = {
+				NOT = { num_of_janissaries = 1 }
+	}
+	
+	modifier = {
+		infantry_power = -0.10
+		discipline = -0.05
+		land_morale = -0.10
+		global_unrest = 5
+	}
+	
+	on_start = mitaevents.1
+	on_end = mitaevents.2
+	
+	on_monthly = {
+		random_events = {
+			100 = 0
+			5 = flavor_bur.9
+		}		
+	}
+	
+}

@@ -1,0 +1,164 @@
+namespace = deneme
+normal_or_historical_nations = yes
+
+country_event = {
+	id = deneme.1
+	title = "deneme.1_title"
+	desc = "deneme.1_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = deneme1.a
+		change_religion = phaedrusian
+		set_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes	
+	}
+	option = {
+		name = deneme1.b
+		ai_chance = { factor = 25 }
+		change_religion = protestant
+		set_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = deneme1.c
+		ai_chance = { factor = 25 }
+		change_religion = reformed
+		set_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = deneme1.d
+		ai_chance = { factor = 25 }
+		change_religion = hussite
+		set_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = deneme1.e
+		ai_chance = { factor = 25 }
+		change_religion = anglican
+		set_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes	
+	}
+	option = {
+		name = deneme1.f
+		set_country_flag = religion_reformed_ct
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_isk
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = {
+	id = deneme.3
+	title = "deneme.3_title"
+	desc = "deneme.3_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger ={
+		tag = ITR
+		has_game_started = yes
+	}
+	
+	option = {
+		name = deneme3.a
+		ROOT = {
+					every_owned_province = { 
+						change_religion = ROOT
+					}	
+		}
+	}
+	option = {
+		name = deneme3.b
+		country_event = {
+				id = ideagroups.1
+			}
+	}
+	option = {
+		name = deneme3.c
+		every_country = {
+			change_religion = ROOT
+		}
+		every_country = {
+			every_owned_province = { 
+				change_religion = ROOT
+			}	
+		}
+	}
+	option = {
+		name = deneme3.d
+		every_country = {
+			country_event = { id = deneme.5 }
+		}
+	}
+}
+
+country_event = {
+	id = deneme.4
+	title = "deneme.4_title"
+	desc = "deneme.4_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#itr_religion_mission_hus5
+		name = deneme4.a
+		every_country = { 
+				limit = { 
+					has_opinion = {
+						who = ITR
+						value = 150
+					}
+					is_part_of_hre = yes
+				}
+				change_religion = ROOT
+			}
+	}
+}
+
+country_event = {
+	id = deneme.5
+	title = "deneme.5_title"
+	desc = "deneme.5_desc"
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#itr_religion_mission_hus5
+		name = deneme5.a
+		ITR = {
+			inherit = ROOT
+		}
+	}
+}

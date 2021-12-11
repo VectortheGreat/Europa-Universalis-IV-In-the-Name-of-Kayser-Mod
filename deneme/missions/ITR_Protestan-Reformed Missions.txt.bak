@@ -1,0 +1,202 @@
+
+itr_religion_missions_pr = {		#Protestant/Reformed Missions
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ITR
+		has_country_flag = religion_reformed_pr
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	itr_religion_mission_pr1 = {		#Fate of Heretics
+		icon = protestants
+		required_missions = { }
+		position = 7
+		trigger = {
+			is_defender_of_faith = yes
+			stability = 2
+			religious_unity = 0.75
+		}
+		effect = {
+			country_event = {
+				id = itest.6
+			}
+		}
+	}
+	itr_religion_mission_pr2 = {		#Reformation in the HRE
+		icon = italian_heretics
+		required_missions = { itr_religion_mission_pr1 }
+		position = 8
+		provinces_to_highlight = {
+			NOT = {
+				ROOT = {
+					calc_true_if = {
+						all_elector = {
+							has_opinion = { who = ROOT value = 200 }
+						}
+						amount = 3
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					calc_true_if = {
+						all_elector = {
+							has_opinion = {
+								who = ROOT
+								value = 200
+							}
+						}
+						amount = 3
+					}
+					calc_true_if = {
+						all_elector = {
+							OR = {
+								religion = protestant
+								religion = reformed
+							}
+						}
+						amount = 3
+					}
+				}
+				NOT = { hre_size = 1 }
+			}	
+		}
+		effect = {
+			add_country_modifier = {
+					name = "ink_015"
+					duration = 3652
+			}
+			country_event = {
+				id = itest.7
+			}
+		}
+	}
+	
+	itr_religion_mission_pr3 = {		#HRE religion
+		icon = protect_pope
+		required_missions = { itr_religion_mission_pr2 }
+		position = 9
+		trigger = {
+			OR = {
+				OR = {
+					has_country_flag = religious_league_war_on_winning_side
+					hre_religion = protestant
+					hre_religion = reformed
+				}
+				NOT = { hre_size = 1 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_emperor = yes
+				}
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+						NOT = { total_development = 100 }
+						NOT = { tag = ITR }
+						NOT = { is_emperor = yes }
+					}
+					country_event = {
+						id = itest.5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						NOT  = { is_emperor = yes }
+						AND = {
+								NOT = { hre_size = 1 }
+								NOT = { exists = HLR }
+						}
+						has_country_flag = religious_league_war_on_winning_side
+					}
+				}
+				add_dip_power = 300
+			}
+			else = {
+				add_dip_power = 200
+			}
+		}
+	}
+	
+	itr_religion_mission_pr4 = {		#Reform Hegemon
+		icon = catholicsm
+		required_missions = {  }
+		position = 10
+		trigger = {
+				any_country = {
+					OR = {
+						religion = protestant
+						religion = reformed
+					}
+					total_development = 2000
+					is_hegemon = yes
+				}
+				NOT = {
+					calc_true_if = {
+						all_country = {
+							religion = catholic
+						}
+						amount = 50
+					}
+				}
+		}
+		effect = {
+			every_country = {
+				limit = {
+					religion = catholic
+					continent = europe
+				}
+				country_event = {
+					id = itest.9
+				}
+			}
+		}
+	}
+	
+	itr_religion_mission_pr5 = {		#One Christian Sect
+		icon = crush_revolution
+		required_missions = { itr_religion_mission_pr4 }
+		position = 11
+		provinces_to_highlight = {
+			all_country = {
+					capital_scope = {
+							continent = europe
+					}
+					NOT = { religion = ROOT }	
+			}
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					OR = {
+						religion = orthodox
+						religion = catholic
+						religion = hussite
+						religion = coptic
+						religion = anglican
+					}
+					capital_scope = {
+						continent = europe
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_103"
+				duration = -1
+			}
+		}
+	}
+}

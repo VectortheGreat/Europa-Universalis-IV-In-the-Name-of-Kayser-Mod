@@ -1,0 +1,77 @@
+ink_000 = {
+	local_missionary_strength = 0.10
+}
+
+ink_001 = {		#+
+	local_unrest = -4
+	local_friendly_movement_speed = 0.2
+	min_local_autonomy = 60
+	supply_limit_modifier = -0.25
+}
+ink_002 = {		#-
+	local_unrest = 5
+	local_friendly_movement_speed = -0.2
+	supply_limit_modifier = +0.25
+	local_manpower_modifier = 0.35
+	
+}
+
+ink_003 = {
+	global_tax_modifier = 0.15
+}
+
+ink_004 = {
+	local_unrest = -2
+}
+
+ink_005 = {
+	global_missionary_strength = 0.03
+}
+
+ink_006 = {
+	unrest_catholic_provinces  = 2
+}
+
+ink_007 = {
+	tolerance_own = 2
+	tolerance_heretic = -2
+	global_religious_conversion_resistance = 0.20
+}
+ink_008 = {	#banned from curia
+	papal_influence = -10
+}
+ink_009 = {	#converted to protestant
+	church_power_modifier = 0.15
+}
+ink_010 = { #converted reformed
+	monthly_fervor_increase = 0.3
+}
+ink_011 = {	#Heretics Rise
+	global_unrest = 5
+}
+ink_012 = {	#Papal blessing
+	land_morale = 0.10
+}
+ink_013 = {	#Crush Heretics
+	global_heretic_missionary_strength = 0.05
+	tolerance_heretic = -3
+	land_morale = 0.05
+}
+ink_014 = {	#Tolerance Heretics
+	tolerance_heretic = 3
+	global_heretic_missionary_strength = -0.05
+	religious_unity = 0.25
+}
+ink_015 = {	#Reformation in the Hre
+	diplomatic_reputation = 2
+}
+ink_016 = {	#We have savior
+	land_morale = 0.10
+	land_maintenance_modifier = -0.10
+}
+ink_pr1 = {	#hüdavengidar
+	local_missionary_strength = 0.10
+}
+ink_pr2 = {	#reform zeal
+	local_missionary_strength = -1
+}

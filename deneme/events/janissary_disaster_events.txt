@@ -1,0 +1,32 @@
+########################################
+# Muslims in the Army Events             #
+########################################
+
+namespace = mitaevents
+normal_or_historical_nations = yes
+
+country_event = {
+	id = mitaevents.1
+	title = mitaevents.1_title
+	desc = mitaevents.1_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mitaevents.1a
+	}
+}
+
+country_event = {
+	id = mitaevents.2
+	title = mitaevents.2_title
+	desc = mitaevents.2_desc
+	picture = REVOLUTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mitaevents.2a
+	}
+}

@@ -1,0 +1,12 @@
+ink_10000 = {
+	opinion = 75
+	yearly_decay = 2
+}
+ink_10001 = {
+	opinion = 50
+	yearly_decay = 1
+}
+ink_10002 = {
+	opinion = 50
+	yearly_decay = 1
+}
