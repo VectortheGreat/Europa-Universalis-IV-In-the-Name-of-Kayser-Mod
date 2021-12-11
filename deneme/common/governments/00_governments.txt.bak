@@ -151,6 +151,7 @@ monarchy = {
 		mossi_federal_kingdom_legacy
 		turkish_government_legacy
 		magna_turcorum_legacy
+		british_autonomous_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -549,6 +550,7 @@ theocracy = {
 		monastic_order_government
 		holy_state_legacy
 		the_great_temple_government
+		royal_order_government
 	}
 	reform_levels = {
 		theocratic_leadership = {

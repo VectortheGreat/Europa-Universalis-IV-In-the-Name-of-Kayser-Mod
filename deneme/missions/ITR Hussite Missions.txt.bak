@@ -40,8 +40,8 @@ itr_religion_missions_hus = {		#Hussite Missions
 					exists = BOH
 				}
 				add_country_modifier = {
-					name = "ink_149"
-					duration = -1
+					name = "ink_150"
+					duration = 3652
 				}
 			}
 			else = {
@@ -50,7 +50,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 		}
 	}
 	itr_religion_mission_hus2 = {		#Bohemian Crown
-		icon = italian_heretics
+		icon = mission_empire
 		required_missions = { itr_religion_mission_hus1 }
 		position = 8
 		provinces_to_highlight = {
@@ -191,7 +191,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 	}
 	
 	itr_religion_mission_hus5 = {		#One Christian Sect
-		icon = crush_revolution
+		icon = catholicsm
 		required_missions = { itr_religion_mission_hus4 }
 		position = 11
 		provinces_to_highlight = {

@@ -31,6 +31,7 @@ country_decisions = {
 				add_historical_rival = MAM
 				add_historical_friend = KNI
 				add_historical_friend = CYP
+				change_graphical_culture = westerngfx
 			}
 			151 = {
 				move_capital_effect = yes

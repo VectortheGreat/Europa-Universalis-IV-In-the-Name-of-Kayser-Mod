@@ -11,7 +11,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 	has_country_shield = yes
 	
 	itr_religion_mission_ang1 = {		#The Fist Anglican Church in Capital
-		icon = protestants
+		icon = universities
 		required_missions = { }
 		position = 7
 		trigger = {
@@ -19,6 +19,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 			stability = 3
 			religious_unity = 0.90
 			treasury = 1000
+			is_core = 148
 		}
 		effect = {
 			country_event = {	#It adds a tier 2 monument
@@ -318,7 +319,8 @@ itr_religion_missions_ang = {		#Anglican Missions
 			all_country = {
 				NOT = { colony = 1 }
 			}
-			current_age = age_of_absolutism
+			NOT = { current_age = age_of_discovery }
+			NOT = { current_age = age_of_reformation }
 		}
 		effect = {
 			add_country_modifier = {

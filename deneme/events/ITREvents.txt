@@ -16,6 +16,7 @@ country_event = {		#Help from pope
 	option = {
 		name = itest1.a
 		add_treasury = 300
+		set_country_flag = itr_grand_mercenary_army
 		add_manpower = 3
 		hidden_effect = {
 				add_opinion = {
@@ -343,8 +344,26 @@ country_event = {		#Anglican Church
 	
 	option = {
 		name = itest12.a
-		capital_scope = {
-			add_building = temple
+		add_great_project = {
+			type = church_tessalonica
+			instant = no 
+		}
+	}
+}
+
+country_event = {		#St.Alexander Cathedral
+	id = itest.12
+	title = "itest.12_title"
+	desc = "itest.12_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest12.a
+		add_great_project = {
+			type = saint_alexander
+			instant = yes 
 		}
 	}
 }
@@ -411,7 +430,7 @@ country_event = {		#New British Government
 		name = itest15.a
 		highlight = yes
 		GBR = {
-			change_government = "dictatorship"
+			change_government = british_autonomous_state
 			set_country_flag = itr_british_government
 			set_country_flag = colonial_agreement
 			every_subject_country = {
@@ -475,10 +494,7 @@ country_event = {		#Colonial Agreement Core Provinces
 	
 	trigger = {
 		tag = GBR
-		had_country_flag = {
-			flag = colonial_agreement
-			days = 30
-		}
+		has_country_flag = { flag = colonial_agreement }
 		any_province = {
 			AND = {
 				OR = {
@@ -489,6 +505,9 @@ country_event = {		#Colonial Agreement Core Provinces
 				is_city = yes
 				is_core = ROOT
 			}
+		}
+		mean_time_to_happen = {
+			months = 1
 		}
 	}
 	
@@ -524,10 +543,7 @@ country_event = {		#Colonial Agreement Non Core Provinces
 	
 	trigger = {
 		tag = GBR
-		had_country_flag = {
-			flag = colonial_agreement
-			days = 30
-		}
+		has_country_flag = { flag = colonial_agreement }
 		any_province = {
 			AND = {
 				OR = {
@@ -540,6 +556,10 @@ country_event = {		#Colonial Agreement Non Core Provinces
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+			months = 1
+		}
 	
 	option = {
 		name = itest17777.a
@@ -573,6 +593,14 @@ country_event = {		#Colonial Agreement for GBR cancel
 		tag = GBR
 		has_country_flag = colonial_agreement
 		NOT = { is_subject_of = ITR }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			has_country_flag = colonial_agreement
+		}
 	}
 	
 	immediate = {
@@ -652,10 +680,7 @@ country_event = {		#Papal State Agreement Non Core provinces
 	
 	trigger = {
 		tag = ITR
-		had_country_flag = {
-			flag = itr_papal_agreement
-			days = 30
-		}
+		has_country_flag = colonial_agreement
 		any_owned_province = {
 			AND = {
 				OR = {
@@ -672,6 +697,10 @@ country_event = {		#Papal State Agreement Non Core provinces
 				NOT = { is_core = ROOT }
 			}
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
 	}
 	
 	option = {
@@ -716,6 +745,14 @@ country_event = {		#Papal State Agreement cancel
 		}
 	}
 	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			has_country_flag = itr_papal_agreement
+		}
+	}
+	
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = itr_papal_agreement
@@ -738,10 +775,7 @@ country_event = {		#Papal State Agreement Core provinces
 	
 	trigger = {
 		tag = ITR
-		had_country_flag = {
-			flag = itr_papal_agreement
-			days = 30
-		}
+		has_country_flag = colonial_agreement
 		any_owned_province = {
 			AND = {
 				OR = {
@@ -758,6 +792,10 @@ country_event = {		#Papal State Agreement Core provinces
 				is_core = ROOT
 			}
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
 	}
 	
 	option = {	#problem
@@ -787,5 +825,20 @@ country_event = {		#Papal State Agreement Core provinces
 		ai_chance = {
 			factor = 100
 		}
+	}
+}
+
+
+country_event = {
+	id = itest.22
+	title = "itest.22_title"
+	desc = "itest.22_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest1.a
+		set_country_flag = itr_grand_mercenary_army
 	}
 }

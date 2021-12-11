@@ -1312,7 +1312,7 @@ country_event = {		#Gezgin Priests
 		has_country_flag = itr_gezgin_priests
 	}
 	mean_time_to_happen = {
-		months = 20
+		months = 10
 		modifier = {
 			factor = 1
 			religion = catholic

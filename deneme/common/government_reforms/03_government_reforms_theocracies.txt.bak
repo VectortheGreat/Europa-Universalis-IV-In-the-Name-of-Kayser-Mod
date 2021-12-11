@@ -997,5 +997,6 @@ royal_order_reform = {
 	nation_designer_cost = 10
 	icon = "monks"
 	allow_normal_conversion = no
+	legacy_equivalent = royal_order_government
 	monastic = yes
 }

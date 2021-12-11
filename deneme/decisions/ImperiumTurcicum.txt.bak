@@ -27,7 +27,6 @@ country_decisions = {
 				add_historical_rival = HAB
 				add_historical_rival = VEN
 				add_historical_rival = MAM
-				change_graphical_culture = westerngfx
 			}
 			change_technology_group = western
 			change_unit_type = western

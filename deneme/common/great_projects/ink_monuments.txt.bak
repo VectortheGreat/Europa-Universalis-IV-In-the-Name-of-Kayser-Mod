@@ -1760,7 +1760,7 @@ palace_konstantinopolis = {
 
 		country_modifiers = {
 			global_tax_modifier = 0.05
-			min_autonomy_in_territories = -0.05
+			min_autonomy_in_territories = 0.05
 		}
 
 		on_upgraded = {
@@ -1785,7 +1785,7 @@ palace_konstantinopolis = {
 
 		country_modifiers = {
 			global_tax_modifier = 0.15
-			min_autonomy_in_territories = -0.1
+			min_autonomy_in_territories = 0.1
 		}
 
 		on_upgraded = {
@@ -1810,7 +1810,7 @@ palace_konstantinopolis = {
 
 		country_modifiers = {
 			global_tax_modifier = 0.25
-			min_autonomy_in_territories = -0.2
+			min_autonomy_in_territories = 0.2
 		}
 
 		on_upgraded = {

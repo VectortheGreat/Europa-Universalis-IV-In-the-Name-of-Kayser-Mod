@@ -52,7 +52,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 	}
 	
 	itr_religion_mission_ct3 = {		#Dominate Papacy
-		icon = protect_pope
+		icon = dominatepapacy
 		required_missions = { itr_religion_mission_ct2 }
 		position = 9
 		provinces_to_highlight = {
@@ -100,13 +100,14 @@ itr_religion_missions_ct = {		#Catholic Missions
 	}
 	
 	itr_religion_mission_ct4 = {		#HRE Religion
-		icon = italian_heretics
+		icon = inkhre
 		required_missions = { }
 		position = 10
 		trigger = {
 			OR = {
 				OR = {
 					hre_religion = catholic
+					has_country_flag = religious_league_war_on_winning_side
 					is_year = 1635
 				}
 				NOT = { hre_size = 1 }

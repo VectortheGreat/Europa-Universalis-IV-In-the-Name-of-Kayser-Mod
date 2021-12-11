@@ -2198,6 +2198,7 @@ british_autonomous_state = {
 	modifiers = {
 		global_trade_power = 0.2	
 		development_cost = -0.2
+		
 	}
 	
 	conditional = {

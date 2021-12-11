@@ -157,11 +157,6 @@ spriteTypes = {
 #### Generic Mission Icons ####
 	
 	spriteType = {
-		name = "inkalexander"
-		texturefile = "gfx//interface//missions//inkalexander.dds"
-	}
-	
-	spriteType = {
 		name = "dominatepapacy"
 		texturefile = "gfx//interface//missions//dominatepapacy.dds"
 	}

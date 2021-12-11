@@ -101,7 +101,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 					limit = {
 						is_part_of_hre = yes
 						NOT = { religion = ROOT }
-						NOT = { total_development = 100 }
+						NOT = { total_development = 200 }
 						NOT = { tag = ITR }
 						NOT = { is_emperor = yes }
 					}
@@ -130,7 +130,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 	}
 	
 	itr_religion_mission_pr4 = {		#Reform Hegemon
-		icon = catholicsm
+		icon = italian_heretics
 		required_missions = {  }
 		position = 10
 		trigger = {

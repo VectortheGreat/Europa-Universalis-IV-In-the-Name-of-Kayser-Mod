@@ -64,7 +64,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	}
 	
 	itr_religion_mission_isk4 = {		#Alexander's Legacy
-		icon = catholicsm
+		icon = assimilate_natives
 		required_missions = { itr_religion_mission_isk3 }
 		position = 10
 		trigger = {
@@ -84,15 +84,18 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	}
 	
 	itr_religion_mission_isk5 = {		#St. Alexander Cathedral
-		icon = crush_revolution
+		icon = universities
 		required_missions = { }
 		position = 11
 		trigger = {
 			dip_tech = 17
 			treasury = 2500
+			is_core = 317
 		}
 		effect = {
-			#Tier 3 Monument inşa edilecek.
+			country_event = {	#It adds a tier 2 monument
+				id = itest.12
+			}
 		}
 	}
 }

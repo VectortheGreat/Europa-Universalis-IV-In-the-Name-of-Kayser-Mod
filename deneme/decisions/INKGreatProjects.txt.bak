@@ -1,0 +1,140 @@
+country_decisions = {
+
+	ink_main_decision = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_0
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = ink_great_projects_1
+			clr_country_flag = ink_great_projects_0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_hide_decision = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			NOT = { has_country_flag = ink_gp_notifications_hide2 }
+		}
+		allow = {
+			
+		}
+		effect = {
+			set_country_flag = ink_gp_notifications_hide
+			set_country_flag = ink_gp_notifications_hide2
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_open_decision = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			has_country_flag = ink_gp_notifications_hide
+		}
+		allow = {
+			
+		}
+		effect = {
+			clr_country_flag = ink_gp_notifications_hide
+			clr_country_flag = ink_gp_notifications_hide2
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_port_of_athens = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			NOT = { has_country_flag = ink_gp_notifications_hide }
+		}
+		allow = {
+			treasury = 1000
+			is_core = 146
+		}
+		effect = {
+			set_country_flag = ink_port_of_athens_gp
+			add_great_project = {
+				type = port_athens
+				instant = yes 
+			}
+			add_treasury = -1000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_great_market = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			NOT = { has_country_flag = ink_gp_notifications_hide }
+		}
+		allow = {
+			treasury = 1000
+			is_core = 151
+		}
+		effect = {
+			set_country_flag = ink_great_market_gp
+			add_great_project = {
+				type = great_market
+				instant = yes 
+			}
+			add_treasury = -1000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_palace_konstantinopolis = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			NOT = { has_country_flag = ink_gp_notifications_hide }
+		}
+		allow = {
+			treasury = 1000
+			is_core = 151
+		}
+		effect = {
+			set_country_flag = ink_palace_konstantinopolis_gp
+			add_great_project = {
+				type = palace_konstantinopolis
+				instant = yes 
+			}
+			add_treasury = -1000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ink_council_adrianople = {
+		major = yes
+		potential = {
+			has_country_flag = ink_great_projects_1
+			NOT = { has_country_flag = ink_gp_notifications_hide }
+		}
+		allow = {
+			treasury = 1000
+			is_core = 149
+		}
+		effect = {
+			set_country_flag = ink_council_adrianople_gp
+			add_great_project = {
+				type = council_adrianople
+				instant = yes 
+			}
+			add_treasury = -1000
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
