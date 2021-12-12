@@ -51,12 +51,10 @@ country_event = {
 	
 	option = { # Convert to Hussite
 		ai_chance = { 
-			factor = 70
+			factor = 60
 				modifier = {
-					factor = 0.4
-					NOT = {
-						exists = ITR
-					}
+					factor = 1.66666667
+					exists = ITR
 				}
 		}
 		name = flavor_boh.1.a
@@ -103,13 +101,7 @@ country_event = {
 	
 	option = { # Hussite King, Catholic nation - tolerance option
 		ai_chance = { 
-			factor = 30
-				modifier = {
-					factor = 2.4
-					NOT = {
-						exists = ITR
-					}
-				}
+			factor = 40
 		}
 		set_country_flag = hussite_regency_mission_flag
 		name = flavor_boh.1.c

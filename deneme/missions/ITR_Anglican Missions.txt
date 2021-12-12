@@ -131,6 +131,26 @@ itr_religion_missions_ang = {		#Anglican Missions
 				}
 				add_dip_power = 100
 			}
+			if = {
+				ENG = {
+					limit = {
+						exists = ENG
+						NOT = { religion = anglican }
+					}
+					country_event = {
+						id = itest.13
+					}
+				}
+				GBR = {
+					limit = {
+						exists = GBR
+						NOT = { religion = anglican }
+					}
+					country_event = {
+						id = itest.13
+					}
+				}
+			}
 		}
 	}
 	

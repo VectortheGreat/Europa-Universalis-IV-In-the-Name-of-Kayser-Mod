@@ -1228,8 +1228,8 @@ itr_military_missions = {
 		}
 	}
 	
-	itr_military_mission_3 = {		#Urban's Cannons
-		icon = urbans_cannon
+	itr_military_mission_3 = {		#The New Order
+		icon = pro_army
 		required_missions = { itr_military_mission_2 }
 		position = 3
 		provinces_to_highlight = {
@@ -1267,12 +1267,8 @@ itr_military_missions = {
 			mil_tech = 8
 		}
 		effect = {
-			add_country_modifier = {
-				name = "ink_6"
-				duration = 5478
-			}
 			country_event = {
-				id = 
+				id = itest.22
 			}
 		}
 	}
@@ -1914,6 +1910,19 @@ itr_economic_missions = {
 	}
 	
 	itr_economic_mission_10 = {		#Great Projets
+		icon = universities
+		required_missions = {  }
+		position = 10
+		trigger = {
+			dip_tech = 10
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = ink_great_projects_0
+		}
+	}
+	
+	itr_economic_mission_11 = {		#Great Projets
 		icon = universities
 		required_missions = {  }
 		position = 10

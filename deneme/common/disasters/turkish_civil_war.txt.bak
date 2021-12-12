@@ -11,8 +11,10 @@ turkish_civil_war = {
 			religion = orthodox
 			religion = coptic
 		}
+		NOT = { ai = yes }
 		normal_or_historical_nations = yes
 		current_age = age_of_discovery
+		NOT = { has_country_flag = end_of_turkish_civil_war }
 
 	}
 	

@@ -1,0 +1,20 @@
+########################################
+# ITR Mission Events                   #
+########################################
+
+namespace = itr2
+normal_or_historical_nations = yes
+
+country_event = {
+	id = itr2.1
+	title = "itr2.1_title"
+	desc = "itr2.1_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itr2.a
+		set_country_flag = itr_grand_mercenary_army
+	}
+}

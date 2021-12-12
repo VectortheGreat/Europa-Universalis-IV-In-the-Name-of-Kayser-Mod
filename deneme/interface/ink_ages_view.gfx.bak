@@ -1,0 +1,82 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "ink_age_itr_1"
+		texturefile = "gfx/interface/ages/ink_age_itr_1.dds"
+	}
+	
+	spriteType = {
+		name = "ink_age_itr_2"
+		texturefile = "gfx/interface/ages/ink_age_itr_2.dds"
+	}	
+
+	spriteType = {
+		name = "ink_age_itr_3"
+		texturefile = "gfx/interface/ages/ink_age_itr_3.dds"
+	}		
+	
+	spriteType = {
+		name = "ink_age_itr_4"
+		texturefile = "gfx/interface/ages/ink_age_itr_4.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_rmo_1"
+		texturefile = "gfx/interface/ages/ink_age_rmo_1.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_rmo_2"
+		texturefile = "gfx/interface/ages/ink_age_rmo_2.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_rmo_3"
+		texturefile = "gfx/interface/ages/ink_age_rmo_3.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_rmo_4"
+		texturefile = "gfx/interface/ages/ink_age_rmo_4.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_tek_1"
+		texturefile = "gfx/interface/ages/ink_age_tek_1.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_tek_2"
+		texturefile = "gfx/interface/ages/ink_age_tek_2.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_tek_3"
+		texturefile = "gfx/interface/ages/ink_age_tek_3.dds"
+	}
+
+	spriteType = {
+		name = "ink_age_tek_4"
+		texturefile = "gfx/interface/ages/ink_age_tek_4.dds"
+	}
+	
+	spriteType = {
+		name = "ink_ai_1"
+		texturefile = "gfx/interface/ages/ink_ai_1.dds"
+	}
+	
+	spriteType = {
+		name = "ink_ai_2"
+		texturefile = "gfx/interface/ages/ink_ai_2.dds"
+	}
+	
+	spriteType = {
+		name = "ink_ai_3"
+		texturefile = "gfx/interface/ages/ink_ai_3.dds"
+	}
+	
+	spriteType = {
+		name = "ink_ai_4"
+		texturefile = "gfx/interface/ages/ink_ai_4.dds"
+	}
+}

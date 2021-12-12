@@ -75,6 +75,13 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			country_event = {
 				id = itest.7
 			}
+
+				emperor = {
+					country_event = {
+						id = religious_leagues.5
+					}
+				}
+			
 		}
 	}
 	
@@ -122,9 +129,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 					}
 				}
 				add_dip_power = 300
-			}
-			else = {
-				add_dip_power = 200
 			}
 		}
 	}

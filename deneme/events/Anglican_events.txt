@@ -950,7 +950,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 10
 		}
 		enable_religion = anglican
 		change_religion = anglican
@@ -1031,7 +1031,7 @@ country_event = {
 	option = { # dont convert
 		name = anglican_events.14.c
 		ai_chance = {
-			factor = 10
+			factor = 0
 			modifier = {
 				factor = 0
 				OR = {

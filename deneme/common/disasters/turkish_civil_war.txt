@@ -14,6 +14,7 @@ turkish_civil_war = {
 		NOT = { ai = yes }
 		normal_or_historical_nations = yes
 		current_age = age_of_discovery
+		NOT = { has_country_flag = end_of_turkish_civil_war }
 
 	}
 	
@@ -79,7 +80,7 @@ turkish_civil_war = {
 	}
 	
 	modifier = {
-		global_tax_modifier = -0.10
+		global_tax_modifier = -0.2
 		stability_cost_modifier = 1.00
 		global_heathen_missionary_strength = -0.015
 	}

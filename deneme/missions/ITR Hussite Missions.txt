@@ -47,6 +47,16 @@ itr_religion_missions_hus = {		#Hussite Missions
 			else = {
 				add_dip_power = 100
 			}
+			if = {
+				BOH = {
+					limit = {
+						NOT = { religion = hussite }
+					}
+					country_event = {
+						id = itest.14
+					}
+				}
+			}
 		}
 	}
 	itr_religion_mission_hus2 = {		#Bohemian Crown
@@ -117,6 +127,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 							OR = {
 								religion = protestant
 								religion = reformed
+								religion = hussite
 							}
 						}
 						amount = 3
@@ -153,6 +164,11 @@ itr_religion_missions_hus = {		#Hussite Missions
 					name = "ink_015"
 					duration = 3652
 			}
+			emperor = {
+					country_event = {
+						id = religious_leagues.5
+					}
+				}
 			
 		}
 	}

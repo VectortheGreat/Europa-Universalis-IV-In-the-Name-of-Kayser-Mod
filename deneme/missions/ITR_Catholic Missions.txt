@@ -139,12 +139,8 @@ itr_religion_missions_ct = {		#Catholic Missions
 								NOT = { exists = HLR }
 						}
 					}
-					has_country_flag = religious_league_war_on_winning_side
 				}
 				add_dip_power = 300
-			}
-			else = {
-				add_dip_power = 100
 			}
 		}
 	}

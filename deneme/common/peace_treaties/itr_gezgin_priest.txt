@@ -23,6 +23,7 @@ gezgin_priests = {
 		religion = phaedrusian
 		FROM = {
 			religion_group = christian
+			NOT = { is_great_power = yes }
 		}
 		is_great_power = yes
 		has_global_flag = gezgin_papazlar

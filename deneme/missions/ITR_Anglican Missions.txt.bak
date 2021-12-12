@@ -28,7 +28,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 		}
 	}
 	itr_religion_mission_ang2 = {		#British
-		icon = italian_heretics
+		icon = inkbritish
 		required_missions = {  }
 		position = 8
 		provinces_to_highlight = {
@@ -135,7 +135,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 	}
 	
 	itr_religion_mission_ang3 = {		#British Crown
-		icon = protect_pope
+		icon = inkbritishcrown
 		required_missions = { itr_religion_mission_ang2 }
 		position = 9
 		provinces_to_highlight = {
@@ -225,7 +225,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 	}
 	
 	itr_religion_mission_ang4 = {		#British Government
-		icon = catholicsm
+		icon = britishgovernment
 		required_missions = { itr_religion_mission_ang3 }
 		position = 10
 		trigger = {
@@ -309,7 +309,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 	}
 	
 	itr_religion_mission_ang5 = {		#Rule the New World
-		icon = crush_revolution
+		icon = rulethenewworld
 		required_missions = { itr_religion_mission_ang4 }
 		position = 11
 		provinces_to_highlight = {

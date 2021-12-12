@@ -106,7 +106,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 		trigger = {
 			OR = {
 				OR = {
-					hre_religion = catholic
 					has_country_flag = religious_league_war_on_winning_side
 					is_year = 1635
 				}
@@ -143,9 +142,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 					has_country_flag = religious_league_war_on_winning_side
 				}
 				add_dip_power = 300
-			}
-			else = {
-				add_dip_power = 100
 			}
 		}
 	}

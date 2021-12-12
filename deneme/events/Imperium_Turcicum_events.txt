@@ -1303,16 +1303,16 @@ country_event = {		#Protestantism is spreading- catholic path
 }
 
 country_event = {		#Gezgin Priests
-	id = itr.994
-	title = "itr.994_title"
-	desc = "itr.994_desc"
+	id = itr.993
+	title = "itr.993_title"
+	desc = "itr.993_desc"
 	picture = ORTHODOX_eventPicture
 
 	trigger = {
 		has_country_flag = itr_gezgin_priests
 	}
 	mean_time_to_happen = {
-		months = 10
+		months = 1
 		modifier = {
 			factor = 1
 			religion = catholic
@@ -1347,7 +1347,7 @@ country_event = {		#Gezgin Priests
 		}
 	}
 	option = {
-		name = itr994.a	#
+		name = itr993.a
 		random_owned_province = {
 			limit = {
 				religion_group = christian
@@ -1363,9 +1363,9 @@ country_event = {		#Gezgin Priests
 }
 
 country_event = {		#Gezgin Priests cancel
-	id = itr.993
-	title = "itr.993_title"
-	desc = "itr.993_desc"
+	id = itr.992
+	title = "itr.992_title"
+	desc = "itr.992_desc"
 	picture = ORTHODOX_eventPicture
 	
 	
@@ -1383,9 +1383,47 @@ country_event = {		#Gezgin Priests cancel
 		}			
 	}
 	option = {
-		name = itr999.a	#
+		name = itr992.a
 		clr_country_flag = itr_gezgin_priests
 		clr_country_flag = itr_boost_gezgin_priests
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#New ideas for INK marches
+	id = itr.991
+	title = "itr.991_title"
+	desc = "itr.991_desc"
+	picture = ORTHODOX_eventPicture
+	
+
+	trigger = {
+		has_reform = royal_order_government
+		NOT = { has_country_flag = ink_march_ideas }
+	}
+	option = {
+		name = itr992.a
+		swap_free_idea_group = yes
+		set_country_flag = ink_march_ideas
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#New government for INK marches
+	id = itr.990
+	title = "itr.990_title"
+	desc = "itr.990_desc"
+	picture = ORTHODOX_eventPicture
+	
+
+	trigger = {
+		NOT = { has_reform = royal_order_government }
+		is_subject_of = ITR
+	}
+	option = {
+		name = itr992.a
+		change_government = theocracy
+		add_government_reform = royal_order_government
 		ai_chance = { factor = 100 }	
 	}
 }

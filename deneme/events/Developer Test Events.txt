@@ -1,0 +1,281 @@
+#Developer Events
+
+namespace = deneme
+normal_or_historical_nations = yes
+
+country_event = {	#Reform Missions
+	id = dev.1
+	title = "dev.1_title"
+	desc = "dev.1_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dev1.a		
+		change_religion = catholic
+		set_country_flag = religion_reformed_ct
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_isk
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = dev1.b
+		ai_chance = { factor = 25 }
+		change_religion = protestant
+		set_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = dev1.c
+		ai_chance = { factor = 25 }
+		change_religion = reformed
+		set_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = dev1.d
+		ai_chance = { factor = 25 }
+		change_religion = hussite
+		set_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+	option = {
+		name = dev1.e
+		ai_chance = { factor = 25 }
+		change_religion = anglican
+		set_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes	
+	}
+	option = {
+		name = dev1.f
+		change_religion = phaedrusian
+		set_country_flag = religion_reformed_isk
+		clr_country_flag = religion_reformed_pr
+		clr_country_flag = religion_reformed_hus
+		clr_country_flag = religion_reformed_ang
+		clr_country_flag = religion_reformed_ct
+		swap_non_generic_missions = yes
+	}
+}
+
+country_event = {	#Provinces and Countries
+	id = dev.2
+	title = "dev.2_title"
+	desc = "dev.2_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger ={
+		tag = ITR
+		has_game_started = yes
+	}
+	
+	option = {	#Converts every owned province
+		name = dev2.a
+		ROOT = {
+					every_owned_province = { 
+						change_religion = ROOT
+					}	
+		}
+	}
+	
+	option = {	#Converts every province and countries
+		name = dev2.b
+		every_country = {
+			change_religion = ROOT
+		}
+		every_country = {
+			every_owned_province = { 
+				change_religion = ROOT
+			}	
+		}
+		every_province = {
+			limit = {
+				NOT = { is_city = yes }
+			}
+			change_religion = ROOT
+		}
+	}
+}
+
+country_event = {	#Idea, Tech, GFX etc.
+	id = dev.3
+	title = "dev.3_title"
+	desc = "dev.3_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#New ideas
+		name = dev3.a
+		swap_free_idea_group = yes
+	}
+	option = {	#New missions
+		name = dev3.b
+		swap_non_generic_missions = yes
+	}
+	option = {	#Western Tech Group and GFX
+		name = dev3.c
+		change_technology_group = western
+		change_graphical_culture = westerngfx
+	}
+	option = {	#Restore Name
+		name = dev3.d
+		restore_country_name = yes
+	}
+	option = {	#Collapse Nation
+		name = dev3.e
+		collapse_nation = yes
+	}
+	
+}
+
+country_event = {	#HRE
+	id = dev.4
+	title = "dev.4_title"
+	desc = "dev.4_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#HRE League
+		name = dev4.a
+		enable_hre_leagues = yes
+	}
+	option = {	#HRE League Ends
+		name = dev4.b
+		set_hre_religion_treaty = yes
+	}
+	option = {	#Catholic HRE
+		name = dev4.c
+		set_hre_religion = catholic
+	}
+	option = {	#Protestant HRE
+		name = dev4.d
+		set_hre_religion = protestant
+	}
+	option = {	#Reformed HRE
+		name = dev4.e
+		set_hre_religion = reformed
+	}
+	option = {	#Hussite HRE
+		name = dev4.f
+		set_hre_religion = hussite
+	}
+	option = {	#Anglican HRE
+		name = dev4.g
+		set_hre_religion = anglican
+	}
+	option = {	#Phaedrusian HRE
+		name = dev4.h
+		set_hre_religion = phaedrusian
+	}
+	option = {	#Coptic HRE
+		name = dev4.i
+		set_hre_religion = coptic
+	}
+	option = {	#Orthodox HRE
+		name = dev4.j
+		set_hre_religion = orthodox
+	}
+}
+
+
+country_event = {	#Province
+	id = dev.5
+	title = "dev.5_title"
+	desc = "dev.5_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {	#Adds 100 development to the Capital
+		name = dev5.a
+		capital_scope = {
+			add_base_tax = 100
+			add_base_production = 100
+			add_base_manpower = 100
+		}
+	}
+	option = {	#Removes 100 development from the Capital
+		name = dev5.b
+		capital_scope = {
+			add_base_tax = -100
+			add_base_production = -100
+			add_base_manpower = -100
+		}
+	}
+	option = {	#Adds 10 development to the Capital
+		name = dev5.c
+		capital_scope = {
+			add_base_tax = 10
+			add_base_production = 10
+			add_base_manpower = 10
+		}
+	}
+	option = {	#Removes 10 development from the Capital
+		name = dev5.d
+		capital_scope = {
+			add_base_tax = -10
+			add_base_production = -10
+			add_base_manpower = -10
+		}
+	}
+	option = {	#Adds 1 tax development to the Capital
+		name = dev5.e
+		capital_scope = {
+			add_base_tax = 1
+		}
+	}
+	option = {	#Removes 1 tax development from the Capital
+		name = dev5.f
+		capital_scope = {
+			add_base_tax = -1
+		}
+	}
+	option = {	#Adds 1 dip development to the Capital
+		name = dev5.g
+		capital_scope = {
+			add_base_production  = 1
+		}
+	}
+	option = {	#Removes 1 dip development from the Capital
+		name = dev5.h
+		capital_scope = {
+			add_base_production  = -1
+		}
+	}
+	option = {	#Adds 1 mil development to the Capital
+		name = dev5.i
+		capital_scope = {
+			add_base_manpower  = 1
+			
+		}
+	}
+	option = {	#Removes 1 mil development from the Capital
+		name = dev5.j
+		capital_scope = {
+			add_base_manpower  = -1
+		}
+	}
+}

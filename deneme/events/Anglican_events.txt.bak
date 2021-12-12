@@ -883,7 +883,7 @@ country_event = {
 		name = anglican_events.14.a
 		trigger = { has_dlc = "Rule Britannia" }
 		ai_chance = {
-			factor = 75
+			factor = 90
 			modifier = {
 				factor = 0.01
 				NOT = { tag = ENG }
@@ -1031,7 +1031,7 @@ country_event = {
 	option = { # dont convert
 		name = anglican_events.14.c
 		ai_chance = {
-			factor = 25
+			factor = 10
 			modifier = {
 				factor = 0
 				OR = {

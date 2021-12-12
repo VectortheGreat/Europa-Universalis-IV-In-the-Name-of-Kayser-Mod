@@ -12,7 +12,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 	has_country_shield = yes
 	
 	itr_religion_mission_pr1 = {		#Fate of Heretics
-		icon = protestants
+		icon = fateofheretics
 		required_missions = { }
 		position = 7
 		trigger = {
@@ -27,7 +27,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		}
 	}
 	itr_religion_mission_pr2 = {		#Reformation in the HRE
-		icon = italian_heretics
+		icon = inkelectors
 		required_missions = { itr_religion_mission_pr1 }
 		position = 8
 		provinces_to_highlight = {
@@ -79,7 +79,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 	}
 	
 	itr_religion_mission_pr3 = {		#HRE religion
-		icon = protect_pope
+		icon = inkhre
 		required_missions = { itr_religion_mission_pr2 }
 		position = 9
 		trigger = {
@@ -123,9 +123,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 				}
 				add_dip_power = 300
 			}
-			else = {
-				add_dip_power = 200
-			}
 		}
 	}
 	
@@ -165,7 +162,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 	}
 	
 	itr_religion_mission_pr5 = {		#One Christian Sect
-		icon = crush_revolution
+		icon = catholicsm
 		required_missions = { itr_religion_mission_pr4 }
 		position = 11
 		provinces_to_highlight = {

@@ -50,7 +50,15 @@ country_event = {
 	}
 	
 	option = { # Convert to Hussite
-		ai_chance = { factor = 10 }
+		ai_chance = { 
+			factor = 70
+				modifier = {
+					factor = 0.4
+					NOT = {
+						exists = ITR
+					}
+				}
+		}
 		name = flavor_boh.1.a
 		set_country_flag = hussite_regency_mission_flag
 		if = {
@@ -94,7 +102,15 @@ country_event = {
 	}
 	
 	option = { # Hussite King, Catholic nation - tolerance option
-		ai_chance = { factor = 90 }
+		ai_chance = { 
+			factor = 30
+				modifier = {
+					factor = 2.4
+					NOT = {
+						exists = ITR
+					}
+				}
+		}
 		set_country_flag = hussite_regency_mission_flag
 		name = flavor_boh.1.c
 		add_papal_influence = -100

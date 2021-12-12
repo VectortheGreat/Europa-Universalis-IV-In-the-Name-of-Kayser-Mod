@@ -1,0 +1,125 @@
+turkish_government = {
+	icon = "admiral_king_reform"
+	potential = {
+		religion = orthodox
+		primary_culture = turkish
+		has_country_flag = third_rome
+	}
+	
+	trigger = {
+		religion = orthodox
+		primary_culture = turkish
+	}
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+
+	modifiers = {
+		governing_capacity = 250
+		monarch_admin_power = 2
+		global_manpower_modifier = 0.15
+		max_absolutism = 10
+	}
+	
+	factions = {
+		ink_knights
+		ink_merchants
+		ink_bureaucrats
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Third Rome" }
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+magna_turcorum_dynastia = {
+	icon = "consolidate_power_in_cities_reform"
+	potential = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = phaedrusian
+		}
+		primary_culture = turkish
+		has_country_flag = third_rome
+	}
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = phaedrusian
+		}
+		primary_culture = turkish
+	}
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		monarch_diplomatic_power = 2	
+		legitimacy = 1
+		power_projection_from_insults = 0.5
+		
+	}
+	
+	factions = {
+		ink_knights
+		ink_merchants
+		ink_bureaucrats
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+
+	ai = {
+		factor = 100
+	}
+}
+
+british_autonomous_state = {
+	icon = "consolidate_power_in_cities_reform"
+	potential = {
+		religion = anglican
+		culture_group = british
+	}
+	trigger = {
+		religion = anglican
+		is_subject_of = ITR
+		is_march = yes
+		culture_group = british
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		global_trade_power = 0.2	
+		development_cost = -0.2
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+
+	ai = {
+		factor = 5
+	}
+}

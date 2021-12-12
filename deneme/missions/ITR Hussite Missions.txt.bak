@@ -11,7 +11,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 	has_country_shield = yes
 	
 	itr_religion_mission_hus1 = {		#Bohemia
-		icon = protestants
+		icon = inkhussite
 		required_missions = { }
 		position = 7
 		provinces_to_highlight = {
@@ -85,7 +85,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 	}
 	
 	itr_religion_mission_hus3 = {		#Electors
-		icon = protect_pope
+		icon = inkelectors
 		required_missions = {  }
 		position = 9
 		provinces_to_highlight = {
@@ -117,6 +117,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 							OR = {
 								religion = protestant
 								religion = reformed
+								religion = hussite
 							}
 						}
 						amount = 3
@@ -153,12 +154,17 @@ itr_religion_missions_hus = {		#Hussite Missions
 					name = "ink_015"
 					duration = 3652
 			}
+			emperor = {
+					country_event = {
+						id = religious_leagues.5
+					}
+				}
 			
 		}
 	}
 	
 	itr_religion_mission_hus4 = {		#Secure HRE
-		icon = catholicsm
+		icon = securethehre
 		required_missions = { itr_religion_mission_hus3 }
 		position = 10
 		trigger = {

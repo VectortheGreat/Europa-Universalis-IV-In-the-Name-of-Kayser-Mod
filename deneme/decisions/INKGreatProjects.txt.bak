@@ -9,6 +9,10 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = ink_great_projects_1
+			set_country_flag = itr_end1
+			set_country_flag = itr_end2
+			set_country_flag = itr_end3
+			set_country_flag = itr_end4
 			clr_country_flag = ink_great_projects_0
 			ai_will_do = {
 				factor = 1
@@ -20,6 +24,12 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			NOT = { has_country_flag = ink_gp_notifications_hide2 }
+			OR = {
+				has_country_flag = itr_end1
+				has_country_flag = itr_end2
+				has_country_flag = itr_end3
+				has_country_flag = itr_end4
+			}
 		}
 		allow = {
 			
@@ -37,6 +47,12 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			has_country_flag = ink_gp_notifications_hide
+			OR = {
+				has_country_flag = itr_end1
+				has_country_flag = itr_end2
+				has_country_flag = itr_end3
+				has_country_flag = itr_end4
+			}				
 		}
 		allow = {
 			
@@ -54,13 +70,15 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			NOT = { has_country_flag = ink_gp_notifications_hide }
+			NOT = { has_country_flag = ink_port_of_athens_gp }
 		}
 		allow = {
-			treasury = 1000
+			treasury = 3000
 			is_core = 146
 		}
 		effect = {
 			set_country_flag = ink_port_of_athens_gp
+			clr_country_flag = itr_end1
 			add_great_project = {
 				type = port_athens
 				instant = yes 
@@ -76,13 +94,15 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			NOT = { has_country_flag = ink_gp_notifications_hide }
+			NOT = { has_country_flag = ink_great_market_gp }
 		}
 		allow = {
-			treasury = 1000
+			treasury = 3000
 			is_core = 151
 		}
 		effect = {
 			set_country_flag = ink_great_market_gp
+			clr_country_flag = itr_end2
 			add_great_project = {
 				type = great_market
 				instant = yes 
@@ -98,13 +118,15 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			NOT = { has_country_flag = ink_gp_notifications_hide }
+			NOT = { has_country_flag = ink_palace_konstantinopolis_gp }
 		}
 		allow = {
-			treasury = 1000
+			treasury = 3000
 			is_core = 151
 		}
 		effect = {
 			set_country_flag = ink_palace_konstantinopolis_gp
+			clr_country_flag = itr_end3
 			add_great_project = {
 				type = palace_konstantinopolis
 				instant = yes 
@@ -120,6 +142,7 @@ country_decisions = {
 		potential = {
 			has_country_flag = ink_great_projects_1
 			NOT = { has_country_flag = ink_gp_notifications_hide }
+			NOT = { has_country_flag = ink_council_adrianople_gp }
 		}
 		allow = {
 			treasury = 1000
@@ -127,6 +150,7 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = ink_council_adrianople_gp
+			clr_country_flag = itr_end4
 			add_great_project = {
 				type = council_adrianople
 				instant = yes 

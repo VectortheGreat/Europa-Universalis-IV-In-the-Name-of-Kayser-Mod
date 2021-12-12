@@ -381,8 +381,8 @@ christian = {
 		heretic = { TABORITE UTRAQUIST ORPHAN }
 	}
 	
-	phaedrusian = {	#Phaedrusian	#255  45  44
-		color = { 224  72  141 }
+	phaedrusian = {	#Phaedrusian	#255  45  44 OLD / 224  72  141
+		color = { 113  193  215 }
 		icon = 30
 
 		allowed_center_conversion = {
