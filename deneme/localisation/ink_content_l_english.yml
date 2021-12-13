@@ -9,3 +9,13 @@
  mil_konstantinopolis_library:0 "Military Art Library"
  dip_konstantinopolis_library:0 "Diplomatic Library"
  adm_konstantinopolis_library:0 "Christian Administrative Library"
+ gezgin_priests:0 "Force to Establish Gezgin Priest Order"
+ boost_gezgin_priests:0 "Strengthen the Gezgin Priest Order"
+ 
+ gezgin_priests_desc: "@[From.GetTag] §Y[From.GetName]§! will establish Gezgin Priest Order for 15 years."
+ CB_ALLOWED_gezgin_priests: "Force to Establish Gezgin Priest Order"
+ PEACE_gezgin_priests: "Force to Establish Gezgin Priest Order"
+ 
+ boost_gezgin_priests_desc: " @[Root.GetTag] §Y[Root.GetName]§! will Strengthen Gezgin Priest Order §G100%§! for 15 years."
+ CB_ALLOWED_boost_gezgin_priests: "Strengthen the Gezgin Priest Order"
+ PEACE_boost_gezgin_priests: "Strengthen the Gezgin Priest Order"

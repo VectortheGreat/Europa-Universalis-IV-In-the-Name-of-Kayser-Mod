@@ -143,17 +143,17 @@ itr_religion_missions_hus = {		#Hussite Missions
 						who = ROOT
 						value = 200
 					}
-				}
-				limit = {
-					NOT = { total_development = 100 }
+					NOT = { religion = catholic }
 				}
 				country_event = {
 					id = itest.7
 				}
 			}
-			every_elector = { 
+			every_country = { 
 				limit = {
-					religion = ROOT
+					NOT = { religion = catholic }
+					is_part_of_hre = yes
+					NOT = { tag = ITR }
 				}
 				add_country_modifier = {
 					name = "ink_016"
@@ -199,10 +199,31 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 		effect = {
-			set_hre_religion = hussite
-			country_event = {
-				id = itest.9
+			every_elector = { 
+				limit = { 
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					NOT = { religion = catholic }
+				}
+				country_event = {
+					id = itest.9
+				}
 			}
+			every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+						NOT = { total_development = 150 }
+						NOT = { tag = ITR }
+						NOT = { is_emperor = yes }
+					}
+					country_event = {
+						id = itest.9
+					}
+			}
+			set_hre_religion = hussite
 		}
 	}
 	

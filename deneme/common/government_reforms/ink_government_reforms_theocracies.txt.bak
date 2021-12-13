@@ -3,6 +3,7 @@ the_great_temple_government = {
 	potential = {
 			primary_culture = turkish
 			religion_group = christian
+			has_country_flag = third_rome
 	}
 	modifiers = {
 		governing_capacity = 150

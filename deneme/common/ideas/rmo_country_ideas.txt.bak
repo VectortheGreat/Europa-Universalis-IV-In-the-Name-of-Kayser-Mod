@@ -145,8 +145,8 @@ ink_march_ideas = {
 	}
 	free = yes
 	cossacks_escaped_serfs = {
-		drill_gain_modifier = 0.10
-		yearly_army_professionalism = 0.02
+		tolerance_own = 2
+		global_heathen_missionary_strength = 0.03
 	}
 	cossacks_hetmanate = {
 		siege_ability = 0.10
@@ -162,7 +162,8 @@ ink_march_ideas = {
 		backrow_artillery_damage = 0.10
 	}
 	cossacks_free_the_serfs = {
-		tolerance_own = 2
+		drill_gain_modifier = 0.10
+		yearly_army_professionalism = 0.02
 	}
 	cossacks_registered = {
 		land_maintenance_modifier = -0.10

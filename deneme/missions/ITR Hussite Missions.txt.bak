@@ -47,6 +47,16 @@ itr_religion_missions_hus = {		#Hussite Missions
 			else = {
 				add_dip_power = 100
 			}
+			if = {
+				BOH = {
+					limit = {
+						NOT = { religion = hussite }
+					}
+					country_event = {
+						id = itest.14
+					}
+				}
+			}
 		}
 	}
 	itr_religion_mission_hus2 = {		#Bohemian Crown
@@ -133,17 +143,17 @@ itr_religion_missions_hus = {		#Hussite Missions
 						who = ROOT
 						value = 200
 					}
-				}
-				limit = {
-					NOT = { total_development = 100 }
+					NOT = { religion = catholic }
 				}
 				country_event = {
 					id = itest.7
 				}
 			}
-			every_elector = { 
+			every_country = { 
 				limit = {
-					religion = ROOT
+					NOT = { religion = catholic }
+					is_part_of_hre = yes
+					NOT = { tag = ITR }
 				}
 				add_country_modifier = {
 					name = "ink_016"
@@ -189,6 +199,18 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 		effect = {
+			every_elector = { 
+				limit = { 
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					NOT = { religion = catholic }
+				}
+				country_event = {
+					id = itest.9
+				}
+			}
 			set_hre_religion = hussite
 			country_event = {
 				id = itest.9

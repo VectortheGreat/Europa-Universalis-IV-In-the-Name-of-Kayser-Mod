@@ -28,9 +28,9 @@
  
  ink_age_rmo_4:0 "New Roman Empire!"
  ink_age_rmo_4_desc: " 1 "
- ink_age_itr_4:0 "Lord of Vassal"
+ ink_age_itr_4:0 "Emperor of Marches!"
  ink_age_itr_4_desc: " 2 "
- ink_age_tek_4:0 "Crusader Victory"
+ ink_age_tek_4:0 "Crusader Victory!"
  ink_age_tek_4_desc: " 3 "
  ink_ai_4:0 "AI Buff IV"
  ink_ai_4_desc: "A bonus to prevent imbalance after so many age bonuses."

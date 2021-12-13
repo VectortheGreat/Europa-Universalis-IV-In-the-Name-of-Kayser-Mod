@@ -261,6 +261,15 @@ country_event = {		#Reform Hegemon
 		add_stability = -3
 		ai_chance = {
 			factor = 10
+			
+		}
+	}
+	option = {
+		name = itest9.b
+		change_religion = PREV
+		add_stability = -1
+		ai_chance = {
+			factor = 90
 			modifier = {
 				factor = 0
 				ai_attitude = {
@@ -277,14 +286,6 @@ country_event = {		#Reform Hegemon
 				}
 				is_great_power = yes
 			}
-		}
-	}
-	option = {
-		name = itest9.b
-		change_religion = PREV
-		add_stability = -1
-		ai_chance = {
-			factor = 90
 		}
 	}
 }

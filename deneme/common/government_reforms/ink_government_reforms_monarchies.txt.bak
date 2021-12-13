@@ -100,7 +100,6 @@ british_autonomous_state = {
 	potential = {
 		religion = anglican
 		culture_group = british
-		has_country_flag = third_rome
 	}
 	trigger = {
 		religion = anglican

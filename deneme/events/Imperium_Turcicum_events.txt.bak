@@ -1312,7 +1312,7 @@ country_event = {		#Gezgin Priests
 		has_country_flag = itr_gezgin_priests
 	}
 	mean_time_to_happen = {
-		months = 1
+		months = 26
 		modifier = {
 			factor = 1
 			religion = catholic
@@ -1409,7 +1409,7 @@ country_event = {		#New ideas for INK marches
 	}
 }
 
-country_event = {		#New ideas for INK marches
+country_event = {		#New government for INK marches
 	id = itr.990
 	title = "itr.990_title"
 	desc = "itr.990_desc"

@@ -1910,7 +1910,7 @@ itr_economic_missions = {
 	}
 	
 	itr_economic_mission_10 = {		#Great Projets
-		icon = universities
+		icon = imperial_projects
 		required_missions = {  }
 		position = 10
 		trigger = {
@@ -1922,16 +1922,16 @@ itr_economic_missions = {
 		}
 	}
 	
-	itr_economic_mission_11 = {		#Great Projets
-		icon = universities
-		required_missions = {  }
+	itr_economic_mission_11 = {		#March
+		icon = imperial_marches
+		required_missions = { itr_economic_mission_10 }
 		position = 10
 		trigger = {
-			dip_tech = 10
+			dip_tech = 7
 			is_at_war = no
 		}
 		effect = {
-			set_country_flag = ink_great_projects_0
+			set_global_flag = ink_march_lord
 		}
 	}
 }

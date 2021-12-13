@@ -462,8 +462,8 @@ country_event = {		#New British Government
 	
 	option = {
 		name = itest15.a
+		create_march = GBR
 		GBR = {
-			add_government_reform = british_autonomous_state
 			set_country_flag = itr_british_government
 			set_country_flag = colonial_agreement
 			every_subject_country = {
@@ -505,6 +505,7 @@ country_event = {		#New British Government
 				cede_province = ITR
 				remove_core = GBR
 			}
+			add_government_reform = british_autonomous_state
 		}
 		ai_chance = {
 			factor = 50

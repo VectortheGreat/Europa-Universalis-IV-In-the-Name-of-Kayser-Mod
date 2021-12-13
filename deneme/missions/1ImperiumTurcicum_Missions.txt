@@ -1910,9 +1910,9 @@ itr_economic_missions = {
 	}
 	
 	itr_economic_mission_10 = {		#Great Projets
-		icon = universities
-		required_missions = { itr_economic_mission_11 }
-		position = 11
+		icon = imperial_projects
+		required_missions = {  }
+		position = 10
 		trigger = {
 			dip_tech = 10
 			is_at_war = no
@@ -1923,11 +1923,11 @@ itr_economic_missions = {
 	}
 	
 	itr_economic_mission_11 = {		#March
-		icon = universities
-		required_missions = {  }
-		position = 10
+		icon = imperial_marches
+		required_missions = { itr_economic_mission_10 }
+		position = 11
 		trigger = {
-			dip_tech = 7
+			mil_tech = 12
 			is_at_war = no
 		}
 		effect = {

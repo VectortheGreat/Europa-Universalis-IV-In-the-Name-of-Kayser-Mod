@@ -6,8 +6,6 @@ the_great_temple_government = {
 			has_country_flag = third_rome
 	}
 	modifiers = {
-		governing_capacity = 150
-		# cb_on_religious_enemies = yes
 		monarch_military_power = 2
 		war_exhaustion = -0.10
 	}
@@ -45,9 +43,8 @@ royal_order_government = {
 		religion_group = christian
 	}
 	modifiers = {
-		# cb_on_religious_enemies = yes
 		war_exhaustion = -0.05
-		liberty_desire = -3
+		liberty_desire = -30
 	}
 	
 	conditional = {
