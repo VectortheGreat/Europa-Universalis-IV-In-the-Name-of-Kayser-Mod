@@ -1,0 +1,13 @@
+﻿l_english:
+ ink_knights: "Knights"
+ ink_knights_influence: "The Knights Influence"
+ ink_knights_FACTION_DESC: "The Knights are the most important factors from the foundation of the state to its rise. Their courage and presence will strengthen us."
+ ink_merchants: "Merchants"
+ ink_merchants_influence: "Merchants Influence"
+ ink_merchants_FACTION_DESC: "The most famous merchant class of Konstantinopolis. Their intelligence will make our trade node the strongest.n"
+ ink_bureaucrats: "Bureaucrats"
+ ink_bureaucrats_influence: "Bureaucrats Influence"
+ ink_bureaucrats_FACTION_DESC: "This noble group of bureaucrats educated in Roma will ensure the stability and prosperity of our state."
+ RMO_parliament_name: "Senate"
+ ITR_parliament_name: "Concilii"
+ TEK_parliament_name: "Parliament"

@@ -137,28 +137,8 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 		effect = {
-			every_elector = { 
-				limit = { 
-					has_opinion = {
-						who = ROOT
-						value = 200
-					}
-					NOT = { religion = catholic }
-				}
-				country_event = {
-					id = itest.7
-				}
-			}
-			every_country = { 
-				limit = {
-					NOT = { religion = catholic }
-					is_part_of_hre = yes
-					NOT = { tag = ITR }
-				}
-				add_country_modifier = {
-					name = "ink_016"
-					duration = -1
-				}
+			country_event = {
+				id = itest.11
 			}
 			add_country_modifier = {
 					name = "ink_015"

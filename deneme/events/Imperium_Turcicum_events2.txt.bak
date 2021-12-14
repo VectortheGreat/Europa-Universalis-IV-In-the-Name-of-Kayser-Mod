@@ -70,7 +70,7 @@ country_event = {		#Dominate Papacy
 	
 	is_triggered_only = yes
 	
-	option = {
+	option = {	#Wonderful
 		name = itest3.a
 		every_country = {
 			limit = {
@@ -92,7 +92,7 @@ country_event = {		#Dominate Papacy - AI
 	picture = POPE_PREACHING_eventPicture
 	is_triggered_only = yes
 	
-	option = {
+	option = {	#How dare they
 		name = itest4.a
 		add_country_modifier = {
 			name = "ink_147"
@@ -157,7 +157,7 @@ country_event = {		#Fate of Heretics
 	}
 }
 
-country_event = {		#Reformation in the HRE
+country_event = {		#Strength the Reformists
 	id = itest.7
 	title = "itest.7_title"
 	desc = "itest.7_desc"
@@ -247,13 +247,12 @@ country_event = {		#Remove effect
 	}
 }
 
-country_event = {		#Reform Hegemon
+country_event = {		#The Collapse of the Catholicism
 	id = itest.9
 	title = "itest.9_title"
 	desc = "itest.9_desc"
 	picture = POPE_PREACHING_eventPicture
 	
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
@@ -261,6 +260,15 @@ country_event = {		#Reform Hegemon
 		add_stability = -3
 		ai_chance = {
 			factor = 10
+			
+		}
+	}
+	option = {
+		name = itest9.b
+		change_religion = PREV
+		add_stability = -1
+		ai_chance = {
+			factor = 90
 			modifier = {
 				factor = 0
 				ai_attitude = {
@@ -279,14 +287,6 @@ country_event = {		#Reform Hegemon
 			}
 		}
 	}
-	option = {
-		name = itest9.b
-		change_religion = PREV
-		add_stability = -1
-		ai_chance = {
-			factor = 90
-		}
-	}
 }
 
 country_event = {		#Order of Traveler Priests
@@ -295,7 +295,6 @@ country_event = {		#Order of Traveler Priests
 	desc = "itest.10_desc"
 	picture = POPE_PREACHING_eventPicture
 	
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
@@ -313,12 +312,11 @@ country_event = {		#Reformation in the HRE - Hussite one
 	desc = "itest.11_desc"
 	picture = POPE_PREACHING_eventPicture
 	
-	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 		name = itest11.a
-		every_country = { 
+		every_country = {
 			limit = {
 				religion = protestant
 				religion = hussite
