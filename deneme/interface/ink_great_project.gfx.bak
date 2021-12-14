@@ -79,31 +79,4 @@ spriteTypes = {
 		name = "GFX_great_project_santiago_compostela"	
 		texturefile = "gfx//interface//great_projects//great_project_santiago_compostela.dds"
 	}
-	
-	#SecondPatch
-	
-	spriteType = {
-		name = "GFX_great_protject_council_adrianople"	
-		texturefile = "gfx//interface//great_projects//great_protject_council_adrianople.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_great_project_izmir_barrack"	
-		texturefile = "gfx//interface//great_projects//great_project_izmir_barrack.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_great_project_kayseri_palace"	
-		texturefile = "gfx//interface//great_projects//great_project_kayseri_palace.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_great_project_saint_alexander"	
-		texturefile = "gfx//interface//great_projects//great_project_saint_alexander.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_great_project_church_tessalonica"	
-		texturefile = "gfx//interface//great_projects//great_project_church_tessalonica.dds"
-	}
 }

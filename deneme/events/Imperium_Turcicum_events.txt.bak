@@ -10,7 +10,18 @@ country_event = {	#Mysterious Priest
 	id = itr.1
 	title = "itr.1_title"
 	desc = "itr.1_desc"
-	picture = ORTHODOX_eventPicture
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = bonfire_of_the_vanities_eventpicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = RELIGION_eventPicture
+	}
 	
 	fire_only_once = yes
 
@@ -24,7 +35,7 @@ country_event = {	#Mysterious Priest
 	}
 	
 	option = {	#Invite this priest to our palace
-		name = itr1.a
+		name = itr1a
 		317 = {	
 			add_province_modifier = { 
 				name = "ink_pr1"
@@ -46,7 +57,7 @@ country_event = {		#Born of Alexander
 	id = itr.2
 	title = "itr.2_title"
 	desc = "itr.2_desc"
-	picture = ORTHODOX_eventPicture
+	picture = NEW_HEIR_eventPicture
 	
 	fire_only_once = yes
 
@@ -59,7 +70,7 @@ country_event = {		#Born of Alexander
 	}
 	
 	option = {	#This boy will be a good priest in the future.
-		name = itr2.a
+		name = itr2a
 		set_country_flag = aziz_iskender2
 		clr_country_flag = aziz_iskender
 		hidden_effect = {
@@ -76,7 +87,7 @@ country_event = {		#Alexander's Vatican Theological Education
 	id = itr.3
 	title = "itr.3_title"
 	desc = "itr.3_desc"
-	picture = ORTHODOX_eventPicture
+	picture = POPE_PREACHING_eventPicture
 	
 	fire_only_once = yes
 
@@ -89,7 +100,7 @@ country_event = {		#Alexander's Vatican Theological Education
 	}
 	
 	option = {	#Wonderful!
-		name = itr3.a
+		name = itr3a
 		clr_country_flag = aziz_iskender2
 		if = {
 			limit = {
@@ -112,7 +123,7 @@ country_event = {		#Protestants
 	id = itr.4
 	title = "itr.4_title"
 	desc = "itr.4_desc"
-	picture = ORTHODOX_eventPicture
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 
@@ -122,7 +133,7 @@ country_event = {		#Protestants
 	}
 	
 	option = {
-		name = itr4.a	#Send Alexander to investigate them
+		name = itr4a	#Send Alexander to investigate them
 		set_country_flag = itr_reform1
 		ai_chance = { factor = 100 }	
 	}
@@ -132,7 +143,7 @@ country_event = {		#Alexander's return from Germany
 	id = itr.5
 	title = "itr.5_title"
 	desc = "itr.5_desc"
-	picture = ORTHODOX_eventPicture
+	picture = WESTERNISATION_eventPicture
 	
 	fire_only_once = yes
 
@@ -145,12 +156,12 @@ country_event = {		#Alexander's return from Germany
 	}
 	
 	option = {
-		name = itr5.a	#We should imitate them
+		name = itr5a	#We should imitate them
 		set_country_flag = itr_reformissue
 		ai_chance = { factor = 70 }	
 	}
 	option = {
-		name = itr5.b	#We must protect ourselves from the heretics
+		name = itr5b	#We must protect ourselves from the heretics
 		set_country_flag = itr_antireform1
 		ai_chance = { factor = 30 }	
 	}
@@ -161,7 +172,7 @@ country_event = {		#Reform Issue
 	id = itr.6
 	title = "itr.6_title"
 	desc = "itr.6_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGION_eventPicture
 	
 	fire_only_once = yes
 
@@ -178,31 +189,31 @@ country_event = {		#Reform Issue
 		}
 	}
 	option = {
-		name = itr6.a	#Protestantism is our way
+		name = itr6a	#Protestantism is our way
 		set_country_flag = itr_protestant_way
 		add_papal_influence = -30
 		ai_chance = { factor = 20 }
 	}
 	option = {
-		name = itr6.b	#Reformed is our way
+		name = itr6b	#Reformed is our way
 		set_country_flag = itr_reformed_way
 		add_papal_influence = -30
 		ai_chance = { factor = 20 }	
 	}
 	option = {
-		name = itr6.c	#Hussite is our way
+		name = itr6c	#Hussite is our way
 		set_country_flag = itr_hussite_way
 		add_papal_influence = -30
 		ai_chance = { factor = 20 }	
 	}
 	option = {
-		name = itr6.d	#We need a new eastern reformist denomination
+		name = itr6d	#We need a new eastern reformist denomination
 		set_country_flag = itr_iskenderian_way
 		add_papal_influence = -30
 		ai_chance = { factor = 20 }	
 	}
 	option = {
-		name = itr6.e	#Anglican is our way
+		name = itr6e	#Anglican is our way
 		set_country_flag = itr_anglican_way
 		add_papal_influence = -30
 		ai_chance = { factor = 20 }	
@@ -213,7 +224,7 @@ country_event = {		#Protestant Reformation
 	id = itr.11
 	title = "itr.11_title"
 	desc = "itr.11_desc"
-	picture = ORTHODOX_eventPicture
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 	
@@ -226,7 +237,7 @@ country_event = {		#Protestant Reformation
 	}
 	
 	option = {
-		name = itr11.a	#We must support the Protestant idea.
+		name = itr11a	#We must support the Protestant idea.
 		set_country_flag = itr_boost_protestants
 		set_country_flag = itr_reformsinprovinces
 		set_country_flag = itr_protestant_way2
@@ -248,7 +259,7 @@ country_event = {		#Protestant Reformation
 		ai_chance = { factor = 90 }	
 	}
 	option = {
-		name = itr11.b	#Do not support or interfere with them.
+		name = itr11b	#Do not support or interfere with them.
 		set_country_flag = itr_reformsinprovinces
 		add_papal_influence = -10
 		hidden_effect = {
@@ -265,7 +276,7 @@ country_event = {		#Protestants Rise
 	id = itr.12
 	title = "itr.12_title"
 	desc = "itr.12_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	fire_only_once = yes
 	
@@ -314,7 +325,7 @@ country_event = {		#Reformation
 	id = itr.13
 	title = "itr.13_title"
 	desc = "itr.13_desc"
-	picture = ORTHODOX_eventPicture
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 	
@@ -327,11 +338,7 @@ country_event = {		#Reformation
 	}
 	
 	option = {
-		name = itr13.a	#We must support the Reformed idea.
-		add_country_modifier = {
-				name = "ink_006"
-				duration = 3200
-		}
+		name = itr13a	#We must support the Reformed idea.
 		set_country_flag = itr_boost_protestants
 		set_country_flag = itr_reformsinprovinces2
 		set_country_flag = itr_reformed_way2
@@ -353,7 +360,7 @@ country_event = {		#Reformation
 		ai_chance = { factor = 90 }	
 	}
 	option = {
-		name = itr13.b	#Do not support or interfere with them.
+		name = itr13b	#Do not support or interfere with them.
 		add_papal_influence = -10
 		hidden_effect = {
 			remove_historical_friend = PAP
@@ -370,7 +377,7 @@ country_event = {		#Reformed Rise
 	id = itr.14
 	title = "itr.14_title"
 	desc = "itr.14_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	fire_only_once = yes
 	
@@ -384,7 +391,7 @@ country_event = {		#Reformed Rise
 	}
 	
 	option = {
-		name = itr14.a	#We'll be Reformed.
+		name = itr14a	#We'll be Reformed.
 		change_religion = reformed
 		clr_country_flag = itr_reformsinprovinces2
 		set_country_flag = religion_reformed_pr	#missions
@@ -402,7 +409,7 @@ country_event = {		#Reformed Rise
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr14.b	#We cannot abandon Catholicism. We must suppress the heretics.
+		name = itr14b	#We cannot abandon Catholicism. We must suppress the heretics.
 		clr_country_flag = itr_reformsinprovinces2
 		set_country_flag = itr_hereticsrise
 		if = {
@@ -419,7 +426,18 @@ country_event = {		#The New Eastern Reformation
 	id = itr.15
 	title = "itr.15_title"
 	desc = "itr.15_desc"
-	picture = ORTHODOX_eventPicture
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = bonfire_of_the_vanities_eventpicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = REFORM_eventPicture
+	}
 	
 	fire_only_once = yes
 	
@@ -433,7 +451,7 @@ country_event = {		#The New Eastern Reformation
 	
 	
 	option = {
-		name = itr15.a	#Alexander is right in his ideas. We need support him.
+		name = itr15a	#Alexander is right in his ideas. We need support him.
 		add_years_of_income = -0.5
 		317 = {
 			change_religion = phaedrusian
@@ -459,7 +477,7 @@ country_event = {		#The New Eastern Reformation
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr15.b	#It's his own problem
+		name = itr15b	#It's his own problem
 		set_country_flag = itr_reformsinprovinces5
 		hidden_effect = {
 			remove_historical_friend = PAP
@@ -475,7 +493,7 @@ country_event = {		#Phaedrusian Rise
 	id = itr.16
 	title = "itr.16_title"
 	desc = "itr.16_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	fire_only_once = yes
 	
@@ -489,7 +507,7 @@ country_event = {		#Phaedrusian Rise
 	}
 	
 	option = {
-		name = itr16.a	#We'll be Phaedrusian.
+		name = itr16a	#We'll be Phaedrusian.
 		change_religion = phaedrusian
 		set_country_flag = religion_reformed_isk	#missions
 		clr_country_flag = religion_reformed_pr
@@ -506,7 +524,7 @@ country_event = {		#Phaedrusian Rise
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr16.b	#We cannot abandon Catholicism. We must suppress the heretics.
+		name = itr16b	#We cannot abandon Catholicism. We must suppress the heretics.
 		clr_country_flag = itr_reformsinprovinces5
 		set_country_flag = itr_hereticsrise
 		if = {
@@ -521,9 +539,20 @@ country_event = {		#Phaedrusian Rise
 
 country_event = {		#Hussite Reformation
 	id = itr.17
-	title = "itr.17_title"
-	desc = "itr.17_desc"
-	picture = ORTHODOX_eventPicture
+	title = "itr17_title"
+	desc = "itr17_desc"
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = HUSSITE_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = REFORM_eventPicture
+	}
 	
 	fire_only_once = yes
 	
@@ -536,7 +565,7 @@ country_event = {		#Hussite Reformation
 	}
 	
 	option = {
-		name = itr17.a	#We will support the Hussite reformation.
+		name = itr17a	#We will support the Hussite reformation.
 		if = {
 			limit = {
 				BOH = {
@@ -581,7 +610,7 @@ country_event = {		#Hussite Rise
 	id = itr.18
 	title = "itr.18_title"
 	desc = "itr.18_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGION_eventPicture
 	
 	fire_only_once = yes
 	
@@ -595,7 +624,7 @@ country_event = {		#Hussite Rise
 	}
 	
 	option = {
-		name = itr18.a	#We'll be Hussite.
+		name = itr18a	#We'll be Hussite.
 		change_religion = hussite
 		set_country_flag = religion_reformed_hus	#missions
 		clr_country_flag = religion_reformed_pr
@@ -613,7 +642,7 @@ country_event = {		#Hussite Rise
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr18.b	#We cannot abandon Catholicism. We must suppress the heretics.
+		name = itr18b	#We cannot abandon Catholicism. We must suppress the heretics.
 		clr_country_flag = itr_reformsinprovinces
 		set_country_flag = itr_hereticsrise
 		if = {
@@ -630,7 +659,7 @@ country_event = {		#Anglican Reformation
 	id = itr.19
 	title = "itr.19_title"
 	desc = "itr.19_desc"
-	picture = ORTHODOX_eventPicture
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 	
@@ -643,7 +672,7 @@ country_event = {		#Anglican Reformation
 	}
 	
 	option = {
-		name = itr19.a	#We will support the Anglican reformation.
+		name = itr19a	#We will support the Anglican reformation.
 		if = {
 			limit = {
 				ENG = {
@@ -715,7 +744,7 @@ country_event = {		#Anglican Rise
 	id = itr.20
 	title = "itr.20_title"
 	desc = "itr.20_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGION_eventPicture
 	
 	fire_only_once = yes
 	
@@ -729,7 +758,7 @@ country_event = {		#Anglican Rise
 	}
 	
 	option = {
-		name = itr20.a	#We'll be Anglican.
+		name = itr20a	#We'll be Anglican.
 		change_religion = anglican
 		set_country_flag = religion_reformed_ang	#missions
 		clr_country_flag = religion_reformed_pr
@@ -767,7 +796,18 @@ country_event = {		#Second Luther
 	id = itr.7
 	title = "itr.7_title"
 	desc = "itr.7_desc"
-	picture = ORTHODOX_eventPicture
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = LUTHER_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = REFORM_eventPicture
+	}
 	
 	fire_only_once = yes
 
@@ -779,7 +819,7 @@ country_event = {		#Second Luther
 	}
 	
 	option = {
-		name = itr7.a	#Stop that heretic!
+		name = itr7a	#Stop that heretic!
 		add_papal_influence = 10
 		set_country_flag = religion_reformed_ct
 		set_country_flag = itr_antireform2
@@ -787,7 +827,7 @@ country_event = {		#Second Luther
 		ai_chance = { factor = 80 }	
 	}
 	option = {
-		name = itr7.b	#Ignore him.
+		name = itr7b	#Ignore him.
 		add_reform_desire = 0.05
 		set_country_flag = itr_antireform3
 		set_country_flag = itr_cath_protestants2
@@ -799,7 +839,7 @@ country_event = {		#Heretics Rise
 	id = itr.8
 	title = "itr.8_title"
 	desc = "itr.8_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_TURMOIL_eventPicture
 	
 	fire_only_once = yes
 
@@ -828,7 +868,7 @@ country_event = {		#Heretics Rise
 		}
 	}
 	option = {
-		name = itr8.a	#We must prepare ourselves for civil war.
+		name = itr8a	#We must prepare ourselves for civil war.
 		add_country_modifier = {
 				name = "ink_011"
 				duration = -1
@@ -849,7 +889,7 @@ country_event = {		#Rebels of Iskender
 	id = itr.9
 	title = "itr.9_title"
 	desc = "itr.9_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_WARS_eventPicture
 	
 	fire_only_once = yes
 	
@@ -883,7 +923,7 @@ country_event = {		#Rebels of Iskender
 	}
 	
 	option = {
-		name = itr9.a	#Kill the all rebels!
+		name = itr9a	#Kill the all rebels!
 		set_country_flag = itr_iskenders_rebel
 		add_country_modifier = {
 				name = "ink_012"
@@ -986,7 +1026,7 @@ country_event = {		#Defeat of Iskender
 	id = itr.10
 	title = "itr.10_title"
 	desc = "itr.10_desc"
-	picture = ORTHODOX_eventPicture
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
 	
 	fire_only_once = yes
 
@@ -996,7 +1036,7 @@ country_event = {		#Defeat of Iskender
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 	}
 	option = {
-		name = itr10.a	#We must stabilize the country before we convert the heretics.
+		name = itr10a	#We must stabilize the country before we convert the heretics.
 		add_stability = 3
 		if = {
 			limit = {
@@ -1008,7 +1048,7 @@ country_event = {		#Defeat of Iskender
 		ai_chance = { factor = 70 }	
 	}
 	option = {
-		name = itr10.b	#Convert all heretics!
+		name = itr10b	#Convert all heretics!
 		if = {
 			limit = {
 				has_country_modifier = "ink_011"
@@ -1031,7 +1071,7 @@ country_event = {		#Protestantism is spreading
 	id = itr.999
 	title = "itr.999_title"
 	desc = "itr.999_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1068,7 +1108,7 @@ country_event = {		#Protestantism is spreading
 		}
 	}
 	option = {
-		name = itr999.a	#
+		name = itr999a
 		random_owned_province = {
 			limit = {
 				religion = catholic
@@ -1087,7 +1127,7 @@ country_event = {		#Reformism is spreading
 	id = itr.998
 	title = "itr.998_title"
 	desc = "itr.998_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1124,7 +1164,7 @@ country_event = {		#Reformism is spreading
 		}
 	}
 	option = {
-		name = itr998.a	#
+		name = itr998a
 		random_owned_province = {
 			limit = {
 				religion = catholic
@@ -1143,7 +1183,7 @@ country_event = {		#Hussite is spreading
 	id = itr.997
 	title = "itr.997_title"
 	desc = "itr.997_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1180,7 +1220,7 @@ country_event = {		#Hussite is spreading
 		}
 	}
 	option = {
-		name = itr997.a	#
+		name = itr997a
 		random_owned_province = {
 			limit = {
 				religion = catholic
@@ -1199,7 +1239,7 @@ country_event = {		#Anglican is spreading
 	id = itr.996
 	title = "itr.996_title"
 	desc = "itr.996_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1236,7 +1276,7 @@ country_event = {		#Anglican is spreading
 		}
 	}
 	option = {
-		name = itr996.a	#
+		name = itr996a
 		random_owned_province = { 
 			limit = {
 				religion = catholic
@@ -1251,11 +1291,11 @@ country_event = {		#Anglican is spreading
 	}
 }
 
-country_event = {		#Iskenderian is spreading
+country_event = {		#Phaedrusian is spreading
 	id = itr.995
 	title = "itr.995_title"
 	desc = "itr.995_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1292,7 +1332,7 @@ country_event = {		#Iskenderian is spreading
 		}
 	}
 	option = {
-		name = itr995.a	#
+		name = itr995a
 		random_owned_province = { 
 			limit = {
 				religion = catholic
@@ -1311,7 +1351,7 @@ country_event = {		#Protestantism is spreading- catholic path
 	id = itr.994
 	title = "itr.994_title"
 	desc = "itr.994_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		tag = ITR
@@ -1338,7 +1378,7 @@ country_event = {		#Protestantism is spreading- catholic path
 		}
 	}
 	option = {
-		name = itr994.a	#
+		name = itr994a
 		random_owned_area = {
 			limit = {
 				religion = catholic
@@ -1357,13 +1397,13 @@ country_event = {		#Gezgin Priests
 	id = itr.993
 	title = "itr.993_title"
 	desc = "itr.993_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 
 	trigger = {
 		has_country_flag = itr_gezgin_priests
 	}
 	mean_time_to_happen = {
-		months = 20
+		months = 18
 		modifier = {
 			factor = 1
 			religion = catholic
@@ -1398,7 +1438,7 @@ country_event = {		#Gezgin Priests
 		}
 	}
 	option = {
-		name = itr993.a
+		name = itr993a
 		random_owned_province = {
 			limit = {
 				religion_group = christian
@@ -1417,7 +1457,7 @@ country_event = {		#Gezgin Priests cancel
 	id = itr.992
 	title = "itr.992_title"
 	desc = "itr.992_desc"
-	picture = ORTHODOX_eventPicture
+	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	
 
@@ -1434,7 +1474,7 @@ country_event = {		#Gezgin Priests cancel
 		}			
 	}
 	option = {
-		name = itr992.a
+		name = itr992a
 		clr_country_flag = itr_gezgin_priests
 		clr_country_flag = itr_boost_gezgin_priests
 		ai_chance = { factor = 100 }	
@@ -1448,7 +1488,7 @@ country_event = {		#New ideas for INK marches
 	id = itr.21
 	title = "itr.21_title"
 	desc = "itr.21_desc"
-	picture = ORTHODOX_eventPicture
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
 	
 
 	trigger = {
@@ -1456,7 +1496,7 @@ country_event = {		#New ideas for INK marches
 		NOT = { has_country_flag = ink_march_ideas }
 	}
 	option = {
-		name = itr21.a
+		name = itr21a
 		swap_free_idea_group = yes
 		set_country_flag = ink_march_ideas
 		ai_chance = { factor = 100 }	
@@ -1467,7 +1507,7 @@ country_event = {		#New government for INK marches
 	id = itr.22
 	title = "itr.22_title"
 	desc = "itr.22_desc"
-	picture = ORTHODOX_eventPicture
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
 	
 
 	trigger = {
@@ -1475,7 +1515,7 @@ country_event = {		#New government for INK marches
 		is_subject_of = ITR
 	}
 	option = {
-		name = itr22.a
+		name = itr22a
 		change_government = theocracy
 		add_government_reform = royal_order_government
 		ai_chance = { factor = 100 }	
@@ -1485,7 +1525,7 @@ country_event = {		#Death of Alexander
 	id = itr.23
 	title = "itr.23_title"
 	desc = "itr.23_desc"
-	picture = ORTHODOX_eventPicture
+	picture = DEATH_OF_HEIR_eventPicture
 	
 
 	trigger = {
@@ -1497,7 +1537,7 @@ country_event = {		#Death of Alexander
 		NOT = { religion = catholic }
 	}
 	option = {	#May rest in peace
-		name = itr23.a
+		name = itr23a
 		add_prestige = 20
 		ai_chance = { factor = 100 }	
 	}

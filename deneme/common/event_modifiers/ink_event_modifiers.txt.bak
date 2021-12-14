@@ -28,17 +28,17 @@ ink_005 = {
 	global_missionary_strength = 0.03
 }
 
-ink_006 = {
+ink_006 = {	#Removed
 	unrest_catholic_provinces  = 2
 }
 
-ink_007 = {
+ink_007 = {	#Removed
 	tolerance_own = 2
 	tolerance_heretic = -2
 	global_religious_conversion_resistance = 0.20
 }
 ink_008 = {	#banned from curia
-	papal_influence = -10
+	papal_influence = -100
 }
 ink_009 = {	#converted to protestant
 	church_power_modifier = 0.15
@@ -73,5 +73,5 @@ ink_pr1 = {	#hüdavengidar
 	local_missionary_strength = 0.10
 }
 ink_pr2 = {	#reform zeal
-	local_missionary_strength = -0.10
+	local_missionary_strength = -1
 }

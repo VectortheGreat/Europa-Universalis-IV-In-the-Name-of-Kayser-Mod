@@ -135,9 +135,6 @@ country_event = {	#Provinces and Countries
 			}	
 		}
 		every_province = {
-			limit = {
-				NOT = { is_city = yes }
-			}
 			change_religion = ROOT
 		}
 	}
@@ -171,23 +168,6 @@ country_event = {	#Idea, Tech, GFX etc.
 	option = {	#Collapse Nation
 		name = dev3.e
 		collapse_nation = yes
-	}
-	option = {	#Converts every province and countries
-		name = dev3.f
-		every_country = {
-			change_religion = ROOT
-		}
-		every_country = {
-			every_owned_province = { 
-				change_religion = ROOT
-			}	
-		}
-		every_province = {
-			limit = {
-				NOT = { is_city = yes }
-			}
-			change_religion = ROOT
-		}
 	}
 	
 }

@@ -66,7 +66,18 @@ country_event = {		#Dominate Papacy
 	id = itest.3
 	title = "itest.3_title"
 	desc = "itest.3_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = {	
+		trigger = {
+			has_dlc = "Art of War"
+		}
+		picture = CHRISTIAN_ANIMIST_ALTAR_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Art of War" }
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
 	
 	is_triggered_only = yes
 	
@@ -100,7 +111,7 @@ country_event = {		#Dominate Papacy - AI
 		}
 		add_opinion = {
 				who = ITR
-				modifier = ink_10003
+				modifier = ink_10002
 		}	
 	}
 }
@@ -109,7 +120,7 @@ country_event = {		#HRE - AI
 	id = itest.5
 	title = "itest.5_title"
 	desc = "itest.5_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -123,7 +134,7 @@ country_event = {		#Fate of Heretics
 	id = itest.6
 	title = "itest.6_title"
 	desc = "itest.6_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -161,7 +172,7 @@ country_event = {		#Strength the Reformists
 	id = itest.7
 	title = "itest.7_title"
 	desc = "itest.7_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = TOURNAMENT_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -190,7 +201,7 @@ country_event = {		#Reformation in the HRE - For Electors
 	id = itest.999
 	title = "itest.999_title"
 	desc = "itest.999_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -231,7 +242,7 @@ country_event = {		#Remove effect
 	id = itest.8
 	title = "itest.8_title"
 	desc = "itest.8_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = TOURNAMENT_eventPicture
 	hidden = yes
 	
 	is_triggered_only = yes	#watch it
@@ -293,12 +304,12 @@ country_event = {		#Order of Traveler Priests
 	id = itest.10
 	title = "itest.10_title"
 	desc = "itest.10_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = REFORM_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = itest10.b
+		name = itest10.a
 		set_global_flag = gezgin_papazlar
 		ai_chance = {
 			factor = 100
@@ -310,7 +321,7 @@ country_event = {		#Reformation in the HRE - Hussite one
 	id = itest.11
 	title = "itest.11_title"
 	desc = "itest.11_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = TOURNAMENT_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -336,7 +347,7 @@ country_event = {		#Anglican Church
 	id = itest.12
 	title = "itest.12_title"
 	desc = "itest.12_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = ST_PETERS_CHURCH_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -370,7 +381,7 @@ country_event = {		#St.Alexander Cathedral
 	id = itest.1273
 	title = "itest.1273_title"
 	desc = "itest.1273_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = ST_PETERS_CHURCH_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -404,7 +415,7 @@ country_event = {		#Return to the Faith
 	id = itest.13
 	title = "itest.13_title"
 	desc = "itest.13_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -429,7 +440,7 @@ country_event = {		#Return to the Faith Hussite
 	id = itest.14
 	title = "itest.14_title"
 	desc = "itest.14_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = RELIGION_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -454,7 +465,7 @@ country_event = {		#New British Government
 	id = itest.15
 	title = "itest.15_title"
 	desc = "itest.15_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -522,7 +533,7 @@ country_event = {		#Colonial Agreement Core Provinces
 	id = itest.16
 	title = "itest.16_title"
 	desc = "itest.16_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = GBR
@@ -571,7 +582,7 @@ country_event = {		#Colonial Agreement Non Core Provinces
 	id = itest.17x
 	title = "itest.17x_title"
 	desc = "itest.17x_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = GBR
@@ -618,7 +629,7 @@ country_event = {		#Colonial Agreement for GBR cancel
 	id = itest.17
 	title = "itest.17_title"
 	desc = "itest.17_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = GBR
@@ -652,7 +663,7 @@ country_event = {	#Papal State Agreement
 	id = itest.18
 	title = "itest.18_title"
 	desc = "itest.18_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -689,6 +700,7 @@ country_event = {	#Papal State Agreement
 				duration = -1
 		}
 		set_country_flag = itr_papal_agreement
+		set_country_flag = itr_papal_subjugation
 		ai_chance = {
 			factor = 99
 		}
@@ -707,7 +719,7 @@ country_event = {		#Papal State Agreement Non Core provinces
 	id = itest.19
 	title = "itest.19_title"
 	desc = "itest.19_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = ITR
@@ -765,7 +777,7 @@ country_event = {		#Papal State Agreement cancel
 	id = itest.20
 	title = "itest.20_title"
 	desc = "itest.20_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = ITR
@@ -801,7 +813,7 @@ country_event = {		#Papal State Agreement Core provinces
 	id = itest.21
 	title = "itest.21_title"
 	desc = "itest.21_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
 		tag = ITR
@@ -861,12 +873,12 @@ country_event = {	#Kayser's Mercenary Companies
 	id = itest.22
 	title = "itest.22_title"
 	desc = "itest.22_desc"
-	picture = POPE_PREACHING_eventPicture
+	picture = GENERALS_DISCUSSING_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = itest.22a
+		name = itest22.a
 		set_country_flag = itr_grand_mercenary_army
 	}
 }
