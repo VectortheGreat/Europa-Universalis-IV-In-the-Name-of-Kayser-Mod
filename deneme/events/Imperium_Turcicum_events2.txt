@@ -126,7 +126,33 @@ country_event = {		#HRE - AI
 	
 	option = {
 		name = itest5.a
-		change_religion = PREV	
+		change_religion = protestant	
+	}
+}
+country_event = {		#HRE - AI
+	id = itest.5x
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = reformed	
+	}
+}
+country_event = {		#HRE - AI
+	id = itest.5z
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = hussite	
 	}
 }
 
@@ -153,7 +179,7 @@ country_event = {		#Fate of Heretics
 		}
 	}
 	option = {
-		name = itest6.a
+		name = itest6.b
 		add_country_modifier = {
 			name = "ink_014"
 			duration = -1
@@ -276,7 +302,48 @@ country_event = {		#The Collapse of the Catholicism
 	}
 	option = {
 		name = itest9.b
-		change_religion = PREV
+		change_religion = protestant
+		add_stability = -1
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
+	}
+}
+country_event = {		#The Collapse of the Catholicism
+	id = itest.9x
+	title = "itest.9_title"
+	desc = "itest.9_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest9.a
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+	option = {
+		name = itest9.b
+		change_religion = reformed
 		add_stability = -1
 		ai_chance = {
 			factor = 90
@@ -880,5 +947,20 @@ country_event = {	#Kayser's Mercenary Companies
 	option = {
 		name = itest22.a
 		set_country_flag = itr_grand_mercenary_army
+	}
+}
+
+country_event = {	#Enable Leagues
+	id = itest.23
+	title = "itest.23_title"
+	desc = "itest.23_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dev4.a
+		enable_hre_leagues = yes
+		set_global_flag = evangelical_union_happened
 	}
 }

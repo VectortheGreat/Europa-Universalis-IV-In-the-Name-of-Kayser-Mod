@@ -144,11 +144,9 @@ itr_religion_missions_hus = {		#Hussite Missions
 					name = "ink_015"
 					duration = 3652
 			}
-			emperor = {
-					country_event = {
-						id = religious_leagues.5
-					}
-				}
+			country_event = {
+				id = itest.23
+			}
 			
 		}
 	}
@@ -200,7 +198,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 						NOT = { is_emperor = yes }
 					}
 					country_event = {
-						id = itest.9
+						id = itest.5z
 					}
 			}
 			set_hre_religion = hussite

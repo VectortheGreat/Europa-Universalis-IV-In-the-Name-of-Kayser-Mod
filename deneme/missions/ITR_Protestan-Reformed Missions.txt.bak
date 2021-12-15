@@ -75,12 +75,10 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			country_event = {
 				id = itest.7
 			}
-
-				emperor = {
-					country_event = {
-						id = religious_leagues.5
-					}
-				}
+			
+			country_event = {
+				id = itest.23
+			}
 			
 		}
 	}
@@ -103,6 +101,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			if = {
 				limit = {
 					is_emperor = yes
+					religion = protestant
 				}
 				every_country = {
 					limit = {
@@ -119,15 +118,23 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			}
 			else_if = {
 				limit = {
-					OR = {
-						NOT  = { is_emperor = yes }
-						AND = {
-								NOT = { hre_size = 1 }
-								NOT = { exists = HLR }
-						}
-						has_country_flag = religious_league_war_on_winning_side
+					is_emperor = yes
+					religion = reformed
+				}
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+						NOT = { total_development = 200 }
+						NOT = { tag = ITR }
+						NOT = { is_emperor = yes }
+					}
+					country_event = {
+						id = itest.5x
 					}
 				}
+			}
+			else = {
 				add_dip_power = 300
 			}
 		}
@@ -156,13 +163,40 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 				}
 		}
 		effect = {
-			every_country = {
+			if = {
 				limit = {
-					religion = catholic
-					continent = europe
+					religion = protestant
 				}
-				country_event = {
-					id = itest.9
+				every_country = {
+					limit = {
+						religion = catholic
+						capital_scope = {
+							continent = europe
+						}
+						NOT = { is_great_power = yes }
+						NOT = { total_development = 500 }
+					}
+					country_event = {
+						id = itest.9
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion = reformed
+				}
+				every_country = {
+					limit = {
+						religion = catholic
+						capital_scope = {
+							continent = europe
+						}
+						NOT = { is_great_power = yes }
+						NOT = { total_development = 500 }
+					}
+					country_event = {
+						id = itest.9x
+					}
 				}
 			}
 		}

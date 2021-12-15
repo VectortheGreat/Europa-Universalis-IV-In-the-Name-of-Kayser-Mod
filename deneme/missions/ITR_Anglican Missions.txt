@@ -347,7 +347,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 		effect = {
 			add_country_modifier = {
 					name = "ink_151"
-					duration = 7300
+					duration = 14610
 			}
 		}
 	}

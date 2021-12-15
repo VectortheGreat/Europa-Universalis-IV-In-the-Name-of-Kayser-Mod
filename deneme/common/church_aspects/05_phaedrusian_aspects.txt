@@ -88,8 +88,7 @@ ink_buff4 = {	#Deport Infidels
 ink_buff5 = {	#Religious Centralization
 	cost = 130
 	modifier = {
-		harsh_treatment_cost = -0.3
-		global_autonomy = -0.1
+		global_autonomy = -0.25
 	}
 	ai_will_do = {
 		factor = 10
@@ -113,8 +112,7 @@ ink_buff7 = {	#Anatolian Renaissance
 ink_buff6 = {	#Protect the Faith
 	cost = 130
 	modifier = {
-		discipline = 0.05
-		land_maintenance_modifier = -0.10
+		discipline = 0.1
 	}
 	ai_will_do = {
 		factor = 10
@@ -162,7 +160,7 @@ ink_buff10 = {	#Religious Leader
 	cost = 130
 	modifier = {
 		diplomatic_reputation = 1
-		liberty_desire_from_subject_development = -0.15
+		ae_impact = -0.1
 	}
 	ai_will_do = {
 		factor = 10

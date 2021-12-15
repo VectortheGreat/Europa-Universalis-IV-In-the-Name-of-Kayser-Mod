@@ -82,9 +82,10 @@ spriteTypes = {
 	
 	#SecondPatch
 	
+
 	spriteType = {
-		name = "GFX_great_protject_council_adrianople"	
-		texturefile = "gfx//interface//great_projects//great_protject_council_adrianople.dds"
+		name = "GFX_great_project_council_adrianople"	
+		texturefile = "gfx//interface//great_projects//great_project_council_adrianople.dds"
 	}
 	
 	spriteType = {

@@ -21,7 +21,7 @@ ink_buff1 = {	#Alexander's principles
 ink_buff2 = {	#Tolerance for Heretics
 	cost = 130
 	modifier = {
-		tolerance_heathen = 2
+		tolerance_heretic = 2
 		religious_unity = 0.25
 	}
 	ai_will_do = {

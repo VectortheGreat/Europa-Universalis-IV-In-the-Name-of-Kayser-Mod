@@ -134,9 +134,6 @@ country_event = {	#Provinces and Countries
 				change_religion = ROOT
 			}	
 		}
-		every_province = {
-			change_religion = ROOT
-		}
 	}
 }
 
@@ -298,6 +295,74 @@ country_event = {	#Province
 		name = dev5.j
 		capital_scope = {
 			add_base_manpower  = -1
+		}
+	}
+}
+
+country_event = {	#Reform Missions
+	id = dev.6
+	title = "dev.6_title"
+	desc = "dev.6_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dev6.a		
+		every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+						NOT = { total_development = 200 }
+						NOT = { tag = ITR }
+						NOT = { is_emperor = yes }
+					}
+					country_event = {
+						id = itest.5
+					}
+				}
+	}
+	option = {
+		name = dev6.b
+		ai_chance = { factor = 25 }
+		every_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+						NOT = { total_development = 200 }
+						NOT = { tag = ITR }
+						NOT = { is_emperor = yes }
+					}
+					country_event = {
+						id = itest.5
+					}
+				}
+	}
+}
+
+country_event = {	#Reform Missions
+	id = dev.7
+	title = "dev.7_title"
+	desc = "dev.7_desc"
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dev6.a		
+		change_religion = ROOT
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+	option = {
+		name = dev6.b
+		ai_chance = { factor = 25 }
+		change_religion = PREV
+		ai_chance = {
+			factor = 90
+			
 		}
 	}
 }
