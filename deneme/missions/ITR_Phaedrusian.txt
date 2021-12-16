@@ -72,7 +72,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 					all_country = {
 						religion = ROOT
 					}
-					amount = 50
+					amount = 25
 			}
 		}
 		effect = {

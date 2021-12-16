@@ -135,6 +135,7 @@ country_event = {		#Protestants
 	option = {
 		name = itr4a	#Send Alexander to investigate them
 		set_country_flag = itr_reform1
+		custom_tooltip = itr_reform_issue_tt
 		ai_chance = { factor = 100 }	
 	}
 }
@@ -158,11 +159,13 @@ country_event = {		#Alexander's return from Germany
 	option = {
 		name = itr5a	#We should imitate them
 		set_country_flag = itr_reformissue
+		custom_tooltip = itr_reform_side_tt
 		ai_chance = { factor = 70 }	
 	}
 	option = {
 		name = itr5b	#We must protect ourselves from the heretics
 		set_country_flag = itr_antireform1
+		custom_tooltip = itr_antireform_side_tt
 		ai_chance = { factor = 30 }	
 	}
 }
@@ -192,30 +195,35 @@ country_event = {		#Reform Issue
 		name = itr6a	#Protestantism is our way
 		set_country_flag = itr_protestant_way
 		add_papal_influence = -30
+		custom_tooltip = itr_protestant_path_tt
 		ai_chance = { factor = 20 }
 	}
 	option = {
 		name = itr6b	#Reformed is our way
 		set_country_flag = itr_reformed_way
 		add_papal_influence = -30
+		custom_tooltip = itr_reformed_path_tt
 		ai_chance = { factor = 20 }	
 	}
 	option = {
 		name = itr6c	#Hussite is our way
 		set_country_flag = itr_hussite_way
 		add_papal_influence = -30
+		custom_tooltip = itr_hussite_path_tt
 		ai_chance = { factor = 20 }	
 	}
 	option = {
 		name = itr6d	#We need a new eastern reformist denomination
 		set_country_flag = itr_iskenderian_way
 		add_papal_influence = -30
+		custom_tooltip = itr_phaedrusian_path_tt
 		ai_chance = { factor = 20 }	
 	}
 	option = {
 		name = itr6e	#Anglican is our way
 		set_country_flag = itr_anglican_way
 		add_papal_influence = -30
+		custom_tooltip = itr_anglican_path_tt
 		ai_chance = { factor = 20 }	
 	}
 }
@@ -256,6 +264,7 @@ country_event = {		#Protestant Reformation
 				remove_historical_friend = ITR
 			}
 		}
+		custom_tooltip = itr_protestant_path2_tt
 		ai_chance = { factor = 90 }	
 	}
 	option = {
@@ -268,6 +277,7 @@ country_event = {		#Protestant Reformation
 				remove_historical_friend = ITR
 			}
 		}
+		custom_tooltip = itr_protestant_path3_tt
 		ai_chance = { factor = 10 }	
 	}
 }
@@ -290,7 +300,7 @@ country_event = {		#Protestants Rise
 	}
 	
 	option = {
-		name = itr.12a	#We'll be Protestant.
+		name = itr12a	#We'll be Protestant.
 		change_religion = protestant
 		clr_country_flag = itr_reformsinprovinces
 		set_country_flag = religion_reformed_pr	#missions
@@ -308,7 +318,7 @@ country_event = {		#Protestants Rise
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr.12b	#We cannot abandon Catholicism. We must suppress the heretics.
+		name = itr12b	#We cannot abandon Catholicism. We must suppress the heretics.
 		clr_country_flag = itr_reformsinprovinces
 		if = {
 			limit = {
@@ -317,6 +327,7 @@ country_event = {		#Protestants Rise
 			remove_country_modifier = "ink_008"
 		}
 		set_country_flag = itr_hereticsrise
+		custom_tooltip = itr_antireform_path2_tt
 		ai_chance = { factor = 0 }	
 	}
 }
@@ -357,6 +368,7 @@ country_event = {		#Reformation
 				remove_historical_friend = ITR
 			}
 		}
+		custom_tooltip = itr_protestant_path2_tt
 		ai_chance = { factor = 90 }	
 	}
 	option = {
@@ -369,6 +381,7 @@ country_event = {		#Reformation
 			}
 		}
 		set_country_flag = itr_reformsinprovinces2
+		custom_tooltip = itr_protestant_path3_tt
 		ai_chance = { factor = 10 }	
 	}
 }
@@ -418,6 +431,7 @@ country_event = {		#Reformed Rise
 			}
 			remove_country_modifier = "ink_008"
 		}
+		custom_tooltip = itr_antireform_path2_tt
 		ai_chance = { factor = 0 }	
 	}
 }
@@ -474,6 +488,7 @@ country_event = {		#The New Eastern Reformation
 				remove_historical_friend = ITR
 			}
 		}
+		custom_tooltip = itr_protestant_path2_tt
 		ai_chance = { factor = 100 }	
 	}
 	option = {
@@ -486,6 +501,7 @@ country_event = {		#The New Eastern Reformation
 			}
 		}
 		add_papal_influence = -10
+		custom_tooltip = itr_protestant_path3_tt
 		ai_chance = { factor = 0 }	
 	}
 }
@@ -533,26 +549,16 @@ country_event = {		#Phaedrusian Rise
 			}
 			remove_country_modifier = "ink_008"
 		}
+		custom_tooltip = itr_antireform_path2_tt
 		ai_chance = { factor = 0 }	
 	}
 }
 
 country_event = {		#Hussite Reformation
 	id = itr.17
-	title = "itr17_title"
-	desc = "itr17_desc"
-	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
-		picture = HUSSITE_eventPicture
-	}
-	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
-		picture = REFORM_eventPicture
-	}
+	title = "itr.17_title"
+	desc = "itr.17_desc"
+	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
 	
@@ -651,6 +657,7 @@ country_event = {		#Hussite Rise
 			}
 			remove_country_modifier = "ink_008"
 		}
+		custom_tooltip = itr_antireform_path2_tt
 		ai_chance = { factor = 0 }	
 	}
 }
@@ -785,6 +792,7 @@ country_event = {		#Anglican Rise
 			}
 			remove_country_modifier = "ink_008"
 		}
+		custom_tooltip = itr_antireform_path2_tt
 		ai_chance = { factor = 0 }	
 	}
 }
@@ -820,17 +828,18 @@ country_event = {		#Second Luther
 	
 	option = {
 		name = itr7a	#Stop that heretic!
-		add_papal_influence = 10
+		add_papal_influence = 20
 		set_country_flag = religion_reformed_ct
 		set_country_flag = itr_antireform2
 		set_country_flag = itr_cath_protestants1
+		custom_tooltip = itr_antireform_rebel1_tt
 		ai_chance = { factor = 80 }	
 	}
 	option = {
 		name = itr7b	#Ignore him.
-		add_reform_desire = 0.05
 		set_country_flag = itr_antireform3
 		set_country_flag = itr_cath_protestants2
+		custom_tooltip = itr_antireform_rebel2_tt
 		ai_chance = { factor = 20 }	
 	}
 }
@@ -1062,6 +1071,7 @@ country_event = {		#Defeat of Iskender
 			remove_province_modifier = "ink_pr1"
 		}
 		set_country_flag = heretics_were_defeated
+		custom_tooltip = itr_antireform_rebel3_tt
 		ai_chance = { factor = 30 }	
 	}
 }
@@ -1135,7 +1145,7 @@ country_event = {		#Reformism is spreading
 		NOT = { 
 				num_of_religion = {
 				religion = reformed
-				value = 0.40
+				value = 0.60
 			}
 		}
 	}
@@ -1191,7 +1201,7 @@ country_event = {		#Hussite is spreading
 		NOT = { 
 				num_of_religion = {
 				religion = hussite
-				value = 0.40
+				value = 0.60
 			}
 		}
 	}
@@ -1247,7 +1257,7 @@ country_event = {		#Anglican is spreading
 		NOT = { 
 				num_of_religion = {
 				religion = anglican
-				value = 0.40
+				value = 0.60
 			}
 		}
 	}
@@ -1303,7 +1313,7 @@ country_event = {		#Phaedrusian is spreading
 		NOT = { 
 				num_of_religion = {
 				religion = phaedrusian
-				value = 0.40
+				value = 0.60
 			}
 		}
 	}
@@ -1493,7 +1503,7 @@ country_event = {		#New ideas for INK marches
 
 	trigger = {
 		has_reform = royal_order_government
-		NOT = { has_country_flag = ink_march_ideas }
+		NOT = { has_country_flag = ink_march_ideas 
 	}
 	option = {
 		name = itr21a

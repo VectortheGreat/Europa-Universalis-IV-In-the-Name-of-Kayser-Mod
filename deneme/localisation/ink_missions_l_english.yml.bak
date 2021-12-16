@@ -101,6 +101,7 @@
  rmo_economic_mission_9_desc:0 "Building the Suez Canal will greatly contribute to Asian trade, but it will cost us. We must build it as early as possible." 
  rmo_economic_mission_10_title:0 "Coal Production"
  rmo_economic_mission_10_desc:0 "Coal is one of the best production resources in the world. We must use this valuable production resource as effectively as possible." 
+ 
  itr_religion_mission_1_title:0 "Help From Pope"
  itr_religion_mission_1_desc:0 "In this troubled period, We must seek help from Holy Father." 
  itr_religion_mission_2_title:0 "Convert Balkans"
@@ -203,10 +204,11 @@
  itr_economic_mission_8_desc:0 "We must control the Spanish colonists and make them part of our nation." 
  itr_economic_mission_9_title:0 "Colonial Power"
  itr_economic_mission_9_desc:0 "All Europe must admit that no one other than us has as much colonial power as we do." 
- itr_economic_mission_10_title:0 "Universities"
- itr_economic_mission_10_desc:0 "Universities will ensure the development of our nation in terms of education and science. We must build them as much as possible."
- itr_economic_mission_11_title:0 "Build Suez Canal"
- itr_economic_mission_11_desc:0 "Building the Suez Canal will greatly contribute to Asian trade, but it will cost us. We must build it as early as possible."
+ itr_economic_mission_10_title:0 "Imperial Projects"
+ itr_economic_mission_10_desc:0 " "
+ itr_economic_mission_11_title:0 "Imperial Marches"
+ itr_economic_mission_11_desc:0 " "
+ 
  tek_religion_mission_1_title:0 "Found the Holy Order"
  tek_religion_mission_1_desc:0 "Chaos broke out in the country, there was an irregularity in the administration. We must establish the holy order to prevent them." 
  tek_religion_mission_2_title:0 "Convert Balkans"

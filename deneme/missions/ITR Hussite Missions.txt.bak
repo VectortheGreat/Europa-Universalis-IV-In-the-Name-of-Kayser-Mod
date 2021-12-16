@@ -137,17 +137,18 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 		effect = {
+			
 			country_event = {
-				id = itest.11
+				id = itest.566
 			}
 			add_country_modifier = {
 					name = "ink_015"
 					duration = 3652
 			}
 			country_event = {
-				id = religious_leagues.5
+				id = itest.23
 			}
-			
+			custom_tooltip = itr_hre_league_tt
 		}
 	}
 	

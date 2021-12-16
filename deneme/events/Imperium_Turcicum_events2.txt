@@ -130,7 +130,7 @@ country_event = {		#HRE - AI
 	}
 }
 country_event = {		#HRE - AI
-	id = itest.5x
+	id = itest.555
 	title = "itest.5_title"
 	desc = "itest.5_desc"
 	picture = RELIGION_eventPicture
@@ -143,7 +143,7 @@ country_event = {		#HRE - AI
 	}
 }
 country_event = {		#HRE - AI
-	id = itest.5z
+	id = itest.566
 	title = "itest.5_title"
 	desc = "itest.5_desc"
 	picture = RELIGION_eventPicture
@@ -152,7 +152,33 @@ country_event = {		#HRE - AI
 	
 	option = {
 		name = itest5.a
-		change_religion = hussite	
+		change_religion = hussite
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = itest999.b
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
 	}
 }
 
@@ -211,7 +237,7 @@ country_event = {		#Strength the Reformists
 		}
 		every_country = { 
 			limit = {
-				religion = ROOT
+				NOT = { religion = catholic }
 				is_part_of_hre = yes
 				NOT = { tag = ITR }
 			}
@@ -326,15 +352,15 @@ country_event = {		#The Collapse of the Catholicism
 	}
 }
 country_event = {		#The Collapse of the Catholicism
-	id = itest.9x
-	title = "itest.9_title"
-	desc = "itest.9_desc"
+	id = itest.999
+	title = "itest.9x_title"
+	desc = "itest.9x_desc"
 	picture = POPE_PREACHING_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = itest9.a
+		name = itest9x.a
 		add_stability = -3
 		ai_chance = {
 			factor = 10
@@ -342,7 +368,7 @@ country_event = {		#The Collapse of the Catholicism
 		}
 	}
 	option = {
-		name = itest9.b
+		name = itest9x.b
 		change_religion = reformed
 		add_stability = -1
 		ai_chance = {
@@ -377,6 +403,7 @@ country_event = {		#Order of Traveler Priests
 	
 	option = {
 		name = itest10.a
+		custom_tooltip = itr_gezgin_papazlar_tt
 		set_global_flag = gezgin_papazlar
 		ai_chance = {
 			factor = 100
@@ -396,9 +423,7 @@ country_event = {		#Reformation in the HRE - Hussite one
 		name = itest11.a
 		every_country = {
 			limit = {
-				religion = protestant
-				religion = hussite
-				religion = reformed
+				NOT = { religion = catholic }
 				is_part_of_hre = yes
 				NOT = { tag = ITR }
 			}
@@ -542,6 +567,7 @@ country_event = {		#New British Government
 		GBR = {
 			set_country_flag = itr_british_government
 			set_country_flag = colonial_agreement
+			set_country_flag = itr_gbr_cancelled_march
 			every_subject_country = {
 				limit = {
 					is_colonial_nation = yes
@@ -583,6 +609,7 @@ country_event = {		#New British Government
 			}
 			add_government_reform = british_autonomous_state
 		}
+		custom_tooltip = itr_gbr_march_tt
 		ai_chance = {
 			factor = 50
 		}
@@ -736,10 +763,6 @@ country_event = {	#Papal State Agreement
 	
 	option = {
 		name = itest18.a
-		PAP = {
-			change_government = "dictatorship"
-			set_country_flag = itr_papal_government
-		}
 		every_owned_province = {
 			limit = { 
 				AND = {
@@ -768,12 +791,13 @@ country_event = {	#Papal State Agreement
 		}
 		set_country_flag = itr_papal_agreement
 		set_country_flag = itr_papal_subjugation
+		custom_tooltip = itr_papal_state_tt
 		ai_chance = {
 			factor = 99
 		}
 	}
 	option = {
-		name = itest15.b
+		name = itest18.b
 		add_prestige = 30
 		add_papal_influence = 20
 		ai_chance = {
@@ -946,6 +970,7 @@ country_event = {	#Kayser's Mercenary Companies
 	
 	option = {
 		name = itest22.a
+		custom_tooltip = itr_kaysers_mercenaries_tt
 		set_country_flag = itr_grand_mercenary_army
 	}
 }
@@ -962,5 +987,25 @@ country_event = {	#Enable Leagues
 		name = dev4.a
 		enable_hre_leagues = yes
 		set_global_flag = evangelical_union_happened
+	}
+}
+
+country_event = {	#Great Britain March Return
+	id = itest.24
+	title = "itest.24_title"
+	desc = "itest.24_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	trigger = {
+		has_country_flag = itr_gbr_cancelled_march
+		tag = GBR
+		is_subject_of = ITR
+		NOT = { is_march = yes }
+	}
+	option = {
+		name = dev4.a
+		ITR = {
+			create_march = GBR
+		}
 	}
 }

@@ -1918,6 +1918,7 @@ itr_economic_missions = {
 			is_at_war = no
 		}
 		effect = {
+			custom_tooltip = ink_great_projectss_tt
 			set_country_flag = ink_great_projects_0
 		}
 	}
@@ -1931,6 +1932,7 @@ itr_economic_missions = {
 			is_at_war = no
 		}
 		effect = {
+			custom_tooltip = ink_marches_tt
 			set_global_flag = ink_march_lord
 		}
 	}

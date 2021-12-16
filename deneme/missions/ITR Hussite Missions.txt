@@ -137,6 +137,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 		effect = {
+			
 			country_event = {
 				id = itest.11
 			}
@@ -147,7 +148,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 			country_event = {
 				id = itest.23
 			}
-			
+			custom_tooltip = itr_hre_league_tt
 		}
 	}
 	
@@ -186,7 +187,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 					NOT = { religion = catholic }
 				}
 				country_event = {
-					id = itest.9
+					id = itest.566
 				}
 			}
 			every_country = {
@@ -198,7 +199,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 						NOT = { is_emperor = yes }
 					}
 					country_event = {
-						id = itest.5z
+						id = itest.566
 					}
 			}
 			set_hre_religion = hussite

@@ -1918,6 +1918,7 @@ itr_economic_missions = {
 			is_at_war = no
 		}
 		effect = {
+			custom_tooltip = ink_great_projectss
 			set_country_flag = ink_great_projects_0
 		}
 	}
@@ -1925,12 +1926,13 @@ itr_economic_missions = {
 	itr_economic_mission_11 = {		#March
 		icon = imperial_marches
 		required_missions = { itr_economic_mission_10 }
-		position = 10
+		position = 11
 		trigger = {
-			dip_tech = 7
+			mil_tech = 12
 			is_at_war = no
 		}
 		effect = {
+			custom_tooltip = ink_marches
 			set_global_flag = ink_march_lord
 		}
 	}

@@ -11,7 +11,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	has_country_shield = yes
 	
 	itr_religion_mission_isk1 = {		#Reformation
-		icon = protestants
+		icon = fateofheretics
 		required_missions = { }
 		position = 7
 		trigger = {
@@ -26,7 +26,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 		}
 	}
 	itr_religion_mission_isk2 = {		#Global Seyyah Priests
-		icon = italian_heretics
+		icon = gezginpapaz
 		required_missions = { itr_religion_mission_isk1 }
 		position = 8
 		trigger = {
@@ -43,7 +43,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	}
 	
 	itr_religion_mission_isk3 = {		#Spread the Faith
-		icon = protect_pope
+		icon = assimilate_natives
 		required_missions = { itr_religion_mission_isk2 }
 		position = 9
 		trigger = {
@@ -64,7 +64,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	}
 	
 	itr_religion_mission_isk4 = {		#Alexander's Legacy
-		icon = assimilate_natives
+		icon = inkalexander
 		required_missions = { itr_religion_mission_isk3 }
 		position = 10
 		trigger = {

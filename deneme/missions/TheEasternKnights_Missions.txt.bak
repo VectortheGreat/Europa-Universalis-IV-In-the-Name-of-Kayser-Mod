@@ -1871,17 +1871,18 @@ tek_economic_missions = {
 			
 		}
 	}
-	tek_economic_mission_10 = {		#imperial_projects
-		icon = imperial_projects
+	tek_economic_mission_10 = {		#Assimilate the Natives
+		icon = assimilate_natives
 		required_missions = {  } 
 		position = 11
 		trigger = {
-			dip_tech = 10
-			is_at_war = no
+			num_of_colonists = 1
 		}
 		effect = {
-			custom_tooltip = ink_great_projectss_tt
-			set_country_flag = ink_great_projects_0
+			add_country_modifier = {
+				name = "ink_135"
+				duration = 10957
+			}
 		}
 	}
 }

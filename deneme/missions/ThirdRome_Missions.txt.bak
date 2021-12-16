@@ -2019,17 +2019,38 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	rmo_economic_mission_8 = {		#imperial_projects
-		icon = imperial_projects
+	rmo_economic_mission_8 = {		#Universities
+		icon = universities
 		required_missions = {  }
 		position = 8
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				province_id = 146
+				province_id = 148
+				province_id = 326
+			}
+		}
 		trigger = {
-			dip_tech = 10
-			is_at_war = no
+			151 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_building = university
+			}
+			146 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_building = university
+			}
+			148 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_building = university
+			}
+			326 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_building = university
+			}	
 		}
 		effect = {
-			custom_tooltip = ink_great_projectss_tt
-			set_country_flag = ink_great_projects_0
+			change_innovativeness = 5
 		}
 	}
 	

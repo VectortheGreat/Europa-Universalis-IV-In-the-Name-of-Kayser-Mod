@@ -84,15 +84,18 @@ itr_religion_missions_ct = {		#Catholic Missions
 			}
 		}
 		effect = {
-			every_country = {
-				limit = {
-					religion = catholic
-					NOT = { tag = ITR }
-					NOT = { tag = PAP }
-					NOT = { is_subject_of = ITR }
-				}
-				country_event = {
-					id = itest.4
+			custom_tooltip = itr_dominate_papacy_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = catholic
+						NOT = { tag = ITR }
+						NOT = { tag = PAP }
+						NOT = { is_subject_of = ITR }
+					}
+					country_event = {
+						id = itest.4
+					}
 				}
 			}
 			add_prestige = 25
@@ -113,6 +116,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 			}
 		}
 		effect = {
+			custom_tooltip = itr_hre_religion_tt
 			if = {
 				limit = {
 					is_emperor = yes
@@ -139,7 +143,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 								NOT = { exists = HLR }
 						}
 					}
-					has_country_flag = religious_league_war_on_winning_side
 				}
 				add_dip_power = 300
 			}

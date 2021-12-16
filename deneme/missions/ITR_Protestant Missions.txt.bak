@@ -68,7 +68,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			}	
 		}
 		effect = {
-			custom_tooltip = itr_hre_league_tt
+			
 			add_country_modifier = {
 					name = "ink_015"
 					duration = 3652
@@ -79,7 +79,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			country_event = {
 				id = itest.7
 			}
-			
+			custom_tooltip = itr_hre_league_tt
 		}
 	}
 	
@@ -90,7 +90,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		trigger = {
 			OR = {
 				OR = {
-					has_country_flag = religious_league_war_on_winning_side
 					hre_religion = protestant
 					hre_religion = reformed
 				}
@@ -98,7 +97,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			}
 		}
 		effect = {
-			custom_tooltip = itr_hre_religion_tt
 			if = {
 				limit = {
 					is_emperor = yes
@@ -138,6 +136,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			else = {
 				add_dip_power = 300
 			}
+			custom_tooltip = itr_hre_religion_tt
 		}
 	}
 	
