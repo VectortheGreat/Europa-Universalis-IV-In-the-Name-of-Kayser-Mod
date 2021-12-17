@@ -144,28 +144,29 @@ ink_march_ideas = {
 		has_reform = royal_order_government
 	}
 	free = yes
-	cossacks_escaped_serfs = {
+	ink_march1 = {
 		tolerance_own = 2
 		global_heathen_missionary_strength = 0.03
 	}
-	cossacks_hetmanate = {
+	ink_march2 = {
 		siege_ability = 0.10
 	}
-	zaz_steppe_riders = {
+	ink_march3 = {
 		production_efficiency = 0.1
 		development_cost = -0.1
 	}
-	cossacks_insults = {
+	ink_march4 = {
 		merchants = 2
+		church_influence_modifier = 0.15
 	}
-	cossacks_military_society = {
+	ink_march5 = {
 		backrow_artillery_damage = 0.10
 	}
-	cossacks_free_the_serfs = {
+	ink_march6 = {
 		drill_gain_modifier = 0.10
 		yearly_army_professionalism = 0.02
 	}
-	cossacks_registered = {
+	ink_march7 = {
 		land_maintenance_modifier = -0.10
 		discipline = 0.05
 	}

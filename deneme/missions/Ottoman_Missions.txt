@@ -13,13 +13,15 @@ otto_slot_3 = {
 	has_country_shield = yes
 	
 	otto_3 = {
-		icon = mission_impaled_soldies
+		icon = ayasofya
 		position = 1
 		required_missions = {  }
 		trigger = {
+			exists = BYZ
 		}
 		effect = {
 			add_claim = 151
+			add_treasury = 1
 		}
 	}
 }

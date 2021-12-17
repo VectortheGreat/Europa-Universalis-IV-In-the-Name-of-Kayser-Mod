@@ -76,7 +76,7 @@ country_event = {		#Born of Alexander
 		hidden_effect = {
 			if = {
 				limit = { reform_desire = 0.75 }
-				add_reform_desire = -0.3
+				add_reform_desire = -0.2
 			}
 		}
 		ai_chance = { factor = 100 }	
@@ -783,7 +783,7 @@ country_event = {		#Anglican Rise
 		ai_chance = { factor = 100 }	
 	}
 	option = {
-		name = itr20.b	#We cannot abandon Catholicism. We must suppress the heretics.
+		name = itr20b	#We cannot abandon Catholicism. We must suppress the heretics.
 		clr_country_flag = itr_reformsinprovinces4
 		set_country_flag = itr_hereticsrise
 		if = {
@@ -1491,7 +1491,6 @@ country_event = {		#Gezgin Priests cancel
 	}
 }
 
-########
 
 
 country_event = {		#New ideas for INK marches
@@ -1500,10 +1499,9 @@ country_event = {		#New ideas for INK marches
 	desc = "itr.21_desc"
 	picture = BATTLE_VISTULA_LAGOON_eventPicture
 	
-
 	trigger = {
 		has_reform = royal_order_government
-		NOT = { has_country_flag = ink_march_ideas 
+		NOT = { has_country_flag = ink_march_ideas } 
 	}
 	option = {
 		name = itr21a
@@ -1523,6 +1521,7 @@ country_event = {		#New government for INK marches
 	trigger = {
 		NOT = { has_reform = royal_order_government }
 		is_subject_of = ITR
+		NOT = { has_country_flag = colonial_agreement }
 	}
 	option = {
 		name = itr22a
@@ -1537,6 +1536,7 @@ country_event = {		#Death of Alexander
 	desc = "itr.23_desc"
 	picture = DEATH_OF_HEIR_eventPicture
 	
+	fire_only_once = yes
 
 	trigger = {
 		tag = ITR
@@ -1549,6 +1549,177 @@ country_event = {		#Death of Alexander
 	option = {	#May rest in peace
 		name = itr23a
 		add_prestige = 20
+		ai_chance = { factor = 100 }	
+	}
+}
+
+country_event = {		#Join the Empire
+	id = itr.24
+	title = "itr.24_title"
+	desc = "itr.24_desc"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = catholic
+		hre_religion = catholic
+		has_country_flag = religious_league_war_on_winning_side
+	}
+	option = {	#We'll join the Empire
+		name = itr24a
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_elector = yes
+			}
+			elector = no
+		}
+		ITR = {
+			set_in_empire = yes
+			elector = yes
+		}
+		ai_chance = { factor = 60 }	
+	}
+	option = {	#Hah!? We are already an Empire
+		name = itr24b
+		add_prestige = 25
+		ai_chance = { factor = 40 }	
+	}
+}
+
+country_event = {		#Join the Empire
+	id = itr.25
+	title = "itr.24_title"
+	desc = "itr.24_desc"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = protestant
+		hre_religion = protestant
+		has_country_flag = religious_league_war_on_winning_side
+	}
+	option = {	#We'll join the Empire
+		name = itr24a
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_elector = yes
+			}
+			elector = no
+		}
+		ITR = {
+			set_in_empire = yes
+			elector = yes
+		}
+		ai_chance = { factor = 60 }	
+	}
+	option = {	#Hah!? We are already an Empire
+		name = itr24b
+		add_prestige = 25
+		ai_chance = { factor = 40 }	
+	}
+}
+
+country_event = {		#Join the Empire
+	id = itr.26
+	title = "itr.24_title"
+	desc = "itr.24_desc"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = reformed
+		hre_religion = reformed
+		has_country_flag = religious_league_war_on_winning_side
+		has_country_flag = itr_hre_reformed
+	}
+	option = {	#We'll join the Empire
+		name = itr24a
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_elector = yes
+			}
+			elector = no
+		}
+		ITR = {
+			set_in_empire = yes
+			elector = yes
+		}
+		ai_chance = { factor = 60 }	
+	}
+	option = {	#Hah!? We are already an Empire
+		name = itr24b
+		add_prestige = 25
+		ai_chance = { factor = 40 }	
+	}
+}
+
+country_event = {		#Join the Empire
+	id = itr.27
+	title = "itr.24_title"
+	desc = "itr.24_desc"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = hussite
+		hre_religion = hussite
+		has_country_flag = religious_league_war_on_winning_side
+	}
+	option = {	#We'll join the Empire
+		name = itr24a
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_elector = yes
+			}
+			elector = no
+		}
+		ITR = {
+			set_in_empire = yes
+			elector = yes
+		}
+		ai_chance = { factor = 60 }	
+	}
+	option = {	#Hah!? We are already an Empire
+		name = itr24b
+		add_prestige = 25
+		ai_chance = { factor = 40 }	
+	}
+}
+
+country_event = {		#Secure HRE
+	id = itr.28
+	title = "itr.28_title"
+	desc = "itr.28_desc"
+	picture = DEATH_OF_HEIR_eventPicture
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		religion = reformed
+		hre_religion = reformed
+		has_country_flag = religious_league_war_on_winning_side
+		is_great_power = yes
+	}
+	immediate = {	#We'll join the Empire
+		name = itr28a
+		hidden_effect = {
+			set_hre_religion = reformed
+			set_country_flag = itr_hre_reformed
+		}
 		ai_chance = { factor = 100 }	
 	}
 }

@@ -74,14 +74,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 						religion = reformed
 				}
 			}
-			PAP = { 
-				all_owned_province = {
-					NOT = {
-							religion = protestant
-							religion = reformed
-					}
-				}
-			}
 		}
 		effect = {
 			hidden_effect = {

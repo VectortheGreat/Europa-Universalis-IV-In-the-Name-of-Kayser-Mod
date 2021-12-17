@@ -230,12 +230,7 @@ country_event = {		#Strength the Reformists
 	
 	option = {
 		name = itest7.a
-		every_elector = { 
-			country_event = {
-				id = itest.999
-			}
-		}
-		every_country = { 
+		every_country = {
 			limit = {
 				NOT = { religion = catholic }
 				is_part_of_hre = yes
@@ -353,14 +348,14 @@ country_event = {		#The Collapse of the Catholicism
 }
 country_event = {		#The Collapse of the Catholicism
 	id = itest.999
-	title = "itest.9x_title"
-	desc = "itest.9x_desc"
+	title = "itest.9_title"
+	desc = "itest.9_desc"
 	picture = POPE_PREACHING_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = itest9x.a
+		name = itest9.a
 		add_stability = -3
 		ai_chance = {
 			factor = 10
@@ -368,7 +363,7 @@ country_event = {		#The Collapse of the Catholicism
 		}
 	}
 	option = {
-		name = itest9x.b
+		name = itest9".b
 		change_religion = reformed
 		add_stability = -1
 		ai_chance = {
@@ -491,7 +486,7 @@ country_event = {		#St.Alexander Cathedral
 			}
 			add_great_project = {
 				type = saint_alexander
-				instant = yes 
+				instant = no 
 			}
 			add_treasury = -1000
 		}
@@ -814,7 +809,7 @@ country_event = {		#Papal State Agreement Non Core provinces
 	
 	trigger = {
 		tag = ITR
-		has_country_flag = colonial_agreement
+		has_country_flag = itr_papal_agreement
 		any_owned_province = {
 			AND = {
 				OR = {
@@ -908,7 +903,7 @@ country_event = {		#Papal State Agreement Core provinces
 	
 	trigger = {
 		tag = ITR
-		has_country_flag = colonial_agreement
+		has_country_flag = itr_papal_agreement
 		any_owned_province = {
 			AND = {
 				OR = {
@@ -931,7 +926,7 @@ country_event = {		#Papal State Agreement Core provinces
 		months = 1
 	}
 	
-	option = {	#problem
+	option = {
 		name = itest21.a
 		every_owned_province = {
 			limit = {
@@ -984,7 +979,7 @@ country_event = {	#Enable Leagues
 	is_triggered_only = yes
 	
 	option = {
-		name = dev4.a
+		name = itest23.a
 		enable_hre_leagues = yes
 		set_global_flag = evangelical_union_happened
 	}
@@ -1001,9 +996,12 @@ country_event = {	#Great Britain March Return
 		tag = GBR
 		is_subject_of = ITR
 		NOT = { is_march = yes }
+		ITR = {
+			NOT = { ai = yes }
+		}
 	}
 	option = {
-		name = dev4.a
+		name = itest24.a
 		ITR = {
 			create_march = GBR
 		}

@@ -84,7 +84,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 			}
 		}
 		effect = {
-			custom_tooltip = itr_dominate_papacy_tt
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -99,6 +98,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 				}
 			}
 			add_prestige = 25
+			custom_tooltip = itr_dominate_papacy_tt
 		}
 	}
 	
@@ -116,7 +116,6 @@ itr_religion_missions_ct = {		#Catholic Missions
 			}
 		}
 		effect = {
-			custom_tooltip = itr_hre_religion_tt
 			if = {
 				limit = {
 					is_emperor = yes
@@ -146,6 +145,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 				}
 				add_dip_power = 300
 			}
+			custom_tooltip = itr_hre_religion_tt
 		}
 	}
 	

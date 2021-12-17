@@ -108,7 +108,7 @@ TEK_ideas = {
 	free = yes
 	
 	tek_idea1 = {
-		warscore_cost_vs_other_religion = -0.20
+		warscore_cost_vs_other_religion = -0.1
 		global_missionary_strength = 0.015
 	}
 	tek_idea2 = {

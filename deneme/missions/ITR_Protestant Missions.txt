@@ -68,7 +68,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			}	
 		}
 		effect = {
-			
 			add_country_modifier = {
 					name = "ink_015"
 					duration = 3652
@@ -195,7 +194,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 						NOT = { total_development = 500 }
 					}
 					country_event = {
-						id = itest.9x
+						id = itest.999
 					}
 				}
 			}

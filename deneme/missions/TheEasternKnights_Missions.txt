@@ -1871,7 +1871,7 @@ tek_economic_missions = {
 			
 		}
 	}
-	tek_economic_mission_10 = {		#imperial_projects
+	tek_economic_mission_10 = {		#Imperial Projects
 		icon = imperial_projects
 		required_missions = {  } 
 		position = 11

@@ -1858,10 +1858,45 @@ rmo_economic_missions = {
 		}
 	}
 	
+	rmo_economic_mission_31 = {		#Hagia Sophia
+		icon = ayasofya
+		required_missions = { itr_economic_mission_3 }
+		position = 4
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		trigger = {		
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				has_great_project = {
+					type = hagia_sophia
+					tier = 3
+				}
+			}
+			else = {
+				151 = {
+					religion = ROOT
+					has_building = temple
+					development = 50
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_112"
+				duration = 7300
+			}
+			add_patriarch_authority = 0.1
+			add_prestige = 10
+		}
+	}
+	
 	rmo_economic_mission_4 = {		#Civilization is priority
 		icon = civilization
 		required_missions = { rmo_economic_mission_3 }
-		position = 4
+		position = 5
 		trigger = {
 			total_development = 1000
 			treasury = 2000
@@ -1897,7 +1932,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_5 = {		#Improve Trade
 		icon = improve_trade
 		required_missions = {  }
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				province_id = 151
@@ -1931,7 +1966,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_6 = {		#Advanced Trade
 		icon = trade
 		required_missions = { rmo_economic_mission_5 }
-		position = 6
+		position = 7
 		trigger = {
 			151 = {
 				has_most_province_trade_power = ROOT
@@ -1957,7 +1992,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_7 = {	#National Wealth
 		icon = national_wealth
 		required_missions = { rmo_economic_mission_6 }
-		position = 7
+		position = 8
 		trigger = {
 			treasury = 5000
 			NOT = { num_of_loans = 1 } 
@@ -2022,7 +2057,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_8 = {		#imperial_projects
 		icon = imperial_projects
 		required_missions = {  }
-		position = 8
+		position = 9
 		trigger = {
 			dip_tech = 10
 			is_at_war = no

@@ -27,7 +27,7 @@ the_great_temple_government = {
 	lock_level_when_selected = yes
 	heirs_can_be_generals = yes
 	valid_for_nation_designer = no
-	icon = "monks"
+	icon = "soldiers"
 	allow_normal_conversion = no
 	monastic = yes
 }
@@ -72,7 +72,7 @@ royal_order_government = {
 	lock_level_when_selected = yes
 	heirs_can_be_generals = yes
 	valid_for_nation_designer = no
-	icon = "monks"
+	icon = "soldiers"
 	allow_normal_conversion = no
 	monastic = yes
 }
