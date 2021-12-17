@@ -1,0 +1,1046 @@
+########################################
+# ITR Mission Events                   #
+########################################
+
+namespace = itest
+normal_or_historical_nations = yes
+
+country_event = {		#Help from pope
+	id = itest.1
+	title = "itest.1_title"
+	desc = "itest.1_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest1.a
+		add_treasury = 300
+		set_country_flag = itr_grand_mercenary_army
+		add_manpower = 3
+		hidden_effect = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_100
+				}
+				reverse_add_opinion = {
+					who = PAP
+					modifier = ink_10000
+				}
+		}
+	}
+}
+
+country_event = {	#Transfer Colonies
+	id = itest.2
+	title = "itest.2_title"
+	desc = "itest.2_desc"
+	picture = JESUTIS_IN_BRAZIL_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest2.a
+		every_subject_country = {   
+		# This changes the scope to all your subject countries, going through one by one
+			every_subject_country = {
+			# This changes the scope to all the subject countries of your subject
+				limit = {
+					is_colonial_nation = yes
+				}
+				# This limits it to only colonial nations, so only colonial subjects of your subject
+				ROOT = {
+					# This scopes back to you, so the game's looking at you again (once for every colonial subject of your subjects)
+					create_subject = {
+						subject_type = colony
+						subject = PREV
+					}
+					# This makes the PREVIOUS scope (so your subjects' colonial subjects) into your colonies (since the game's looking at you)
+				}
+			}
+		}
+	}
+}
+
+country_event = {		#Dominate Papacy
+	id = itest.3
+	title = "itest.3_title"
+	desc = "itest.3_desc"
+	picture = {	
+		trigger = {
+			has_dlc = "Art of War"
+		}
+		picture = CHRISTIAN_ANIMIST_ALTAR_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Art of War" }
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	option = {	#Wonderful
+		name = itest3.a
+		every_country = {
+			limit = {
+				religion = catholic
+				NOT = { tag = ITR }
+			}
+			country_event = {
+				id = itest.4
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+country_event = {		#Dominate Papacy - AI
+	id = itest.4
+	title = "itest.4_title"
+	desc = "itest.4_desc"
+	picture = POPE_PREACHING_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#How dare they
+		name = itest4.a
+		add_country_modifier = {
+			name = "ink_147"
+			duration = -1
+		}
+		add_opinion = {
+				who = ITR
+				modifier = ink_10002
+		}	
+	}
+}
+
+country_event = {		#HRE - AI
+	id = itest.5
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = protestant	
+	}
+}
+
+country_event = {		#HRE - AI
+	id = itest.577
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = catholic	
+	}
+}
+
+country_event = {		#HRE - AI
+	id = itest.555
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = reformed	
+	}
+}
+country_event = {		#HRE - AI
+	id = itest.566
+	title = "itest.5_title"
+	desc = "itest.5_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest5.a
+		change_religion = hussite
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = itest999.b
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
+	}
+}
+
+country_event = {		#Fate of Heretics
+	id = itest.6
+	title = "itest.6_title"
+	desc = "itest.6_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest6.a
+		define_advisor = {
+				type = inquisitor
+				skill = 5
+				culture = saxon
+				discount = yes
+				religion = ROOT
+		}
+		add_country_modifier = {
+			name = "ink_013"
+			duration = -1
+		}
+	}
+	option = {
+		name = itest6.b
+		add_country_modifier = {
+			name = "ink_014"
+			duration = -1
+		}
+		define_advisor = {
+				type = treasurer
+				skill = 4
+				culture = turkish
+				discount = yes
+				religion = ROOT
+		}
+	}
+}
+
+country_event = {		#Strength the Reformists
+	id = itest.7
+	title = "itest.7_title"
+	desc = "itest.7_desc"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest7.a
+		every_country = {
+			limit = {
+				NOT = { religion = catholic }
+				is_part_of_hre = yes
+				NOT = { tag = ITR }
+			}
+			add_country_modifier = {
+				name = "ink_016"
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {		#Reformation in the HRE - For Electors
+	id = itest.999
+	title = "itest.999_title"
+	desc = "itest.999_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest999.a
+		change_religion = PREV
+		add_stability = -1
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = itest999.b
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
+	}
+}
+
+country_event = {		#Remove effect
+	id = itest.8
+	title = "itest.8_title"
+	desc = "itest.8_desc"
+	picture = TOURNAMENT_eventPicture
+	hidden = yes
+	
+	is_triggered_only = yes	#watch it
+	
+	trigger = {
+		has_country_modifier = "ink_016"
+		war_with = ITR
+	}	
+	
+	option = {
+		name = itest8.a
+		remove_country_modifier = "ink_016"
+	}
+}
+
+country_event = {		#The Collapse of the Catholicism
+	id = itest.9
+	title = "itest.9_title"
+	desc = "itest.9_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest9.a
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+	option = {
+		name = itest9.b
+		change_religion = protestant
+		add_stability = -1
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
+	}
+}
+country_event = {		#The Collapse of the Catholicism
+	id = itest.999
+	title = "itest.9_title"
+	desc = "itest.9_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest9.a
+		add_stability = -3
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+	option = {
+		name = itest9.b
+		change_religion = reformed
+		add_stability = -1
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = ITR
+					attitude = attitude_outraged
+				}
+				is_great_power = yes
+			}
+		}
+	}
+}
+
+country_event = {		#Order of Traveler Priests
+	id = itest.10
+	title = "itest.10_title"
+	desc = "itest.10_desc"
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest10.a
+		custom_tooltip = itr_gezgin_papazlar_tt
+		set_global_flag = gezgin_papazlar
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {		#Reformation in the HRE - Hussite one
+	id = itest.11
+	title = "itest.11_title"
+	desc = "itest.11_desc"
+	picture = TOURNAMENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest11.a
+		every_country = {
+			limit = {
+				NOT = { religion = catholic }
+				is_part_of_hre = yes
+				NOT = { tag = ITR }
+			}
+			add_country_modifier = {
+				name = "ink_016"
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {		#Anglican Church
+	id = itest.12
+	title = "itest.12_title"
+	desc = "itest.12_desc"
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ink_gp_anglican
+		}
+	}
+	
+	option = {
+		name = itest12.a
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			add_great_project = {
+				type = church_tessalonica
+				instant = no 
+			}
+			add_treasury = -1000
+		}
+		else = {
+			148 = {
+				add_building = cathedral
+			}
+		}
+	}
+}
+
+country_event = {		#St.Alexander Cathedral
+	id = itest.1273
+	title = "itest.1273_title"
+	desc = "itest.1273_desc"
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ink_gp_alexander
+		}
+	}
+	
+	option = {
+		name = itest1273.a
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			add_great_project = {
+				type = saint_alexander
+				instant = no 
+			}
+			add_treasury = -1000
+		}
+		else = {
+			148 = {
+				add_building = cathedral
+			}
+		}
+	}
+}
+
+country_event = {		#Return to the Faith
+	id = itest.13
+	title = "itest.13_title"
+	desc = "itest.13_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest13.a
+		change_religion = anglican
+		add_stability = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = itest13.b
+		add_stability = -3
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {		#Return to the Faith Hussite
+	id = itest.14
+	title = "itest.14_title"
+	desc = "itest.14_desc"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest14.a
+		change_religion = hussite
+		add_stability = -1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = itest14.b
+		add_stability = -3
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {		#New British Government
+	id = itest.15
+	title = "itest.15_title"
+	desc = "itest.15_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest15.a
+		create_march = GBR
+		GBR = {
+			set_country_flag = itr_british_government
+			set_country_flag = colonial_agreement
+			set_country_flag = itr_gbr_cancelled_march
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+				}
+				ROOT = {
+					create_subject = {
+						subject_type = colony
+						subject = PREV
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+						NOT = { is_core = GBR }
+					}
+				}
+				cede_province = ITR
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = oceania
+						}
+						is_core = GBR
+					}
+				}
+				add_core = ITR
+				cede_province = ITR
+				remove_core = GBR
+			}
+			add_government_reform = british_autonomous_state
+		}
+		custom_tooltip = itr_gbr_march_tt
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = itest15.b
+		add_prestige = 30
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = {		#Colonial Agreement Core Provinces
+	id = itest.16
+	title = "itest.16_title"
+	desc = "itest.16_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = GBR
+		has_country_flag = colonial_agreement
+		any_province = {
+			AND = {
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = oceania
+				}
+				is_city = yes
+				is_core = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+			months = 1
+	}
+	
+	option = {
+		name = itest16.a
+		every_owned_province = {
+			limit = {
+				AND = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					is_core = GBR
+				}
+			}
+			add_core = ITR
+			cede_province = ITR
+			remove_core = GBR
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {		#Colonial Agreement Non Core Provinces
+	id = itest.17x
+	title = "itest.17x_title"
+	desc = "itest.17x_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = GBR
+		has_country_flag = colonial_agreement
+		any_province = {
+			AND = {
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = oceania
+				}
+				is_city = yes
+				NOT = { is_core = ROOT }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+			months = 1
+		}
+	
+	option = {
+		name = itest17x.a
+		every_owned_province = { 
+			limit = {
+				AND = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+					NOT = { is_core = GBR }
+				}
+			}
+			cede_province = ITR
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {		#Colonial Agreement for GBR cancel
+	id = itest.17
+	title = "itest.17_title"
+	desc = "itest.17_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = GBR
+		has_country_flag = colonial_agreement
+		NOT = { is_subject_of = ITR }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			has_country_flag = colonial_agreement
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = colonial_agreement
+		}
+	}
+	
+	option = {
+		name = itest16.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Papal State Agreement
+	id = itest.18
+	title = "itest.18_title"
+	desc = "itest.18_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest18.a
+		every_owned_province = {
+			limit = { 
+				AND = {
+					OR = {
+						area = lazio_area
+						area = central_italy_area
+						area = venetia_area
+						area = tuscany_area
+						area = emilia_romagna_area
+						area = liguria_area
+						area = piedmont_area
+						area = lombardy_area
+						area = po_valley_area
+					}
+					controlled_by = ROOT
+				}
+			}
+			add_core = PAP
+			cede_province = PAP
+			remove_core = ROOT
+		}
+		create_march = PAP
+		add_country_modifier = {
+				name = "ink_120"
+				duration = -1
+		}
+		set_country_flag = itr_papal_agreement
+		set_country_flag = itr_papal_subjugation
+		custom_tooltip = itr_papal_state_tt
+		ai_chance = {
+			factor = 99
+		}
+	}
+	option = {
+		name = itest18.b
+		add_prestige = 30
+		add_papal_influence = 20
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {		#Papal State Agreement Non Core provinces
+	id = itest.19
+	title = "itest.19_title"
+	desc = "itest.19_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_papal_agreement
+		any_owned_province = {
+			AND = {
+				OR = {
+					area = lazio_area
+					area = central_italy_area
+					area = venetia_area
+					area = tuscany_area
+					area = emilia_romagna_area
+					area = liguria_area
+					area = piedmont_area
+					area = lombardy_area
+					area = po_valley_area
+				}
+				NOT = { is_core = ROOT }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = itest19.a
+		every_owned_province = {
+			limit = {
+				AND = {
+					OR = {
+						area = lazio_area
+						area = central_italy_area
+						area = venetia_area
+						area = tuscany_area
+						area = emilia_romagna_area
+						area = liguria_area
+						area = piedmont_area
+						area = lombardy_area
+						area = po_valley_area
+					}
+					NOT = { is_core = ROOT }
+				}
+			}
+			cede_province = PAP
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {		#Papal State Agreement cancel
+	id = itest.20
+	title = "itest.20_title"
+	desc = "itest.20_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_papal_agreement
+		PAP = {
+			NOT = { is_subject_of = ITR }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			has_country_flag = itr_papal_agreement
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = itr_papal_agreement
+		}
+	}
+	
+	option = {
+		name = itest20.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {		#Papal State Agreement Core provinces
+	id = itest.21
+	title = "itest.21_title"
+	desc = "itest.21_desc"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		tag = ITR
+		has_country_flag = itr_papal_agreement
+		any_owned_province = {
+			AND = {
+				OR = {
+					area = lazio_area
+					area = central_italy_area
+					area = venetia_area
+					area = tuscany_area
+					area = emilia_romagna_area
+					area = liguria_area
+					area = piedmont_area
+					area = lombardy_area
+					area = po_valley_area
+				}
+				is_core = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = itest21.a
+		every_owned_province = {
+			limit = {
+				AND = {
+					OR = {
+						area = lazio_area
+						area = central_italy_area
+						area = venetia_area
+						area = tuscany_area
+						area = emilia_romagna_area
+						area = liguria_area
+						area = piedmont_area
+						area = lombardy_area
+						area = po_valley_area
+					}
+					is_core = ROOT
+				}
+			}
+			add_core = PAP
+			cede_province = PAP
+			remove_core = ROOT
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Kayser's Mercenary Companies
+	id = itest.22
+	title = "itest.22_title"
+	desc = "itest.22_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest22.a
+		custom_tooltip = itr_kaysers_mercenaries_tt
+		set_country_flag = itr_grand_mercenary_army
+	}
+}
+
+country_event = {	#Enable Leagues
+	id = itest.23
+	title = "itest.23_title"
+	desc = "itest.23_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = itest23.a
+		enable_hre_leagues = yes
+		set_global_flag = evangelical_union_happened
+	}
+}
+
+country_event = {	#Great Britain March Return
+	id = itest.24
+	title = "itest.24_title"
+	desc = "itest.24_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	trigger = {
+		has_country_flag = itr_gbr_cancelled_march
+		tag = GBR
+		is_subject_of = ITR
+		NOT = { is_march = yes }
+		ITR = {
+			NOT = { ai = yes }
+		}
+	}
+	option = {
+		name = itest24.a
+		ITR = {
+			create_march = GBR
+		}
+	}
+}
+
+country_event = {	#Dominate Papacy Cancel
+	id = itest.24
+	title = "itest.24_title"
+	desc = "itest.24_desc"
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	trigger = {
+		NOT = { religion = catholic }
+		has_opinion_modifier = {
+			who = ROOT
+			modifier = ink_10002
+		}
+	}
+	option = {
+		name = itest24.a
+		remove_opinion = {
+			who = ROOT
+			modifier = ink_10002
+		}
+	}
+}
