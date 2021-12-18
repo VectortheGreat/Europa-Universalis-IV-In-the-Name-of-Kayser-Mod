@@ -517,7 +517,7 @@ country_event = {		#Phaedrusian Rise
 	trigger = {
 		has_country_flag = itr_protestant_way2	
 		num_of_religion = {
-			religion = reformed
+			religion = phaedrusian
 			value = 0.25
 		}
 	}
@@ -537,6 +537,7 @@ country_event = {		#Phaedrusian Rise
 				duration = 3652
 		}
 		swap_non_generic_missions = yes
+		enable_religion = phaedrusian
 		ai_chance = { factor = 100 }	
 	}
 	option = {
@@ -1522,6 +1523,7 @@ country_event = {		#New government for INK marches
 		NOT = { has_reform = royal_order_government }
 		is_subject_of = ITR
 		NOT = { has_country_flag = colonial_agreement }
+		has_global_flag = ink_marches_03
 	}
 	option = {
 		name = itr22a
@@ -1569,6 +1571,7 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		set_in_empire = yes
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1576,10 +1579,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
-			elector = yes
-		}
+		elector = yes
 		ai_chance = { factor = 60 }	
 	}
 	option = {	#Hah!? We are already an Empire
@@ -1605,6 +1605,9 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		ROOT = {
+			set_in_empire = yes
+		}
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1612,8 +1615,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
+		ROOT = {
 			elector = yes
 		}
 		ai_chance = { factor = 60 }	
@@ -1642,6 +1644,9 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		ROOT = {
+			set_in_empire = yes
+		}
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1649,8 +1654,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
+		ROOT = {
 			elector = yes
 		}
 		ai_chance = { factor = 60 }	
@@ -1678,6 +1682,9 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		ROOT = {
+			set_in_empire = yes
+		}
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1685,8 +1692,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
+		ROOT = {
 			elector = yes
 		}
 		ai_chance = { factor = 60 }	
@@ -1703,23 +1709,20 @@ country_event = {		#Secure HRE
 	title = "itr.28_title"
 	desc = "itr.28_desc"
 	picture = DEATH_OF_HEIR_eventPicture
-	hidden = yes
 	
 	fire_only_once = yes
 	
 	trigger = {
 		tag = ITR
 		religion = reformed
-		hre_religion = reformed
+		hre_religion = protestant
 		has_country_flag = religious_league_war_on_winning_side
 		is_great_power = yes
 	}
-	immediate = {	#We'll join the Empire
+	option = {	#We'll join the Empire
 		name = itr28a
-		hidden_effect = {
-			set_hre_religion = reformed
-			set_country_flag = itr_hre_reformed
-		}
+		set_hre_religion = reformed
+		set_country_flag = itr_hre_reformed
 		ai_chance = { factor = 100 }	
 	}
 }

@@ -294,7 +294,7 @@ ink_143 = {
 ink_143ai = {
 	missionaries = 3
 	global_heretic_missionary_strength = 0.05
-	missionary_maintenance_cost = 0.75
+	missionary_maintenance_cost = -0.75
 }
 ink_144 = {
 	missionaries = 1

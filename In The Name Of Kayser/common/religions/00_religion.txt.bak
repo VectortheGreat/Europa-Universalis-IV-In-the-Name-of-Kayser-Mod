@@ -21,6 +21,7 @@ christian = {
 		icon = 1
 		allowed_conversion = {
 			reformed
+			phaedrusian
 			protestant
 		}
 		country = {
@@ -384,6 +385,8 @@ christian = {
 	phaedrusian = {	#Phaedrusian	#255  45  44 OLD / 224  72  141
 		color = { 113  193  215 }
 		icon = 30
+		
+		allow_female_defenders_of_the_faith = yes
 
 		allowed_center_conversion = {
 			catholic
@@ -405,8 +408,8 @@ christian = {
 			ink_buff3
 			ink_buff4
 			ink_buff5
-			ink_buff6
 			ink_buff7
+			ink_buff6
 			ink_buff8
 			ink_buff9
 			ink_buff10
@@ -425,6 +428,7 @@ christian = {
 		allowed_conversion = {
 			reformed
 			catholic
+			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic
@@ -562,6 +566,7 @@ christian = {
 		allowed_conversion = {
 			protestant
 			catholic
+			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic

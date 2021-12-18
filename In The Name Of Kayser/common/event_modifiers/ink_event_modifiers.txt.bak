@@ -59,7 +59,7 @@ ink_013 = {	#Crush Heretics
 }
 ink_014 = {	#Tolerance Heretics
 	tolerance_heretic = 3
-	global_heretic_missionary_strength = -0.05
+	global_heretic_missionary_strength = -0.03
 	religious_unity = 0.25
 }
 ink_015 = {	#Reformation in the Hre

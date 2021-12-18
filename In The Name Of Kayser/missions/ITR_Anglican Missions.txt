@@ -123,33 +123,7 @@ itr_religion_missions_ang = {		#Anglican Missions
 				}
 			}
 			else = {
-				limit = {
-					ENG = { is_subject_of = ITR }
-					GBR = { is_subject_of = ITR }
-					NOT = { exist = ENG }
-					NOT = { exist = GBR }
-				}
 				add_dip_power = 100
-			}
-			if = {
-				ENG = {
-					limit = {
-						exists = ENG
-						NOT = { religion = anglican }
-					}
-					country_event = {
-						id = itest.13
-					}
-				}
-				GBR = {
-					limit = {
-						exists = GBR
-						NOT = { religion = anglican }
-					}
-					country_event = {
-						id = itest.13
-					}
-				}
 			}
 		}
 	}
@@ -205,9 +179,6 @@ itr_religion_missions_ang = {		#Anglican Missions
 						value = 200
 					}
 				}
-			}
-			else = {
-				add_dip_power = 100
 			}
 		}
 		effect = {

@@ -307,10 +307,10 @@ ink_145 = {
 ink_146 = {
 	land_attrition = -0.20
 }
-ink_147 = {	#Dominate Curia
+ink_147 = {	#Dominate the Papacy
 	papal_influence = -2
 }
-ink_148 = {	#Popularity
+ink_148 = {	#Religious Fervour
 	diplomatic_reputation = 2
 	legitimacy = 1.5
 }

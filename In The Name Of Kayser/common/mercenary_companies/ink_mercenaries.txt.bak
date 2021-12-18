@@ -105,7 +105,7 @@ merc_ink_march = {	#Noble Crusader Company
 	}
 	cost_modifier = 0.5
 	modifier = {
-		recover_army_morale_speed = 0.20
+		discipline = 0.05
 		land_morale = 0.1
 	}
 }

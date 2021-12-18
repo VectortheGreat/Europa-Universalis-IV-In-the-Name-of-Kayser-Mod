@@ -517,7 +517,7 @@ country_event = {		#Phaedrusian Rise
 	trigger = {
 		has_country_flag = itr_protestant_way2	
 		num_of_religion = {
-			religion = reformed
+			religion = phaedrusian
 			value = 0.25
 		}
 	}
@@ -537,6 +537,7 @@ country_event = {		#Phaedrusian Rise
 				duration = 3652
 		}
 		swap_non_generic_missions = yes
+		enable_religion = phaedrusian
 		ai_chance = { factor = 100 }	
 	}
 	option = {
@@ -1522,6 +1523,7 @@ country_event = {		#New government for INK marches
 		NOT = { has_reform = royal_order_government }
 		is_subject_of = ITR
 		NOT = { has_country_flag = colonial_agreement }
+		has_global_flag = ink_marches_03
 	}
 	option = {
 		name = itr22a
@@ -1569,6 +1571,7 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		set_in_empire = yes
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1576,10 +1579,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
-			elector = yes
-		}
+		elector = yes
 		ai_chance = { factor = 60 }	
 	}
 	option = {	#Hah!? We are already an Empire
@@ -1605,6 +1605,7 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		set_in_empire = yes
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1612,10 +1613,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
-			elector = yes
-		}
+		elector = yes
 		ai_chance = { factor = 60 }	
 	}
 	option = {	#Hah!? We are already an Empire
@@ -1642,6 +1640,7 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		set_in_empire = yes
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1649,10 +1648,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
-			elector = yes
-		}
+		elector = yes
 		ai_chance = { factor = 60 }	
 	}
 	option = {	#Hah!? We are already an Empire
@@ -1678,6 +1674,7 @@ country_event = {		#Join the Empire
 	}
 	option = {	#We'll join the Empire
 		name = itr24a
+		set_in_empire = yes
 		random_country = {
 			limit = {
 				is_part_of_hre = yes
@@ -1685,10 +1682,7 @@ country_event = {		#Join the Empire
 			}
 			elector = no
 		}
-		ITR = {
-			set_in_empire = yes
-			elector = yes
-		}
+		elector = yes
 		ai_chance = { factor = 60 }	
 	}
 	option = {	#Hah!? We are already an Empire

@@ -21,7 +21,7 @@
  PEACE_boost_gezgin_priests: "Strengthen the Gezgin Priest Order"
  
  itr_hre_religion_tt:0 "§ If you complete this mission as Holy Roman Emperor, some HRE states §Tconvert to your religion.§!§!"
- itr_hre_league_tt:0 "§ Enables the §THRE League.§!§!"
+ itr_hre_league_tt:0 "§ Enables the §THRE League§! if the HRE religion is Catholic.§!"
  itr_dominate_papacy_tt:0 "§ Every Catholic country except you gains permanent §G-2 yearly papal influence§! and they will have a permanent §R-40§! opinion on you. §! "
  itr_gezgin_papazlar_tt:0 "§ Every Phaedrusian country will gain §Ta new peace treaty§! that converts enemy provinces to Phaedrusian for 15 years. §!"
  itr_gbr_march_tt:0 "§ Great Britain will be March permanently and they will §Gtransfer all New World provinces to us§!. §RIf we're going to break their Vassalization, they'll be March again.§! §!"

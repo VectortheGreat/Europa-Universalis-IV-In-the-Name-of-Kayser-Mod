@@ -1934,6 +1934,7 @@ itr_economic_missions = {
 		effect = {
 			custom_tooltip = ink_marches_tt
 			set_global_flag = ink_march_lord
+			set_global_flag = ink_marches_03
 		}
 	}
 }

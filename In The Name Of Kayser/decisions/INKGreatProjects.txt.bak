@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			has_country_flag = ink_great_projects_0
+			has_dlc = "Leviathan"
 		}
 		allow = {
 		}
@@ -176,7 +177,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 148
+			is_core = 318
 		}
 		effect = {
 			set_country_flag = ink_izmir_barrack_gp

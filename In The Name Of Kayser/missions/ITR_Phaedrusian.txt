@@ -94,7 +94,7 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 		}
 		effect = {
 			country_event = {	#It adds a tier 2 monument
-				id = itest.12
+				id = itest.1273
 			}
 		}
 	}

@@ -217,6 +217,18 @@ country_event = {	#HRE
 		name = dev4.j
 		set_hre_religion = orthodox
 	}
+	option = {	#Orthodox HRE
+		name = dev4.j
+		ROOT = {
+			set_in_empire = yes
+		}
+	}
+	option = {	#Orthodox HRE
+		name = dev4.j
+		ROOT = {
+			elector = yes
+		}
+	}
 }
 
 

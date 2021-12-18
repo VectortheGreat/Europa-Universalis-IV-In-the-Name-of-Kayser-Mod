@@ -18,6 +18,7 @@ country_event = {		#Ankara Rebels
 			flag = civilwar_start
 			days = 30
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -36,7 +37,7 @@ country_event = {		#Ankara Rebels
 				}
 				spawn_rebels = {
 					type = sunni_rebels
-					size = 15
+					size = 10
 				}
 			}
 		}
@@ -62,6 +63,7 @@ country_event = {		#Hüdavengidar Rebels
 			flag = rebels_1
 			days = 60
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -80,7 +82,7 @@ country_event = {		#Hüdavengidar Rebels
 				}
 				spawn_rebels = {
 					type = sunni_rebels
-					size = 15
+					size = 10
 				}
 			}
 		}
@@ -105,6 +107,7 @@ country_event = {		#Aydın Rebels
 			flag = rebels_2
 			days = 60
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -123,7 +126,7 @@ country_event = {		#Aydın Rebels
 				}
 				spawn_rebels = {
 					type = sunni_rebels
-					size = 25
+					size = 15
 				}
 			}
 		}
@@ -148,6 +151,7 @@ country_event = {		#Germiyan Rebels
 			flag = rebels_3
 			days = 60
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -166,7 +170,7 @@ country_event = {		#Germiyan Rebels
 				}
 				spawn_rebels = {
 					type = sunni_rebels
-					size = 15
+					size = 10
 				}
 			}
 		}
@@ -191,6 +195,7 @@ country_event = {		#Bolu Rebels
 			flag = rebels_4
 			days = 60
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -224,6 +229,7 @@ country_event = {		#Canik Rebels
 			flag = rebels_5
 			days = 60
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -257,6 +263,7 @@ country_event = {		#Rum Rebels
 			flag = rebels_6
 			days = 100
 		}
+		NOT = { ai = yes }
 	}
 
 	option = {
@@ -275,7 +282,7 @@ country_event = {		#Rum Rebels
 				}
 				spawn_rebels = {
 					type = sunni_rebels
-					size = 20
+					size = 15
 				}
 			}
 		}
@@ -467,7 +474,8 @@ country_event = {		# End of Civil War for AI
 
 	option = {
 		name = "tcwevents.11a"
-		add_stability = 1
+		add_stability = 2
+		clr_country_flag = civilwar_start2
 		clr_country_flag = rebels_6
 		clr_country_flag = rebels_5
 		clr_country_flag = rebels_4

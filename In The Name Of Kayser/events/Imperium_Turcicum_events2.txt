@@ -110,8 +110,8 @@ country_event = {		#Dominate Papacy - AI
 			duration = -1
 		}
 		add_opinion = {
-				who = ITR
-				modifier = ink_10002
+			who = ITR
+			modifier = ink_10002
 		}	
 	}
 }
@@ -1024,23 +1024,24 @@ country_event = {	#Great Britain March Return
 }
 
 country_event = {	#Dominate Papacy Cancel
-	id = itest.24
-	title = "itest.24_title"
-	desc = "itest.24_desc"
+	id = itest.25
+	title = "itest.25_title"
+	desc = "itest.25_desc"
 	picture = GENERALS_DISCUSSING_eventPicture
 	
 	trigger = {
 		NOT = { religion = catholic }
-		has_opinion_modifier = {
-			who = ROOT
+		reverse_has_opinion_modifier = {
+			who = ITR
 			modifier = ink_10002
 		}
 	}
 	option = {
-		name = itest24.a
-		remove_opinion = {
-			who = ROOT
+		name = itest25.a
+		reverse_remove_opinion = {
+			who = ITR
 			modifier = ink_10002
 		}
+		ai_chance = { factor = 100 }	
 	}
 }

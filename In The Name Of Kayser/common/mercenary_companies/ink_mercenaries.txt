@@ -100,7 +100,6 @@ merc_ink_march = {	#Noble Crusader Company
 	sprites = { itr_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		is_march = yes
-		overlord = { has_reform = magna_turcorum_dynastia }
 		has_reform = royal_order_government
 	}
 	cost_modifier = 0.5

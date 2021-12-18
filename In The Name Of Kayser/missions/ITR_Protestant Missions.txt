@@ -31,16 +31,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		required_missions = { itr_religion_mission_pr1 }
 		position = 8
 		provinces_to_highlight = {
-			NOT = {
-				ROOT = {
-					calc_true_if = {
-						all_elector = {
-							has_opinion = { who = ROOT value = 200 }
-						}
-						amount = 3
-					}
-				}
-			}
 		}
 		trigger = {
 			OR = {
@@ -65,6 +55,8 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 					}
 				}
 				NOT = { hre_size = 1 }
+				hre_religion = protestant
+				hre_religion = reformed
 			}	
 		}
 		effect = {
@@ -72,8 +64,13 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 					name = "ink_015"
 					duration = 3652
 			}
-			country_event = {
-				id = itest.23
+			if = {
+				limit = {
+					hre_religion = catholic
+				}
+				country_event = {
+					id = itest.23
+				}
 			}
 			country_event = {
 				id = itest.7

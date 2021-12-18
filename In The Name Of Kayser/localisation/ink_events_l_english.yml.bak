@@ -147,6 +147,9 @@
  itr.24_desc:0 "We were adored by princes and electors in the war in which we determined the fate of the Holy Roman Empire in League War. They invite us as electors to the Holy Roman Empire."
  itr24a:0 "We'll join the Empire."
  itr24b:0 "Hah!? We are already an Empire."
+ itr.28_title:0 "Secure the Empire"
+ itr.28_desc:0 "We have won a great war. All electors influenced by us. We must secure the HRE."
+ itr28a:0 "We'll rule the HRE."
  
  itr.999_title:0 "Protestantism is spreading"
  itr.999_desc:0 "The Gezgin Priests organization, converted another province to Protestantism."

@@ -53,7 +53,7 @@ ink_012 = {	#Papal blessing
 	land_morale = 0.10
 }
 ink_013 = {	#Crush Heretics
-	global_heretic_missionary_strength = 0.05
+	global_heretic_missionary_strength = 0.03
 	tolerance_heretic = -3
 	land_morale = 0.05
 }

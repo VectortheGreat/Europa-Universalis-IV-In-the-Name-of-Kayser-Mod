@@ -227,7 +227,14 @@ age_of_discovery = {
 		ink_ai_1 = {
 		
 			allow = {
-				ai = yes
+				OR = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
+				}
 			}
 			modifier = {
 				ae_impact = -0.1
@@ -445,7 +452,14 @@ age_of_reformation = {
 
 		ink_ai_2 = {
 			allow = {
-				ai = yes
+				OR = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
+				}
 			}
 			modifier = {
 				ae_impact = -0.15
@@ -647,7 +661,14 @@ age_of_absolutism = {
 
 		ink_ai_3 = {
 			allow = {
-				ai = yes
+				OR = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
+				}
 			}
 			modifier = {
 				ae_impact = -0.3
@@ -854,13 +875,13 @@ age_of_revolutions = {
 		}
 		ink_ai_4 = {
 			allow = {
-				AND = {
-					ai = yes
-					OR = {
-						NOT = { is_subject_of = ITR }
-						NOT = { is_subject_of = TEK }
-						NOT = { is_subject_of = RMO }
-					}
+				OR = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
 				}
 			}
 			modifier = {

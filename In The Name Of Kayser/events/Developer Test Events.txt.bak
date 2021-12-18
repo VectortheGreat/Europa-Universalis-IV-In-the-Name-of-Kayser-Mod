@@ -351,10 +351,18 @@ country_event = {	#Reform Missions
 	option = {
 		name = dev6.a		
 		change_religion = ROOT
+		ai_chance = {
+			factor = 10
+			
+		}
 	}
 	option = {
 		name = dev6.b
 		ai_chance = { factor = 25 }
 		change_religion = PREV
+		ai_chance = {
+			factor = 90
+			
+		}
 	}
 }

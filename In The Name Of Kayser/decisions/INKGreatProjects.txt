@@ -81,7 +81,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 146
+			owns_core_province = 146
 		}
 		effect = {
 			set_country_flag = ink_port_of_athens_gp
@@ -105,7 +105,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 151
+			owns_core_province = 151
 		}
 		effect = {
 			set_country_flag = ink_great_market_gp
@@ -129,7 +129,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 151
+			owns_core_province = 151
 		}
 		effect = {
 			set_country_flag = ink_palace_konstantinopolis_gp
@@ -153,7 +153,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 149
+			owns_core_province = 149
 		}
 		effect = {
 			set_country_flag = ink_council_adrianople_gp
@@ -177,7 +177,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 148
+			owns_core_province = 318
 		}
 		effect = {
 			set_country_flag = ink_izmir_barrack_gp
@@ -201,7 +201,7 @@ country_decisions = {
 		}
 		allow = {
 			treasury = 2000
-			is_core = 2301
+			owns_core_province = 2301
 		}
 		effect = {
 			set_country_flag = ink_kayseri_palace_gp

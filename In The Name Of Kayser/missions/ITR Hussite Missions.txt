@@ -99,16 +99,6 @@ itr_religion_missions_hus = {		#Hussite Missions
 		required_missions = {  }
 		position = 9
 		provinces_to_highlight = {
-			NOT = {
-				ROOT = {
-					calc_true_if = {
-						all_elector = {
-							has_opinion = { who = ROOT value = 200 }
-						}
-						amount = 3
-					}
-				}
-			}
 		}
 		trigger = {
 			OR = {
@@ -133,11 +123,12 @@ itr_religion_missions_hus = {		#Hussite Missions
 						amount = 3
 					}
 				}
+				hre_religion = protestant
+				hre_religion = reformed
 				NOT = { hre_size = 1 }
 			}
 		}
 		effect = {
-			
 			country_event = {
 				id = itest.11
 			}
@@ -145,8 +136,13 @@ itr_religion_missions_hus = {		#Hussite Missions
 					name = "ink_015"
 					duration = 3652
 			}
-			country_event = {
-				id = itest.23
+			if = {
+				limit = {
+					hre_religion = catholic
+				}
+				country_event = {
+					id = itest.23
+				}
 			}
 			custom_tooltip = itr_hre_league_tt
 		}

@@ -21,6 +21,7 @@ christian = {
 		icon = 1
 		allowed_conversion = {
 			reformed
+			phaedrusian
 			protestant
 		}
 		country = {
@@ -384,6 +385,8 @@ christian = {
 	phaedrusian = {	#Phaedrusian	#255  45  44 OLD / 224  72  141
 		color = { 113  193  215 }
 		icon = 30
+		
+		allow_female_defenders_of_the_faith = yes
 
 		allowed_center_conversion = {
 			catholic
@@ -411,6 +414,23 @@ christian = {
 			ink_buff9
 			ink_buff10
 		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = phaedrusian
+				}
+			}
+		}
+
+		on_convert = {
+			change_religion = phaedrusian
+			add_prestige = -100
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
 		aspects_name = PROTESTANT_ASPECTS
 		
 		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
@@ -425,6 +445,7 @@ christian = {
 		allowed_conversion = {
 			reformed
 			catholic
+			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic
@@ -562,6 +583,7 @@ christian = {
 		allowed_conversion = {
 			protestant
 			catholic
+			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic

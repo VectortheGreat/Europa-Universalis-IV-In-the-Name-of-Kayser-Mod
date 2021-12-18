@@ -56,10 +56,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 		required_missions = { itr_religion_mission_ct2 }
 		position = 9
 		provinces_to_highlight = {
-			OR = {
-					owned_by = PAP
-					PAP = { NOT = { is_subject_of = ROOT } }
-			}
+			owned_by = PAP
 		}
 		trigger = {
 			is_papal_controller = yes
