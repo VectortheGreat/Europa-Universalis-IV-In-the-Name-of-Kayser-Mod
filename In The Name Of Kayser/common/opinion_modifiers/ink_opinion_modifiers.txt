@@ -1,4 +1,0 @@
-ink_10000 = {
-	opinion = 75
-	yearly_decay = 2
-}
