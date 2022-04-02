@@ -13,7 +13,7 @@ jesuit_order = {
         add_base_tax = -1
     }
     modifier = {
-        local_development_cost = -0.1
+        local_development_cost = -0.15
         local_build_cost = -0.1
     }
     ai_priority = {
@@ -52,7 +52,7 @@ dominican_order = {
         add_base_production = -1
     }
     modifier = {
-		trade_goods_size_modifier = 0.1
+        province_trade_power_modifier = 0.25
     }
     ai_priority = {
         factor = 1

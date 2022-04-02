@@ -35,7 +35,6 @@
 4754 = "Cattaro"
 4779 = "Gallipoli"
 4780 = "Locrida"
-316 = "Nikomedia"
 
 #Africa
 334 = "Tangeri"

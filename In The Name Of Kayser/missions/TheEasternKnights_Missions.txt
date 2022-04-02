@@ -20,12 +20,12 @@ tek_religion_missions = {
 		position = 1
 		provinces_to_highlight = {
 				province_id = 151
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 			}	
 		trigger = {
 			religious_unity = 0
 			151 = {			#Constantinople
-				religion = ROOT
+						religion = coptic
 			}
 		}
 		effect = {
@@ -36,7 +36,7 @@ tek_religion_missions = {
 				type = inquisitor
 				skill = 2
 				discount = yes
-				religion = ROOT
+				religion = coptic
 			}
 			add_country_modifier = {
 				name = "ink_144"
@@ -58,30 +58,30 @@ tek_religion_missions = {
 					province_id = 3000
 					province_id = 1766
 				}
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 		}
 		trigger = {
 				AND = {
 					151 = {			#Constantinople
-						religion = ROOT
+						religion = coptic
 					}
 					148 = {			#Selanik
-						religion = ROOT
+						religion = coptic
 					}
 					146 = {			#Athens
-						religion = ROOT
+						religion = coptic
 					}
 					149 = {			#Edirne
-						religion = ROOT
+						religion = coptic
 					}
 					3001 = {		#Skopje
-						religion = ROOT
+						religion = coptic
 					}
 					3000 = {		#Nis
-						religion = ROOT
+						religion = coptic
 					}
 					1766 = {		#Kosovo
-						religion = ROOT
+						religion = coptic
 					}
 				}
 		}
@@ -108,36 +108,38 @@ tek_religion_missions = {
 					province_id = 318
 					province_id = 331
 				}
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 		}
 		trigger = {
+				AND = {
 					326 = {			#Ankara
-						religion = ROOT
+						religion = coptic
 					}
 					328 = {			#Sinop
-						religion = ROOT
+						religion = coptic
 					}
 					316 = {			#Kocaeli
-						religion = ROOT
+						religion = coptic
 					}
 					317 = {			#Hüdavendigar
-						religion = ROOT
+						religion = coptic
 					}
 					2297 = {		#Saruhan
-						religion = ROOT
+						religion = coptic
 					}
 					2298 = {		#Tekke
-						religion = ROOT
+						religion = coptic
 					}
 					2301 = {		#Kayseri
-						religion = ROOT
+						religion = coptic
 					}
 					318 = {			#Sugla
-						religion = ROOT
+						religion = coptic
 					}
 					331 = {			#Erzurum
-						religion = ROOT
+						religion = coptic
 					}
+				}
 		}
 		effect = {
 			add_country_modifier = {
@@ -152,11 +154,11 @@ tek_religion_missions = {
 		position = 4
 		provinces_to_highlight = {
 			province_id = 118
-			NOT = { religion = ROOT }
+			NOT = { religion = coptic }
 		}	
 		trigger = {
 			118 = {			#Roma
-				religion = ROOT
+				religion = coptic
 			}
 		}
 		effect = {
@@ -176,14 +178,14 @@ tek_religion_missions = {
 				province_id = 2313
 				province_id = 379
 			}
-			NOT = { religion = ROOT }
+			NOT = { religion = coptic }
 		}
 		trigger = {
 			379 = {
-				religion = ROOT
+				religion = coptic
 			}
 			2313 = {
-				religion = ROOT
+				religion = coptic
 			}
 		}
 		effect = {
@@ -193,11 +195,11 @@ tek_religion_missions = {
 			}
 			2313 = {
 				add_building = cathedral
-				owned_by = ROOT
+				owned_by = root
 			}
 			379 = {
 				add_building = cathedral
-				owned_by = ROOT
+				owned_by = root
 			}
 		}
 	}
@@ -211,29 +213,30 @@ tek_religion_missions = {
 				area = palestine_area
 				area = aleppo_area
 			}
-			NOT = { religion = ROOT }
+			NOT = { religion = coptic }
 		}
 		trigger = {
 			syria_area = {
 				type = all
-				religion = ROOT
+				religion = coptic
 			}
 			palestine_area = {
 				type = all
-				religion = ROOT
+				religion = coptic
 			}
 			aleppo_area = {
 				type = all
-				religion = ROOT
+				religion = coptic
 			}
 		}
 
 		effect = {
-			add_prestige = 20
+			add_years_of_income = 4
+			add_prestige = 50
 			define_advisor = {
 				type = theologian
 				skill = 3
-				religion = ROOT
+				religion = coptic
 				discount = yes
 			}
 		}
@@ -247,14 +250,14 @@ tek_religion_missions = {
 					province_id = 385
 					province_id = 384
 				}
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 		}
 		trigger = {
 			385 = {
-				religion = ROOT
+				religion = coptic
 			}
 			384 = {
-				religion = ROOT
+				religion = coptic
 			}
 
 		}
@@ -277,27 +280,27 @@ tek_religion_missions = {
 				province_id = 2313
 				province_id = 419
 			}
-			NOT = { religion = ROOT }
+			NOT = { religion = coptic }
 		}
 		trigger = {
 			1227 = {
-				religion = ROOT
+				religion = coptic
 			}
 			1234 = {
-				religion = ROOT
+				religion = coptic
 			}
 			358 = {
-				religion = ROOT
+				religion = coptic
 			}
 			2313 = {
-				religion = ROOT
+				religion = coptic
 			}
 			419 = {
-				religion = ROOT
+				religion = coptic
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige = 50
 			change_adm = 3
 			add_country_modifier = {
 				name = "ink_126"
@@ -353,14 +356,14 @@ tek_religion_missions = {
 		position = 11
 		provinces_to_highlight = {
 			province_id = 151
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 				NOT = { culture = turkish }
 				has_cathedral_building_trigger = no
 		}
 		trigger = {
 			religious_unity = 1
 			151 = {
-				religion = ROOT
+				religion = coptic
 				culture = turkish
 				has_building = cathedral
 				development = 50
@@ -492,7 +495,7 @@ tek_diplomatic_missions = {
 		}
 		trigger = {
 			OR = {
-				NAP = {	is_subject_of = ROOT	}
+				NAP = {	is_subject_of = TEK	}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 8
 					OR = {
@@ -523,7 +526,7 @@ tek_diplomatic_missions = {
 					province_id = 3003
 					province_id = 163
 			}
-			NOT = { is_core = ROOT }
+			NOT = { is_core = root }
 		}
 		trigger = {
 			owns_core_province = 164
@@ -709,7 +712,7 @@ tek_diplomatic_missions = {
 		}
 		effect = {
 			add_years_of_income = 0.5
-			add_prestige = 10
+			add_prestige = 25
 		}
 	}
 	tek_diplomatic_mission_7 = {		#Arabia
@@ -846,7 +849,7 @@ tek_diplomatic_missions = {
 			}
 		}
 		effect = {
-			add_mercantilism = 3
+			add_mercantilism = 5
 			add_country_modifier = {
 				name = "ink_138"
 				duration = 7300
@@ -889,6 +892,7 @@ tek_administrative_missions = {
 				name = "ink_124"
 				duration = 5478
 			}
+			add_splendor = 450
 			4699 = {
 				limit = {
 						NOT = { is_core = ROOT }
@@ -1456,17 +1460,11 @@ tek_military_missions = {
 				province_id = 398
 				province_id = 2315
 			}
-			NOT = { is_core = ROOT }
+			NOT = { is_core = root }
 		}
 		trigger = {
 			navy_size = 75
-			num_of_owned_provinces_with = { 
-				OR = {
-					has_building = dock 
-					has_building = drydock
-				}
-				value = 10  
-			}
+			dock = 10
 			owns_core_province = 408
 			owns_core_province = 398
 			owns_core_province = 2315
@@ -1488,7 +1486,7 @@ tek_military_missions = {
 				province_id = 4419
 				province_id = 2039
 			}
-			NOT = { is_core = ROOT }
+			NOT = { is_core = root }
 		}
 		trigger = {
 			navy_size = 200
@@ -1699,13 +1697,13 @@ tek_economic_missions = {
 		trigger = {
 			151 = {
 				development = 40
-				owned_by = ROOT
+				owned_by = root
 			}
 		}
 		effect = {
 			151 = {
 				add_building = university
-				owned_by = ROOT
+				owned_by = root
 			}
 			
 			set_country_flag = konstantinopolis_library_mission_flag
@@ -1720,26 +1718,16 @@ tek_economic_missions = {
 		position = 4
 		provinces_to_highlight = {
 			province_id = 151
-				NOT = { religion = ROOT }
+				NOT = { religion = coptic }
 				NOT = { culture = turkish }
 				has_temple_building_trigger = no
 		}
 		trigger = {
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-				}
-				has_great_project = {
-					type = hagia_sophia
-					tier = 3
-				}
-			}
-			else = {
-				151 = {
-					religion = ROOT
-					has_building = temple
-					development = 50
-				}
+			151 = {
+				religion = coptic
+				culture = turkish
+				has_building = temple
+				development = 50
 			}
 		}
 		effect = {
@@ -1747,7 +1735,7 @@ tek_economic_missions = {
 				name = "ink_112"
 				duration = 7300
 			}
-			add_prestige = 15
+			add_prestige = 25
 		}
 	}
 	tek_economic_mission_5 = {		#Improve Trade
@@ -1777,7 +1765,7 @@ tek_economic_missions = {
 			}
 		}
 		effect = {
-			add_mercantilism = 4
+			add_mercantilism = 10
 			add_country_modifier = {
 				name = "ink_25"
 				duration = 3650
@@ -1871,17 +1859,18 @@ tek_economic_missions = {
 			
 		}
 	}
-	tek_economic_mission_10 = {		#Imperial Projects
-		icon = imperial_projects
+	tek_economic_mission_10 = {		#Assimilate the Natives
+		icon = assimilate_natives
 		required_missions = {  } 
 		position = 11
 		trigger = {
-			dip_tech = 10
-			is_at_war = no
+			num_of_colonists = 1
 		}
 		effect = {
-			custom_tooltip = ink_great_projectss_tt
-			set_country_flag = ink_great_projects_0
+			add_country_modifier = {
+				name = "ink_135"
+				duration = 10957
+			}
 		}
 	}
 }

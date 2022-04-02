@@ -1,0 +1,167 @@
+buff1 = {
+	cost = 130
+	modifier = {
+		global_missionary_strength = 0.015
+		tolerance_own = 1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1
+			is_at_war = no
+		}
+	}
+}
+
+buff2 = {
+	cost = 130
+	modifier = {
+		tolerance_heathen = 2
+		tolerance_heretic = 2
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+buff3 = {
+	cost = 130
+	modifier = {
+		diplomatic_reputation = 1
+		imperial_authority = 0.10
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1
+			is_at_war = no
+		}
+	}
+}
+
+buff4 = {
+	cost = 130
+	modifier = {
+		global_colonial_growth = 20
+		native_uprising_chance = -0.25
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+buff5 = {
+	cost = 130
+	modifier = {
+		harsh_treatment_cost = -0.3
+		global_autonomy = -0.1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1
+			is_at_war = no
+		}
+	}
+}
+
+buff6 = {
+	cost = 130
+	modifier = {
+		discipline = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+buff7 = {
+	cost = 130
+	modifier = {
+		technology_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1
+			is_at_war = no
+		}
+	}
+}
+
+buff8 = {
+	cost = 130
+	modifier = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+buff9 = {
+	cost = 130
+	modifier = {
+		global_trade_power = 0.1
+		embargo_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 1
+			is_at_war = no
+		}
+	}
+}
+
+buff10 = {
+	cost = 130
+	modifier = {
+		legitimacy = 1
+		yearly_absolutism = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}

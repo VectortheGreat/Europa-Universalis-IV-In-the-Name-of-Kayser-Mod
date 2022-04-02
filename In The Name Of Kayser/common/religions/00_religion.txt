@@ -21,7 +21,6 @@ christian = {
 		icon = 1
 		allowed_conversion = {
 			reformed
-			phaedrusian
 			protestant
 		}
 		country = {
@@ -382,11 +381,9 @@ christian = {
 		heretic = { TABORITE UTRAQUIST ORPHAN }
 	}
 	
-	phaedrusian = {	#Phaedrusian	#255  45  44 OLD / 224  72  141
-		color = { 113  193  215 }
+	iskenderian = {
+		color = { 255  45  44 }
 		icon = 30
-		
-		allow_female_defenders_of_the_faith = yes
 
 		allowed_center_conversion = {
 			catholic
@@ -401,35 +398,19 @@ christian = {
 		}
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
+		hre_heretic_religion = yes
 		
 		aspects = {
-			ink_buff1
-			ink_buff2
-			ink_buff3
-			ink_buff4
-			ink_buff5
-			ink_buff7
-			ink_buff6
-			ink_buff8
-			ink_buff9
-			ink_buff10
-		}
-		
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = phaedrusian
-				}
-			}
-		}
-
-		on_convert = {
-			change_religion = phaedrusian
-			add_prestige = -100
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}
+			buff1
+			buff2
+			buff3
+			buff4
+			buff5
+			buff6
+			buff7
+			buff8
+			buff9
+			buff10
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -445,7 +426,6 @@ christian = {
 		allowed_conversion = {
 			reformed
 			catholic
-			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic
@@ -583,7 +563,6 @@ christian = {
 		allowed_conversion = {
 			protestant
 			catholic
-			phaedrusian
 		}
 		allowed_center_conversion = {
 			catholic

@@ -38,7 +38,6 @@ monarchy = {
 				mossi_federal_kingdom
 				turkish_government
 				magna_turcorum_dynastia
-				british_autonomous_state
 			}
 		}
 		hereditary_vs_nobility = {
@@ -149,6 +148,8 @@ monarchy = {
 		solomonic_empire_legacy
 		musa_rule_legacy
 		mossi_federal_kingdom_legacy
+		turkish_government_legacy
+		magna_turcorum_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -187,6 +188,8 @@ monarchy = {
 		prussian_monarchy
 		elective_monarchy
 		celestial_empire
+		turkish_government
+		magna_turcorum_dynastia
 	}
 
 	#Flavor
@@ -543,6 +546,7 @@ theocracy = {
 		theocratic_government
 		monastic_order_government
 		holy_state_legacy
+		the_great_temple_government
 	}
 	reform_levels = {
 		theocratic_leadership = {
@@ -553,7 +557,6 @@ theocracy = {
 				holy_state_reform
 				united_cantons_reform
 				the_great_temple_government
-				royal_order_government
 			}
 		}
 		internal_vs_external_mission = {
