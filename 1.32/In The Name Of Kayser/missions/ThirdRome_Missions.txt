@@ -65,44 +65,44 @@ rmo_religion_missions = {
 				province_id = 318
 				province_id = 331
 			}
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = { 
 			326 = {			#Ankara
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			328 = {			#Sinop
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			316 = {			#Kocaeli
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			317 = {			#Hüdavendigar
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			2297 = {	
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			2298 = {		#Tekke
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			2301 = {		#Kayseri
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			318 = {			#Sugla
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 			331 = {			#Erzurum
 				country_or_non_sovereign_subject_holds = ROOT
-				religion = orthodox
+				religion = ROOT
 			}
 		}
 		effect = {
@@ -119,16 +119,16 @@ rmo_religion_missions = {
 		icon = convert_roma
 		provinces_to_highlight = {
 			province_id = 118
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = {
 			118 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT 
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.10
+			add_patriarch_authority = 0.05
 			118 = {
 				add_building = cathedral
 			}
@@ -144,20 +144,20 @@ rmo_religion_missions = {
 				province_id = 2313
 				province_id = 379
 			}
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = {
 			379 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			2313 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.20
+			add_patriarch_authority = 0.10
 			add_country_modifier = {
 				name = "ink_8"
 				duration = 3652
@@ -178,16 +178,16 @@ rmo_religion_missions = {
 		provinces_to_highlight = {
 			province_id = 358
 			NOT = { owned_by = ROOT }
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = {
 			358 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.10
+			add_patriarch_authority = 0.05
 			358 = {
 				add_building = cathedral
 			}
@@ -207,38 +207,38 @@ rmo_religion_missions = {
 				area = delta_area
 				area = bahari_area
 			}
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = {
 			cukurova_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 			syria_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 			palestine_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 			aleppo_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 			delta_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 			bahari_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
-				religion = orthodox
+				religion = ROOT
 			}
 
 		}
@@ -260,20 +260,20 @@ rmo_religion_missions = {
 				province_id = 385
 				province_id = 384
 			}
-			NOT = { religion = orthodox }
+			NOT = { religion = ROOT }
 		}
 		trigger = {
 			385 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			384 = {
-				religion = orthodox
+				religion = ROOT
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.2
+			add_patriarch_authority = 0.05
 			add_country_modifier = {
 				name = "ink_10"
 			}
@@ -290,8 +290,6 @@ rmo_religion_missions = {
 			change_adm = 2 
 			change_dip = 2
 			change_mil = 2
-			add_stability = 1
-			add_years_of_income = 0.5
 		}
 	}
 	rmo_religion_mission_10 = {		#Crush the Rev
@@ -361,7 +359,7 @@ rmo_diplomatic_missions = {
 		position = 1
 		
 		trigger = {
-			religion = orthodox
+			religion = ROOT
 			NOT = { exists = BYZ }
 			owns_core_province = 151
 		}
@@ -458,7 +456,7 @@ rmo_diplomatic_missions = {
 		}
 		trigger = {
 			OR = {
-				NAP = {	is_subject_of = RMO	}
+				NAP = {	is_subject_of = ROOT	}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 8
 					OR = {
@@ -490,7 +488,7 @@ rmo_diplomatic_missions = {
 					province_id = 3003
 					province_id = 163
 			}
-			NOT = { is_core = root }
+			NOT = { is_core = ROOT }
 		}
 		trigger = {
 			owns_core_province = 164
@@ -649,7 +647,7 @@ rmo_diplomatic_missions = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige = 15
 			bahari_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -939,7 +937,6 @@ rmo_administrative_missions = {
 				name = "ink_124"
 				duration = 5478
 			}
-			add_splendor = 450
 			4699 = {
 				add_core = ROOT
 			}
@@ -1583,7 +1580,10 @@ rmo_military_missions = {
 		trigger = {
 			navy_size = 50
 			num_of_owned_provinces_with = { 
-				has_building = dock 
+				OR = {
+					has_building = dock 
+					has_building = drydock
+				}
 				value = 5  
 			}
 			owns_core_province = 328
@@ -1858,10 +1858,45 @@ rmo_economic_missions = {
 		}
 	}
 	
-	rmo_economic_mission_4 = {		#Civilization is priority
-		icon = civilization
+	rmo_economic_mission_31 = {		#Hagia Sophia
+		icon = ayasofya
 		required_missions = { rmo_economic_mission_3 }
 		position = 4
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		trigger = {		
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				has_great_project = {
+					type = hagia_sophia
+					tier = 3
+				}
+			}
+			else = {
+				151 = {
+					religion = ROOT
+					has_building = temple
+					development = 50
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_112"
+				duration = 7300
+			}
+			add_patriarch_authority = 0.1
+			add_prestige = 10
+		}
+	}
+	
+	rmo_economic_mission_4 = {		#Civilization is priority
+		icon = civilization
+		required_missions = { rmo_economic_mission_31 }
+		position = 5
 		trigger = {
 			total_development = 1000
 			treasury = 2000
@@ -1897,7 +1932,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_5 = {		#Improve Trade
 		icon = improve_trade
 		required_missions = {  }
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				province_id = 151
@@ -1931,7 +1966,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_6 = {		#Advanced Trade
 		icon = trade
 		required_missions = { rmo_economic_mission_5 }
-		position = 6
+		position = 7
 		trigger = {
 			151 = {
 				has_most_province_trade_power = ROOT
@@ -1957,7 +1992,7 @@ rmo_economic_missions = {
 	rmo_economic_mission_7 = {	#National Wealth
 		icon = national_wealth
 		required_missions = { rmo_economic_mission_6 }
-		position = 7
+		position = 8
 		trigger = {
 			treasury = 5000
 			NOT = { num_of_loans = 1 } 
@@ -2019,38 +2054,17 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	rmo_economic_mission_8 = {		#Universities
-		icon = universities
+	rmo_economic_mission_8 = {		#imperial_projects
+		icon = imperial_projects
 		required_missions = {  }
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				province_id = 151
-				province_id = 146
-				province_id = 148
-				province_id = 326
-			}
-		}
+		position = 9
 		trigger = {
-			151 = {
-				country_or_non_sovereign_subject_holds = ROOT 
-				has_building = university
-			}
-			146 = {
-				country_or_non_sovereign_subject_holds = ROOT 
-				has_building = university
-			}
-			148 = {
-				country_or_non_sovereign_subject_holds = ROOT 
-				has_building = university
-			}
-			326 = {
-				country_or_non_sovereign_subject_holds = ROOT 
-				has_building = university
-			}	
+			dip_tech = 10
+			is_at_war = no
 		}
 		effect = {
-			change_innovativeness = 5
+			custom_tooltip = ink_great_projectss_tt
+			set_country_flag = ink_great_projects_0
 		}
 	}
 	

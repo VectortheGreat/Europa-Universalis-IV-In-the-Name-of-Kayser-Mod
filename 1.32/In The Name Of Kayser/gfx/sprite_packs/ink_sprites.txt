@@ -57,7 +57,10 @@ itr_sprite_pack = {
 rmo_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = RMO
+		OR = { 
+			tag = RMO
+			has_reform = royal_order_government
+		}
 	}
 	
 	sprite_infantry = {

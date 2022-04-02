@@ -75,7 +75,6 @@ saint_peter = {
 		}
 
 		province_modifiers = {
-			local_years_of_nationalism = -5
 		}
 
 		area_modifier = {
@@ -96,11 +95,10 @@ saint_peter = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
-			local_years_of_nationalism = -5
 		}
 
 		area_modifier = {
@@ -126,11 +124,10 @@ saint_peter = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
-			local_years_of_nationalism = -5
 		}
 
 		area_modifier = {
@@ -241,7 +238,8 @@ holy_sepulchre = {
 		}
 
 		country_modifiers = {
-			war_taxes_cost_modifier = -0.10
+			shock_damage_received = -0.10
+			reinforce_cost_modifier = -0.10
 		}
 
 		on_upgraded = {
@@ -254,7 +252,7 @@ holy_sepulchre = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 3000
 		}
 
 		province_modifiers = {
@@ -266,8 +264,8 @@ holy_sepulchre = {
 		}
 
 		country_modifiers = {
-			artillery_power = 0.05
-			war_taxes_cost_modifier = -0.25
+			shock_damage_received = -0.10
+			reinforce_cost_modifier = -0.10
 		}
 
 		on_upgraded = {
@@ -280,7 +278,7 @@ holy_sepulchre = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 6000
 		}
 
 		province_modifiers = {
@@ -292,8 +290,8 @@ holy_sepulchre = {
 		}
 
 		country_modifiers = {
-			artillery_power = 0.10
-			war_taxes_cost_modifier = -0.50
+			shock_damage_received = -0.2
+			reinforce_cost_modifier = -0.2
 			cb_on_religious_enemies = yes
 		}
 
@@ -323,7 +321,7 @@ san_vitale = {
 
 	build_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -336,14 +334,14 @@ san_vitale = {
 
 	can_use_modifiers_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -387,11 +385,10 @@ san_vitale = {
 		}
 
 		area_modifier = {
-			local_tax_modifier = 0.1
 		}
 
 		country_modifiers = {
-			advisor_cost = -0.10
+			advisor_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -404,7 +401,7 @@ san_vitale = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -412,12 +409,11 @@ san_vitale = {
 		}
 
 		area_modifier = {
-			local_tax_modifier = 0.20
 		}
 
 		country_modifiers = {
 			num_accepted_cultures = 1
-			advisor_cost = -0.25
+			advisor_cost = -0.1
 		}
 
 		on_upgraded = {
@@ -430,7 +426,7 @@ san_vitale = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
@@ -438,16 +434,14 @@ san_vitale = {
 		}
 
 		area_modifier = {
-			local_tax_modifier = 0.30
 		}
 
 		country_modifiers = {
 			num_accepted_cultures = 2
-			advisor_cost = -0.40
+			advisor_cost = -0.2
 		}
 
 		on_upgraded = {
-			add_splendor = 500
 		}
 	}
 }
@@ -554,7 +548,7 @@ mary_zion = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -580,7 +574,7 @@ mary_zion = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
@@ -598,153 +592,6 @@ mary_zion = {
 
 		on_upgraded = {
 			add_stability = 1
-		}
-	}
-}
-
-#Etchmiadzin Cathedral
-etchmiadzin_cathedral = {
-	start = 419
-
-	date = 301.01.01
-
-	time = {
-		months = 0
-	}
-
-	build_cost = 0
-
-	can_be_moved = no
-
-	starting_tier = 0
-
-	type = monument
-
-	build_trigger = {
-		religion = coptic
-		has_owner_religion = yes
-	}
-
-	on_built = {
-	}
-
-	on_destroyed = {
-	}
-
-	can_use_modifiers_trigger = {
-		AND= {
-				religion = coptic
-				has_owner_religion = yes
-		}
-	}
-
-	can_upgrade_trigger = {
-		AND= {
-				religion = coptic
-				has_owner_religion = yes
-		}
-	}
-
-	keep_trigger = {
-	}
-
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-
-		cost_to_upgrade = {
-			factor = 0
-		}
-
-		province_modifiers = {
-		}
-
-		area_modifier = {
-		}
-
-		country_modifiers = {
-		}
-
-		on_upgraded = {
-		}
-	}
-
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-
-		cost_to_upgrade = {
-			factor = 1000
-		}
-
-		province_modifiers = {
-			local_unrest = -1
-		}
-
-		area_modifier = {
-		}
-
-		country_modifiers = {
-			stability_cost_modifier = -0.05
-			caravan_power = 0.1
-		}
-
-		on_upgraded = {
-		}
-	}
-
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-
-		cost_to_upgrade = {
-			factor = 3500
-		}
-
-		province_modifiers = {
-			local_unrest = -2
-		}
-
-		area_modifier = {
-			
-		}
-
-		country_modifiers = {
-			stability_cost_modifier = -0.10
-			caravan_power = 0.20
-		}
-
-		on_upgraded = {
-		}
-	}
-
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-
-		cost_to_upgrade = {
-			factor = 7000
-		}
-
-		province_modifiers = {
-			local_unrest = -3
-		}
-
-		area_modifier = {
-			
-		}
-
-		country_modifiers = {
-			stability_cost_modifier = -0.25
-			caravan_power = 0.30
-		}
-
-		on_upgraded = {
-		
 		}
 	}
 }
@@ -769,7 +616,7 @@ saint_thaddeus = {
 
 	build_trigger = {
 		AND= {
-				religion = coptic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -782,14 +629,14 @@ saint_thaddeus = {
 
 	can_use_modifiers_trigger = {
 		AND= {
-				religion = coptic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		AND= {
-				religion = coptic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -838,7 +685,7 @@ saint_thaddeus = {
 
 		country_modifiers = {
 			trade_steering = 0.075
-			min_autonomy_in_territories = -0.1
+			caravan_power = 0.1
 		}
 
 		on_upgraded = {
@@ -851,7 +698,7 @@ saint_thaddeus = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -864,7 +711,7 @@ saint_thaddeus = {
 
 		country_modifiers = {
 			trade_steering = 0.10
-			min_autonomy_in_territories = -0.2
+			caravan_power = 0.1
 		}
 
 		on_upgraded = {
@@ -877,7 +724,7 @@ saint_thaddeus = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
@@ -890,7 +737,7 @@ saint_thaddeus = {
 
 		country_modifiers = {
 			trade_steering = 0.2
-			min_autonomy_in_territories = -0.3
+			caravan_power = 0.2
 		}
 
 		on_upgraded = {
@@ -986,8 +833,9 @@ john_lateran = {
 		}
 
 		country_modifiers = {
-			papal_influence = 0.5
-			warscore_cost_vs_other_religion = -0.10
+			papal_influence = 1
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.1
 			yearly_patriarch_authority = 0.0005
 			church_loyalty_modifier = 0.05
 		}
@@ -1014,8 +862,9 @@ john_lateran = {
 		}
 
 		country_modifiers = {
-			papal_influence = 1
-			warscore_cost_vs_other_religion = -0.15
+			papal_influence = 2
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.2
 			yearly_patriarch_authority = 0.001
 			church_loyalty_modifier = 0.10
 		}
@@ -1042,14 +891,15 @@ john_lateran = {
 		}
 
 		country_modifiers = {
-			papal_influence = 2
-			warscore_cost_vs_other_religion = -0.25
+			papal_influence = 3
+			monthly_fervor_increase = 0.75
+			church_power_modifier = 0.3
 			yearly_patriarch_authority = 0.002
 			church_loyalty_modifier = 0.15
 		}
 
 		on_upgraded = {
-			add_prestige = 15
+			add_prestige = 10
 		}
 	}
 }
@@ -1074,7 +924,7 @@ bolnisi_sioni = {
 
 	build_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1087,14 +937,14 @@ bolnisi_sioni = {
 
 	can_use_modifiers_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		AND= {
-				religion = orthodox
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1143,7 +993,7 @@ bolnisi_sioni = {
 
 		country_modifiers = {
 			defensiveness = 0.05
-			administrative_efficiency = 0.05
+			ae_impact = -0.05
 		}
 
 		on_upgraded = {
@@ -1156,7 +1006,7 @@ bolnisi_sioni = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -1169,7 +1019,7 @@ bolnisi_sioni = {
 
 		country_modifiers = {
 			defensiveness = 0.15
-			administrative_efficiency = 0.1
+			ae_impact = -0.1
 		}
 
 		on_upgraded = {
@@ -1182,7 +1032,7 @@ bolnisi_sioni = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
@@ -1195,7 +1045,7 @@ bolnisi_sioni = {
 
 		country_modifiers = {
 			defensiveness = 0.25
-			administrative_efficiency = 0.15
+			ae_impact = -0.2
 		}
 
 		on_upgraded = {
@@ -1308,7 +1158,7 @@ john_baptist = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -1336,7 +1186,7 @@ john_baptist = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 5000
 		}
 
 		province_modifiers = {
@@ -1439,17 +1289,13 @@ saint_domnius = {
 		}
 
 		province_modifiers = {
-			province_trade_power_modifier = 0.1
-			local_religious_conversion_resistance = 0.25
 		}
 
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			diplomatic_reputation = 0.5
-			papal_influence_from_cardinals = 0.5
-			global_religious_conversion_resistance = 0.15
+		diplomatic_reputation = 0.5
 		}
 
 		on_upgraded = {
@@ -1462,11 +1308,10 @@ saint_domnius = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 3000
 		}
 
 		province_modifiers = {
-			province_trade_power_modifier = 0.20
 			local_religious_conversion_resistance = 0.50
 		}
 
@@ -1477,7 +1322,6 @@ saint_domnius = {
 		country_modifiers = {
 			diplomatic_reputation = 1
 			papal_influence_from_cardinals = 1
-			global_religious_conversion_resistance = 0.25
 		}
 
 		on_upgraded = {
@@ -1490,12 +1334,11 @@ saint_domnius = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 6000
 		}
 
 		province_modifiers = {
-			province_trade_power_modifier = 0.30
-			local_religious_conversion_resistance = 0.65
+			local_religious_conversion_resistance = 1
 		}
 
 		area_modifier = {
@@ -1503,11 +1346,10 @@ saint_domnius = {
 		}
 
 		country_modifiers = {
-			diplomatic_reputation = 2
-			papal_influence_from_cardinals = 1
-				imperial_authority = 0.1
-				imperial_reform_catholic_approval = 20
-				global_religious_conversion_resistance = 0.45
+		diplomatic_reputation = 2
+		papal_influence_from_cardinals = 1
+		imperial_authority = 0.1
+		imperial_reform_catholic_approval = 20
 		}
 
 		on_upgraded = {
@@ -1536,7 +1378,7 @@ santiago_compostela = {
 
 	build_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1549,14 +1391,14 @@ santiago_compostela = {
 
 	can_use_modifiers_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1617,7 +1459,7 @@ santiago_compostela = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 2500
 		}
 
 		province_modifiers = {
@@ -1644,7 +1486,7 @@ santiago_compostela = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 6000
 		}
 
 		province_modifiers = {
@@ -1686,7 +1528,7 @@ oviedo_cathedral = {
 
 	build_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1699,14 +1541,14 @@ oviedo_cathedral = {
 
 	can_use_modifiers_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
 
 	can_upgrade_trigger = {
 		AND= {
-				religion = catholic
+				religion_group = christian
 				has_owner_religion = yes
 		}
 	}
@@ -1758,7 +1600,7 @@ oviedo_cathedral = {
 		}
 
 		on_upgraded = {	
-			add_mercantilism = 2
+			add_mercantilism = 1
 		}
 	}
 
@@ -1785,7 +1627,7 @@ oviedo_cathedral = {
 		}
 
 		on_upgraded = {
-			add_mercantilism = 5
+			add_mercantilism = 3
 		}
 	}
 
@@ -1795,7 +1637,7 @@ oviedo_cathedral = {
 		}
 
 		cost_to_upgrade = {
-			factor = 7000
+			factor = 6000
 		}
 
 		province_modifiers = {
@@ -1812,7 +1654,7 @@ oviedo_cathedral = {
 		}
 
 		on_upgraded = {
-			add_mercantilism = 10
+			add_mercantilism = 5
 		}
 	}
 }
@@ -1827,7 +1669,7 @@ palace_konstantinopolis = {
 		months = 120
 	}
 
-	build_cost = 10000
+	build_cost = 0
 
 	can_be_moved = no
 
@@ -1838,7 +1680,7 @@ palace_konstantinopolis = {
 	build_trigger = {
 	
 		FROM = {
-			adm_tech = 17
+			has_country_flag = ink_palace_konstantinopolis_gp
 		}
 		FROM = {
 			OR = {
@@ -1866,9 +1708,6 @@ palace_konstantinopolis = {
 	}
 
 	can_upgrade_trigger = {
-		FROM = {
-			adm_tech = 17
-		}
 		FROM = {
 			OR = {
 				tag = RMO
@@ -1909,11 +1748,10 @@ palace_konstantinopolis = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 0
 		}
 
 		province_modifiers = {
-			fort_level = 1
 		}
 
 		area_modifier = {
@@ -1921,9 +1759,8 @@ palace_konstantinopolis = {
 		}
 
 		country_modifiers = {
-			yearly_absolutism = 0.05
 			global_tax_modifier = 0.05
-			harsh_treatment_cost = -0.1
+			min_autonomy_in_territories = -0.05
 		}
 
 		on_upgraded = {
@@ -1936,21 +1773,19 @@ palace_konstantinopolis = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 0
 		}
 
 		province_modifiers = {
-			fort_level = 1
 		}
 
 		area_modifier = {
-			local_manpower_modifier = 0.15
+			local_manpower_modifier = 0.3
 		}
 
 		country_modifiers = {
-			yearly_absolutism = 0.1
 			global_tax_modifier = 0.15
-			harsh_treatment_cost = -0.2
+			min_autonomy_in_territories = -0.1
 		}
 
 		on_upgraded = {
@@ -1967,17 +1802,15 @@ palace_konstantinopolis = {
 		}
 
 		province_modifiers = {
-			fort_level = 2
 		}
 
 		area_modifier = {
-			local_manpower_modifier = 0.35
+			local_manpower_modifier = 0.5
 		}
 
 		country_modifiers = {
-			yearly_absolutism = 0.2
 			global_tax_modifier = 0.25
-			harsh_treatment_cost = -0.35
+			min_autonomy_in_territories = -0.2
 		}
 
 		on_upgraded = {
@@ -1986,9 +1819,9 @@ palace_konstantinopolis = {
 	}
 }
 
-#Church of Saint Alincahan
-saint_alincahan = {
-	start = 2301
+#Cathedral of Saint Alexander
+saint_alexander = {
+	start = 317
 
 	date = 1850.01.01
 
@@ -1996,7 +1829,7 @@ saint_alincahan = {
 		months = 120
 	}
 
-	build_cost = 5000
+	build_cost = 0
 
 	can_be_moved = no
 
@@ -2006,14 +1839,8 @@ saint_alincahan = {
 
 	build_trigger = {
 		FROM = {
-			dip_tech = 17
-		}
-		FROM = {
-			OR = {
-				tag = RMO
-				tag = ITR
-				tag = TEK
-			}
+			has_country_flag = ink_gp_alexander
+			religion = phaedrusian
 		}
 	}
 
@@ -2025,24 +1852,13 @@ saint_alincahan = {
 
 	can_use_modifiers_trigger = {
 		FROM = {
-			OR = {
-				tag = RMO
-				tag = ITR
-				tag = TEK
-			}
+			religion = phaedrusian
 		}
 	}
 
 	can_upgrade_trigger = {
 		FROM = {
-			dip_tech = 16
-		}
-		FROM = {
-			OR = {
-				tag = RMO
-				tag = ITR
-				tag = TEK
-			}
+			religion = phaedrusian
 		}
 	}
 
@@ -2085,11 +1901,11 @@ saint_alincahan = {
 		}
 
 		area_modifier = {
-			local_friendly_movement_speed = 0.1
+			tolerance_own = 3
 		}
 
 		country_modifiers = {
-			global_spy_defence = 0.1
+			development_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -2102,7 +1918,7 @@ saint_alincahan = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 0
 		}
 
 		province_modifiers = {
@@ -2110,11 +1926,12 @@ saint_alincahan = {
 		}
 
 		area_modifier = {
-			local_friendly_movement_speed = 0.25
+			tolerance_own = 3
 		}
 
 		country_modifiers = {
-			global_spy_defence = 0.15
+			development_cost = -0.1
+			monarch_admin_power = 1
 		}
 
 		on_upgraded = {
@@ -2135,13 +1952,12 @@ saint_alincahan = {
 		}
 
 		area_modifier = {
-			local_friendly_movement_speed = 0.5
+			tolerance_own = 3
 		}
 
 		country_modifiers = {
-			free_policy = 1
-			advisor_pool = 1
-			global_spy_defence = 0.30
+			development_cost = -0.2
+			monarch_admin_power = 2
 		}
 
 		on_upgraded = {
@@ -2160,7 +1976,7 @@ great_market = {
 		months = 120
 	}
 
-	build_cost = 7000
+	build_cost = 0
 
 	can_be_moved = no
 
@@ -2170,7 +1986,7 @@ great_market = {
 
 	build_trigger = {
 		FROM = {
-			dip_tech = 17
+			has_country_flag = ink_great_market_gp
 		}
 		FROM = {
 			OR = {
@@ -2198,9 +2014,6 @@ great_market = {
 	}
 
 	can_upgrade_trigger = {
-		FROM = {
-			dip_tech = 17
-		}
 		FROM = {
 			OR = {
 				tag = RMO
@@ -2241,7 +2054,7 @@ great_market = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 0
 		}
 
 		province_modifiers = {
@@ -2249,14 +2062,12 @@ great_market = {
 		}
 
 		area_modifier = {
-			local_development_cost = -0.1
 			trade_goods_size_modifier = 0.05
 			trade_value_modifier = 0.05
 		}
 
 		country_modifiers = {
 			trade_efficiency = 0.1
-			global_ship_trade_power = 0.1
 			global_trade_goods_size_modifier = 0.1
 		}
 
@@ -2270,7 +2081,7 @@ great_market = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 0
 		}
 
 		province_modifiers = {
@@ -2278,14 +2089,12 @@ great_market = {
 		}
 
 		area_modifier = {
-			local_development_cost = -0.2
 			trade_goods_size_modifier = 0.10
 			trade_value_modifier = 0.10
 		}
 
 		country_modifiers = {
 			trade_efficiency = 0.2
-			global_ship_trade_power = 0.2
 			global_trade_goods_size_modifier = 0.2
 		}
 
@@ -2307,14 +2116,12 @@ great_market = {
 		}
 
 		area_modifier = {
-			local_development_cost = -0.40
-			trade_goods_size_modifier = 0.20
+			local_development_cost = -0.2
 			trade_value_modifier = 0.20
 		}
 
 		country_modifiers = {
 			trade_efficiency = 0.3
-			global_ship_trade_power = 0.3
 			global_trade_goods_size_modifier = 0.3
 		}
 
@@ -2334,7 +2141,7 @@ port_athens = {
 		months = 120
 	}
 
-	build_cost = 7000
+	build_cost = 0
 
 	can_be_moved = no
 
@@ -2344,7 +2151,7 @@ port_athens = {
 
 	build_trigger = {
 		FROM = {
-			mil_tech = 17
+			has_country_flag = ink_port_of_athens_gp
 		}
 		FROM = {
 			OR = {
@@ -2372,9 +2179,6 @@ port_athens = {
 	}
 
 	can_upgrade_trigger = {
-		FROM = {
-			adm_tech = 17
-		}
 		FROM = {
 			OR = {
 				tag = RMO
@@ -2415,7 +2219,7 @@ port_athens = {
 		}
 
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 0
 		}
 
 		province_modifiers = {
@@ -2423,13 +2227,12 @@ port_athens = {
 		}
 
 		area_modifier = {
-			hostile_fleet_attrition = 1
-			blockade_force_required = 0.25
 		}
 
 		country_modifiers = {
-			flagship_durability = 0.5
-			flagship_landing_penalty = -0.5
+			admiral_skill_gain_modifier = 0.35
+			trade_power_in_fleet_modifier = 3
+			privateering_efficiency_in_fleet_modifier = 0.35
 		}
 
 		on_upgraded = {
@@ -2442,7 +2245,7 @@ port_athens = {
 		}
 
 		cost_to_upgrade = {
-			factor = 3500
+			factor = 0
 		}
 
 		province_modifiers = {
@@ -2450,13 +2253,12 @@ port_athens = {
 		}
 
 		area_modifier = {
-			hostile_fleet_attrition = 2
-			blockade_force_required = 0.50
 		}
 
 		country_modifiers = {
-			flagship_durability = 1
-			flagship_landing_penalty = -1
+			admiral_skill_gain_modifier = 0.35
+			trade_power_in_fleet_modifier = 3
+			privateering_efficiency_in_fleet_modifier = 0.35
 		}
 
 		on_upgraded = {
@@ -2473,20 +2275,642 @@ port_athens = {
 		}
 
 		province_modifiers = {
-			local_ship_repair = 0.80
+			local_ship_repair = 0.6
 		}
 
 		area_modifier = {
-			hostile_fleet_attrition = 3
-			blockade_force_required = 0.75
 		}
 
 		country_modifiers = {
-			flagship_durability = 1
-			flagship_landing_penalty = -1
-			admiral_skill_gain_modifier = 0.1
-			trade_power_in_fleet_modifier = 1
-			privateering_efficiency_in_fleet_modifier = 0.1	
+			admiral_skill_gain_modifier = 0.35
+			trade_power_in_fleet_modifier = 3
+			privateering_efficiency_in_fleet_modifier = 0.35
+		}
+
+		on_upgraded = {
+			add_sailors = 2000
+		}
+	}
+}
+
+#
+council_adrianople = {
+	start = 149
+
+	date = 1850.01.01
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 0
+
+	can_be_moved = no
+
+	starting_tier = 2
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_flag = ink_council_adrianople_gp
+		}
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			envoy_travel_time = -0.1
+			dip_tech_cost_modifier = -0.025
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			diplomats = 1
+			envoy_travel_time = -0.2
+			dip_tech_cost_modifier = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 7000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			diplomats = 2
+			envoy_travel_time = -0.3
+			dip_tech_cost_modifier = -0.1
+		}
+
+		on_upgraded = {
+		
+		}
+	}
+}
+
+# Church of Tessalonica
+church_tessalonica = {
+	start = 148
+
+	date = 1850.01.01
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 0
+
+	can_be_moved = no
+
+	starting_tier = 2
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			religion = anglican
+			has_country_flag = ink_gp_anglican
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = {
+			religion = anglican
+		}
+	}
+
+	can_upgrade_trigger = {
+		FROM = {
+			religion = anglican
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			all_power_cost = -0.025
+			reform_progress_growth = 0.1
+			church_power_modifier = 0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			all_power_cost = -0.05
+			reform_progress_growth = 0.2
+			church_power_modifier = 0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 7000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			all_power_cost = -0.1
+			reform_progress_growth = 0.3
+			church_power_modifier = 0.20
+		}
+
+		on_upgraded = {
+		
+		}
+	}
+}
+
+#The Great Barracks of Izmir
+izmir_barrack = {
+	start = 318
+
+	date = 1850.01.01
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 2
+
+	can_be_moved = no
+
+	starting_tier = 2
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_flag = ink_izmir_barrack_gp
+		}
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		supply_limit_modifier = 0.1
+		}
+
+		country_modifiers = {
+			global_manpower_modifier = 0.05
+			manpower_recovery_speed = 0.05
+			mercenary_manpower = 0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		supply_limit_modifier = 0.2
+		}
+
+		country_modifiers = {
+			global_manpower_modifier = 0.1
+			manpower_recovery_speed = 0.1
+			mercenary_manpower = 0.2
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 7000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		supply_limit_modifier = 0.3
+		}
+
+		country_modifiers = {
+			global_manpower_modifier = 0.2
+			manpower_recovery_speed = 0.2
+			mercenary_manpower = 0.3
+		}
+
+		on_upgraded = {
+		
+		}
+	}
+}
+
+#Palace of Kayseri
+kayseri_palace = {
+	start = 2301
+
+	date = 1850.01.01
+
+	time = {
+		months = 120
+	}
+
+	build_cost = 0
+
+	can_be_moved = no
+
+	starting_tier = 2
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_flag = ink_kayseri_palace_gp
+		}
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		FROM = {
+			OR = {
+				tag = RMO
+				tag = ITR
+				tag = TEK
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			core_creation = -0.05
+			administrative_efficiency = 0.05
+			state_maintenance_modifier = -0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+			allowed_num_of_buildings = 1
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			core_creation = -0.1
+			administrative_efficiency = 0.1
+			state_maintenance_modifier = -0.2
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 7000
+		}
+
+		province_modifiers = {
+			allowed_num_of_buildings = 1
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			core_creation = -0.2
+			administrative_efficiency = 0.2
+			state_maintenance_modifier = -0.35
 		}
 
 		on_upgraded = {

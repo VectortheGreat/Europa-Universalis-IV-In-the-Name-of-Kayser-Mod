@@ -180,7 +180,7 @@ age_of_discovery = {
 			}
 		}
 		
-		ab_ottoman_siege_ability = {
+		ink_age_rmo_1 = {
 			allow = {
 				tag = RMO
 			}
@@ -192,7 +192,7 @@ age_of_discovery = {
 			}
 		}
 		
-		ab_portugal_colonial_growth = {
+		ink_age_itr_1 = {
 		
 			allow = {
 				tag = ITR
@@ -204,7 +204,7 @@ age_of_discovery = {
 				factor = 100
 			}
 		}
-		ab_denmark_reduced_lib_desire = {
+		ink_age_tek_1 = {
 		
 			allow = {
 				tag = TEK
@@ -224,96 +224,39 @@ age_of_discovery = {
 				}
 			}
 		}
-		ab_venice_ship_trade = {
+		ink_ai_1 = {
 		
 			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					tag = FRA
-					tag = ENG
-					tag = GBR
-					tag = CAS
-					tag = ARA
-					tag = SPA
-					tag = POR
-					tag = NAP
-					tag = PLC
-					tag = POL
-					tag = PRU
-					tag = HAB
-					tag = BOH
-					tag = BRA
-					tag = TEU
-					tag = DAN
-					tag = SWE
-					tag = NOR
-					tag = MOS
-					tag = RUS
-					tag = BUR
-					tag = HUN
-					tag = SER
-					tag = WAL
-					tag = QAR
-					tag = AKK
-					tag = MAM
-					tag = KAR
-					tag = VEN
-					tag = GEN
-					tag = TIM
-					tag = PER
-					tag = QOM
-					tag = TUN
-					tag = MOR
-					tag = MNG
-					tag = VIJ
-					tag = DLH
-					tag = GUJ
-					tag = JNP
-					tag = MUG
-					tag = BNG
-					tag = BAL
-					tag = OIR
-					tag = KOR
-					tag = JAP
-					tag = ODA
-					tag = OUC
-					tag = TKG
-					tag = UES
-					tag = MCH
-					tag = QNG
-					tag = NED
-					tag = GEO
-					tag = HOL
-					tag = CRI
-					tag = LAN
-					tag = TUS
-					tag = GOL
-					tag = GLH
-					tag = KAZ
-					tag = SCA
-					tag = IRE
-					tag = SPI
-					tag = PLC
-					tag = NOV
-					tag = AZT
-					tag = INC
-					tag = LIT
+				AND = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
 				}
 			}
 			modifier = {
 				ae_impact = -0.1
 				discipline = 0.05
-				land_forcelimit_modifier = 0.20
-				manpower_recovery_speed = 0.25
-				naval_forcelimit_modifier = 0.25
-				flagship_cost = -1
+				land_forcelimit_modifier = 0.15
+				manpower_recovery_speed = 0.20
+				naval_forcelimit_modifier = 0.20
+				flagship_cost = -0.25
 				diplomatic_upkeep = 1
 				governing_capacity = 100
 				global_unrest = -2
 			}
 			ai_will_do = {
 				factor = 100
+				modifier = {
+					factor = 0
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TEK
+						is_subject_of = RMO
+					}
+				}
 			}
 		}
 	}
@@ -472,7 +415,7 @@ age_of_reformation = {
 		}
 
 	
-		ab_spain_tercio = {
+		ink_age_rmo_2 = {
 			allow = {
 				tag = RMO
 			}
@@ -483,119 +426,62 @@ age_of_reformation = {
 				factor = 100
 			}
 		}
-		ab_mughal_artillery = {
+		ink_age_itr_2 = {
 			allow = {
 				tag = ITR
 			}
 			modifier = {
-				papal_influence = 2
+				development_cost = -0.1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 		
-		ab_polish_legitimacy = {
+		ink_age_tek_2 = {
 			allow = {
 				tag = TEK
 			}
 			modifier = {
-				institution_spread_from_true_faith = 0.25
+				artillery_bonus_vs_fort = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 
-		ab_persia_reinforce = {
+		ink_ai_2 = {
 			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					tag = FRA
-					tag = ENG
-					tag = GBR
-					tag = CAS
-					tag = ARA
-					tag = SPA
-					tag = POR
-					tag = NAP
-					tag = PLC
-					tag = POL
-					tag = PRU
-					tag = HAB
-					tag = BOH
-					tag = BRA
-					tag = TEU
-					tag = DAN
-					tag = SWE
-					tag = NOR
-					tag = MOS
-					tag = RUS
-					tag = BUR
-					tag = HUN
-					tag = SER
-					tag = WAL
-					tag = QAR
-					tag = AKK
-					tag = MAM
-					tag = KAR
-					tag = VEN
-					tag = GEN
-					tag = TIM
-					tag = PER
-					tag = QOM
-					tag = TUN
-					tag = MOR
-					tag = MNG
-					tag = VIJ
-					tag = DLH
-					tag = GUJ
-					tag = JNP
-					tag = MUG
-					tag = BNG
-					tag = BAL
-					tag = OIR
-					tag = KOR
-					tag = JAP
-					tag = ODA
-					tag = OUC
-					tag = TKG
-					tag = UES
-					tag = MCH
-					tag = QNG
-					tag = NED
-					tag = GEO
-					tag = HOL
-					tag = CRI
-					tag = LAN
-					tag = TUS
-					tag = GOL
-					tag = GLH
-					tag = KAZ
-					tag = SCA
-					tag = IRE
-					tag = SPI
-					tag = PLC
-					tag = NOV
-					tag = AZT
-					tag = INC
-					tag = LIT
+				AND = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
 				}
 			}
 			modifier = {
 				ae_impact = -0.15
 				discipline = 0.05
-				land_forcelimit_modifier = 0.15
-				manpower_recovery_speed = 0.20
-				naval_forcelimit_modifier = 0.15
-				flagship_cost = -1
+				land_forcelimit_modifier = 0.20
+				manpower_recovery_speed = 0.25
+				naval_forcelimit_modifier = 0.30
+				flagship_cost = -0.5
 				diplomatic_upkeep = 1
 				governing_capacity = 200
-				global_unrest = -1
+				global_unrest = -2
 			}
 			ai_will_do = {
 				factor = 100
+				modifier = {
+					factor = 0
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TEK
+						is_subject_of = RMO
+					}
+				}
 			}
 		}
 	}	
@@ -736,9 +622,9 @@ age_of_absolutism = {
 		}
 	
 	
-		ab_france_fire_damage = {
+		ink_age_rmo_3 = {
 			allow = {
-				OR = {
+				AND = {
 					tag = RMO
 					tag = ROM
 				}
@@ -750,7 +636,7 @@ age_of_absolutism = {
 				factor = 100
 			}
 		}
-		ab_dutch_anti_corruption = {
+		ink_age_itr_3 = {
 			allow = {
 				tag = ITR
 			}
@@ -761,107 +647,51 @@ age_of_absolutism = {
 				factor = 100
 			}
 		}	
-		ab_sweden_manpower = {
+		ink_age_tek_3 = {
 			allow = {
 				tag = TEK
 			}
 			modifier = {
-				trade_steering = 0.25
+				trade_steering = 0.35
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 
-		ab_manchu_banner = {
+		ink_ai_3 = {
 			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					tag = FRA
-					tag = ENG
-					tag = GBR
-					tag = CAS
-					tag = ARA
-					tag = SPA
-					tag = POR
-					tag = NAP
-					tag = PLC
-					tag = POL
-					tag = PRU
-					tag = HAB
-					tag = BOH
-					tag = BRA
-					tag = TEU
-					tag = DAN
-					tag = SWE
-					tag = NOR
-					tag = MOS
-					tag = RUS
-					tag = BUR
-					tag = HUN
-					tag = SER
-					tag = WAL
-					tag = QAR
-					tag = AKK
-					tag = MAM
-					tag = KAR
-					tag = VEN
-					tag = GEN
-					tag = TIM
-					tag = PER
-					tag = QOM
-					tag = TUN
-					tag = MOR
-					tag = MNG
-					tag = VIJ
-					tag = DLH
-					tag = GUJ
-					tag = JNP
-					tag = MUG
-					tag = BNG
-					tag = BAL
-					tag = OIR
-					tag = KOR
-					tag = JAP
-					tag = ODA
-					tag = OUC
-					tag = TKG
-					tag = UES
-					tag = MCH
-					tag = QNG
-					tag = NED
-					tag = GEO
-					tag = HOL
-					tag = CRI
-					tag = LAN
-					tag = TUS
-					tag = GOL
-					tag = GLH
-					tag = KAZ
-					tag = SCA
-					tag = IRE
-					tag = SPI
-					tag = PLC
-					tag = NOV
-					tag = AZT
-					tag = INC
-					tag = LIT
+				AND = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
 				}
 			}
 			modifier = {
-				ae_impact = -0.1
-				discipline = 0.05
-				land_forcelimit_modifier = 0.15
-				manpower_recovery_speed = 0.20
-				naval_forcelimit_modifier = 0.20
-				flagship_cost = -1
-				diplomatic_upkeep = 2
-				governing_capacity = 250
-				global_unrest = -1
+				ae_impact = -0.3
+				discipline = 0.1
+				land_forcelimit_modifier = 0.30
+				manpower_recovery_speed = 0.30
+				naval_forcelimit_modifier = 0.30
+				flagship_cost = -0.75
+				diplomatic_upkeep = 3
+				governing_capacity = 350
+				global_unrest = -4
+				administrative_efficiency = 0.05
 			}
 			ai_will_do = {
 				factor = 100
+				modifier = {
+					factor = 0
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TEK
+						is_subject_of = RMO
+					}
+				}
 			}
 		}
 	}
@@ -1007,7 +837,7 @@ age_of_revolutions = {
 				}
 			}
 		}
-		ab_pru_military = {
+		ink_age_rmo_4 = {
 			allow = {
 				OR = {
 					tag = RMO
@@ -1021,7 +851,7 @@ age_of_revolutions = {
 				factor = 100
 			}
 		}
-		ab_gbr_fleet = {
+		ink_age_itr_4 = {
 			allow = {
 				tag = ITR
 			}
@@ -1032,106 +862,50 @@ age_of_revolutions = {
 				factor = 100
 			}
 		}
-		ab_russia_boost = {
+		ink_age_tek_4 = {
 			allow = {
 				tag = TEK
 			}
 			modifier = {
-				land_morale = 0.10
+				land_morale = 0.20
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
-		ab_austria_rep = {
+		ink_ai_4 = {
 			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					tag = FRA
-					tag = ENG
-					tag = GBR
-					tag = CAS
-					tag = ARA
-					tag = SPA
-					tag = POR
-					tag = NAP
-					tag = PLC
-					tag = POL
-					tag = PRU
-					tag = HAB
-					tag = BOH
-					tag = BRA
-					tag = TEU
-					tag = DAN
-					tag = SWE
-					tag = NOR
-					tag = MOS
-					tag = RUS
-					tag = BUR
-					tag = HUN
-					tag = SER
-					tag = WAL
-					tag = QAR
-					tag = AKK
-					tag = MAM
-					tag = KAR
-					tag = VEN
-					tag = GEN
-					tag = TIM
-					tag = PER
-					tag = QOM
-					tag = TUN
-					tag = MOR
-					tag = MNG
-					tag = VIJ
-					tag = DLH
-					tag = GUJ
-					tag = JNP
-					tag = MUG
-					tag = BNG
-					tag = BAL
-					tag = OIR
-					tag = KOR
-					tag = JAP
-					tag = ODA
-					tag = OUC
-					tag = TKG
-					tag = UES
-					tag = MCH
-					tag = QNG
-					tag = NED
-					tag = GEO
-					tag = HOL
-					tag = CRI
-					tag = LAN
-					tag = TUS
-					tag = GOL
-					tag = GLH
-					tag = KAZ
-					tag = SCA
-					tag = IRE
-					tag = SPI
-					tag = PLC
-					tag = NOV
-					tag = AZT
-					tag = INC
-					tag = LIT
+				AND = {
+					NOT = { is_subject_of = ITR }
+					NOT = { is_subject_of = TEK }
+					NOT = { is_subject_of = RMO }
+					NOT = { tag = ITR }
+					NOT = { tag = TEK }
+					NOT = { tag = RMO }
 				}
 			}
 			modifier = {
-				ae_impact = -0.1
-				discipline = 0.07
-				land_forcelimit_modifier = 0.10
-				manpower_recovery_speed = 0.15
-				naval_forcelimit_modifier = 0.15
+				ae_impact = -0.4
+				discipline = 0.1
+				land_forcelimit_modifier = 0.40
+				manpower_recovery_speed = 0.4
+				naval_forcelimit_modifier = 0.4
 				flagship_cost = -1
-				diplomatic_upkeep = 2
-				governing_capacity = 300
-				land_morale = 0.10
+				diplomatic_upkeep = 4
+				governing_capacity = 500
+				global_unrest = -4
+				administrative_efficiency = 0.1
 			}
 			ai_will_do = {
 				factor = 100
+				modifier = {
+					factor = 0
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TEK
+						is_subject_of = RMO
+					}
+				}
 			}
 		}
 	}

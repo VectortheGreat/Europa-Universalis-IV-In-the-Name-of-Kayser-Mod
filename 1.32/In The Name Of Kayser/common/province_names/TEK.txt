@@ -1,3 +1,4 @@
 151 = "Kostantinopolis"
 2313 = "Antioch"
 379 = "Jerusalem"
+316 = "Nikomedia"
