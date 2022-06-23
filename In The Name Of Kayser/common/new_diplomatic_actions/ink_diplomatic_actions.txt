@@ -1,0 +1,56 @@
+call_crusade_ink = {
+	category = alliance
+	
+	require_acceptance = no
+	
+	is_visible = {
+		ROOT = { has_country_flag = ink_has_crusade_active }
+		ROOT = { 
+			NOT = {
+				owns = 118
+			}
+		}
+		FROM = {
+			NOT = { religion_group = christian }
+		}
+	}
+	
+	is_allowed = {
+		FROM = {
+			NOT = {
+				truce_with = TEK
+			}
+			custom_trigger_tooltip = {
+				tooltip = crusader_mark_system_tt
+				NOT = {
+					has_global_flag = ink_crusade_mark_system
+				}
+			}
+		}
+		ROOT = {
+			NOT = {	has_country_modifier = ink_crusade_modifier }
+		}
+		is_at_war = no
+		NOT = { is_year = 1650 }
+		118 = { NOT = { owned_by = ROOT } }
+	}
+	
+	on_accept = {
+		FROM = {
+			set_country_flag = ink_crusader_target
+			add_opinion = {
+				who = ROOT
+				modifier = ink_crusade_target
+			}
+		}
+		ROOT = {
+			set_country_flag = ink_crusader
+		}
+		country_event = { id = crusadeink.1 }
+		
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}	

@@ -1,0 +1,125 @@
+turkish_civil_war = {
+	potential = {
+		OR = {
+			tag = RMO
+			tag = TUR
+			tag = ITR
+			tag = TEK
+			}
+			religion_group = christian
+			normal_or_historical_nations = yes
+			current_age = age_of_discovery
+			NOT = { has_country_flag = end_of_turkish_civil_war }
+			NOT = { has_country_flag = tek_crusader_decisions }	
+			NOT = { has_country_flag = ink_anatolian_union }	
+		}
+		
+		can_start = {
+			NOT = {
+				AND = {
+					326 = {
+						religion = ROOT
+					}
+					316 = {
+						religion = ROOT
+					}
+					317 = {
+						religion = ROOT
+					}
+					2297 = {
+						religion = ROOT
+					}
+					2298 = {
+						religion = ROOT
+					}
+				}
+			}
+			NOT = { religious_unity = 0.90 }
+		}
+		
+		can_stop = {
+			religious_unity = 0.90
+			NOT = {
+				AND = {
+					326 = {
+						religion = ROOT
+					}
+					316 = {
+						religion = ROOT
+					}
+					317 = {
+						religion = ROOT
+					}
+					2297 = {
+						religion = ROOT
+					}
+					2298 = {
+						religion = ROOT
+					}
+				}
+			}
+}
+
+progress = {
+	modifier = {
+		factor = 2
+		NOT = { religious_unity = 0.75 }
+	} 		
+	modifier = {
+		factor = 2
+		NOT = { religious_unity = 0.5 }
+	} 
+	modifier = {
+		factor = 2
+		NOT = { stability = 2 }
+	}
+}
+
+can_end = {
+	OR = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = ink_civil_war_condiditions_tt
+				religious_unity = 0.85
+				calc_true_if = {
+					all_province = {
+						religion = ROOT
+						region = anatolia_region
+					}
+					amount = 8
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = ink_civil_war_anatolain_union_tt
+			OR = {
+				has_country_flag = ink_anatolian_union
+				has_country_flag = ink_civilwar_end_for_ai
+			}
+		}
+	}
+}
+
+modifier = {
+	global_tax_modifier = -0.2
+	stability_cost_modifier = 1.00
+	global_heathen_missionary_strength = -0.02
+}
+
+on_start = tcwevents.9
+on_end = tcwevents.8
+
+on_monthly = {
+	events = {
+		tcwevents.1 # rebels 1
+		tcwevents.2 # rebels 2
+		tcwevents.3 # rebels 3
+		tcwevents.4 # rebels 4
+		tcwevents.5 # rebels 5
+		tcwevents.6 # rebels 6
+		tcwevents.7 # rebels 7
+		tcwevents.10
+	}	
+}
+
+}	

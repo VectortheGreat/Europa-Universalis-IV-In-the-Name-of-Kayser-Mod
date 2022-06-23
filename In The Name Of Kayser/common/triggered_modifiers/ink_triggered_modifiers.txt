@@ -1,0 +1,45 @@
+non_christian_subject = {
+	potential = {
+		tag = TEK
+	}
+
+	trigger = {	
+		tag = TEK
+		any_subject_country = {
+			NOT = { religion_group = christian }
+		}
+	}
+	
+	tolerance_own = -1.5
+	diplomatic_reputation = -2.5
+}
+
+papal_election_threat = {
+	potential = {
+		tag = PAP
+	}
+
+	trigger = {	
+		ITR = {
+			is_papal_controller = no
+		}
+		has_global_flag = itr_papal_triggered_modifier
+		PAP = { is_subject_of = ITR }
+	}
+	monarch_lifespan = -0.40
+}
+
+papal_election_support = {
+	potential = {
+		tag = PAP
+	}
+
+	trigger = {	
+		ITR = {
+			is_papal_controller = yes
+		}
+		has_global_flag = itr_papal_triggered_modifier
+		PAP = { is_subject_of = ITR }
+	}
+	monarch_lifespan = 0.40
+}

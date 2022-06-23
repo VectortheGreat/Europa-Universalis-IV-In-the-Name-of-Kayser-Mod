@@ -1,0 +1,164 @@
+namespace = ink_common
+normal_or_historical_nations = yes
+
+country_event = {	#Demand Islands
+	id = ink_common.1
+	title = "ink_common.1_title"
+	desc = "ink_common.1_desc"
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger ={
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = RMO
+		}
+		GEN = {
+			owns = 4700
+			owns = 2348
+			is_part_of_hre = no
+			OR = {
+				NOT = { war_with = TEK war_with = ITR war_with RMO }
+			}
+		}
+		NOT = { OR = { GEN = { is_subject_of = RMO  } GEN = { is_subject_of = ITR  } GEN = { is_subject_of = TEK  } } }
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.8
+			stability = 2
+		}
+	}
+	
+	option = {
+		name = ink_common1.a
+		ai_chance = { factor = 100 }
+		GEN = { country_event = { id = ink_common.2 } }
+	}
+	
+	option = {
+		name = ink_common1.b
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+country_event = {	#Demand Islands - Reply
+	id = ink_common.2
+	title = "ink_common.2_title"
+	desc = "ink_common.2_desc"
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	
+	option = {
+		name = ink_common2.a
+		ai_chance = { factor = 70 }
+		4700 = {
+			cede_province = FROM
+		}
+		2348 = {
+			cede_province = FROM
+		}
+	}
+	
+	option = {
+		name = ink_common2.a
+		ai_chance = { factor = 30 }
+		FROM = { country_event = { id = ink_common.3 } }
+	}
+}
+
+country_event = {	#Demand Islands - Reject
+	id = ink_common.3
+	title = "ink_common.3_title"
+	desc = "ink_common.3_desc"
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ink_common3.a
+		ai_chance = { factor = 30 }
+		4700 = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_claim = ROOT
+		}
+		2348 = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_claim = ROOT
+		}
+		add_country_modifier = { 
+			name = "ink_conquer_islands"
+			duration = 1826
+		}
+	}
+}
+
+country_event = { #Anti Habsburg Alliance
+	id = ink_common.4
+	title = "ink_common.4_title"
+	desc = "ink_common.4_desc"
+	picture = ink_anti_habsburg_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = RMO
+		}
+		FRA = {
+			is_subject = no
+			exists = yes
+			NOT = {
+				OR = {
+					alliance_with = TEK
+					alliance_with = RMO
+					alliance_with = ITR
+				}
+			}
+		}
+		HAB = {
+			is_subject = no
+			exists = yes
+			OR = {
+				is_rival = TEK
+				is_rival = RMO
+				is_rival = ITR
+			}
+			is_rival = FRA
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	option = {
+		name = ink_common4.a
+		ai_chance = { factor = 90 }
+		ROOT = { create_alliance = FRA }			
+			
+	}
+	option = {
+		name = ink_common4.b
+		ai_chance = { factor = 10 }
+		add_prestige = 5
+	}
+}	

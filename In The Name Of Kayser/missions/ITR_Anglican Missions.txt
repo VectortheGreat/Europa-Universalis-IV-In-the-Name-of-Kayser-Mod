@@ -1,0 +1,334 @@
+itr_religion_missions_ang = {		#Anglican Missions
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		tag = ITR
+		has_country_flag = religion_reformed_ang
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	itr_religion_mission_ang1 = {		#The Fist Anglican Church in Capital
+		icon = universities
+		required_missions = { }
+		position = 7
+		provinces_to_highlight = {
+			AND = {
+				province_id = 148
+				OR = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+			}
+		}
+		trigger = {
+			is_defender_of_faith = yes
+			stability = 3
+			religious_unity = 0.90
+			treasury = 1000
+			is_core = 148
+		}
+		effect = {
+			country_event = {	#It adds a tier 2 monument
+				id = itest.12
+			}
+		}
+	}
+	itr_religion_mission_ang2 = {		#British
+		icon = inkbritish
+		required_missions = {  }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				owned_by = GBR
+				owned_by = ENG
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				alliance_with = GBR
+				GBR = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+				}
+				alliance_with = ENG
+				ENG = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+			}
+			else = {
+				OR = {
+					ENG = { is_subject_of = ITR }
+					NOT = { exist = ENG }
+					GBR = { is_subject_of = ITR }
+					NOT = { exist = ENG }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GBR
+					religion = anglican
+				}
+				add_country_modifier = {
+					name = "ink_150"
+					duration = 3652
+				}
+			}
+			else_if = {
+				limit = {
+					exists = GBR
+					NOT = { religion = anglican }
+				}
+				GBR = {
+					country_event = {
+						id = itest.13
+					}
+				}
+				add_country_modifier = {
+					name = "ink_150"
+					duration = 3652
+				}
+			}
+			if = {
+				limit = {
+					exists = ENG
+					religion = anglican
+				}
+				add_country_modifier = {
+					name = "ink_150"
+					duration = 3652
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+					NOT = { religion = anglican }
+				}
+				ENG = {
+					country_event = {
+						id = itest.13
+					}
+				}
+				add_country_modifier = {
+					name = "ink_150"
+					duration = 3652
+				}
+			}
+			else = {
+				add_dip_power = 100
+			}
+		}
+	}
+	
+	itr_religion_mission_ang3 = {		#British Crown
+		icon = inkbritishcrown
+		required_missions = { itr_religion_mission_ang2 }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				owned_by = GBR
+				owned_by = ENG
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = GBR
+					
+				}
+				GBR = {
+					OR = {
+						has_female_heir = yes
+						has_foreign_heir = yes
+						religion = anglican
+						has_heir = no
+						NOT = { heir_claim = 50 }
+						is_subject_of = ITR
+						NOT = { exists = GBR } 
+					}
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+				}
+				ENG = {
+					OR = {
+						has_female_heir = yes
+						religion = anglican
+						has_foreign_heir = yes
+						has_heir = no
+						NOT = { heir_claim = 50 }
+						is_subject_of = ITR
+						NOT = { exists = ENG } 
+					}
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GBR
+					
+				}
+				GBR = {
+					define_heir = {
+						male = yes
+						dynasty = ROOT
+						name = "Alp"
+						claim = 90
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+				}
+				ENG = {
+					define_heir = {
+						male = yes
+						dynasty = ROOT
+						name = "Alp"
+						claim = 90
+					}
+				}
+			}
+			else = {
+				add_adm_power = 200
+			}
+		}
+	}
+	
+	itr_religion_mission_ang4 = {		#British Government
+		icon = britishgovernment
+		required_missions = { itr_religion_mission_ang3 }
+		position = 10
+		trigger = {
+			if = {
+				limit = {
+					exists = GBR
+					
+				}
+				GBR = {
+					AND = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+						NOT = { liberty_desire = 50 }
+						is_subject_of = ITR
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+				}
+				ENG = {
+					AND = {
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+						NOT = { liberty_desire = 50 }
+						is_subject_of = ITR
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = { exist = ENG }
+					NOT = { exist = GBR }
+				}
+			}				
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				country_event = {
+					id = itest.15
+				}
+			}
+			else_if = {
+				limit = {
+					exists = ENG
+				}
+				ENG = {
+					change_tag = GBR
+					lowlands_area = {
+						limit = {
+							NOT = { is_core = PREV }
+						}
+						add_core = PREV
+					}
+					highlands_area = {
+						limit = {
+							NOT = { is_core = PREV }
+						}
+						add_core = PREV
+					}
+					hidden_effect = {
+						swap_non_generic_missions = yes
+						restore_country_name = yes
+						country_event = { id = ideagroups.1 }
+					}
+				}
+				country_event = {
+					id = itest.15
+				}
+			}
+			else = {
+				add_adm_power = 200
+			}
+		}
+	}
+	
+	itr_religion_mission_ang5 = {		#Rule the New World
+		icon = rulethenewworld
+		required_missions = { itr_religion_mission_ang4 }
+		position = 11
+		provinces_to_highlight = {
+			#hightlight!
+		}
+		trigger = {
+			all_country = {
+				NOT = { colony = 1 }
+			}
+			NOT = { current_age = age_of_discovery }
+			NOT = { current_age = age_of_reformation }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ink_151"
+				duration = 14610
+			}
+		}
+	}
+}

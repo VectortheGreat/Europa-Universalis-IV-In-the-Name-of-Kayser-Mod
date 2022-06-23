@@ -1,0 +1,178 @@
+namespace = inkinfo
+normal_or_historical_nations = yes
+
+country_event = {	#Welcome
+	id = inkinfo.1
+	title = "inkinfo.1_title"
+	desc = "inkinfo.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = inkachi1a
+		country_event = { id = inkinfo.2 }
+	}
+	option = {
+		name = inkachi1b	
+	}
+}
+country_event = {	#About Mod
+	id = inkinfo.2
+	title = "inkinfo.2_title"
+	desc = "inkinfo.2_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.3 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#Turkish Civil War
+	id = inkinfo.3
+	title = "inkinfo.3_title"
+	desc = "inkinfo.3_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.4 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.2 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#About Nova Imperium Romanum
+	id = inkinfo.4
+	title = "inkinfo.4_title"
+	desc = "inkinfo.4_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.5 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.3 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#About Imperium Turcicum
+	id = inkinfo.5
+	title = "inkinfo.5_title"
+	desc = "inkinfo.5_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.6 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.4 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#About The Eastern Knights
+	id = inkinfo.6
+	title = "inkinfo.6_title"
+	desc = "inkinfo.6_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.7 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.5 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#Nova Romanum Imperium Tips
+	id = inkinfo.7
+	title = "inkinfo.7_title"
+	desc = "inkinfo.7_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.8 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.6 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#Imperium Turcicum Tips
+	id = inkinfo.8
+	title = "inkinfo.8_title"
+	desc = "inkinfo.8_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2a
+		country_event = { id = inkinfo.9 }
+	}
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.7 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}
+
+country_event = {	#The Eastern Knights Tips
+	id = inkinfo.9
+	title = "inkinfo.9_title"
+	desc = "inkinfo.9_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi2c
+		country_event = { id = inkinfo.8 }
+	}
+	option = {
+		name = inkachi2b	
+	}
+}

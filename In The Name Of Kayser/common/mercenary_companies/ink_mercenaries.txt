@@ -1,0 +1,112 @@
+merc_ink_knights = {	#The Holy Order
+	regiments_per_development = 0.04	#40 regiments for 1000 development
+	cavalry_weight = 0.4	#40% Cavalry
+	cavalry_cap = 4 #Max 4 Cavalries
+	home_province = 320	#Rhodes
+	sprites = { dlc040_kni_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		OR = {
+			tag = ITR
+			tag = RMO
+			tag = TEK
+		}
+	}
+	cost_modifier = 0.5
+	modifier = {
+		land_morale = 0.15
+		leader_land_shock = 1
+	}
+}
+
+merc_ink_imperial = {	#Crusader Volunteers
+	regiments_per_development = 0.04	#40 regiments for 1000 development
+	cavalry_weight = 0.2	#20% Cavalry
+	cavalry_cap = 2	#Max 2 Cavalries
+	artillery_weight = 0.4	#40% Artillery
+	home_province = 320	#Rhodes
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		OR = {
+			tag = ITR
+			tag = RMO
+			tag = TEK
+		}
+	}
+	cost_modifier = 0.50
+	modifier = {
+		land_morale = 0.10
+		shock_damage_received = -0.2
+	}
+}
+
+merc_ink_grand_imperial1 = {	#Kayser's Loyal Army
+	regiments_per_development = 0.05	#50 regiments for 1000 development
+	artillery_weight = 0.45	#45% Artillery
+	home_province = 151		#Konstantinopolis
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		has_country_flag = itr_grand_mercenary_army
+	}
+	cost_modifier = 0.5
+	modifier = {
+		fire_damage = 0.2
+		discipline = 0.075
+	}
+}
+merc_ink_grand_imperial2 = {	#Kayser's Grand Artillery Army
+	regiments_per_development = 0.05	#50 regiments for 1000 development
+	artillery_weight = 0.60	#60% Artillery
+	home_province = 151	#Konstantinopolis
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		has_country_flag = itr_grand_mercenary_army
+	}
+	cost_modifier = 0.5
+	modifier = {
+		backrow_artillery_damage = 0.15
+		artillery_power = 0.2
+	}
+}
+merc_ink_grand_imperial3 = {	#Kayser's Grand Army
+	regiments_per_development = 0.05	#50 regiments for 1000 development
+	artillery_weight = 0.35	#35% Artillery
+	home_province = 151 #Konstantinopolis
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		has_country_flag = itr_grand_mercenary_army
+	}
+	cost_modifier = 0.5
+	modifier = {
+		fire_damage_received = -0.2
+		infantry_power = 0.20
+	}
+}
+merc_ink_grand_imperial4 = {	#Kayser's Champion Army
+	regiments_per_development = 0.05	#50 regiments for 1000 development
+	artillery_weight = 0.45 #45% Artillery
+	home_province = 151	#Konstantinopolis
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		has_country_flag = itr_grand_mercenary_army
+	}
+	cost_modifier = 0.5
+	modifier = {
+		recover_army_morale_speed = 0.20
+		land_morale = 0.2
+	}
+}
+merc_ink_march = {	#Noble Crusader Company
+	regiments_per_development = 0.05	#50 regiments for 1000 development
+	artillery_weight = 0.30 #30% Artillery
+	home_province = 318 #Sugla
+	sprites = { itr_sprite_pack westerngfx_sprite_pack }
+	trigger = {
+		is_march = yes
+		has_reform = royal_order_government
+	}
+	cost_modifier = 0.2
+	modifier = {
+		discipline = 0.1
+		land_morale = 0.2
+	}
+}

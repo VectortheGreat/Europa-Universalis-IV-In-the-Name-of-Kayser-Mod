@@ -1,0 +1,532 @@
+namespace = inkachi
+normal_or_historical_nations = yes
+
+###NOVA IMPERIUM ROMANUM ACHIEVEMENTS###
+
+country_event = {	#I Said I'm the True Heir to Rome
+	id = inkachi.1
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		is_core = 183
+		is_core = 341
+		is_core = 236
+		is_core = 217
+		is_core = 227
+		is_core = 361
+		is_core = 2301
+		is_core = 2313
+		is_core = 104
+		is_core = 151
+		is_core = 118
+		is_core = 146
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rmo_achievement_1_completed
+			set_country_flag = rmo_achi_del_1
+		}
+	}
+	option = {
+		name = inkachi1.a	
+	}
+}
+
+country_event = {	#Neither Holy Nor Roman Nor an Empire
+	id = inkachi.2
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		NOT = { exists = HLR }
+		NOT = { hre_size = 1 }
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rmo_achievement_2_completed
+			set_country_flag = rmo_achi_del_2
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Neo-Roman Legionnaires
+	id = inkachi.3
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		has_global_modifier_value = {
+			which = discipline
+			value = 0.25
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rmo_achievement_3_completed
+			set_country_flag = rmo_achi_del_3
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Make Konstantinopolis Great Again!
+	id = inkachi.4
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		151 = {
+			NOT = { num_free_building_slots = 1 }
+			development = 75
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rmo_achievement_4_completed
+			set_country_flag = rmo_achi_del_4
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Cradle of Civilizations
+	id = inkachi.5
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		all_province = {
+			OR = {
+				AND = {
+					NOT = {
+						culture = turkish
+						culture = neo_turkish
+					}
+				}
+				NOT = {
+					num_free_building_slots = 1
+				}
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = rmo_achievement_5_completed
+			set_country_flag = rmo_achi_del_5
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+###IMPERIUM TURCICUM ROMANUM ACHIEVEMENTS###
+
+country_event = {	#von Habsburgs? Which duchy's dynasty?
+	id = inkachi.6
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		ITR = {
+			is_emperor = yes
+		}
+		OR = {
+			HAB = {
+				NOT = {
+					has_subject_of_type = personal_union
+					has_subject_of_type = vassal
+					has_subject_of_type = march
+					has_subject_of_type = colony
+				}
+				government_rank = 1
+			}
+			NOT = { exists = HAB }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = itr_achievement_1_completed
+			set_country_flag = itr_achi_del_1
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#The Turks should not colonize(!)
+	id = inkachi.7
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		calc_true_if = {
+			all_subject_country = {
+				is_colonial_nation = yes
+			}
+			amount = 6
+		}
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT }
+				any_subject_country = {
+					is_colonial_nation = yes
+				}
+			}
+		}
+		colony = 6
+		NOT = { current_age = age_of_discovery }
+		NOT = { current_age = age_of_reformation }
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = itr_achievement_2_completed
+			set_country_flag = itr_achi_del_2
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Pope-sama you should retire..
+	id = inkachi.8
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		OR = {
+			PAP = { is_subject_of = ITR }
+			is_core = 118
+		}	
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = itr_achievement_3_completed
+			set_country_flag = itr_achi_del_3
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Professional Mercenary Armies
+	id = inkachi.9
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		army_professionalism = 1
+		num_of_mercenaries = 300
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = itr_achievement_4_completed
+			set_country_flag = itr_achi_del_4
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Winged Siphais Arrived
+	id = inkachi.10
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ITR
+		controls = 257
+		OR = { 
+			war_with = POL
+			war_with = PLC
+		}
+		OR = {
+			war_score_against = {
+				who = POL
+				value = 80
+			}
+			war_score_against = {
+				who = PLC
+				value = 80
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = itr_achievement_5_completed
+			set_country_flag = itr_achi_del_5
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+###THE EASTERN KNIGHTS ACHIEVEMENTS###
+
+country_event = {	#Allah Vu..Ops.. Deus VULT!
+	id = inkachi.11
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		devotion = 100
+		palestine_area = {
+			type = all
+			religion = ROOT
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = tek_achievement_1_completed
+			set_country_flag = tek_achi_del_1
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Save the Brothers
+	id = inkachi.12
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		primary_culture = neo_turkish3
+		NOT = {
+			any_province = {
+				OR = {
+					culture = neo_turkish3
+					culture = neo_azerbaijani
+					culture = neo_uzbehk
+					culture = neo_turkmeni
+					culture = neo_uyghur
+					culture = neo_khazak
+					culture = neo_kirgiz
+					culture = neo_crimean
+				}
+				NOT = { religion = ROOT }
+			}
+		}
+		calc_true_if = {
+			all_province = {
+				culture = neo_turkmeni
+				religion = ROOT
+			}
+			amount = 1
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = tek_achievement_2_completed
+			set_country_flag = tek_achi_del_2
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Early Tanks
+	id = inkachi.13
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		has_global_modifier_value = {
+			which = siege_ability
+			value = 0.7
+		}
+		has_global_modifier_value = {
+			which = artillery_power
+			value = 0.2
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = tek_achievement_3_completed
+			set_country_flag = tek_achi_del_3
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Lord of the 8 Orders
+	id = inkachi.14
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		calc_true_if = {
+			all_subject_country = {
+				is_subject_of_type = crusader_march
+			}
+			amount = 8
+		}
+		all_subject_country = {
+			NOT = { liberty_desire = 50 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = tek_achievement_4_completed
+			set_country_flag = tek_achi_del_4
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Excuse me, It's my Crusade!
+	id = inkachi.15
+	title = "inkachi.1_title"
+	desc = "inkachi.1_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		NOT = {
+            any_great_power = {
+				NOT = { 
+					religion_group = christian
+				}
+				capital_scope = {
+					continent = asia
+				}
+			}
+		}
+		NOT = {
+			asia = {
+				owner = {
+					capital_scope = {
+						continent = europe
+					}
+					NOT = { OR = { tag = TEK is_subject_of = TEK } }
+				}
+			}
+		}
+		current_age = age_of_revolutions
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = tek_achievement_5_completed
+			set_country_flag = tek_achi_del_5
+		}
+	}
+	option = {
+		name = inkachi1.a
+	}
+}
+
+###ACHIEVEMENT INFORMATION###
+country_event = {	#The Eastern Knights Achievements
+	id = inkachi.16
+	title = "inkachi.16_title"
+	desc = "inkachi.16_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Imperium Turcicium Achievements
+	id = inkachi.17
+	title = "inkachi.17_title"
+	desc = "inkachi.17_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi1.a
+	}
+}
+
+country_event = {	#Nova Imperium Romanum Achievements
+	id = inkachi.18
+	title = "inkachi.18_title"
+	desc = "inkachi.18_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkachi1.a
+	}
+}	
