@@ -69,10 +69,10 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 		position = 10
 		trigger = {
 			calc_true_if = {
-					all_country = {
-						religion = ROOT
-					}
-					amount = 25
+				all_country = {
+					religion = ROOT
+				}
+				amount = 25
 			}
 		}
 		effect = {

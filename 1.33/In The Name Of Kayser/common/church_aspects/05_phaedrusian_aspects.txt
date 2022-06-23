@@ -22,7 +22,7 @@ ink_buff2 = {	#Tolerance for Heretics
 	cost = 130
 	modifier = {
 		tolerance_heretic = 2
-		religious_unity = 0.25
+		religious_unity = 0.15
 	}
 	ai_will_do = {
 		factor = 5
@@ -88,7 +88,7 @@ ink_buff4 = {	#Deport Infidels
 ink_buff5 = {	#Religious Centralization
 	cost = 130
 	modifier = {
-		global_autonomy = -0.25
+		global_autonomy = -0.20
 	}
 	ai_will_do = {
 		factor = 10
@@ -112,7 +112,7 @@ ink_buff7 = {	#Anatolian Renaissance
 ink_buff6 = {	#Protect the Faith
 	cost = 130
 	modifier = {
-		discipline = 0.1
+		discipline = 0.05
 	}
 	ai_will_do = {
 		factor = 10

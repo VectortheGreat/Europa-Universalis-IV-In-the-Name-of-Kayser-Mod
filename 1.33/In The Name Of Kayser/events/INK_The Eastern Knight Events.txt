@@ -1,0 +1,1060 @@
+########################################
+	# The Eastern Knights Events           #
+########################################
+namespace = ttest
+normal_or_historical_nations = yes
+country_event = {		#Colonist	
+	id = ttest.1
+	title = "ttest.1_title"
+	desc = "ttest.1_desc"
+	picture = ink_missionary_eventPicture
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest1.a
+		add_country_modifier = {
+			name = "ink_140"
+			duration = 21915
+		}
+	}
+	option = {
+		name = ttest1.b
+		add_country_modifier = {
+			name = "ink_141"
+			duration = 27393
+		}
+	}
+	option = {
+		name = ttest1.c
+		add_prestige = 15
+	}
+}
+country_event = {		#Holy Order
+	id = ttest.2
+	title = ttest.2_title
+	desc = ttest.2_desc
+	picture = ink_holy_order_eventPicture
+	fire_only_once = yes
+	goto = 151
+	option = {
+		goto = 151
+		name = holy_order1
+		add_treasury = -100
+		custom_tooltip = holy_order_tt
+		151 = {
+			add_province_triggered_modifier = holy_order
+		}
+	}
+}
+country_event = {		#Persia
+	id = ttest.3
+	title = "ttest.3_title"
+	desc = ttest.3_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest3.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = persia_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK3 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK3 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = persian
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK2
+				add_historical_friend = TK4
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				persia_region = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						region = persia_region
+						controlled_by = TEK
+					}
+				}
+				add_core = TK3
+				cede_province = TK3
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						region = persia_region
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK3
+			}
+		}
+		custom_tooltip = tek_crusader_persia_tt
+		TEK = {
+			create_subject = {
+				subject = TK3
+				subject_type = crusader_march
+			}
+			persia_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_persia
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK3
+			}
+			TK3 = {
+				persia_region = {
+					limit = {
+						NOT = { is_core = TK3 }
+						NOT = { is_claim = TK3 }
+					}
+					add_permanent_claim = TK3
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest3.b
+		add_prestige = 10
+		persia_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#Central Asia
+	id = ttest.4
+	title = ttest.4_title
+	desc = ttest.4_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest4.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = central_asia_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK4 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK4 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = turkmeni
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK2
+				add_historical_friend = TK3
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						region = central_asia_region
+						controlled_by = TEK
+					}
+				}
+				add_core = TK4
+				cede_province = TK4
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						region = central_asia_region
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK4
+			}
+		}
+		custom_tooltip = tek_crusader_centasia_tt
+		TEK = {
+			create_subject = {
+				subject = TK4
+				subject_type = crusader_march
+			}
+			central_asia_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_turkistan
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK4
+			}
+			TK4 = {
+				central_asia_region = {
+					limit = {
+						NOT = { is_core = TK4 }
+						NOT = { is_claim = TK4 }
+					}
+					add_permanent_claim = TK4
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest4.b
+		add_prestige = 10
+		central_asia_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#India
+	id = ttest.5
+	title = ttest.5_title
+	desc = ttest.5_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest5.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					OR = {
+						region = west_india_region
+						region = hindusthan_region
+					}
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK2 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK2 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = saurashtri
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK3
+				add_historical_friend = TK4
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+						is_core = ROOT 
+					}
+				}
+				add_core = TK2
+				cede_province = TK2
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK2
+			}
+		}
+		custom_tooltip = tek_crusader_india_tt
+		TEK = {
+			create_subject = {
+				subject = TK2
+				subject_type = crusader_march
+			}
+			west_india_region = {
+				remove_claim = TEK
+			}
+			hindusthan_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_india
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK2
+			}
+			TK2 = {
+				west_india_region = {
+					limit = {
+						NOT = { is_core = TK2 }
+						NOT = { is_claim = TK2 }
+					}
+					add_permanent_claim = TK2
+				}
+				hindusthan_region = {
+					limit = {
+						NOT = { is_core = TK2 }
+						NOT = { is_claim = TK2 }
+					}
+					add_permanent_claim = TK2
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest5.b
+		add_prestige = 10
+		hindusthan_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#Armenia
+	id = ttest.6
+	title = ttest.6_title
+	desc = ttest.6_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest6.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = caucasia_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK1 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK1 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = armenian
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK3
+				add_historical_friend = TK2
+				add_historical_friend = TK4
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						region = caucasia_region
+						controlled_by = TEK
+					}
+				}
+				add_core = TK1
+				cede_province = TK1
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						region = caucasia_region
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK1
+			}
+		}
+		custom_tooltip = tek_crusader_armenia_tt
+		TEK = {
+			create_subject = {
+				subject = TK1
+				subject_type = crusader_march
+			}
+			caucasia_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_armenia
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK1
+			}
+			TK1 = {
+				caucasia_region = {
+					limit = {
+						NOT = { is_core = TK1 }
+						NOT = { is_claim = TK1 }
+					}
+					add_permanent_claim = TK1
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest6.b
+		add_prestige = 10
+		caucasia_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#Egypt
+	id = ttest.7
+	title = ttest.7_title
+	desc = ttest.7_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest7.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = egypt_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK5 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK5 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = al_misr_arabic
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK2
+				add_historical_friend = TK4
+				add_historical_friend = TK3
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = { 
+					AND = {
+						region = egypt_region
+						controlled_by = TEK
+					}
+				}
+				add_core = TK5
+				cede_province = TK5
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						region = egypt_region
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK5
+			}
+		}
+		custom_tooltip = tek_crusader_egypt_tt
+		TEK = {
+			create_subject = {
+				subject = TK5
+				subject_type = crusader_march
+			}
+			egypt_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_egypt
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK5
+			}
+			TK5 = {
+				egypt_region = {
+					limit = {
+						NOT = { is_core = TK5 }
+						NOT = { is_claim = TK5 }
+					}
+					add_permanent_claim = TK5
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest7.b
+		add_prestige = 10
+		egypt_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#Burma
+	id = ttest.8
+	title = ttest.8_title
+	desc = ttest.8_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest8.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					OR = {
+						region = burma_region
+						region = indo_china_region
+					}
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK6 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK6 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = arakanese
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK3
+				add_historical_friend = TK4
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK7
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+						is_core = ROOT 
+					}
+				}
+				add_core = TK6
+				cede_province = TK6
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+						NOT = { is_core = ROOT }
+					}
+				}
+				cede_province = TK6
+			}
+		}
+		custom_tooltip = tek_crusader_burma_tt
+		TEK = {
+			create_subject = {
+				subject = TK6
+				subject_type = crusader_march
+			}
+			burma_region = {
+				remove_claim = TEK
+			}
+			indo_china_region = {
+				remove_claim = TEK
+			}
+			malaya_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_burma
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK6
+			}
+			TK6 = {
+				burma_region = {
+					limit = {
+						NOT = { is_core = TK6 }
+						NOT = { is_claim = TK6 }
+					}
+					add_permanent_claim = TK6
+				}
+				indo_china_region = {
+					limit = {
+						NOT = { is_core = TK6 }
+						NOT = { is_claim = TK6 }
+					}
+					add_permanent_claim = TK6
+				}
+				malaya_region = {
+					limit = {
+						NOT = { is_core = TK6 }
+						NOT = { is_claim = TK6 }
+					}
+					add_permanent_claim = TK6
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest8.b
+		add_prestige = 10
+	}
+}
+country_event = {		#China
+	id = ttest.9
+	title = ttest.9_title
+	desc = ttest.9_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest9.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = south_china_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK7 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK7 = {
+				change_government = theocracy
+				add_manpower = 15
+				add_treasury = 300
+				add_army_professionalism = 0.2
+				add_army_tradition = 40
+				change_primary_culture = cantonese
+				change_religion = ROOT
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+				add_historical_friend = TK1
+				add_historical_friend = TK2
+				add_historical_friend = TK4
+				add_historical_friend = TK5
+				add_historical_friend = TK6
+				add_historical_friend = TK3
+				add_historical_friend = TK8
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = {
+					region = south_china_region
+					is_core = TEK
+				}
+				add_core = TK7
+				cede_province = TK7
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					region = south_china_region
+					NOT = { is_core = ROOT }
+				}
+				cede_province = TK7
+			}
+		}
+		custom_tooltip = tek_crusader_china_tt
+		TEK = {
+			create_subject = {
+				subject = TK7
+				subject_type = crusader_march
+			}
+			south_china_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_china
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK7
+			}
+			TK7 = {
+				south_china_region = {
+					limit = {
+						NOT = { is_core = TK7 }
+						NOT = { is_claim = TK7 }
+					}
+					add_permanent_claim = TK7
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest9.b
+		add_prestige = 10
+		north_china_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		xinan_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+country_event = {		#Japan
+	id = ttest.10
+	title = ttest.10_title
+	desc = ttest.10_desc
+	picture = ink_orders_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ttest10.a
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					region = japan_region
+					controller = {
+						is_subject_of = TEK
+						NOT = { tag = TK8 }
+					}
+				}
+				add_core = TEK
+				cede_province = TEK
+			}
+			TK8 = {
+				change_government = theocracy
+				hidden_effect = {
+					add_manpower = 15
+					add_treasury = 300
+					add_army_professionalism = 0.2
+					add_army_tradition = 40
+					change_primary_culture = japanese
+					change_religion = ROOT
+					change_technology_group = ottoman
+					change_unit_type = ottoman
+					add_historical_friend = TK1
+					add_historical_friend = TK2
+					add_historical_friend = TK4
+					add_historical_friend = TK5
+					add_historical_friend = TK6
+					add_historical_friend = TK7
+					add_historical_friend = TK3
+				}
+				capital_scope = {
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					infantry = THIS
+					cavalry = THIS
+					cavalry = THIS
+				}
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = japan_region
+							region = korea_region
+						}
+						is_core = TEK
+					}
+				}
+				add_core = TK8
+				cede_province = TK8
+				remove_core = TEK
+			}
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = japan_region
+							region = korea_region
+						}
+					}
+					NOT = { is_core = ROOT }
+				}
+				cede_province = TK8
+			}
+		}
+		custom_tooltip = tek_crusader_japan_tt
+		TEK = {
+			create_subject = {
+				subject = TK8
+				subject_type = crusader_march
+			}
+			japan_region = {
+				remove_claim = TEK
+			}
+		}
+		set_country_flag = itr_crusader_subject_agreement_japan
+		hidden_effect = {
+			every_country = {
+				limit = { NOT = { religion = ROOT } }
+				add_truce_with = TK8
+			}
+			TK8 = {
+				japan_region = {
+					limit = {
+						NOT = { is_core = TK8 }
+						NOT = { is_claim = TK8 }
+					}
+					add_permanent_claim = TK8
+				}
+			}
+		}
+	}
+	option = {
+		name = ttest10.b
+		add_prestige = 10
+		korea_region = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+country_event = { #Muslims have fallen
+	id = ttest.11
+	title = "ttest.11_title"
+	desc = "ttest.11_desc"
+	picture = ink_knights_IV_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		NOT = {
+			any_country = {
+				religion_group = muslim
+				OR = {
+					is_great_power = yes
+					is_defender_of_faith = yes
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {	#
+		name = ttest11.a
+		ai_chance = { factor = 35 }
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					religion_group = muslim
+					controller = { religion_group = muslim }
+				}
+				add_province_modifier = { 
+					name = "ink_muslims_fallen"
+					duration = 3652
+				}
+			}
+		}
+		custom_tooltip = ink_muslims_fallen_tt
+		add_devotion = 10
+	}
+}
+
+country_event = { #No Rival for Crusaders
+	id = ttest.12
+	title = "ttest.12_title"
+	desc = "ttest.12_desc"
+	picture = ink_knights_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		religion_group = christian
+		NOT = {
+			any_country = {
+				NOT = { 
+					religion_group = christian
+				}
+				is_great_power = yes
+				capital_scope = {
+					continent = asia
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	option = {
+		name = ttest12.a
+		ai_chance = { factor = 35 }
+		add_country_modifier = { 
+			name = "ink_crushed_infidels"
+			duration = 3652
+		}
+	}
+}
+
+country_event = { #About Orders
+	id = ttest.13
+	title = "ttest.13_title"
+	desc = "ttest.13_desc"
+	picture = ink_knights_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ttest13.a
+	}
+}

@@ -1,6 +1,3 @@
-# Describes how religion is spread to new provinces from
-# Centers of Reformation and the "Propagate Religion" Trading Policy
-
 phaedrusian_center_of_reformation = {
 	
 	religion = phaedrusian

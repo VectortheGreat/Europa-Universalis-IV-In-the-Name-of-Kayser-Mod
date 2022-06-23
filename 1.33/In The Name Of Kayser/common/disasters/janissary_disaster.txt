@@ -6,11 +6,7 @@ janissary_disaster = {
 			tag = ITR
 			tag = TEK
 		}
-		OR = {
-			religion = catholic
-			religion = orthodox
-			religion = coptic
-		}
+		religion_group = christian
 		normal_or_historical_nations = yes
 
 	}

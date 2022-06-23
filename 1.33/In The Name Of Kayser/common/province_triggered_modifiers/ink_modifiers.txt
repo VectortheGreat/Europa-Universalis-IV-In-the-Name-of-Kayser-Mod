@@ -44,37 +44,13 @@ mil_konstantinopolis_library = {
 # Holy Order
 holy_order = {
 	potential = {
-		normal_or_historical_nations = yes
-	}
-	trigger = {
 		owner = {
 			tag = TEK
 		}
 	}
-	manpower_in_true_faith_provinces = 0.15
-	ae_impact = -0.1
-}
-
-test_modifier = {
-	potential = {
-		always = yes
-	}
-
 	trigger = {
-		owner = {
-			stability = 0
-		}
+		religion_group = christian
 	}
-
-	local_build_cost = 0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
-	
+	manpower_in_true_faith_provinces = 0.10
+	global_heathen_missionary_strength = 0.02
 }

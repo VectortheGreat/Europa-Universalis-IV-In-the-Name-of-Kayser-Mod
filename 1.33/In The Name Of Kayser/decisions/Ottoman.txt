@@ -14,7 +14,7 @@ country_decisions = {
 			adm_tech = 5
 			ADM = 4
 			adm_power = 50
-		}
+			}
 		effect = {
 			add_country_modifier = {
 				name = "the_provincial_system"

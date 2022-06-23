@@ -15,9 +15,9 @@ ink_4 = {
 	global_manpower_modifier = 0.10
 	manpower_recovery_speed = 0.20
 }
-	
+
 ink_5 = {
-	fire_damage = 0.05
+	special_unit_forcelimit= 0.075
 }
 ink_6 = {
 	siege_ability = 0.20
@@ -36,14 +36,13 @@ ink_9 = {
 }
 ink_10 = {
 	tolerance_own = 2
-	tolerance_heathen = -4
 }
 ink_11 = {
 	drill_gain_modifier = 0.25
 	drill_decay_modifier = -0.25
 }
 ink_12 = {
-	discipline = 0.10
+	discipline = 0.05
 	land_maintenance_modifier = -0.10
 }
 ink_13 = {
@@ -59,7 +58,7 @@ ink_15 = {
 	navy_tradition_decay = -0.01
 }
 ink_16 = {
-	technology_cost = -0.1
+	embracement_cost = -0.25
 	global_institution_spread = 0.25
 }
 ink_17 = {
@@ -69,10 +68,10 @@ ink_17 = {
 	build_time = -0.25
 }
 ink_18 = {
-	administrative_efficiency = 0.10
+	administrative_efficiency = 0.05
 }
 ink_19 = {
-	num_accepted_cultures = 4
+	num_accepted_cultures = 2
 	promote_culture_cost = -0.50
 }
 ink_20 = {
@@ -81,7 +80,7 @@ ink_20 = {
 ink_21 = {
 	local_friendly_movement_speed = 0.2
 	local_institution_spread = 0.25
-	province_trade_power_value = 0.25
+	province_trade_power_modifier = 0.25
 }
 ink_22 = {
 	stability_cost_modifier = -0.20
@@ -92,7 +91,7 @@ ink_23 = {
 	global_prov_trade_power_modifier = 0.2
 }
 ink_24 = {
-	merchants = 2
+	merchants = 1
 }
 ink_25 = {
 	caravan_power = 0.1
@@ -113,7 +112,7 @@ ink_29 = {
 	cavalry_shock = 1
 }
 ink_30 = {
-	all_power_cost = -0.20
+	all_power_cost = -0.1
 }
 ink_31 = {
 	prestige_from_land = 0.10
@@ -131,6 +130,8 @@ ink_100 = {
 }
 ink_101 = {
 	papal_influence = 1
+	church_power_modifier = 0.5
+	monthly_fervor_increase = 1
 	prestige_decay = -0.01
 }
 ink_102 = {
@@ -168,7 +169,7 @@ ink_110 = {
 	global_tariffs = 0.20
 }
 ink_111 = {
-	liberty_desire_from_subject_development = -0.20
+	liberty_desire_from_subject_development = -0.15
 	global_trade_power = 0.15
 }
 ink_112 = {
@@ -195,7 +196,7 @@ ink_117 = {
 	imperial_authority_value = 0.15
 }
 ink_118 = {
-	max_absolutism = 10
+	max_absolutism = 5
 	yearly_absolutism = 0.1
 }
 ink_120 = {
@@ -210,7 +211,7 @@ ink_122 = {
 }
 ink_123 = {
 	harsh_treatment_cost = -0.2
-	unrest_catholic_provinces = -2
+	global_unrest = -2
 }
 ink_124 = {
 	stability_cost_modifier = -0.2
@@ -232,8 +233,7 @@ ink_128 = {
 	global_heathen_missionary_strength = 0.03
 }
 ink_129 = {
-	num_accepted_cultures = 4
-	promote_culture_cost = -0.50
+	num_accepted_cultures = 2
 }
 ink_130 = {
 	mercenary_discipline = 0.10
@@ -261,7 +261,7 @@ ink_135 = {
 }
 ink_136 = {
 	harsh_treatment_cost = -0.2
-	max_absolutism = 20
+	max_absolutism = 10
 	global_tax_income = 30
 }
 ink_137 = {
@@ -297,8 +297,10 @@ ink_143ai = {
 	missionary_maintenance_cost = -0.75
 }
 ink_144 = {
-	missionaries = 1
-	global_heretic_missionary_strength = 0.05
+	missionaries = 2
+}
+ink_nesto_convert = {
+	global_heretic_missionary_strength = 0.1
 }
 ink_145 = {
 	global_tax_modifier = 0.15
@@ -323,4 +325,59 @@ ink_150 = {	#Hussite-Anglican mission
 ink_151 = {	#Ruler of the New World
 	global_trade_goods_size_modifier = 0.2
 	trade_efficiency = 0.2
+}
+
+ink_strenghten_orders = {
+	build_cost = -0.2
+	liberty_desire = -10
+}
+
+ink_march_lord = {
+	diplomats = 1
+	vassal_forcelimit_bonus = 0.3
+}
+
+ink_arabian_coffee = {
+	trade_goods_size_modifier = 0.35
+}
+
+ink_galley_cost = {
+	galley_cost = -0.25
+	transport_cost = -0.25
+}
+ink_reconquest_anatolia = {
+	warscore_cost_vs_other_religion = -0.25
+}
+ink_great_port = {
+	blockade_impact_on_siege_in_fleet_modifier = 0.1
+	number_of_cannons_flagship_modifier = 0.1
+	cannons_for_hunting_pirates_in_fleet = 1
+}
+ink_neo_turkic_united = {
+	cavalry_shock = 1
+	cavalry_power = 0.25
+}
+ink_neo_eroman_united = {
+	reform_progress_growth = 0.2
+	monthly_splendor = 2
+}
+ink_neo_balkoanato_united = {
+	placed_merchant_power = 3
+	global_trade_goods_size_modifier = 0.1
+}
+ink_convert_muslim = {
+	local_missionary_strength = 0.03
+}
+ink_expand_empire = {
+	governing_capacity = 300
+}
+ink_polish_hussars = {
+	cavalry_power = 0.15
+}
+ink_restored_pentarchy = {
+	local_years_of_nationalism = -5
+	local_manpower_modifier = 0.2
+}
+ink_nobles_loyalty = {
+	nobles_loyalty_modifier = 0.1
 }

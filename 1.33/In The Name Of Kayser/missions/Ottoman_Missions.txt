@@ -1,6 +1,6 @@
 otto_slot_3 = {
 	slot = 3
-	generic = no 
+	generic = yes 
 	ai = yes
 	potential_on_load = {
 		tag = TUR

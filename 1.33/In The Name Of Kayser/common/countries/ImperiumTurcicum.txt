@@ -5,12 +5,12 @@ graphical_culture = westerngfx
 color = { 98 58 109 }
 
 historical_idea_groups = {
-	maritime_ideas
 	religious_ideas
-	defensive_ideas
+	offensive_ideas
 	administrative_ideas
-	trade_ideas
 	quality_ideas
+	trade_ideas
+	influence_ideas
 	innovativeness_ideas
 	diplomatic_ideas
 }
@@ -34,7 +34,7 @@ historical_units = {
 }
 
 monarch_names = {
-	"Iskender #7" = 40
+	"Iskender #7" = 30
 	"Kutay #5" = 30
 	"Gökhan #10" = 20
 	"Saltuk #4" = 20
@@ -89,7 +89,7 @@ leader_names = {
 }
 
 ship_names = {
-    Tengri "Kayra Han" Ülgen "Ak Ana" Erlik "Mergen Tanri" Kýzagan "Yayik Han" "Umay Ana" Karlik Suyla Utkuuçi Ayizit "Oghuz Khagan"
+    "Tengri" "Kayra Han" Ülgen "Ak Ana" Erlik "Mergen Tanri" Kýzagan "Yayik Han" "Umay Ana" Karlik Suyla Utkuuçi Ayizit "Oghuz Khagan"
 	"Ay Han" "Dag Han" "Deniz Han" "Gök Han" "Gün Han" "Yildiz Han" "Ürüng Ayig Toyon" "Su Ýyesi" "Kübey Hatun" "Semrük Bürküt"
 	"Kartal Ana" Asena "Al Basti" "Alp Er Tunga" "Ötüken" "Od Ana" "Sigun Geyik" "Gök Kurt" "Bügü Tekin"
 }

@@ -1,0 +1,522 @@
+namespace = inkrmo
+normal_or_historical_nations = yes
+
+country_event = { #Russia
+	id = inkrmo.1
+	title = "inkrmo.1_title"
+	desc = "inkrmo.1_desc"
+	picture = NEW_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		religion = orthodox
+		exists = RUS
+		government = monarchy
+		RUS = {
+			has_heir = no
+			ruler_age = 60
+			NOT = {
+				OR = {
+					is_rival = RMO
+					is_enemy = RMO
+				}
+				dynasty = ROOT
+			}
+			marriage_with = RMO
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = inkrmo1.a
+		ai_chance = { factor = 35 }
+		RUS = {
+			define_heir = {
+				dynasty = ROOT
+				age = 5
+				adm = 6
+				dip = 5
+				mil = 2
+				claim = 90
+				female = yes
+				no_consort_with_heir = yes
+			}
+		}
+	}
+}
+
+country_event = { #Revenge of the crusade
+	id = inkrmo.2
+	title = "inkrmo.2_title"
+	desc = "inkrmo.2_desc"
+	picture = ink_4th_crusade_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		war_with = VEN
+		112 = { controlled_by = RMO }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo2.a
+		ai_chance = { factor = 90 }
+		add_years_of_income = 0.5
+		add_army_professionalism = -0.05
+		112 = {
+			add_devastation = 50
+			add_prosperity = -10
+		}
+		hidden_effect = { VEN = { add_years_of_income = -0.5 	add_war_exhaustion = 3 } }
+	}
+	option = {
+		name = inkrmo2.b
+		ai_chance = { factor = 10 }
+		add_army_professionalism = 0.05
+		add_prestige = 10
+		hidden_effect = { VEN = { add_war_exhaustion = 1 } }
+	}
+}
+
+country_event = { #New Capital
+	id = inkrmo.3
+	title = "inkrmo.3_title"
+	desc = "inkrmo.3_desc"
+	picture = ink_konstantinopolis_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		is_core = 118
+		118 = { religion = orthodox }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = inkrmo3.a
+		ai_chance = { factor = 90 }
+		151 = {
+			add_province_modifier = { 
+				name = "ink_make_konstantinopolis_great_again"
+				duration = -1
+			}
+		}
+		add_patriarch_authority = 0.1
+	}
+	option = {
+		name = inkrmo3.b
+		ai_chance = { factor = 10 }
+		set_capital = 118
+		118 = {
+			add_province_modifier = { 
+				name = "ink_roma_capital"
+				duration = -1
+			}
+		}
+		add_patriarch_authority = -0.25
+	}
+}
+
+country_event = { #Paris
+	id = inkrmo.4
+	title = "inkrmo.4_title"
+	desc = "inkrmo.4_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 183
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				183 = { is_core = no }
+			}
+			183 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			183 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Tunis
+	id = inkrmo.5
+	title = "inkrmo.5_title"
+	desc = "inkrmo.5_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 341
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				341 = { is_core = no }
+			}
+			341 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+				change_province_name = "Carthage"
+			}
+		}
+		else = {
+			341 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+				change_province_name = "Carthage"
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #London
+	id = inkrmo.6
+	title = "inkrmo.6_title"
+	desc = "inkrmo.6_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 236
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				236 = { is_core = no }
+			}
+			236 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			236 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Madrid
+	id = inkrmo.7
+	title = "inkrmo.7_title"
+	desc = "inkrmo.7_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 217
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				217 = { is_core = no }
+			}
+			217 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			217 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Lisbon
+	id = inkrmo.8
+	title = "inkrmo.8_title"
+	desc = "inkrmo.8_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 227
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				227 = { is_core = no }
+			}
+			227 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			227 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Cairo
+	id = inkrmo.9
+	title = "inkrmo.9_title"
+	desc = "inkrmo.9_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 361
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				361 = { is_core = no }
+			}
+			361 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			361 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Kayseri
+	id = inkrmo.10
+	title = "inkrmo.10_title"
+	desc = "inkrmo.10_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 2301
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				2301 = { is_core = no }
+			}
+			2301 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			2301 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Antioch
+	id = inkrmo.11
+	title = "inkrmo.11_title"
+	desc = "inkrmo.11_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 2313
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				2313 = { is_core = no }
+			}
+			2313 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			2313 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+
+country_event = { #Milan
+	id = inkrmo.12
+	title = "inkrmo.12_title"
+	desc = "inkrmo.12_desc"
+	picture = ink_roman_reconquest_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		owns = 104
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrmo4.a
+		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				104 = { is_core = no }
+			}
+			104 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest"
+					duration = 1826
+				}
+			}
+		}
+		else = {
+			104 = {
+				add_province_modifier = { 
+					name = "ink_roman_reconquest_no_core"
+					duration = 1826
+				}
+			}
+		}
+		add_legitimacy = 5
+	}
+}
+

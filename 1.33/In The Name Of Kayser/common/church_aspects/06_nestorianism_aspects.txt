@@ -1,0 +1,181 @@
+ink_nesto1 = {	#Bless Ruler	#Effect 1
+	sprite = "GFX_ink_bless_ruler_icon"
+	cost = 150
+	potential = {
+	}
+	trigger = {
+		devotion = 75
+	}
+	effect = {
+		custom_tooltip = nesto1_tt
+		hidden_effect = {
+			random_list = { 
+				33.33333333333333 = { add_adm_power = 75 }
+				33.33333333333333 = { add_dip_power = 75 }
+				33.33333333333333 = { add_mil_power = 75 }
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				consort_has_personality = infertile_personality
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				consort_adm = 2
+				consort_dip = 2
+				consort_mil = 2
+			}
+		}
+	}
+}
+
+ink_nesto2 = {	#Force the Oath of Allegiance	#Effect 2
+	sprite = "GFX_ink_nesto_enforce_icon"
+	cost = 150
+	potential = {
+		
+	}
+	trigger = {
+		devotion = 75
+	}
+	effect = {
+		add_corruption = -2
+		add_splendor = 20
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			ruler_age = 40
+		}
+		modifier = {
+			factor = 2
+			ruler_age = 60
+		}
+	}
+}
+
+ink_nesto3 = {	#Support Dyophysitism	#Modifier 1
+	sprite = "GFX_ink_dyophysitism_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = ink_nesto_dyophysitism }
+	}
+	effect = {
+		custom_tooltip = nesto3_tt
+		hidden_effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+			add_country_modifier = {
+				name = "ink_nesto_dyophysitism"
+				duration = 3650
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			is_in_large_debt = yes
+		}
+	}
+}
+
+ink_nesto4 = { #Clergy Government Support
+	sprite = "GFX_ink_support_government_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = ink_nesto_support_government }
+	}
+	effect = {
+		custom_tooltip = nesto4_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = "ink_nesto_support_government"
+				duration = 3650
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 5
+				}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.4
+		}
+	}
+}
+
+ink_nesto5 = { #Religious Orders
+	sprite = "GFX_ink_rel_order_icon"
+	cost = 150
+	trigger = {
+	}
+	effect = {
+		if = {
+			limit = { 
+				NOT = {
+					stability = 3
+				}
+			}
+			add_stability = 1
+		}
+		else = {
+			add_adm_power = 50
+		}
+	}
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 0.5
+			stability = 0
+		}
+		modifier = {
+			factor = 0.5
+			stability = 1
+		}
+		modifier = {
+			factor = 0.5
+			stability = 2
+		}
+	}
+}
+
+ink_nesto6 = {	#Eastern Christian Merchants
+	sprite = "GFX_ink_eastern_merchants_icon"
+	cost = 100
+	trigger = {
+		NOT = { has_country_modifier = ink_nesto_trade_support }
+	}
+	effect = {
+		custom_tooltip = nesto6_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = "ink_nesto_trade_support"
+				duration = 3650
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 5
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.4
+		}
+	}
+}

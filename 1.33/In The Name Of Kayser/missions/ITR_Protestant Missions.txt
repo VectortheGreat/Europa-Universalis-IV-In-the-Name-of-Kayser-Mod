@@ -30,8 +30,6 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		icon = inkelectors
 		required_missions = { itr_religion_mission_pr1 }
 		position = 8
-		provinces_to_highlight = {
-		}
 		trigger = {
 			OR = {
 				AND = {
@@ -61,8 +59,8 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		}
 		effect = {
 			add_country_modifier = {
-					name = "ink_015"
-					duration = 3652
+				name = "ink_015"
+				duration = 3652
 			}
 			if = {
 				limit = {
@@ -141,22 +139,22 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		required_missions = {  }
 		position = 10
 		trigger = {
-				any_country = {
-					OR = {
-						religion = protestant
-						religion = reformed
-					}
-					total_development = 2000
-					is_hegemon = yes
+			any_country = {
+				OR = {
+					religion = protestant
+					religion = reformed
 				}
-				NOT = {
-					calc_true_if = {
-						all_country = {
-							religion = catholic
-						}
-						amount = 50
+				total_development = 2000
+				is_hegemon = yes
+			}
+			NOT = {
+				calc_true_if = {
+					all_country = {
+						religion = catholic
 					}
+					amount = 50
 				}
+			}
 		}
 		effect = {
 			if = {
@@ -203,11 +201,12 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 		required_missions = { itr_religion_mission_pr4 }
 		position = 11
 		provinces_to_highlight = {
-			all_country = {
-					capital_scope = {
-							continent = europe
-					}
-					NOT = { religion = ROOT }	
+			is_capital = yes
+			owner = { 
+				capital_scope = {
+					continent = europe
+				}
+				NOT = { religion = ROOT } 
 			}
 		}
 		trigger = {
@@ -233,4 +232,4 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 			}
 		}
 	}
-}
+}					

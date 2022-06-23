@@ -438,6 +438,46 @@ christian = {
 		date = 1534.11.3 # act of supremacy
 	}
 	
+	nestorianism = {	#Nestorianism / OLD COLOUR 230  75  32 
+		color = { 77 5 40 }
+		icon = 31
+		
+		country = {
+			global_heretic_missionary_strength = 0.015
+			reinforce_cost_modifier = -0.2
+		}
+		
+		country_as_secondary = {
+			land_morale = 0.1
+		}
+		
+		on_convert = {
+			change_religion = nestorianism
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_nesto_convert"
+				duration = 3650
+			}			
+		}
+		
+		uses_anglican_power = yes				# Uses church power/aspect mechanics
+		
+		aspects = {
+			ink_nesto1
+			ink_nesto2
+			ink_nesto3
+			ink_nesto4
+			ink_nesto6
+			ink_nesto5
+		}
+		
+		aspects_name = ANGLICAN_ASPECTS
+		
+		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
+		
+		date = 1534.11.3 # act of supremacy
+	}
+	
 	protestant = {
 		color = { 0 0 178 }
 		icon = 2
@@ -848,6 +888,14 @@ christian = {
 		}
 		province = {
 			local_missionary_strength = -0.02
+		}
+		on_convert = {
+			change_religion = coptic
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_nesto_convert"
+				duration = 3650
+			}			
 		}
 		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }

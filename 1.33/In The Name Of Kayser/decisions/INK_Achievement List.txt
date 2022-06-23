@@ -1,0 +1,40 @@
+country_decisions = {
+	
+	
+	achievement_list_ink = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEK
+				tag = ITR
+				tag = RMO
+				tag = ROM
+				tag = TUR
+			}
+		}
+		allow = {
+			OR = {
+				tag = TEK
+				tag = ITR
+				tag = RMO
+				tag = ROM
+			}
+		}
+		effect = {
+			if = {
+				limit = { tag = TEK }
+				country_event = { id = inkachi.16 }
+			}
+			else_if = {
+				limit = { tag = ITR }
+				country_event = { id = inkachi.17 }
+			}
+			else_if = {
+				limit = { OR = { tag = RMO tag ROM } }
+				country_event = { id = inkachi.18 }
+			}
+			else = {
+				custom_tooltip = ink_achievenement_info_tt
+		}
+	}
+}

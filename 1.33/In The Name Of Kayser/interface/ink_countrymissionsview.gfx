@@ -1,8 +1,28 @@
 spriteTypes = {
+
+	spriteType = {
+		name = "ink_orders_1"
+		texturefile = "gfx//interface//missions//ink_orders_1.dds"
+	}
+	
+	spriteType = {
+		name = "ink_orders_2"
+		texturefile = "gfx//interface//missions//ink_orders_2.dds"
+	}
+	
+	spriteType = {
+		name = "ink_orders_3"
+		texturefile = "gfx//interface//missions//ink_orders_3.dds"
+	}
 	
 	spriteType = {
 		name = "imperial_projects"
 		texturefile = "gfx//interface//missions//imperial_projects.dds"
+	}
+	
+	spriteType = {
+		name = "ink_port"
+		texturefile = "gfx//interface//missions//ink_port.dds"
 	}
 	
 	spriteType = {
@@ -576,11 +596,64 @@ spriteTypes = {
 		name = "restore_pentarchy"
 		texturefile = "gfx//interface//missions//restore_pentarchy.dds"
 	}
-	
+		
+	spriteType = {
+		name = "causcasia"
+		texturefile = "gfx//interface//missions//causcasia.dds"
+	}
 	
 	spriteType = {
+		name = "burma"
+		texturefile = "gfx//interface//missions//burma.dds"
+	}
+	
+	spriteType = {
+		name = "central_asia"
+		texturefile = "gfx//interface//missions//central_asia.dds"
+	}
+	
+	spriteType = {
+		name = "egypt"
+		texturefile = "gfx//interface//missions//egypt.dds"
+	}
+	
+	spriteType = {
+		name = "india"
+		texturefile = "gfx//interface//missions//india.dds"
+	}
+	
+	spriteType = {	
 		name = "cross"
 		texturefile = "gfx//interface//missions//cross.dds"
 	}
 	
+	spriteType = {
+		name = "rmo_culture1"
+		texturefile = "gfx//interface//missions//rmo_culture1.dds"
+	}
+	
+	spriteType = {
+		name = "rmo_culture2"
+		texturefile = "gfx//interface//missions//rmo_culture2.dds"
+	}
+	
+	spriteType = {	
+		name = "rmo_culture3"
+		texturefile = "gfx//interface//missions//rmo_culture3.dds"
+	}
+	
+	spriteType = {
+		name = "tek_culture1"
+		texturefile = "gfx//interface//missions//tek_culture1.dds"
+	}
+	
+	spriteType = {
+		name = "tek_culture2"
+		texturefile = "gfx//interface//missions//tek_culture2.dds"
+	}
+	
+	spriteType = {	
+		name = "tek_culture3"
+		texturefile = "gfx//interface//missions//tek_culture3.dds"
+	}
 }

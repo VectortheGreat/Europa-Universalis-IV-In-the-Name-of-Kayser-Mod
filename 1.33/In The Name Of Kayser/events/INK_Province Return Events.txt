@@ -1,0 +1,1604 @@
+########################################
+	# Province Return Events               #
+########################################
+
+namespace = prreturn
+normal_or_historical_nations = yes
+
+
+
+country_event = {	#Return Province Persia - Non Core
+	id = prreturn.1
+	title = prreturn.1_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK1
+			tag = TK2
+			tag = TK4
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_persia
+			is_subject_of = TEK
+		}
+		OR = {
+			any_owned_province = {
+				region = persia_region
+				NOT = { is_core = ROOT }
+			}
+			AND = {
+				OR = {
+					tag = TK4
+					tag = TK1
+					tag = TK2
+					tag = TK5
+					tag = TK6
+					tag = TK7
+					tag = TK8
+				}
+				any_owned_province = {
+					region = persia_region
+				}
+			}
+		}
+		TK3 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = persia_region
+				}
+				cede_province = TK3
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						region = persia_region
+					}
+					cede_province = TK3
+				}
+			}
+		}
+		custom_tooltip = tek_return_province_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Persia - Core
+	id = prreturn.2
+	title = prreturn.2_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_persia
+		any_owned_province = {
+			region = persia_region
+			is_core = ROOT
+		}
+		TK3 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = persia_region
+					is_core = ROOT
+				}
+				add_core = TK3
+				cede_province = TK3
+				remove_core = ROOT
+			}
+		}
+		custom_tooltip = tek_return_province_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+###
+
+country_event = {	#Return Province Armenia - Non Core
+	id = prreturn.3
+	title = prreturn.4_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK2
+			tag = TK4
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_armenia
+			is_subject_of = TEK
+		}
+		any_owned_province = {
+			region = caucasia_region
+			NOT = { is_core = ROOT }
+		}
+		TK1 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = caucasia_region
+				}
+				cede_province = TK1
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						region = caucasia_region
+					}
+					cede_province = TK1
+				}
+			}
+		}
+		custom_tooltip = tek_return_province_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Armenia - Core
+	id = prreturn.4
+	title = prreturn.5_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_armenia
+		any_owned_province = {
+			region = caucasia_region
+			is_core = ROOT
+		}
+		TK1 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = caucasia_region
+					is_core = ROOT
+				}
+				add_core = TK1
+				cede_province = TK1
+				remove_core = ROOT
+			}
+		}
+		custom_tooltip = tek_return_province_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+###
+
+country_event = {	#Return Province India - Non Core
+	id = prreturn.5
+	title = prreturn.7_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK4
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_india
+			is_subject_of = TEK
+		}
+		OR = {
+			OR = {
+				any_owned_province = {
+					region = west_india_region
+					NOT = { is_core = ROOT }
+				}
+				any_owned_province = {
+					region = hindusthan_region
+					NOT = { is_core = ROOT }
+				}
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK4
+					tag = TK5
+					tag = TK6
+					tag = TK7
+					tag = TK8
+				}
+				OR = {
+					any_owned_province = {
+						region = west_india_region
+						NOT = { is_core = ROOT }
+					}
+					any_owned_province = {
+						region = hindusthan_region
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		}
+		TK2 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}				
+				}
+				cede_province = TK2
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+					}
+					cede_province = TK2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province India - Core
+	id = prreturn.6
+	title = prreturn.8_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_india
+		OR = {
+			any_owned_province = {
+				region = west_india_region
+				is_core = ROOT
+			}
+			any_owned_province = {
+				region = hindusthan_region
+				is_core = ROOT
+			}
+		}
+		TK2 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = west_india_region
+							region = hindusthan_region
+						}
+						is_core = ROOT
+					}				
+				}
+				add_core = TK2
+				cede_province = TK2
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+###
+
+country_event = {	#Return Province Turkistan - Non Core
+	id = prreturn.7
+	title = prreturn.10_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK2
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_turkistan
+			is_subject_of = TEK
+		}
+		OR = {
+			any_owned_province = {
+				region = central_asia_region
+				NOT = { is_core = ROOT }
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK2
+					tag = TK5
+					tag = TK6
+					tag = TK7
+					tag = TK8
+				}
+				any_owned_province = {
+					region = central_asia_region
+				}
+			}
+		}
+		TK4 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = central_asia_region
+				}
+				cede_province = TK4
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						region = central_asia_region
+					}
+					cede_province = TK4
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Turkistan - Core
+	id = prreturn.8
+	title = prreturn.11_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_turkistan
+		any_owned_province = {
+			region = central_asia_region
+			is_core = ROOT
+		}
+		TK4 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = central_asia_region
+					is_core = ROOT
+				}
+				add_core = TK4
+				cede_province = TK4
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+###
+
+country_event = {	#Return Province Egypt - Non Core
+	id = prreturn.9
+	title = prreturn.13_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK2
+			tag = TK4
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_egypt
+			is_subject_of = TEK
+		}
+		OR = {
+			any_owned_province = {
+				region = egypt_region
+				NOT = { is_core = ROOT }
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK2
+					tag = TK4
+					tag = TK6
+					tag = TK7
+					tag = TK8
+				}
+				any_owned_province = {
+					region = egypt_region
+				}
+			}
+		}
+		TK5 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = egypt_region
+				}
+				cede_province = TK5
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						region = egypt_region
+					}
+					cede_province = TK5
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Egypt - Core
+	id = prreturn.10
+	title = prreturn.14_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_egypt
+		any_owned_province = {
+			region = egypt_region
+			is_core = ROOT
+		}
+		TK5 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = egypt_region
+					is_core = ROOT
+				}
+				add_core = TK5
+				cede_province = TK5
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+###
+
+country_event = {	#Return Province Japan - Non Core
+	id = prreturn.11
+	title = prreturn.16_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK2
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_japan
+			is_subject_of = TEK
+		}
+		OR = {
+			any_owned_province = {
+				region = japan_region
+				NOT = { is_core = ROOT }
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK2
+					tag = TK4
+					tag = TK6
+					tag = TK7
+					tag = TK5
+				}
+				any_owned_province = {
+					region = japan_region
+				}
+			}
+		}
+		TK8 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = japan_region
+				}
+				cede_province = TK8
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						region = japan_region
+					}
+					cede_province = TK8
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Japan - Core
+	id = prreturn.12
+	title = prreturn.16_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_japan
+		any_owned_province = {
+			region = japan_region
+			is_core = ROOT
+		}
+		TK8 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = japan_region
+					is_core = ROOT
+				}
+				add_core = TK8
+				cede_province = TK8
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+###
+
+country_event = {	#Return Province Burma - Non Core
+	id = prreturn.13
+	title = prreturn.19_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK2
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_burma
+			is_subject_of = TEK
+		}
+		OR = {
+			OR = {
+				any_owned_province = {
+					region = burma_region
+					NOT = { is_core = ROOT }
+				}
+				any_owned_province = {
+					region = indo_china_region
+					NOT = { is_core = ROOT }
+				}
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK4
+					tag = TK5
+					tag = TK2
+					tag = TK7
+					tag = TK8
+				}
+				OR = {
+					any_owned_province = {
+						region = burma_region
+						NOT = { is_core = ROOT }
+					}
+					any_owned_province = {
+						region = indo_china_region
+						NOT = { is_core = ROOT }
+					}
+				}
+			}
+		}
+		TK6 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}				
+				}
+				cede_province = TK6
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK7 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+					}
+					cede_province = TK6
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province Burma - Core
+	id = prreturn.14
+	title = prreturn.20_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_burma
+		OR = {
+			any_owned_province = {
+				region = burma_region
+				is_core = ROOT
+			}
+			any_owned_province = {
+				region = indo_china_region
+				is_core = ROOT
+			}
+		}
+		TK6 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					AND = {
+						OR = {
+							region = burma_region
+							region = indo_china_region
+						}
+						is_core = ROOT
+					}				
+				}
+				add_core = TK6
+				cede_province = TK6
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+
+###
+
+country_event = {	#Return Province China - Non Core
+	id = prreturn.15
+	title = prreturn.22_title
+	desc = prreturn.1_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = TK3
+			tag = TK1
+			tag = TK2
+			tag = TK5
+			tag = TK6
+			tag = TK7
+			tag = TK8
+		}
+		OR = {
+			has_country_flag = itr_crusader_subject_agreement_china
+			is_subject_of = TEK
+		}
+		OR = {
+			any_owned_province = {
+				region = south_china_region
+				NOT = { is_core = ROOT }
+			}
+			AND = {
+				OR = {
+					tag = TK3
+					tag = TK1
+					tag = TK2
+					tag = TK4
+					tag = TK6
+					tag = TK8
+					tag = TK5
+				}
+				any_owned_province = {
+					region = south_china_region
+				}
+			}
+		}
+		TK7 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = south_china_region
+				}
+				cede_province = TK7
+			}
+			TK1 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK2 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK3 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK4 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK5 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK6 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+			TK8 = {
+				every_owned_province = {
+					limit = {
+						region = south_china_region
+					}
+					cede_province = TK7
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = {	#Return Province China - Core
+	id = prreturn.16
+	title = prreturn.23_title
+	desc = prreturn.2_desc
+	picture = GREAT_BUILDING_eventPicture
+	
+	trigger = {
+		tag = TEK
+		has_country_flag = itr_crusader_subject_agreement_china
+		any_owned_province = {
+			region = south_china_region
+			is_core = ROOT
+		}
+		TK7 = {
+			exists = yes
+			is_subject_of = TEK
+		}
+	}
+	
+	option = {
+		name = prreturn1.a
+		custom_tooltip = tek_return_province_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = south_china_region
+					is_core = ROOT
+				}
+				add_core = TK7
+				cede_province = TK7
+				remove_core = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Armenia
+	id = prreturn.17
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK1
+		owns_core_province = 419
+		419 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		set_capital = 419
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for India
+	id = prreturn.18
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK2
+		OR = {
+			owns_core_province = 2054
+			owns_core_province = 522
+		}
+		2054 = { is_capital = no }
+		522 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		if = {
+			limit = { owns_core_province = 522 }
+			set_capital = 522
+		}
+		else_if = {
+			limit = { owns_core_province = 2054 }
+			set_capital = 2054
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Persia
+	id = prreturn.19
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK3
+		owns_core_province = 416
+		416 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		set_capital = 416
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Turkistan
+	id = prreturn.20
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK4
+		owns_core_province = 454
+		454 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		set_capital = 454
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Egypt
+	id = prreturn.21
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK5
+		owns_core_province = 361
+		361 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		set_capital = 361
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Burma
+	id = prreturn.22
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK6
+		OR = {
+			owns_core_province = 586
+			owns_core_province = 600
+		}
+		586 = { is_capital = no }
+		600 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		if = {
+			limit = { owns_core_province = 586 }
+			set_capital = 586
+		}
+		else_if = {
+			limit = { owns_core_province = 600 }
+			set_capital = 600
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for China
+	id = prreturn.23
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK7
+		OR = {
+			owns_core_province = 667
+			owns_core_province = 1821
+		}
+		667 = { is_capital = no }
+		1821 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		if = {
+			limit = { owns_core_province = 667 }
+			set_capital = 667
+		}
+		else_if = {
+			limit = { owns_core_province = 1821 }
+			set_capital = 1821
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {	#Capital for Japan
+	id = prreturn.24
+	title = prreturn.17_title
+	desc = prreturn.17_desc
+	picture = GREAT_BUILDING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TK8
+		owns_core_province = 1020
+		1020 = { is_capital = no }
+	}
+	
+	option = {
+		name = prreturn17.a
+		set_capital = 1020
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

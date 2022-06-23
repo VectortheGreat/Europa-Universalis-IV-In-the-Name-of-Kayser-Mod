@@ -1,42 +1,45 @@
-papal_subjugation = {
+non_christian_subject = {
 	potential = {
-		normal_or_historical_nations = yes
-		has_discovered = 118	# Roma
-		religion = catholic
-		NOT = { tag = PAP }
+		tag = TEK
 	}
 
 	trigger = {	
-		overlord_of = PAP
-		NOT = { tag = ITA }
-		NOT = { tag = HLR }
-		NOT = { has_country_flag = itr_papal_subjugation }
-		if = {
-			limit = {
-				is_emperor = yes
-				has_dlc = "Emperor"
-			}
-			OR = {
-				PAP = {
-					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
-				}
-				NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
-			}
-		}
-		else_if = {
-			limit = {
-				is_emperor = yes
-				NOT = { has_dlc = "Emperor" }
-			}
-			OR = {
-				PAP = {
-					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
-				}
-				NOT = { hre_reform_passed = privilegia_de_non_appelando }
-			}
+		tag = TEK
+		any_subject_country = {
+			NOT = { religion_group = christian }
 		}
 	}
+	
+	tolerance_own = -1.5
+	diplomatic_reputation = -2.5
+}
 
-	diplomatic_reputation = -2
-	#icon = 9
+papal_election_threat = {
+	potential = {
+		tag = PAP
+	}
+
+	trigger = {	
+		ITR = {
+			is_papal_controller = no
+		}
+		has_global_flag = itr_papal_triggered_modifier
+		PAP = { is_subject_of = ITR }
+	}
+	monarch_lifespan = -0.40
+}
+
+papal_election_support = {
+	potential = {
+		tag = PAP
+	}
+
+	trigger = {	
+		ITR = {
+			is_papal_controller = yes
+		}
+		has_global_flag = itr_papal_triggered_modifier
+		PAP = { is_subject_of = ITR }
+	}
+	monarch_lifespan = 0.40
 }

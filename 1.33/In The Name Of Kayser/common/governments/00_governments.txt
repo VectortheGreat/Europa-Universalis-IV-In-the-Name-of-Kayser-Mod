@@ -1,4 +1,3 @@
-
 monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
@@ -57,6 +56,10 @@ monarchy = {
 				legion_of_honor_reform
 				imperial_nobility_reform
 				uparaja_reform
+				ink_military_traditions
+				ink_royal_taxes
+				ink_anatolian_renaissance
+				ink_greedy_policies	
 			}
 		}
 		bureaucracy = {
@@ -71,6 +74,12 @@ monarchy = {
 				fraternite_reform
 				examination_system_reform
 				corvee_reform
+				ink_bureaucratic_development
+				ink_national_buildings
+				ink_trade_buildings
+				ink_cultural_development
+				ink_gold_rush
+				ink_focus_on_production
 			}
 		}
 		growth_of_administration = {
@@ -86,6 +95,9 @@ monarchy = {
 				equality_principle_reform
 				imperial_principle_reform
 				sakdina_system_reform
+				ink_side_with_bureaucrats
+				ink_side_with_knights
+				ink_side_with_merchants
 			}
 		}
 		deliberative_assembly = {
@@ -100,6 +112,13 @@ monarchy = {
 				feuillant_reform
 				two_chamber_reform
 				imperial_decree_reform
+				ink_authoritarian_king
+				ink_the_great_empire
+				ink_the_great_empire2
+				ink_focus_on_provinces
+				ink_qualified_trade
+				ink_holy_emperor
+				ink_kaysers_popularity
 			}
 		}
 		absolute_rule_vs_constitutional = {
@@ -108,6 +127,11 @@ monarchy = {
 				regional_representation_reform
 				consulate_reform
 				military_electorate_reform
+				ink_war_addiction
+				ink_colonial_empire
+				ink_domestic_centralization
+				ink_advanced_intelligence
+				ink_free_thought
 			}
 		}
 		separation_of_power = {
@@ -119,6 +143,12 @@ monarchy = {
 				emperor_of_the_revolution_reform
 				enlightened_monarchy_reform
 				become_rev_republic_reform
+				ink_empire_of_the_absolute
+				ink_hail_to_the_kayser
+				ink_trade_empire
+				ink_religious_empire
+				ink_military_empire
+				ink_empire_of_the_civilization
 			}
 		}
 	}
@@ -273,6 +303,7 @@ republic = {
 				united_cantons_reform
 				kongsi_federation
 				millenarian_theocracy_reform
+				grand_colonial_government
 			}
 		}
 		republican_virtues = {
@@ -563,6 +594,9 @@ theocracy = {
 				external_mission_reform
 				mission_to_civilize_reform
 				mission_to_kill_pirates_reform
+				ink_spoils_of_war
+				ink_holy_union
+				ink_diplomatic_development
 			}
 		}
 		divine_cause = {
@@ -572,6 +606,10 @@ theocracy = {
 				expel_heathens_reform
 				guru_advisors_reform
 				kingdom_of_god_reform
+				ink_focus_on_cannons
+				ink_diplomatic_politics
+				ink_nightmare_navy
+				ink_strengthen_levy
 			}
 		}
 		clergy_in_administration = {
@@ -584,6 +622,9 @@ theocracy = {
 				pious_merchants_reform
 				monastic_breweries_reform
 				warrior_monks_reform
+				ink_tek_focus_on_bureaucrats
+				ink_tek_focus_on_knights
+				ink_tek_focus_on_merchants
 			}
 		}
 		secularization = {
@@ -595,6 +636,12 @@ theocracy = {
 				proclaim_republic_reform
 				battle_pope_reform
 				conciliarism_reform
+				ink_advanced_castles
+				ink_cultural_pressures
+				ink_anti_autonomy
+				ink_diplomatic_order
+				ink_spread_the_faith
+				ink_trade_terror
 			}
 		}
 		separation_of_power_theocracy = {
@@ -606,6 +653,12 @@ theocracy = {
 				monastic_elections_reform
 				commander_king_reform
 				admiral_king_reform
+				ink_authoritarian_theocracy
+				ink_the_great_order
+				ink_the_holy_order
+				ink_the_strong_order
+				ink_european_clergy
+				ink_tolerance_for_infidels
 			}
 		}
 		nature_of_faith = {
@@ -614,6 +667,9 @@ theocracy = {
 				religious_harmony_reform
 				god_and_man_reform
 				organising_our_religion_reform
+				ink_absolute_order
+				ink_the_big_cannons_on_ships
+				ink_advanced_army
 			}
 		}
 		faith_and_the_world = {
@@ -624,6 +680,9 @@ theocracy = {
 				priestly_autonomy_reform
 				proclaim_religious_head_reform
 				all_under_tengri_reform
+				ink_qualified_elections
+				ink_the_great_eastern_trade
+				ink_qualified_warriors
 			}
 		}
 	}

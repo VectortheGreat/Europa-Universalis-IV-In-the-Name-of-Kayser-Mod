@@ -9,3 +9,31 @@ ink_10001 = {
 ink_10002 = {
 	opinion = -40
 }
+ink_crusader_subject_opinion = {
+	opinion = 30
+}
+
+ink_crusade_target = {
+	opinion = -100
+	yearly_decay = 1
+}
+
+ink_anti_chaldean = {
+	opinion = -100
+	yearly_decay = 2
+}
+
+ink_tolerance_chaldean = {
+	opinion = 100
+	yearly_decay = 2
+}
+
+ink_thief = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+ink_honest = {
+	opinion = 50
+	yearly_decay = 2
+}

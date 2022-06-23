@@ -14,6 +14,15 @@ itr_religion_missions_ang = {		#Anglican Missions
 		icon = universities
 		required_missions = { }
 		position = 7
+		provinces_to_highlight = {
+			AND = {
+				province_id = 148
+				OR = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+			}
+		}
 		trigger = {
 			is_defender_of_faith = yes
 			stability = 3
@@ -43,23 +52,23 @@ itr_religion_missions_ang = {		#Anglican Missions
 					exists = GBR
 				}
 				alliance_with = GBR
-					GBR = {
-							has_opinion = {
-								who = ROOT
-								value = 180
-							}
+				GBR = {
+					has_opinion = {
+						who = ROOT
+						value = 180
 					}
+				}
 			}
 			else_if = {
 				limit = {
 					exists = ENG
 				}
 				alliance_with = ENG
-					ENG = {
-							has_opinion = {
-								who = ROOT
-								value = 180
-							}
+				ENG = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
 				}
 			}
 			else = {
@@ -317,8 +326,8 @@ itr_religion_missions_ang = {		#Anglican Missions
 		}
 		effect = {
 			add_country_modifier = {
-					name = "ink_151"
-					duration = 14610
+				name = "ink_151"
+				duration = 14610
 			}
 		}
 	}

@@ -46,3 +46,10 @@
  dev5.h:0 " Remove 1 dip dev from the Capital "
  dev5.i:0 " Add 1 mil dev to the Capital "
  dev5.j:0 " Remove 1 mil dev to the Capital "
+ 
+ dev12.a:0 "Const. all turkish"
+ dev12.b:0 "Full const. all turkish"
+ dev12.c:0 "10 Dev all Turkish"
+ dev12.d:0 "-10 Dev all Turkish"
+ dev12.e:0 "10 Dev all"
+ dev12.f:0 "-10 Dev all"

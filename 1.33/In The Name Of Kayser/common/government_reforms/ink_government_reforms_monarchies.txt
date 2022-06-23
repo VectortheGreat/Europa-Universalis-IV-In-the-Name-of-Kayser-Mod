@@ -1,36 +1,19 @@
 turkish_government = {
-	icon = "admiral_king_reform"
+	icon = "RMOgovernment"
 	potential = {
 		religion = orthodox
-		primary_culture = turkish
-		has_country_flag = third_rome
+		tag = RMO
 	}
 	
 	trigger = {
-		religion = orthodox
-		primary_culture = turkish
 	}
 	allow_normal_conversion = no
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
-
+	
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 200
 		monarch_admin_power = 2
-		max_absolutism = 10
-	}
-	
-	factions = {
-		ink_knights
-		ink_merchants
-		ink_bureaucrats
-	}
-	
-	conditional = {
-		allow = { has_dlc = "Third Rome" }
-		government_abilities = {
-			russian_mechanic
-		}
 	}
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
@@ -42,7 +25,7 @@ turkish_government = {
 }
 
 magna_turcorum_dynastia = {
-	icon = "consolidate_power_in_cities_reform"
+	icon = "ITRgovernment"
 	potential = {
 		OR = {
 			religion = catholic
@@ -52,8 +35,7 @@ magna_turcorum_dynastia = {
 			religion = anglican
 			religion = phaedrusian
 		}
-		primary_culture = turkish
-		has_country_flag = third_rome
+		tag = ITR
 	}
 	trigger = {
 		OR = {
@@ -64,31 +46,15 @@ magna_turcorum_dynastia = {
 			religion = anglican
 			religion = phaedrusian
 		}
-		primary_culture = turkish
 	}
 	allow_normal_conversion = no
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	modifiers = {
 		monarch_diplomatic_power = 2	
-		legitimacy = 1
+		diplomatic_upkeep = 1
 		power_projection_from_insults = 0.5
-		
-	}
-	
-	factions = {
-		ink_knights
-		ink_merchants
-		ink_bureaucrats
-	}
-	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			iqta_mechanic
-		}
-	}
-
+	}	
 	ai = {
 		factor = 100
 	}
@@ -107,7 +73,7 @@ british_autonomous_state = {
 		culture_group = british
 	}
 	valid_for_nation_designer = no
-
+	
 	modifiers = {
 		global_trade_power = 0.2	
 		development_cost = -0.2
@@ -117,8 +83,1180 @@ british_autonomous_state = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
 	}
-
+	
 	ai = {
 		factor = 5
+	}
+}
+
+#1
+ink_military_traditions = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "military_traditions"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		infantry_power = 0.10
+		land_attrition = -0.10
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+ink_royal_taxes = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "royal_taxes"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.15
+		legitimacy = 1
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+ink_anatolian_renaissance = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "anatolian_renaissance"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		institution_spread_from_true_faith = 0.25
+		embracement_cost = -0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+ink_greedy_policies = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "greedy_policies"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		autonomy_change_time = -0.25
+		harsh_treatment_cost = -0.25
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+#2
+
+ink_bureaucratic_development = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "burea_dev"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		advisor_cost = -0.25
+		advisor_pool = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+ink_national_buildings = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "ink_national_buildings"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		state_maintenance_modifier = -0.20
+		monthly_splendor = 2
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+ink_trade_buildings = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "trade_buildings"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		trade_company_governing_cost = -0.15
+		center_of_trade_upgrade_cost = -0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+ink_cultural_development = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "cultural_development"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -0.25
+	}
+	ai = {
+		factor = 2
+	}
+}
+
+ink_gold_rush = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "gold_rush"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		monthly_gold_inflation_modifier = -0.1
+		gold_depletion_chance_modifier = -0.1
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+ink_focus_on_production = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "focus_production"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		production_efficiency = 0.20
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+#3
+
+ink_side_with_bureaucrats = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "side_burea"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		idea_cost = -0.1
+		church_loyalty_modifier = 0.05
+		church_influence_modifier = 0.1
+	}
+}
+
+ink_side_with_knights = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "side_knights"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		army_tradition = 1
+		nobles_loyalty_modifier = 0.05
+		nobles_influence_modifier = 0.1
+	}
+}
+
+ink_side_with_merchants = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "side_merchant"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		ship_power_propagation = 0.2
+		burghers_loyalty_modifier = 0.05
+		burghers_influence_modifier = 0.1
+	}
+}
+
+#4
+
+ink_authoritarian_king = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "autho_king"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		max_absolutism = 10
+		stability_cost_modifier = -0.1
+	}
+}
+
+ink_the_great_empire = {
+	potential = {
+		has_reform = magna_turcorum_dynastia
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "great_empire1"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		governing_capacity = 300
+	}
+}
+
+ink_the_great_empire2 = {
+	potential = {
+		has_reform = turkish_government
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "great_empire2"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		governing_capacity = 300
+	}
+}
+
+ink_focus_on_provinces = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "focus_province"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		development_cost = -0.20
+	}
+}
+
+ink_qualified_trade = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "qualified_trade"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		trade_efficiency = 0.1
+		global_trade_power = 0.1
+	}
+}
+
+ink_holy_emperor = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	trigger = {
+		is_emperor = yes
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "holy_emperor"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		imperial_authority_value = 0.25
+		manpower_against_imperial_enemies = 0.20
+	}
+}
+
+ink_kaysers_popularity = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "kaysers_popularity"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		years_of_nationalism = -5
+		no_stability_loss_on_monarch_death = yes
+	}
+}
+
+#5
+
+ink_war_addiction = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "war_addiction"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		war_exhaustion = -0.10
+		war_taxes_cost_modifier = -0.5
+	}
+}
+
+ink_colonial_empire = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "colonial_empire"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		colonists = 1
+		native_assimilation = 0.50
+	}
+}
+
+ink_domestic_centralization = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "domestic_centralization"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		global_autonomy = -0.1
+		min_autonomy_in_territories = -0.1
+	}
+}
+
+ink_advanced_intelligence = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "advanced_intelligence"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		spy_offence = 0.20
+		rebel_support_efficiency = 0.75
+	}
+}
+
+ink_free_thought = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "free_thought"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		innovativeness_gain = 0.5
+		free_dip_policy = 1
+	}
+}
+
+#6
+
+ink_empire_of_the_absolute = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "absolute_empire"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		max_absolutism = 10
+		administrative_efficiency = 0.05
+	}
+}
+
+ink_hail_to_the_kayser = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "hail_kayser"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		monarch_lifespan = 0.1
+		monarch_military_power = 1
+	}
+}
+
+ink_trade_empire = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "trade_empire"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		merchants = 1
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+ink_religious_empire = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "religious_empire"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		warscore_cost_vs_other_religion = -0.15
+		tolerance_own = 2
+	}
+}
+
+ink_military_empire = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "military_empire"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		artillery_bonus_vs_fort = 1
+		leader_siege = 1
+	}
+}
+
+ink_empire_of_the_civilization = {
+	potential = {
+		OR = {
+			has_reform = turkish_government
+			has_reform = magna_turcorum_dynastia
+		}
+	}
+	allow_normal_conversion = yes
+	legacy_equivalent = theocratic_government
+	icon = "empire_civilization"
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		build_cost = -0.15
+		trade_company_investment_cost = -0.20
+	}
+}
+
+
+
+### We won't use Them
+feudalism_reform = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		vassal_income = 0.25
+		nobles_influence_modifier = 0.05
+		maratha_exclusive_influence_modifier = 0.05
+		rajput_exclusive_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+
+autocracy_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	legacy_equivalent = despotic_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		unjustified_demands = -0.1
+	}
+	ai = {
+		factor = 0.5 #generic
+	}
+}
+enforce_privileges_reform = {
+	icon = "people_walking"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.15
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { max_manpower = 12 }
+		}
+	}
+}
+quash_noble_power_reform = {
+	icon = "king_2"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.1
+		nobles_influence_modifier = -0.1
+		maratha_exclusive_influence_modifier = -0.1
+		rajput_exclusive_influence_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_in_deficit = yes
+		}
+	}
+}
+centralize_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.05
+	}
+}
+
+decentralize_reform = {
+	icon = "map"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		num_accepted_cultures = 2
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.25
+			NOT = {
+				any_owned_province = {
+					has_owner_accepted_culture = no
+					has_owner_culture = no
+				}
+			}
+		}
+	}
+}
+clergy_in_administration_reform = {
+	icon = "religious_leader"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		free_adm_policy = 1
+		
+		brahmins_hindu_influence_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.05
+		
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					religion = hinduism
+					estate_influence = {
+						estate = estate_brahmins
+						influence = 90
+					}
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 90
+				}
+			}
+		}
+	}
+}
+
+meritocratic_focus_reform = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.1
+		maratha_muslim_influence_modifier = 0.1
+		rajput_muslim_influence_modifier = 0.1
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+		vaisyas_non_muslim_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					religion_group = muslim
+					OR = {
+						estate_influence = {
+							estate = estate_rajput
+							influence = 90
+						}
+						estate_influence = {
+							estate = estate_maratha
+							influence = 90
+						}
+					}
+				}
+				AND = {
+					NOT = { religion_group = muslim }
+					estate_influence = {
+						estate = estate_vaisyas
+						influence = 90
+					}
+				}
+				estate_influence = {
+					estate = estate_burghers
+					influence = 90
+				}
+			}
+		}
+	}
+}
+royal_decree_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+aristocratic_court_reform = {
+	icon = "soldiers_2"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		army_tradition_decay = -0.003
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+states_general_reform = {
+	icon = "states_general"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	trigger = {
+		NOT = { is_lesser_in_union = yes }
+		is_emperor = no
+	}
+	
+	modifiers = {
+		stability_cost_modifier = -0.1
+		no_stability_loss_on_monarch_death = yes
+	}
+	
+	ai = {
+		factor = 0 # AI should never pick this
+	}
+	
+	removed_effect = {
+		country_event = { id = dutch_republic.33 }
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			statists = {
+				diplomatic_reputation = 1
+				global_unrest = -1
+				legitimacy = -0.5
+			}
+			
+			monarchists = {
+				prestige = 0.5
+				manpower_recovery_speed = 0.1
+				legitimacy = 0.5
+			}
+		}
+	}
+}
+
+general_estates_reform = {
+	icon = "paper_with_seal"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 1.2
+			production_income_percentage = 0.25
+		}
+	}
+}
+letat_cest_moi_reform = {
+	icon = "queen"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+
+regional_representation_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.10
+	}
+}
+political_absolutism_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		max_absolutism = 5
+		yearly_absolutism = 0.5
+	}
+	ai = {
+		factor = 1.5
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+
+legislative_houses_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+	}
+	modifiers = {
+		possible_adm_policy = 1
+	}
+}
+of_noble_bearing_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+		NOT = {
+			OR = {
+				has_reform = turkish_government
+				has_reform = magna_turcorum_dynastia
+				has_reform = the_great_temple_government
+			}
+		}
+		NOT = {
+			AND = {
+				has_estate = estate_maratha
+				technology_group = indian
+				NOT = { has_estate = estate_nobles }
+			}
+		}
+		NOT = {
+			AND = {
+				has_estate = estate_rajput
+				technology_group = indian
+				NOT = { has_estate = estate_nobles }
+			}
+		}
+	}
+	modifiers = {
+		leader_cost = -0.1
+		nobles_influence_modifier = 0.1
+		maratha_exclusive_influence_modifier = 0.1
+		rajput_exclusive_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.05
+		maratha_exclusive_loyalty_modifier = 0.05
+		rajput_exclusive_loyalty_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			OR = {
+				AND = {
+					NOT = { has_estate = estate_nobles }
+					OR = {
+						estate_influence = {
+							estate = estate_rajput
+							influence = 90
+						}
+						estate_influence = {
+							estate = estate_maratha
+							influence = 90
+						}
+					}
+				}
+				estate_influence = {
+					estate = estate_nobles
+					influence = 90
+				}
+			}
+		}
+	}
+}
+
+ottoman_government = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "ottoman_government"
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = TUR
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = RUM
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = AN1
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = ottoman_government
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+	legacy_equivalent = ottoman_government_legacy
+	maintain_dynasty = yes
+	modifiers = {
+		unjustified_demands = -0.1
+		legitimacy = 0.5
+		max_absolutism = 5
+		governing_capacity = 150
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		has_pashas = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		has_harem = yes
 	}
 }

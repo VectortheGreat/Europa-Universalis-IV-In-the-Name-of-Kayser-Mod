@@ -38,10 +38,10 @@ itr_religion_missions_ct = {		#Catholic Missions
 			alliance_with = PAP
 			is_defender_of_faith = yes
 			PAP = {
-					has_opinion = {
-						who = ROOT
-						value = 180
-					}
+				has_opinion = {
+					who = ROOT
+					value = 180
+				}
 			}
 		}
 		effect = {
@@ -67,8 +67,8 @@ itr_religion_missions_ct = {		#Catholic Missions
 			num_of_cardinals = 6
 			all_owned_province = {
 				NOT = {
-						religion = protestant
-						religion = reformed
+					religion = protestant
+					religion = reformed
 				}
 			}
 		}
@@ -138,11 +138,12 @@ itr_religion_missions_ct = {		#Catholic Missions
 		required_missions = { itr_religion_mission_ct4 }
 		position = 11
 		provinces_to_highlight = {
-			all_country = {
-					capital_scope = {
-							continent = europe
-					}
-					NOT = { religion = ROOT }	
+			is_capital = yes
+			owner = { 
+				capital_scope = {
+					continent = europe
+				}
+				NOT = { religion = ROOT } 
 			}
 		}
 		trigger = {
