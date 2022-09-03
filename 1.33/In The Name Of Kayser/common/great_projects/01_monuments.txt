@@ -886,7 +886,11 @@ parthenon = {
 				has_owner_religion = yes
 			}
 			AND = {
-				culture = greek
+				OR = {
+					culture = greek
+					culture = neo_greek
+					culture = neo_greek2
+				}
 				OR = {
 					has_owner_culture = yes
 					has_owner_accepted_culture = yes
@@ -929,7 +933,11 @@ parthenon = {
 				has_owner_religion = yes
 			}
 			AND = {
-				culture = greek
+				OR = {
+					culture = greek
+					culture = neo_greek
+					culture = neo_greek2
+				}
 				OR = {
 					has_owner_culture = yes
 					has_owner_accepted_culture = yes
@@ -953,7 +961,11 @@ parthenon = {
 				has_owner_religion = yes
 			}
 			AND = {
-				culture = greek
+				OR = {
+					culture = greek
+					culture = neo_greek
+					culture = neo_greek2
+				}
 				OR = {
 					has_owner_culture = yes
 					has_owner_accepted_culture = yes
