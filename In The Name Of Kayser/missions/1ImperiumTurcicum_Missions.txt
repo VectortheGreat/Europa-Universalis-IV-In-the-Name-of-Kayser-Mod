@@ -770,8 +770,7 @@ itr_diplomatic_missions = {
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 25
-			}
-			
+			}			
 			add_country_modifier = {
 				name = "ink_105"
 				duration = 7300

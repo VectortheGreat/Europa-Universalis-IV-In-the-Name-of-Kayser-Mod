@@ -1573,7 +1573,7 @@ tek_military_missions = {
 				province_id = 4419
 				province_id = 2039
 			}
-			NOT = { is_core = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			navy_size = 200
@@ -1608,7 +1608,7 @@ tek_military_missions = {
 				region = indo_china_region
 				region = malaya_region
 			}
-			NOT = {owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -1640,15 +1640,24 @@ tek_military_missions = {
 		required_missions = { tek_military_mission_9 } 
 		position = 10
 		provinces_to_highlight = {
-			region = south_china_region
-			has_port = yes
-			NOT = {owned_by = ROOT }
+			OR = {
+				region = south_china_region
+				region = north_china_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				region = south_china_region
-				is_city = yes
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = south_china_region
+					is_city = yes
+				}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = north_china_region
+					is_city = yes
+				}
 			}
 		}
 		effect = {
@@ -1669,12 +1678,13 @@ tek_military_missions = {
 		provinces_to_highlight = {
 			region = japan_region
 			has_port = yes
-			NOT = {owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns_all_provinces = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
 				region = japan_region
-				has_port = yes
+				is_city = yes
 			}
 		}
 		effect = {

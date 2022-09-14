@@ -1895,7 +1895,7 @@ rmo_military_missions = {
 				area = imereti_area
 			}
 			has_port = yes
-			NOT = {owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_all_provinces = {
