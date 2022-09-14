@@ -34,6 +34,10 @@ country_event = {	#Neo Turkic 1
 					duration = -1
 				}
 			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
 		}
 		custom_tooltip = tek_turkish_tt
 	}
@@ -91,6 +95,10 @@ country_event = {	#Neo Turkic 2
 					name = "ink_neo_turkic_aze_pr"
 					duration = -1
 				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
 			}
 		}
 		custom_tooltip = tek_azer_crim_tt
@@ -176,6 +184,10 @@ country_event = {	#Neo Turkic 3
 					duration = -1
 				}
 			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
 		}
 		custom_tooltip = tek_altai_tt
 	}
@@ -242,6 +254,10 @@ country_event = {	#Neo Eastern Roman 1
 					duration = -1
 				}
 			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
 		}
 		custom_tooltip = rmo_turk_greek_tt
 	}
@@ -293,6 +309,10 @@ country_event = {	#Neo Eastern Roman 2
 					duration = -1
 				}
 			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
 		}
 		custom_tooltip = rmo_geo_armn_tt
 	}
@@ -330,6 +350,10 @@ country_event = {	#Neo Eastern Roman 3
 					name = "ink_neo_turkic_syr_pr"
 					duration = -1
 				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
 			}
 		}
 		custom_tooltip = rmo_syriac_tt
@@ -415,6 +439,10 @@ country_event = {	# Neo Balkan-Anatolian 1
 					duration = -1
 				}
 			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
 		}
 		custom_tooltip = itr_tur_gre_bul_tt
 	}
@@ -465,6 +493,10 @@ country_event = {	# Neo Balkan-Anatolian 2
 					name = "ink_neo_turkic_albser_pr"
 					duration = -1
 				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
 			}
 		}
 		custom_tooltip = itr_alb_ser_tt
@@ -527,6 +559,10 @@ country_event = {	# Neo Balkan-Anatolian 3
 					name = "ink_neo_turkic_slav_pr"
 					duration = -1
 				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
 			}
 		}
 		custom_tooltip = itr_slav_tt

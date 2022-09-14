@@ -324,7 +324,7 @@ christian = {
 		}
 		country = {
 			development_cost = -0.1
-			innovativeness_gain = 0.5
+			technology_cost = -0.05
 		}
 		
 		country_as_secondary = {
@@ -339,6 +339,10 @@ christian = {
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			innovativeness_aspect
+			expel_heretics_aspect
+			diplomats_of_the_reformation_aspect
+			icons_of_the_church_aspect
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		
@@ -514,6 +518,9 @@ christian = {
 			individual_creeds_aspect
 			allow_usury_aspect
 			translated_bibles_aspect
+			justified_religious_war_aspect
+			war_preaches_aspect
+			head_of_the_church_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -768,6 +775,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+
 				ai_will_do = {
 					factor = 0.05
 					modifier = {
@@ -788,6 +800,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0.02
 					modifier = {
@@ -820,6 +837,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0
 				}
@@ -828,6 +850,11 @@ christian = {
 			icon_nicholas = {
 				improve_relation_modifier = 0.25
 				ae_impact = -0.1
+				
+				visible = {
+					always = yes
+				}
+				
 				allow = {
 					always = yes
 				}
@@ -839,6 +866,11 @@ christian = {
 			icon_climacus = {
 				global_institution_spread = 0.25
 				embracement_cost = -0.2
+
+				visible = {
+					always = yes
+				}
+
 				allow = {
 					always = yes
 				}
@@ -1717,7 +1749,7 @@ dharmic = {
 		gurus = {
 			guru_nanak = {
 				trigger = {
-					always = yes
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 1000
@@ -1750,6 +1782,7 @@ dharmic = {
 				trigger = {
 					is_year = 1539
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1802,6 +1835,7 @@ dharmic = {
 				trigger = {
 					is_year = 1552
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1856,6 +1890,7 @@ dharmic = {
 				trigger = {
 					is_year = 1574
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1912,6 +1947,7 @@ dharmic = {
 				trigger = {
 					is_year = 1581
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1964,6 +2000,7 @@ dharmic = {
 				trigger = {
 					is_year = 1606
 					is_month = 6
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2020,6 +2057,7 @@ dharmic = {
 				trigger = {
 					is_year = 1644
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2074,6 +2112,7 @@ dharmic = {
 				trigger = {
 					is_year = 1661
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2126,6 +2165,7 @@ dharmic = {
 				trigger = {
 					is_year = 1665
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2178,6 +2218,7 @@ dharmic = {
 				trigger = {
 					is_year = 1675
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2230,6 +2271,7 @@ dharmic = {
 				trigger = {
 					is_year = 1708
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2533,7 +2575,7 @@ jewish_group = {
 					limit = {
 						has_church_aspect = judaism_simchat_torah_aspect
 					}
-					change_government_reform_progress = 20
+					change_government_reform_progress = 25
 					add_legitimacy_equivalent = {
 						amount = 5
 						republican_tradition = 5
@@ -2551,6 +2593,21 @@ jewish_group = {
 					}
 					add_years_of_income = 0.3
 					add_inflation = -1
+				}
+				if = {
+					limit = {
+						has_government_attribute = loyalty_from_celebration
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { NOT = { has_country_flag = has_celebrated_festival } }
+						set_country_flag = has_celebrated_festival
+					}
 				}
 			}
 			ai_will_do = {

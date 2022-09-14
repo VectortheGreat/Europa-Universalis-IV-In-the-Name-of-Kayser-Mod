@@ -114,22 +114,16 @@ dei_gratia_rex = {
     ai_will_do = {
         factor = 1
         modifier = {
-            factor = 2
+            factor = 1
             average_unrest = 2
         }
         modifier = {
-            factor = 4
-            current_age = age_of_absolutism
-			NOT = { absolutism = 70 }
-        }
-		 modifier = {
-            factor = 2
-            current_age = age_of_absolutism
-			NOT = { absolutism = 90 }
+            factor = 1
+            average_unrest = 4
         }
         modifier = {
-            factor = 0
-            absolutism = 90
+            factor = 1
+            average_unrest = 6
         }
     }
 }

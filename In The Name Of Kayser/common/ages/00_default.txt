@@ -131,7 +131,7 @@ age_of_discovery = {
 
 		ab_transfer_vassal_wargoal = 
 		{
-			rule = {
+			modifier = {
 				can_transfer_vassal_wargoal = yes
 				can_chain_claim = yes
 			}
@@ -159,7 +159,7 @@ age_of_discovery = {
 			}
 		}
 		ab_colony_boost_development = {
-			rule = {
+			modifier = {
 				can_colony_boost_development = yes
 			}
 			ai_will_do = {
@@ -172,7 +172,7 @@ age_of_discovery = {
 		}
 		
 		ab_attack_bonus_in_capital_terrain = {
-			rule = {
+			modifier = {
 				attack_bonus_in_capital_terrain = yes
 			}
 			ai_will_do = {
@@ -817,7 +817,7 @@ age_of_revolutions = {
 				backrow_artillery_damage = 0.20
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 15
 			}
 		}
 		ab_same_contine_lib_desire = {

@@ -195,7 +195,7 @@ country_event = { #Christian Turks
 		name = inkre4.a
 		ai_chance = { factor = 35 }
 		every_province = {
-			limit = { OR = { culture = turkish culture = neo_turkish culture = neo_turkish2 culture = neo_turkish2 } }
+			limit = { culture = ROOT }
 			add_province_modifier = { 
 				name = "ink_turkish_union"
 				duration = 7300
