@@ -2874,7 +2874,7 @@ kayseri_palace = {
 		}
 		
 		country_modifiers = {
-			core_creation = -0.005
+			core_creation = -0.05
 			state_maintenance_modifier = -0.2
 		}
 		
