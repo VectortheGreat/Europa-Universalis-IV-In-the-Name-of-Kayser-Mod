@@ -43,3 +43,22 @@ papal_election_support = {
 	}
 	monarch_lifespan = 0.40
 }
+
+order_land_mechanic = {
+	potential = {
+		tag = TEK
+		has_country_flag = order_land_conquer_mechanic
+	}
+
+	trigger = {	
+		has_country_flag = order_land_conquer_mechanic
+		calc_true_if = {
+			all_subject_country = {
+				is_subject_of_type = crusader_march
+			}
+			amount = 1
+		}
+
+	}
+	ignore_coring_distance = yes
+}

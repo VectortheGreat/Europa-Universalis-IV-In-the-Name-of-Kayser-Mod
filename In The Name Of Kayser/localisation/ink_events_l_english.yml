@@ -374,7 +374,7 @@
  ttest.12_desc:0 "After defeating the Muslims, the crusaders, who defeated all the infidels in the east, had a great victory. The crusaders, who had no rivals, were getting stronger day by day and spreading Christianity faster."
  ttest12.a:0 "Deus Vult!"
  ttest.13_title:0 "About Orders"
- ttest.13_desc:0 "Orders are half-independent powerful Crusader March states. The regions they are in belong entirely to them, §Rbut there are the biggest game mechanics that you should pay attention to.§! Since your capital is in the European region and the Orders are in Asia, you will not be able to take province from the frontier enemies of the Orders. For this, your Capital must be in Asia or You mush have borders with your war enemies. For example, you declared war on Timurids and the Order of Persia is your march. You cannot take Timurids' provinces directly to yourself, only by giving Timurids' provinces to the Order of Persia. Unfortunately, I can't change this mechanic. Either you must change your capital to Asia or you will have to play more carefullyw."
+ ttest.13_desc:0 "Orders are half-independent powerful Crusader March states. The regions they are in belong entirely to them, §Rbut there are the biggest game mechanics that you should pay attention to.§! Since your capital is in the European region and the Orders are in Asia, you will not be able to take province from the frontier enemies of the Orders. For this, your Capital must be in Asia or You mush have borders with your war enemies. For example, you declared war on Timurids and the Order of Persia is your march. You cannot take Timurids' provinces directly to yourself, only by giving Timurids' provinces to the Order of Persia. But it is not a problem right now. I have provided you to use the ignore coring distance modifier to make up for this shortcoming, but you must have at least 1 order subject to use this modifier."
  ttest13.a:0 "I understand.."
  
  crusadeink.1_title:0 "Crusade Start"
@@ -449,7 +449,7 @@
  tek_crusader_persia_tt:0 "§YWe'll create Crusader March in Persia and they will rule Persia Region.§! §OIf we have provinces in Persia Region, We'll cede to them.§!"
  tek_crusader_centasia_tt:0 "§YWe'll create Crusader March in Central Asia and they will rule Central Asia Region.§! §OIf we have provinces in Central Asia Region, We'll cede to them.§!"
  tek_crusader_india_tt:0 "§YWe'll create Crusader March in India and they will rule India Region.§! §OIf we have provinces in India Region, We'll cede to them.§!"
- tek_crusader_armenia_tt:0 "§YWe'll create Crusader March in Armenia and they will rule Armenia Region.§! §OIf we have provinces in Armenia Region, We'll cede to them.§!"
+ tek_crusader_armenia_tt:0 "§YWe'll create Crusader March in Armenia and they will rule Caucasia Region.§! §OIf we have provinces in Caucasia Region, We'll cede to them.§!"
  tek_crusader_egypt_tt:0 "§YWe'll create Crusader March in Egypt and they will rule Egypt Region.§! §OIf we have provinces in Egypt Region, We'll cede to them.§!"
  tek_crusader_burma_tt:0 "§YWe'll create Crusader March in Burma and they will rule Burma Region.§! §OIf we have provinces in Burma Region, We'll cede to them.§!"
  tek_crusader_china_tt:0 "§YWe'll create Crusader March in China and they will rule China Region.§! §OIf we have provinces in China Region, We'll cede to them.§!"
@@ -465,7 +465,7 @@
  tek_nchina_claim_tt:0 "§OThey will control North China and Xinan Regions. If we have provinces in North China and Xinan, we will cede to them.§!"
  
  inkachi.1_title:0 "Achievement Completed"
- inkachi.1_desc:0 "You have completed the Achievement!"
+ inkachi.1_desc:0 "You have completed an Achievement!"
  inkachi1.a:0 "Nice."
  
  inkculture.1_title:0 "Cultural Reform"

@@ -148,6 +148,12 @@ country_event = {		#Persia
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
+		}
 	}
 	option = {
 		name = ttest3.b
@@ -254,6 +260,12 @@ country_event = {		#Central Asia
 					add_permanent_claim = TK4
 				}
 			}
+		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
 		}
 	}
 	option = {
@@ -381,6 +393,12 @@ country_event = {		#India
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
+		}
 	}
 	option = {
 		name = ttest5.b
@@ -488,6 +506,12 @@ country_event = {		#Armenia
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
+		}
 	}
 	option = {
 		name = ttest6.b
@@ -594,6 +618,12 @@ country_event = {		#Egypt
 					add_permanent_claim = TK5
 				}
 			}
+		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
 		}
 	}
 	option = {
@@ -731,6 +761,12 @@ country_event = {		#Burma
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
+		}
 	}
 	option = {
 		name = ttest8.b
@@ -826,6 +862,12 @@ country_event = {		#China
 					add_permanent_claim = TK7
 				}
 			}
+		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
 		}
 	}
 	option = {
@@ -948,6 +990,12 @@ country_event = {		#Japan
 					add_permanent_claim = TK8
 				}
 			}
+		}
+		if = {
+			limit = {
+				NOT  = { has_country_flag = order_land_conquer_mechanic }
+			}
+			set_country_flag = order_land_conquer_mechanic
 		}
 	}
 	option = {
