@@ -520,6 +520,7 @@ itr_diplomatic_missions = {
 				add_casus_belli = {
 					target = HUN
 					type = cb_restore_personal_union
+					months = 120
 				}
 			}
 			else = {
@@ -550,7 +551,6 @@ itr_diplomatic_missions = {
 			}
 		}
 		trigger = {
-			exist = HAB
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
 				region = carpathia_region
@@ -558,42 +558,40 @@ itr_diplomatic_missions = {
 			}
 		}
 		effect = {
-			if = {
-				tirol_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			tirol_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				austria_proper_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			austria_proper_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				venetia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			venetia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				inner_austria_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			inner_austria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
-				carinthia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1120,6 +1118,7 @@ itr_administrative_missions = {
 				add_casus_belli = {
 					target = CRI
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}
@@ -1545,6 +1544,7 @@ itr_military_missions = {
 				add_casus_belli = {
 					target = TUN
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}
@@ -1584,6 +1584,7 @@ itr_military_missions = {
 				add_casus_belli = {
 					target = SPA
 					type = cb_restore_personal_union
+					months = 120
 				}
 			}
 			else_if = {
@@ -1593,6 +1594,7 @@ itr_military_missions = {
 				add_casus_belli = {
 					target = CAS
 					type = cb_restore_personal_union
+					months = 120
 				}
 			}
 		}

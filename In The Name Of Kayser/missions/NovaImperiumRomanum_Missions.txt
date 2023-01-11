@@ -494,6 +494,7 @@ rmo_diplomatic_missions = {
 				add_casus_belli = {
 					target = NAP
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}
@@ -821,6 +822,7 @@ rmo_diplomatic_missions = {
 				add_casus_belli = {
 					target = TUN
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}
@@ -1784,6 +1786,7 @@ rmo_military_missions = {
 				add_casus_belli = {
 					target = CRI
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}

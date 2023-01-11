@@ -660,7 +660,7 @@ ink_military_empire = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
-		artillery_bonus_vs_fort = 1
+		artillery_levels_available_vs_fort  = 1
 		leader_siege = 1
 	}
 }

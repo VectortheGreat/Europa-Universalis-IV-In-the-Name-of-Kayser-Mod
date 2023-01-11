@@ -475,6 +475,7 @@ tek_diplomatic_missions = {
 				add_casus_belli = {
 					target = NAP
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}

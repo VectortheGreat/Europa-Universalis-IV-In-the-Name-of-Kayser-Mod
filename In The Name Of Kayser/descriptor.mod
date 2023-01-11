@@ -13,5 +13,5 @@ tags={
 }
 name="In The Name Of Kayser"
 replace_path="gfx/loadingscreens"
-supported_version="1.34.2"
+supported_version="1.34.5"
 remote_file_id="2444042439"

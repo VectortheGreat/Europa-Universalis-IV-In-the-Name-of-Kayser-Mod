@@ -133,7 +133,7 @@ ink_march_ideas = {
 		trade_steering = 0.15
 	}
 	bonus = {
-		artillery_bonus_vs_fort = 1
+		artillery_levels_available_vs_fort = 1
 	}
 	trigger = {
 		OR = {
