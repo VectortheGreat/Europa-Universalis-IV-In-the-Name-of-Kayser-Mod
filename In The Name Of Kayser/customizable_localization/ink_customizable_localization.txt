@@ -38,7 +38,10 @@ defined_text = {
     text = {
         localisation_key = ink_cl_special_unit_estate_itr
         trigger = {
-			tag = ITR
+			OR = {
+				tag = TRK
+				tag = ITR
+			}
 		}
 	}
 	text = {

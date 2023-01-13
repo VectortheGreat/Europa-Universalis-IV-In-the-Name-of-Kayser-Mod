@@ -4,7 +4,10 @@ itr_religion_missions_ang = {		#Anglican Missions
 	ai = yes
 	
 	potential = {
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 		has_country_flag = religion_reformed_ang
 		NOT = { map_setup = map_setup_random }
 	}
@@ -73,9 +76,15 @@ itr_religion_missions_ang = {		#Anglican Missions
 			}
 			else = {
 				OR = {
-					ENG = { is_subject_of = ITR }
+					OR = {
+						ENG = { is_subject_of = ITR }
+						ENG = { is_subject_of = TRK }
+					}
+					OR = {
+						GBR = { is_subject_of = ITR }
+						GBR = { is_subject_of = TRK }
+					}					
 					NOT = { exist = ENG }
-					GBR = { is_subject_of = ITR }
 					NOT = { exist = ENG }
 				}
 			}
@@ -160,8 +169,11 @@ itr_religion_missions_ang = {		#Anglican Missions
 						religion = anglican
 						has_heir = no
 						NOT = { heir_claim = 50 }
-						is_subject_of = ITR
-						NOT = { exists = GBR } 
+						NOT = { exists = GBR }
+						OR = {
+							is_subject_of = ITR
+							is_subject_of = TRK
+						}
 					}
 					has_opinion = {
 						who = ROOT
@@ -180,7 +192,10 @@ itr_religion_missions_ang = {		#Anglican Missions
 						has_foreign_heir = yes
 						has_heir = no
 						NOT = { heir_claim = 50 }
-						is_subject_of = ITR
+						OR = {
+							is_subject_of = ITR
+							is_subject_of = TRK
+						}
 						NOT = { exists = ENG } 
 					}
 					has_opinion = {
@@ -241,7 +256,10 @@ itr_religion_missions_ang = {		#Anglican Missions
 							value = 200
 						}
 						NOT = { liberty_desire = 50 }
-						is_subject_of = ITR
+						OR = {
+							is_subject_of = ITR
+							is_subject_of = TRK
+						}
 					}
 				}
 			}
@@ -256,7 +274,10 @@ itr_religion_missions_ang = {		#Anglican Missions
 							value = 200
 						}
 						NOT = { liberty_desire = 50 }
-						is_subject_of = ITR
+						OR = {
+							is_subject_of = ITR
+							is_subject_of = TRK
+						}
 					}
 				}
 			}

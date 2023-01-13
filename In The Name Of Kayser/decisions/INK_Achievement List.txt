@@ -7,6 +7,7 @@ country_decisions = {
 			OR = {
 				tag = TEK
 				tag = ITR
+				tag = TRK
 				tag = RMO
 				tag = ROM
 				tag = TUR
@@ -17,6 +18,7 @@ country_decisions = {
 				tag = TEK
 				tag = ITR
 				tag = RMO
+				tag = TRK
 				tag = ROM
 			}
 		}
@@ -30,11 +32,16 @@ country_decisions = {
 				country_event = { id = inkachi.17 }
 			}
 			else_if = {
+				limit = { tag = TRK }
+				country_event = { id = inkachi.17 }
+			}
+			else_if = {
 				limit = { OR = { tag = RMO tag ROM } }
 				country_event = { id = inkachi.18 }
 			}
 			else = {
 				custom_tooltip = ink_achievenement_info_tt
+			}
 		}
 	}
 }

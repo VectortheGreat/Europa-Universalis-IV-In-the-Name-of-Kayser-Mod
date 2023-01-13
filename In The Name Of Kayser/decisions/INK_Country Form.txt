@@ -7,6 +7,7 @@ country_decisions = {
 			NOT = { exists = RMO }
 			NOT = { tag = TEK }
 			NOT = { tag = ITR }
+			NOT = { tag = TRK }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -72,6 +73,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			NOT = { exists = ITR }
+			NOT = { exists = TRK }
 			NOT = { tag = TEK }
 			NOT = { tag = RMO }
 			OR = {
@@ -92,44 +94,10 @@ country_decisions = {
 			owns = 151		# Constantinople
 		}
 		effect = {
-			change_tag = ITR
-			add_government_reform = magna_turcorum_dynastia
-			hidden_effect = {
-				add_historical_friend = PAP
-				add_historical_rival = HAB
-				add_historical_rival = VEN
-				add_historical_rival = MAM
-				HAB = { add_historical_rival = ITR }
-				VEN = { add_historical_rival = ITR }
-				MAM = { add_historical_rival = ITR }
-				PAP = { add_historical_friend = ITR }
-				change_graphical_culture = westerngfx
-				change_unit_type = western
-				change_technology_group = western
-				restore_country_name = yes
-				
-				if = {
-					limit = {
-						NOT = { government_rank = 3 }
-					}
-					set_government_rank = 3
-				}
+			country_event = {
+				id = inkinfo.10
 			}
-			151 = {
-				move_capital_effect = yes
-				add_core = ITR
-				change_culture = turkish 
-				change_religion = catholic
-			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = ITR_ideas }
-				}
-				country_event = { id = ideagroups.1 } #New Ideas
-			}
-			set_country_flag = third_rome
-			swap_non_generic_missions = yes
+			
 			ai_will_do = {
 				factor = 33
 			}
@@ -143,6 +111,7 @@ country_decisions = {
 			primary_culture = turkish
 			NOT = { exists = TEK }
 			NOT = { tag = ITR }
+			NOT = { tag = TRK }
 			NOT = { tag = RMO }
 			OR = {
 				ai = no
@@ -207,7 +176,7 @@ country_decisions = {
 			151 = {
 				move_capital_effect = yes
 				add_core = TEK
-				change_culture = turkish 
+				change_culture = ROOT 
 			}
 			
 			if = {

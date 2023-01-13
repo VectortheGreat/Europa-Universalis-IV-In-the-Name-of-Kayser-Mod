@@ -271,6 +271,17 @@ on_country_creation = {
 	}
 	else_if = {
 		limit = {
+			tag = TRK
+			NOT = {
+				has_reform = turkish_government
+			}
+			NOT = { has_country_flag = ink_government_fix2 }
+		}
+		add_government_reform = turkish_government
+		set_country_flag = ink_government_fix2
+	}
+	else_if = {
+		limit = {
 			tag = RMO
 			NOT = {
 				has_reform = turkish_government

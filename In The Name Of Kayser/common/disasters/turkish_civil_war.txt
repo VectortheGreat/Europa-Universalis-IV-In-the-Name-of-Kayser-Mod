@@ -5,6 +5,7 @@ turkish_civil_war = {
 			tag = TUR
 			tag = ITR
 			tag = TEK
+			tag = TRK
 			}
 			religion_group = christian
 			normal_or_historical_nations = yes

@@ -61,8 +61,9 @@ monarchy = {
 				polish_autocratic_monarchy
 				lithuanian_grand_kingdom
 				lithuanian_grand_empire
-				turkish_government
+				eastern_roma_government
 				magna_turcorum_dynastia
+				turkish_government
 				british_autonomous_state
 			}
 		}

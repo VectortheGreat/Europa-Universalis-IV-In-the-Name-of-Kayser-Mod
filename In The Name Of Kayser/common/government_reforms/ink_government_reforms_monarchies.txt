@@ -1,4 +1,4 @@
-turkish_government = {
+eastern_roma_government = {
 	icon = "RMOgovernment"
 	potential = {
 		religion = orthodox
@@ -60,6 +60,42 @@ magna_turcorum_dynastia = {
 	}
 }
 
+turkish_government = {
+	icon = "ITRgovernment"
+	potential = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = phaedrusian
+		}
+		tag = TRK
+	}
+	trigger = {
+		OR = {
+			religion = catholic
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = phaedrusian
+		}
+	}
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		monarch_diplomatic_power = 2	
+		diplomatic_upkeep = 1
+		power_projection_from_insults = 0.5
+	}	
+	ai = {
+		factor = 100
+	}
+}
+
 british_autonomous_state = {
 	icon = "consolidate_power_in_cities_reform"
 	potential = {
@@ -68,7 +104,10 @@ british_autonomous_state = {
 	}
 	trigger = {
 		religion = anglican
-		is_subject_of = ITR
+		OR = {
+			is_subject_of = ITR
+			is_subject_of = TRK
+		}
 		is_march = yes
 		culture_group = british
 	}
@@ -93,8 +132,9 @@ british_autonomous_state = {
 ink_military_traditions = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -114,8 +154,9 @@ ink_military_traditions = {
 ink_royal_taxes = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -135,8 +176,9 @@ ink_royal_taxes = {
 ink_anatolian_renaissance = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -156,8 +198,9 @@ ink_anatolian_renaissance = {
 ink_greedy_policies = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -179,8 +222,9 @@ ink_greedy_policies = {
 ink_bureaucratic_development = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -200,8 +244,9 @@ ink_bureaucratic_development = {
 ink_national_buildings = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -221,8 +266,9 @@ ink_national_buildings = {
 ink_trade_buildings = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -241,8 +287,9 @@ ink_trade_buildings = {
 ink_cultural_development = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -262,8 +309,9 @@ ink_cultural_development = {
 ink_gold_rush = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -283,8 +331,9 @@ ink_gold_rush = {
 ink_focus_on_production = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -305,8 +354,9 @@ ink_focus_on_production = {
 ink_side_with_bureaucrats = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -324,8 +374,9 @@ ink_side_with_bureaucrats = {
 ink_side_with_knights = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -343,8 +394,9 @@ ink_side_with_knights = {
 ink_side_with_merchants = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -364,8 +416,9 @@ ink_side_with_merchants = {
 ink_authoritarian_king = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -381,7 +434,10 @@ ink_authoritarian_king = {
 
 ink_the_great_empire = {
 	potential = {
-		has_reform = magna_turcorum_dynastia
+		OR = {
+			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
+		}
 	}
 	allow_normal_conversion = yes
 	legacy_equivalent = theocratic_government
@@ -395,7 +451,7 @@ ink_the_great_empire = {
 
 ink_the_great_empire2 = {
 	potential = {
-		has_reform = turkish_government
+		has_reform = eastern_roma_government
 	}
 	allow_normal_conversion = yes
 	legacy_equivalent = theocratic_government
@@ -410,8 +466,9 @@ ink_the_great_empire2 = {
 ink_focus_on_provinces = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -427,8 +484,9 @@ ink_focus_on_provinces = {
 ink_qualified_trade = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -445,8 +503,9 @@ ink_qualified_trade = {
 ink_holy_emperor = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	trigger = {
@@ -466,8 +525,9 @@ ink_holy_emperor = {
 ink_kaysers_popularity = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -486,8 +546,9 @@ ink_kaysers_popularity = {
 ink_war_addiction = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -504,8 +565,9 @@ ink_war_addiction = {
 ink_colonial_empire = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -522,8 +584,9 @@ ink_colonial_empire = {
 ink_domestic_centralization = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -540,8 +603,9 @@ ink_domestic_centralization = {
 ink_advanced_intelligence = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -558,8 +622,9 @@ ink_advanced_intelligence = {
 ink_free_thought = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -578,8 +643,9 @@ ink_free_thought = {
 ink_empire_of_the_absolute = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -596,8 +662,9 @@ ink_empire_of_the_absolute = {
 ink_hail_to_the_kayser = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -614,8 +681,9 @@ ink_hail_to_the_kayser = {
 ink_trade_empire = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -632,8 +700,9 @@ ink_trade_empire = {
 ink_religious_empire = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -650,8 +719,9 @@ ink_religious_empire = {
 ink_military_empire = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -668,8 +738,9 @@ ink_military_empire = {
 ink_empire_of_the_civilization = {
 	potential = {
 		OR = {
-			has_reform = turkish_government
+			has_reform = eastern_roma_government
 			has_reform = magna_turcorum_dynastia
+			has_reform = turkish_government
 		}
 	}
 	allow_normal_conversion = yes
@@ -695,8 +766,9 @@ feudalism_reform = {
 	potential = {
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -721,9 +793,10 @@ autocracy_reform = {
 	potential = {
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -741,9 +814,10 @@ enforce_privileges_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -765,9 +839,10 @@ quash_noble_power_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -795,9 +870,10 @@ centralize_reform = {
 		}
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -816,9 +892,10 @@ decentralize_reform = {
 		}
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -848,9 +925,10 @@ clergy_in_administration_reform = {
 		}
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -894,9 +972,10 @@ meritocratic_focus_reform = {
 		}
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -948,9 +1027,10 @@ royal_decree_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -968,8 +1048,9 @@ aristocratic_court_reform = {
 	potential = {
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -989,9 +1070,10 @@ states_general_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -1042,9 +1124,10 @@ general_estates_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
 				has_reform = the_great_temple_government
+				has_reform = turkish_government
 			}
 		}
 	}
@@ -1065,8 +1148,9 @@ letat_cest_moi_reform = {
 	potential = {
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -1089,8 +1173,9 @@ regional_representation_reform = {
 	potential = {
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -1106,8 +1191,9 @@ political_absolutism_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -1132,8 +1218,9 @@ legislative_houses_reform = {
 		is_revolutionary = no
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}
@@ -1152,8 +1239,9 @@ of_noble_bearing_reform = {
 		}
 		NOT = {
 			OR = {
-				has_reform = turkish_government
+				has_reform = eastern_roma_government
 				has_reform = magna_turcorum_dynastia
+				has_reform = turkish_government
 				has_reform = the_great_temple_government
 			}
 		}

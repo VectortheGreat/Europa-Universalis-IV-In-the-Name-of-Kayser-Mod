@@ -99,10 +99,12 @@
  ink_crusade_aid_toplam: "Crusade Aid"
  crusade_aid_tt: " We'll gain §G[Root.ink_crusade_aid_toplam.GetValue]§! from §Y[Root.ink_crusade_aid_toplam.GetName].§!"
  crusade_agreement_tt: "§GWe'll get Crusade diplomatic action against heathen countries but We will never get Province of Roma. If we take Roma, We cannot use Crusade diplomatic action.§!"
- nesto1_tt: "You'll get §G75§! Random Monarch Point."
- nesto3_tt: "You'll get §G+2 Tolerance of the True Faith§! and §G+10% Manpower in True Faith Provinces§! for 10 years."
- nesto4_tt: "You'll get §G+1.5% Missionary Strength§! and §G+1 Yearly Devotion§! for 10 years. "
- nesto6_tt: "You'll get §G+20% Trade Steering §! and §G -15% Trade Company Investment cost§! for 10 years."
+ nesto1_tt: "Get §G75§! Random Monarch Point."
+ nesto3_tt: "§G+2 Tolerance of the True Faith§! and §G+1.5% Missionary Strength§! for 15 years."
+ nesto4_tt: "§G+10% Reform Progress Growth§! and §G+1 Yearly Legitimacy§! for 15 years. "
+ nesto6_tt: "§G+20% Trade Steering §! and §G -15% Trade Company Investment cost§! for 15 years."
+ nesto7_tt: "§G+10% Manpower in true faith provinces§! and §G-10% Shock Damage Received§! for 15 years. "
+ nesto8_tt: "§G+1 Mercantilism §! and A random province that has a manufactory gains §G1 diplomatic development§!"
  
  
  ink_itr_mercenary:0 "Professional Mercenaries"

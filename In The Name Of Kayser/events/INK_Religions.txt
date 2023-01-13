@@ -13,6 +13,7 @@ country_event = { #Antioch
 		OR = {
 			tag = TEK
 			tag = ITR
+			tag = TRK
 			tag = RMO
 		}
 		2313 = {
@@ -20,6 +21,7 @@ country_event = { #Antioch
 				owned_by = TEK
 				owned_by = RMO
 				owned_by = ITR
+				owned_by = TRK
 				owner = { 
 					AND = {
 						religion_group = christian
@@ -27,6 +29,7 @@ country_event = { #Antioch
 							is_subject_of = TEK
 							is_subject_of = RMO
 							is_subject_of = ITR
+							is_subject_of = TRK
 						}
 					}
 				}
@@ -70,6 +73,7 @@ country_event = { #Jerusalem
 		OR = {
 			tag = TEK
 			tag = ITR
+			tag = TRK
 			tag = RMO
 		}
 		379 = {
@@ -77,12 +81,14 @@ country_event = { #Jerusalem
 				owned_by = TEK
 				owned_by = RMO
 				owned_by = ITR
+				owned_by = TRK
 				owner = { 
 					AND = {
 						religion_group = christian
 						OR = {
 							is_subject_of = TEK
 							is_subject_of = RMO
+							is_subject_of = TRK
 							is_subject_of = ITR
 						}
 					}
@@ -126,6 +132,7 @@ country_event = { #Alexanderia
 		OR = {
 			tag = TEK
 			tag = ITR
+			tag = TRK
 			tag = RMO
 		}
 		358 = {
@@ -133,11 +140,13 @@ country_event = { #Alexanderia
 				owned_by = TEK
 				owned_by = RMO
 				owned_by = ITR
+				owned_by = TRK
 				owner = {
 					religion_group = christian
 					OR = {
 						is_subject_of = TEK
 						is_subject_of = RMO
+						is_subject_of = TRK
 						is_subject_of = ITR
 					}
 				}
@@ -184,7 +193,7 @@ country_event = { #Christian Turks
 				NOT = { religion_group = christian }
 			}
 		}
-		OR = { tag = RMO tag = TEK tag = ITR }
+		OR = { tag = RMO tag = TEK tag = ITR tag = TRK }
 	}
 	
 	mean_time_to_happen = {
@@ -216,6 +225,7 @@ country_event = { #Roma
 		OR = {
 			tag = TEK
 			tag = ITR
+			tag = TRK
 			tag = RMO
 		}
 		OR = {
@@ -224,6 +234,7 @@ country_event = { #Roma
 					owned_by = TEK
 					owned_by = RMO
 					owned_by = ITR
+					owned_by = TRK
 				}
 				NOT = { religion = ROOT }
 			}
@@ -299,12 +310,18 @@ country_event = { #Excommunicate Rival
 	picture = ink_pope_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = catholic
 		is_papal_controller = yes
 		NOT = { has_country_flag = ink_exco_rival_used }
 		any_rival_country = {
-			war_with = ITR
+			OR = {
+				war_with = ITR
+				war_with = TRK
+			}
 			religion = catholic
 			NOT = {	
 				has_opinion = {
@@ -328,9 +345,18 @@ country_event = { #Excommunicate Rival
 		ai_chance = { factor = 100 }
 		every_country = {
 			limit = {
-				is_rival = ITR
-				war_with = ITR
-				religion = catholic
+				OR = {
+					AND = {
+						is_rival = ITR
+						war_with = ITR
+						religion = catholic
+					}
+					AND = {
+						is_rival = TRK
+						war_with = TRK
+						religion = catholic
+					}
+				}				
 			}
 			excommunicate = THIS
 		}
@@ -443,7 +469,10 @@ country_event = { #Steal ducats from Curia
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = catholic
 		is_papal_controller = yes
 		num_of_loans = 10
@@ -459,24 +488,58 @@ country_event = { #Steal ducats from Curia
 		add_curia_treasury = -1000
 		add_treasury = 1000
 		add_papal_influence = -30
-		ITR = {
-			add_opinion = {
-				who = PAP
-				modifier = ink_thief
+		if = {
+			limit = {
+				exists = ITR
 			}
-			
+			ITR = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_thief
+				}
+				
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_thief
+				}
+				
+			}
 		}
 	}
 	option = {	#It's a sin
 		name = inkre9.b
 		ai_chance = { factor = 35 }
 		add_papal_influence = 40
-		ITR = {
-			add_opinion = {
-				who = PAP
-				modifier = ink_honest
+		if = {
+			limit = {
+				exists = ITR
 			}
-			
+			ITR = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_honest
+				}
+				
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_honest
+				}
+				
+			}
 		}
 	}
 }

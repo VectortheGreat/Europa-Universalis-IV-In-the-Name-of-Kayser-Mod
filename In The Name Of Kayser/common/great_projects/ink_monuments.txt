@@ -1683,6 +1683,7 @@ palace_konstantinopolis = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -1699,6 +1700,7 @@ palace_konstantinopolis = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -1709,6 +1711,7 @@ palace_konstantinopolis = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -1989,6 +1992,7 @@ great_market = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2005,6 +2009,7 @@ great_market = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2015,6 +2020,7 @@ great_market = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2154,6 +2160,7 @@ port_athens = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2170,6 +2177,7 @@ port_athens = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2180,6 +2188,7 @@ port_athens = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2316,6 +2325,7 @@ council_adrianople = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2332,6 +2342,7 @@ council_adrianople = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2342,6 +2353,7 @@ council_adrianople = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2616,6 +2628,7 @@ izmir_barrack = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2632,6 +2645,7 @@ izmir_barrack = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2642,6 +2656,7 @@ izmir_barrack = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2778,6 +2793,7 @@ kayseri_palace = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2794,6 +2810,7 @@ kayseri_palace = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}
@@ -2804,6 +2821,7 @@ kayseri_palace = {
 			OR = {
 				tag = RMO
 				tag = ITR
+				tag = TRK
 				tag = TEK
 			}
 		}

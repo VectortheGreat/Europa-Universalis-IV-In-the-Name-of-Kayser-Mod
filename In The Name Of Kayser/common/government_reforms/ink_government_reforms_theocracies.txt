@@ -39,7 +39,10 @@ royal_order_government = {
 		religion_group = christian
 	}
 	trigger = {
-		is_subject_of = ITR
+		OR = {
+			is_subject_of = TRK
+			is_subject_of = ITR
+		}
 		is_march = yes
 		religion_group = christian
 	}

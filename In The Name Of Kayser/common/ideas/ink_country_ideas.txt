@@ -52,7 +52,10 @@ ITR_ideas = {
 	}	
 
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK			
+			tag = ITR
+		}
 	}
 	free = yes
 	

@@ -92,10 +92,10 @@ ink_convert_roma = {
 }
 ink_nesto_dyophysitism = {
 	tolerance_own = 2
-	manpower_in_true_faith_provinces = 0.10
+	global_missionary_strength  = 0.015
 }
 ink_nesto_support_government = {
-	global_missionary_strength  = 0.015
+	reform_progress_growth = 0.1
 	legitimacy = 1
 	devotion = 1
 	republican_tradition = 1
@@ -103,6 +103,10 @@ ink_nesto_support_government = {
 ink_nesto_trade_support = {
 	trade_steering = 0.2
 	trade_company_investment_cost = -0.15
+}
+ink_nesto_faithful_army = {
+	manpower_in_true_faith_provinces= 0.10
+	shock_damage_received = -0.10
 }
 ink_estate_culture = {
 	local_tax_modifier = 0.2
@@ -218,3 +222,4 @@ ink_convert_balkans = {
 ink_hold_army = {
 	land_forcelimit = 15
 }
+

@@ -1,6 +1,6 @@
 ink_nesto1 = {	#Bless Ruler	#Effect 1
 	sprite = "GFX_ink_bless_ruler_icon"
-	cost = 150
+	cost = 125
 	potential = {
 	}
 	trigger = {
@@ -18,26 +18,12 @@ ink_nesto1 = {	#Bless Ruler	#Effect 1
 	}
 	ai_will_do = {
 		factor = 2
-		modifier = {
-			factor = 0
-			NOT = {
-				consort_has_personality = infertile_personality
-			}
-		}
-		modifier = {
-			factor = 10
-			OR = {
-				consort_adm = 2
-				consort_dip = 2
-				consort_mil = 2
-			}
-		}
 	}
 }
 
 ink_nesto2 = {	#Force the Oath of Allegiance	#Effect 2
 	sprite = "GFX_ink_nesto_enforce_icon"
-	cost = 150
+	cost = 125
 	potential = {
 		
 	}
@@ -51,32 +37,28 @@ ink_nesto2 = {	#Force the Oath of Allegiance	#Effect 2
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 2
-			ruler_age = 40
+			factor = 2.5
+			corruption = 1
 		}
 		modifier = {
-			factor = 2
-			ruler_age = 60
+			factor = 5
+			corruption = 2
 		}
 	}
 }
 
 ink_nesto3 = {	#Support Dyophysitism	#Modifier 1
 	sprite = "GFX_ink_dyophysitism_icon"
-	cost = 100
+	cost = 125
 	trigger = {
 		NOT = { has_country_modifier = ink_nesto_dyophysitism }
 	}
 	effect = {
 		custom_tooltip = nesto3_tt
 		hidden_effect = {
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 5
-			}
 			add_country_modifier = {
 				name = "ink_nesto_dyophysitism"
-				duration = 3650
+				duration = 5475
 			}
 		}
 	}
@@ -84,14 +66,14 @@ ink_nesto3 = {	#Support Dyophysitism	#Modifier 1
 		factor = 1
 		modifier = {
 			factor = 2
-			is_in_large_debt = yes
+			NOT = { religious_unity = 0.5 }
 		}
 	}
 }
 
 ink_nesto4 = { #Clergy Government Support
 	sprite = "GFX_ink_support_government_icon"
-	cost = 100
+	cost = 125
 	trigger = {
 		NOT = { has_country_modifier = ink_nesto_support_government }
 	}
@@ -100,26 +82,22 @@ ink_nesto4 = { #Clergy Government Support
 		hidden_effect = {
 			add_country_modifier = {
 				name = "ink_nesto_support_government"
-				duration = 3650
+				duration = 5475
 			}
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 5
-				}
 		}
 	}
 	ai_will_do = {
 		factor = 1
 		modifier = {
 			factor = 2
-			trade_income_percentage = 0.4
+				NOT = { legitimacy_equivalent = 60 }
 		}
 	}
 }
 
 ink_nesto5 = { #Religious Orders
 	sprite = "GFX_ink_rel_order_icon"
-	cost = 150
+	cost = 125
 	trigger = {
 	}
 	effect = {
@@ -154,7 +132,7 @@ ink_nesto5 = { #Religious Orders
 
 ink_nesto6 = {	#Eastern Christian Merchants
 	sprite = "GFX_ink_eastern_merchants_icon"
-	cost = 100
+	cost = 125
 	trigger = {
 		NOT = { has_country_modifier = ink_nesto_trade_support }
 	}
@@ -163,11 +141,82 @@ ink_nesto6 = {	#Eastern Christian Merchants
 		hidden_effect = {
 			add_country_modifier = {
 				name = "ink_nesto_trade_support"
-				duration = 3650
+				duration = 5475
 			}
-			add_estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 5
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.4
+		}
+	}
+}
+
+ink_nesto7 = {	#Faithful Army
+	sprite = "GFX_ink_faithful_army"
+	cost = 125
+	trigger = {
+		NOT = { has_country_modifier = ink_nesto_faithful_army }
+		religious_unity = 0.75
+	}
+	effect = {
+		custom_tooltip = nesto7_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = "ink_nesto_faithful_army"
+				duration = 5475
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+ink_nesto8 = {	#Grant Monopoly
+	sprite = "GFX_grant_monopoly_icon"
+	cost = 125
+	trigger = {
+		calc_true_if = {
+			all_owned_province = {
+				OR = {
+					has_building = mills
+					has_building = farm_estate
+					has_building = tradecompany
+					has_building = plantations
+					has_building = textile
+					has_building = weapons
+					has_building = wharf
+					has_building = furnace
+				}
+			}
+			amount = 1
+		}
+	}
+	effect = {
+		custom_tooltip = nesto8_tt
+		hidden_effect = {
+			add_mercantilism = 1
+			random_owned_province = {
+				limit = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				add_base_production = 1
 			}
 		}
 	}

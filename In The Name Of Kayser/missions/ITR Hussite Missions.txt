@@ -4,7 +4,10 @@ itr_religion_missions_hus = {		#Hussite Missions
 	ai = yes
 	
 	potential = {
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 		has_country_flag = religion_reformed_hus
 		NOT = { map_setup = map_setup_random }
 	}
@@ -22,14 +25,23 @@ itr_religion_missions_hus = {		#Hussite Missions
 				AND = {
 					alliance_with = BOH
 					BOH = {
-						has_opinion = {
-							who = ITR
-							value = 180
-						}
+						OR = {
+							has_opinion = {
+								who = ITR
+								value = 180
+							}
+							has_opinion = {
+								who = TRK
+								value = 180
+							}
+						}						
 					}
 				}
 				OR = {
-					is_subject_of = ITR
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TRK
+					}
 					NOT = { exists = BOH }
 				}
 			}
@@ -72,8 +84,11 @@ itr_religion_missions_hus = {		#Hussite Missions
 					has_female_heir = yes
 					has_heir = no
 					NOT = { heir_claim = 50 }
-					is_subject_of = ITR
 					NOT = { exists = BOH }
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TRK
+					}
 				}
 			}
 		}
@@ -154,7 +169,10 @@ itr_religion_missions_hus = {		#Hussite Missions
 			NOT = {
 				ROOT = {
 					all_elector = {
-						alliance_with = ITR
+						OR = {
+							alliance_with = ITR
+							alliance_with = TRK
+						}
 						has_opinion = { who = ROOT value = 200 }
 					}
 				}
@@ -168,11 +186,21 @@ itr_religion_missions_hus = {		#Hussite Missions
 						hre_religion = reformed
 					}
 					all_elector = {
-						alliance_with = ITR
-						has_opinion = {
-							who = ITR
-							value = 200
+						OR = {
+							alliance_with = ITR
+							alliance_with = TRK
 						}
+						OR = {
+							has_opinion = {
+								who = ITR
+								value = 200
+							}
+							has_opinion = {
+								who = TRK
+								value = 200
+							}
+						}
+						
 					}
 				}
 				AND = {
@@ -199,6 +227,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 					is_part_of_hre = yes
 					NOT = { religion = ROOT }
 					NOT = { total_development = 150 }
+					NOT = { tag = TRK }
 					NOT = { tag = ITR }
 					NOT = { is_emperor = yes }
 				}

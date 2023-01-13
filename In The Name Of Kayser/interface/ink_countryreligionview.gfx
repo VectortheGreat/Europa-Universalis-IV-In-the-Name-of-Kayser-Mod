@@ -27,4 +27,8 @@ spriteTypes = {
 		name = "GFX_ink_support_government_icon"
 		texturefile = "gfx/interface/ink_support_government.dds"
 	}
+	spriteType = {
+		name = "GFX_ink_faithful_army"
+		texturefile = "gfx/interface/ink_faithful_army.dds"
+	}
 }

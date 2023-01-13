@@ -8,6 +8,7 @@ merc_ink_knights = {	#The Holy Order
 		OR = {
 			tag = ITR
 			tag = RMO
+			tag = TRK
 			tag = TEK
 		}
 	}
@@ -28,6 +29,7 @@ merc_ink_imperial = {	#Crusader Volunteers
 	trigger = {
 		OR = {
 			tag = ITR
+			tag = TRK
 			tag = RMO
 			tag = TEK
 		}

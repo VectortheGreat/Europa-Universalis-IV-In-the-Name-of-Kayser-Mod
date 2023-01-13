@@ -4,6 +4,7 @@ janissary_disaster = {
 			tag = RMO
 			tag = TUR
 			tag = ITR
+			tag = TRK
 			tag = TEK
 		}
 		religion_group = christian

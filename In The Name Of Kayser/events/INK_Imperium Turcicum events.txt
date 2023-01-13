@@ -26,7 +26,10 @@ country_event = {	#Mysterious Priest
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		317 = {
 			has_missionary = yes
 			days = 20
@@ -128,7 +131,10 @@ country_event = {		#Protestants
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		is_religion_enabled = protestant
 	}
 	
@@ -149,7 +155,10 @@ country_event = {		#Alexander's return from Germany
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		had_country_flag = {
 			flag = itr_reform1
 			days = 30
@@ -180,7 +189,10 @@ country_event = {		#Reform Issue
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		OR = {
 			is_religion_enabled = anglican
 			is_year = 1520
@@ -263,9 +275,23 @@ country_event = {		#Protestant Reformation
 		}
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
 			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
+			}
+			
 		}
 		custom_tooltip = itr_protestant_path2_tt
 		ai_chance = { factor = 90 }	
@@ -276,8 +302,21 @@ country_event = {		#Protestant Reformation
 		add_papal_influence = -10
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		custom_tooltip = itr_protestant_path3_tt
@@ -367,8 +406,21 @@ country_event = {		#Reformation
 		}
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		custom_tooltip = itr_protestant_path2_tt
@@ -379,8 +431,21 @@ country_event = {		#Reformation
 		add_papal_influence = -10
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		set_country_flag = itr_reformsinprovinces2
@@ -487,8 +552,21 @@ country_event = {		#The New Eastern Reformation
 		set_country_flag = itr_boost_protestants
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		custom_tooltip = itr_protestant_path2_tt
@@ -499,8 +577,21 @@ country_event = {		#The New Eastern Reformation
 		set_country_flag = itr_reformsinprovinces5
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		add_papal_influence = -10
@@ -582,6 +673,7 @@ country_event = {		#Hussite Reformation
 				BOH = {
 					religion = hussite
 				}
+				exists = ITR
 			}
 			ITR = {
 				add_opinion = {
@@ -603,6 +695,33 @@ country_event = {		#Hussite Reformation
 			set_country_flag = itr_protestant_way3
 			set_country_flag = itr_reformsinprovinces3
 		}
+		else_if = {
+			limit = {
+				BOH = {
+					religion = hussite
+				}
+				exists = TRK
+			}
+			ITR = {
+				add_opinion = {
+					who = BOH
+					modifier = ink_10001
+				}
+			}
+			BOH = {
+				add_opinion = {
+					who = TRK
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way3
+			set_country_flag = itr_reformsinprovinces3
+		}
 		else = {
 			add_papal_influence = -10
 			set_country_flag = itr_protestant_way3
@@ -610,8 +729,21 @@ country_event = {		#Hussite Reformation
 		}
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		ai_chance = { factor = 100 }	
@@ -690,6 +822,7 @@ country_event = {		#Anglican Reformation
 				ENG = {
 					religion = anglican
 				}
+				exists = ITR
 			}
 			ITR = {
 				add_opinion = {
@@ -716,6 +849,7 @@ country_event = {		#Anglican Reformation
 				GBR = {
 					religion = anglican
 				}
+				exists = ITR
 			}
 			ITR = {
 				add_opinion = {
@@ -737,6 +871,60 @@ country_event = {		#Anglican Reformation
 			set_country_flag = itr_protestant_way4
 			set_country_flag = itr_reformsinprovinces4
 		}
+		if = {
+			limit = {
+				ENG = {
+					religion = anglican
+				}
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = ENG
+					modifier = ink_10001
+				}
+			}
+			ENG = {
+				add_opinion = {
+					who = TRK
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way4
+			set_country_flag = itr_reformsinprovinces4
+		}
+		else_if = {
+			limit = {
+				GBR = {
+					religion = anglican
+				}
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = GBR
+					modifier = ink_10001
+				}
+			}
+			GBR = {
+				add_opinion = {
+					who = TRK
+					modifier = ink_10001
+				}
+			}
+			add_country_modifier = {
+				name = "ink_008"
+				duration = -1
+			}
+			set_country_flag = itr_boost_protestants
+			set_country_flag = itr_protestant_way4
+			set_country_flag = itr_reformsinprovinces4
+		}
 		else = {
 			set_country_flag = itr_protestant_way4
 			set_country_flag = itr_reformsinprovinces4
@@ -744,8 +932,21 @@ country_event = {		#Anglican Reformation
 		}
 		hidden_effect = {
 			remove_historical_friend = PAP
-			PAP = {
-				remove_historical_friend = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				PAP = {
+					remove_historical_friend = ITR
+				}
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				PAP = {
+					remove_historical_friend = TRK
+				}
 			}
 		}
 		ai_chance = { factor = 100 }	
@@ -858,7 +1059,10 @@ country_event = {		#Heretics Rise
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = catholic
 		OR = {
 			has_country_flag = itr_antireform2
@@ -908,7 +1112,10 @@ country_event = {		#Rebels of Iskender
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = catholic
 		has_country_flag = itr_rebelsofiskender
 	}
@@ -1089,7 +1296,10 @@ country_event = {		#Protestantism is spreading
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_reformsinprovinces
 		NOT = { 
 			num_of_religion = {
@@ -1145,7 +1355,10 @@ country_event = {		#Reformism is spreading
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_reformsinprovinces2
 		NOT = { 
 			num_of_religion = {
@@ -1201,7 +1414,10 @@ country_event = {		#Hussite is spreading
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_reformsinprovinces3
 		NOT = { 
 			num_of_religion = {
@@ -1257,7 +1473,10 @@ country_event = {		#Anglican is spreading
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_reformsinprovinces4
 		NOT = { 
 			num_of_religion = {
@@ -1313,7 +1532,10 @@ country_event = {		#Phaedrusian is spreading
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_reformsinprovinces5
 		NOT = { 
 			num_of_religion = {
@@ -1369,7 +1591,10 @@ country_event = {		#Protestantism is spreading- catholic path
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		OR = {
 			has_country_flag = itr_cath_protestants1
 			has_country_flag = itr_cath_protestants2
@@ -1528,7 +1753,10 @@ country_event = {		#New government for INK marches
 	
 	trigger = {
 		NOT = { has_reform = royal_order_government }
-		is_subject_of = ITR
+		OR = {
+			is_subject_of = ITR
+			is_subject_of = TRK
+		}
 		is_march = yes
 		NOT = { has_country_flag = colonial_agreement }
 		NOT = { has_country_flag = itr_gov_changed }
@@ -1551,7 +1779,10 @@ country_event = {		#Death of Alexander
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		had_country_flag = {
 			flag = death_of_alexander
 			days = 7305
@@ -1574,7 +1805,10 @@ country_event = {		#Join the Empire
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = catholic
 		hre_religion = catholic
 		has_country_flag = religious_league_war_on_winning_side
@@ -1608,7 +1842,10 @@ country_event = {		#Join the Empire
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = protestant
 		hre_religion = protestant
 		has_country_flag = religious_league_war_on_winning_side
@@ -1642,7 +1879,10 @@ country_event = {		#Join the Empire
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = reformed
 		hre_religion = reformed
 		has_country_flag = religious_league_war_on_winning_side
@@ -1677,7 +1917,10 @@ country_event = {		#Join the Empire
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = hussite
 		hre_religion = hussite
 		has_country_flag = religious_league_war_on_winning_side
@@ -1711,7 +1954,10 @@ country_event = {		#Secure HRE
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion = reformed
 		hre_religion = protestant
 		has_country_flag = religious_league_war_on_winning_side
@@ -1734,21 +1980,36 @@ country_event = { #France
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		religion_group = christian
 		exists = FRA
 		government = monarchy
 		FRA = {
 			has_heir = no
 			ruler_age = 60
-			NOT = {
-				OR = {
-					is_rival = ITR
-					is_enemy = ITR
+			OR = {
+				NOT = {
+					OR = {
+						is_rival = ITR
+						is_enemy = ITR
+					}
+					dynasty = ROOT
 				}
-				dynasty = ROOT
+				NOT = {
+					OR = {
+						is_rival = TRK
+						is_enemy = TRK
+					}
+					dynasty = ROOT
+				}
 			}
-			marriage_with = ITR
+			OR = {
+				marriage_with = ITR
+				marriage_with = TRK
+			}
 		}
 	}
 	
@@ -1767,7 +2028,7 @@ country_event = { #France
 				dip = 5
 				mil = 2
 				claim = 90
-				female = yes
+				male = yes
 				no_consort_with_heir = yes
 			}
 		}

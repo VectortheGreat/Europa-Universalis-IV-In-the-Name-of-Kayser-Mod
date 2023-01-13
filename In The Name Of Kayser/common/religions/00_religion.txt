@@ -472,6 +472,8 @@ christian = {
 			ink_nesto3
 			ink_nesto4
 			ink_nesto6
+			ink_nesto7
+			ink_nesto8
 			ink_nesto5
 		}
 		

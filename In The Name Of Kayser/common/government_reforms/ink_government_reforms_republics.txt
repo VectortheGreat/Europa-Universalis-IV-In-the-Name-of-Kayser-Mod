@@ -9,7 +9,10 @@ grand_colonial_government = {
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
-		is_subject_of = TEK
+		OR = {
+			is_subject_of = ITR
+			is_subject_of = TRK
+		}
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {

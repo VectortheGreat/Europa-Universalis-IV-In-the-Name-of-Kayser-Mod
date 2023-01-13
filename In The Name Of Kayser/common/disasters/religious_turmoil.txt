@@ -1,7 +1,12 @@
 religious_turmoil = {
 	potential = {
 		religion_group = christian
-		NOT = { tag = ITR }
+		NOT = { 
+			OR = {
+				tag = ITR
+				tag = TRK
+			}
+		}
 		current_age = age_of_reformation
 		is_free_or_tributary_trigger = yes
 		NOT = { has_country_flag = had_religious_turmoil } 

@@ -86,6 +86,7 @@ country_event = {		#Dominate Papacy
 			limit = {
 				religion = catholic
 				NOT = { tag = ITR }
+				NOT = { tag = TRK }
 			}
 			country_event = {
 				id = itest.4
@@ -108,10 +109,24 @@ country_event = {		#Dominate Papacy - AI
 			name = "ink_147"
 			duration = -1
 		}
-		add_opinion = {
-			who = ITR
-			modifier = ink_10002
-		}	
+		if = {
+			limit = {
+				exists = ITR
+			}
+			add_opinion = {
+				who = ITR
+				modifier = ink_10002
+			}	
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			add_opinion = {
+				who = TRK
+				modifier = ink_10002
+			}
+		}
 	}
 }
 
@@ -190,6 +205,18 @@ country_event = {		#HRE - AI
 					who = ITR
 					attitude = attitude_outraged
 				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_outraged
+				}
 				is_great_power = yes
 			}
 		}
@@ -249,6 +276,7 @@ country_event = {		#Strength the Reformists
 				NOT = { religion = catholic }
 				is_part_of_hre = yes
 				NOT = { tag = ITR }
+				NOT = { tag = TRK }
 			}
 			add_country_modifier = {
 				name = "ink_016"
@@ -293,6 +321,18 @@ country_event = {		#Reformation in the HRE - For Electors
 					who = ITR
 					attitude = attitude_outraged
 				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_outraged
+				}
 				is_great_power = yes
 			}
 		}
@@ -310,7 +350,10 @@ country_event = {		#Remove effect
 	
 	trigger = {
 		has_country_modifier = "ink_016"
-		war_with = ITR
+		OR = {
+			war_with = TRK
+			war_with = ITR
+		}
 	}	
 	
 	option = {
@@ -355,6 +398,18 @@ country_event = {		#The Collapse of the Catholicism
 					who = ITR
 					attitude = attitude_outraged
 				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_outraged
+				}
 				is_great_power = yes
 			}
 		}
@@ -396,6 +451,18 @@ country_event = {		#The Collapse of the Catholicism
 					who = ITR
 					attitude = attitude_outraged
 				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = TRK
+					attitude = attitude_outraged
+				}
 				is_great_power = yes
 			}
 		}
@@ -435,6 +502,7 @@ country_event = {		#Reformation in the HRE - Hussite one
 				NOT = { religion = catholic }
 				is_part_of_hre = yes
 				NOT = { tag = ITR }
+				NOT = { tag = TRK }
 			}
 			add_country_modifier = {
 				name = "ink_016"
@@ -599,7 +667,18 @@ country_event = {		#New British Government
 						NOT = { is_core = GBR }
 					}
 				}
-				cede_province = ITR
+				if = {
+					limit = {
+						exists = ITR
+					}
+					cede_province = ITR
+				}
+				else_if = {
+					limit = {
+						exists = TRK
+					}
+					cede_province = TRK
+				}
 			}
 			every_owned_province = {
 				limit = {
@@ -612,9 +691,22 @@ country_event = {		#New British Government
 						is_core = GBR
 					}
 				}
-				add_core = ITR
-				cede_province = ITR
-				remove_core = GBR
+				if = {
+					limit = {
+						exists = ITR
+					}
+					add_core = ITR
+					cede_province = ITR
+					remove_core = GBR
+				}
+				else_if = {
+					limit = {
+						exists = TRK
+					}
+					add_core = TRK
+					cede_province = TRK
+					remove_core = GBR
+				}
 			}
 			add_government_reform = british_autonomous_state
 		}
@@ -671,9 +763,22 @@ country_event = {		#Colonial Agreement Core Provinces
 					is_core = GBR
 				}
 			}
-			add_core = ITR
-			cede_province = ITR
-			remove_core = GBR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				add_core = ITR
+				cede_province = ITR
+				remove_core = GBR
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				add_core = TRK
+				cede_province = TRK
+				remove_core = GBR
+			}			
 		}
 		ai_chance = {
 			factor = 100
@@ -720,7 +825,19 @@ country_event = {		#Colonial Agreement Non Core Provinces
 					NOT = { is_core = GBR }
 				}
 			}
-			cede_province = ITR
+			if = {
+				limit = {
+					exists = ITR
+				}
+				cede_province = ITR
+			}
+			else_if = {
+				limit = {
+					exists = TRK
+				}
+				cede_province = TRK
+			}
+			
 		}
 		ai_chance = {
 			factor = 100
@@ -737,7 +854,10 @@ country_event = {		#Colonial Agreement for GBR cancel
 	trigger = {
 		tag = GBR
 		has_country_flag = colonial_agreement
-		NOT = { is_subject_of = ITR }
+		OR = {
+			NOT = { is_subject_of = TRK }
+			NOT = { is_subject_of = ITR }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -823,7 +943,10 @@ country_event = {		#Papal State Agreement Non Core provinces
 	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_papal_agreement
 		any_owned_province = {
 			AND = {
@@ -881,10 +1004,16 @@ country_event = {		#Papal State Agreement cancel
 	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_papal_agreement
 		PAP = {
-			NOT = { is_subject_of = ITR }
+			OR = {
+				NOT = { is_subject_of = ITR }
+				NOT = { is_subject_of = TRK }
+			}
 		}
 	}
 	
@@ -917,7 +1046,10 @@ country_event = {		#Papal State Agreement Core provinces
 	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		has_country_flag = itr_papal_agreement
 		any_owned_province = {
 			AND = {
@@ -1009,16 +1141,37 @@ country_event = {	#Great Britain March Return
 	trigger = {
 		has_country_flag = itr_gbr_cancelled_march
 		tag = GBR
-		is_subject_of = ITR
+		OR = {
+			is_subject_of = ITR
+			is_subject_of = TRK
+		}
 		NOT = { is_march = yes }
-		ITR = {
-			NOT = { ai = yes }
+		OR = {
+			ITR = {
+				NOT = { ai = yes }
+			}
+			TRK = {
+				NOT = { ai = yes }
+			}
 		}
 	}
 	option = {
 		name = itest24.a
-		ITR = {
-			create_march = GBR
+		if = {
+			limit = {
+				exists = ITR
+			}
+			ITR = {
+				create_march = GBR
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				create_march = GBR
+			}
 		}
 	}
 }
@@ -1033,16 +1186,61 @@ country_event = {	#Dominate Papacy Cancel
 	
 	trigger = {
 		NOT = { religion = catholic }
-		reverse_has_opinion_modifier = {
-			who = ITR
-			modifier = ink_10002
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+		OR = {
+			reverse_has_opinion_modifier = {
+				who = ITR
+				modifier = ink_10002
+			}
+			reverse_has_opinion_modifier = {
+				who = TRK
+				modifier = ink_10002
+			}
 		}
 	}
 	option = {
 		name = itest25.a
-		reverse_remove_opinion = {
-			who = ITR
-			modifier = ink_10002
+		if = {
+			limit = {
+				exists = ITR
+			}
+			reverse_remove_opinion = {
+				who = ITR
+				modifier = ink_10002
+			}
+			remove_opinion = {
+				who = ITR
+				modifier = ink_10002
+			}
+			set_global_flag = ink_enough_event
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			reverse_remove_opinion = {
+				who = TRK
+				modifier = ink_10002
+			}
+			remove_opinion = {
+				who = ITR
+				modifier = ink_10002
+			}
+			set_global_flag = ink_enough_event
+		}
+		every_country = {
+			limit = {
+				religion = catholic
+				NOT = { tag = ITR }
+				NOT = { tag = TRK }
+				NOT = { has_global_flag = ink_enough_event }
+			}
+			country_event = {
+				id = itest.25
+			}
 		}
 		ai_chance = { factor = 100 }	
 	}
@@ -1081,16 +1279,35 @@ country_event = {	#United Beyliks of America
 							region = great_lakes_region
 						}
 					}
-					is_subject_of = ITR
+					OR = {
+						is_subject_of = ITR
+						is_subject_of = TRK
+					}
 					is_colonial_nation = yes
 				}
 				PREV = { inherit = PREV }
 			}
 		}
-		ITR = {
-			create_subject = {
-				subject = UB1
-				subject_type = grand_colony
+		if = {
+			limit = {
+				exists = ITR
+			}
+			ITR = {
+				create_subject = {
+					subject = UB1
+					subject_type = grand_colony
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				create_subject = {
+					subject = UB1
+					subject_type = grand_colony
+				}
 			}
 		}
 		every_subject_country = {  
@@ -1123,9 +1340,23 @@ country_event = {	#United Beyliks of America
 	}
 	option = {
 		name = itest26.b
-		reverse_remove_opinion = {
-			who = ITR
-			modifier = ink_10002
+		if = {
+			limit = {
+				exists = ITR
+			}
+			reverse_remove_opinion = {
+				who = ITR
+				modifier = ink_10002
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			reverse_remove_opinion = {
+				who = TRK
+				modifier = ink_10002
+			}
 		}
 		ai_chance = { factor = 100 }	
 	}

@@ -102,6 +102,18 @@ age_of_discovery = {
 				has_country_flag = humiliated_rival
 			}
 		}
+		obj_win_turkish_civil_war = {
+			custom_trigger_tooltip = {
+				tooltip = ink_obj_turkish_civil_war_tt
+				OR = {
+					has_country_flag = end_of_turkish_civil_war
+					AND = {
+						NOT = { exists = AN1 }
+						has_country_flag = ink_anatolian_union
+					}
+				}
+			}
+		}
 	}		
 	
 
@@ -180,6 +192,76 @@ age_of_discovery = {
 			}
 		}
 		
+		ab_portugal_colonial_growth = {
+		
+			allow = {
+				tag = POR
+			}
+			modifier = {
+				global_colonial_growth = 50
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_denmark_reduced_lib_desire = {
+		
+			allow = {
+				tag = DAN
+			}
+			modifier = {
+				reduced_liberty_desire = 30
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 20
+						}
+					}
+				}
+			}
+		}
+		ab_venice_ship_trade = {
+		
+			allow = {
+				tag = VEN
+			}
+			modifier = {
+				global_ship_trade_power = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ink_age_mam_1 = {		
+			allow = {
+				tag = MAM
+			}
+			modifier = {
+				cavalry_power = 0.25
+			}
+			ai_will_do = {
+				factor = 100
+				
+			}
+		}
+		ink_age_hun_1 = {		
+			allow = {
+				tag = HUN
+			}
+			modifier = {
+				defensiveness = 0.3
+			}
+			ai_will_do = {
+				factor = 100
+				
+			}
+		}
+		
 		ink_age_rmo_1 = {
 			allow = {
 				tag = RMO
@@ -195,10 +277,13 @@ age_of_discovery = {
 		ink_age_itr_1 = {
 		
 			allow = {
-				tag = ITR
+				OR = {
+					tag = ITR
+					tag = TRK
+				}
 			}
-			modifier = {
-				ship_durability = 0.1
+			modifier = {				
+				morale_damage = 0.025
 			}
 			ai_will_do = {
 				factor = 100
@@ -214,49 +299,24 @@ age_of_discovery = {
 			}
 			ai_will_do = {
 				factor = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_subject_country = {
-							liberty_desire = 20
-						}
-					}
-				}
+				
 			}
 		}
-		ink_ai_1 = {
-		
+		ink_age_subjects_1 = {		
 			allow = {
-				AND = {
-					NOT = { is_subject_of = ITR }
-					NOT = { is_subject_of = TEK }
-					NOT = { is_subject_of = RMO }
-					NOT = { tag = ITR }
-					NOT = { tag = TEK }
-					NOT = { tag = RMO }
+				OR = {
+					is_subject_of = RMO
+					is_subject_of = ITR
+					is_subject_of = TEK
+					is_subject_of = TRK
 				}
 			}
 			modifier = {
-				ae_impact = -0.1
-				discipline = 0.05
-				land_forcelimit_modifier = 0.15
-				manpower_recovery_speed = 0.20
-				naval_forcelimit_modifier = 0.20
-				flagship_cost = -0.25
-				diplomatic_upkeep = 1
-				governing_capacity = 100
-				global_unrest = -2
+				global_unrest = -3
 			}
 			ai_will_do = {
 				factor = 100
-				modifier = {
-					factor = 0
-					OR = {
-						is_subject_of = ITR
-						is_subject_of = TEK
-						is_subject_of = RMO
-					}
-				}
+				
 			}
 		}
 	}
@@ -336,6 +396,22 @@ age_of_reformation = {
 			is_subject = no
 			has_unified_culture_group = yes
 		}
+
+		obj_defender_of_roman_catholic = {
+			allow = {
+				religion = catholic
+			}
+			is_defender_of_faith = yes
+			is_papal_controller = yes
+		}
+		
+		obj_conqueror_of_faith = {
+			allow = {
+				NOT = { religion = catholic }
+			}
+			is_defender_of_faith = yes
+			is_defender_of_faith_of_tier = 3
+		}	
 	}	
 	
 	
@@ -415,12 +491,63 @@ age_of_reformation = {
 		}
 
 	
+		ab_spain_tercio = {
+			allow = {
+				tag = SPA
+			}
+			modifier = {
+				shock_damage_received = -0.3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_mughal_artillery = {
+			allow = {
+				tag = MUG
+			}
+			modifier = {
+				artillery_cost = -0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_polish_legitimacy = {
+			allow = {
+				OR = {
+					tag = PLC
+					tag = POL
+				}
+			}
+			modifier = {
+				global_trade_goods_size_modifier = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		ab_persia_reinforce = {
+			allow = {
+				tag = PER
+			}
+			modifier = {
+				reinforce_cost_modifier = -0.3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+	
 		ink_age_rmo_2 = {
 			allow = {
 				tag = RMO
 			}
 			modifier = {
-				shock_damage_received = -0.20
+				fire_damage_received = -0.25
 			}
 			ai_will_do = {
 				factor = 100
@@ -428,10 +555,13 @@ age_of_reformation = {
 		}
 		ink_age_itr_2 = {
 			allow = {
-				tag = ITR
+				OR = {
+					tag = ITR
+					tag = TRK
+				}
 			}
 			modifier = {
-				development_cost = -0.1
+				development_cost = -0.2
 			}
 			ai_will_do = {
 				factor = 100
@@ -443,45 +573,50 @@ age_of_reformation = {
 				tag = TEK
 			}
 			modifier = {
-				artillery_bonus_vs_fort = 1
+				artillery_levels_available_vs_fort = 1
 			}
 			ai_will_do = {
 				factor = 100
 			}
 		}
 
-		ink_ai_2 = {
+		ink_age_orders_2 = {
 			allow = {
-				AND = {
-					NOT = { is_subject_of = ITR }
-					NOT = { is_subject_of = TEK }
-					NOT = { is_subject_of = RMO }
-					NOT = { tag = ITR }
-					NOT = { tag = TEK }
-					NOT = { tag = RMO }
+				is_subject_of = TEK
+				OR = {
+					tag = TK1
+					tag = TK2
+					tag = TK3
+					tag = TK4
+					tag = TK5
+					tag = TK6
+					tag = TK7
+					tag = TK8
 				}
 			}
 			modifier = {
-				ae_impact = -0.15
-				discipline = 0.05
-				land_forcelimit_modifier = 0.20
-				manpower_recovery_speed = 0.25
-				naval_forcelimit_modifier = 0.30
-				flagship_cost = -0.5
-				diplomatic_upkeep = 1
-				governing_capacity = 200
-				global_unrest = -2
+				tolerance_own = 2
+				tolerance_heathen = -1
 			}
 			ai_will_do = {
-				factor = 100
-				modifier = {
-					factor = 0
-					OR = {
-						is_subject_of = ITR
-						is_subject_of = TEK
-						is_subject_of = RMO
-					}
+				factor = 100				
+			}
+		}
+		ink_age_marches_2 = {
+			allow = {
+				OR = {
+					is_subject_of = TRK
+					is_subject_of = ITR
+					is_subject_of = RMO
 				}
+				is_march = yes
+			}
+			modifier = {
+				land_maintenance_modifier = -0.25
+				land_forcelimit_modifier = 0.10
+			}
+			ai_will_do = {
+				factor = 100				
 			}
 		}
 	}	
@@ -546,6 +681,11 @@ age_of_absolutism = {
 				has_country_flag = religious_league_war_on_winning_side
 			}
 			
+		}
+		obj_peace_at_home = {
+			stability = 3
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { unrest = 0 }
 		}
 	}	
 	
@@ -620,6 +760,68 @@ age_of_absolutism = {
 				factor = 100
 			}
 		}
+
+		ab_france_fire_damage = {
+			allow = {
+				tag = FRA
+			}
+			modifier = {
+				fire_damage = 0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_dutch_anti_corruption = {
+			allow = {
+				tag = NED
+			}
+			modifier = {
+				yearly_corruption = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		ab_sweden_manpower = {
+			allow = {
+				OR = {
+					tag = SWE
+					tag = SCA
+				}
+			}
+			modifier = {
+				manpower_recovery_speed = 0.35
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		ab_manchu_banner = {
+			allow = {
+				OR = {
+					tag = MCH
+					tag = QNG
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						NOT = { primary_culture = manchu }
+						NOT = { primary_culture = manchu_new }
+						NOT = { has_government_attribute = allow_banners }
+					}
+					custom_tooltip = ab_manchu_banner_tt
+				}
+			}
+			modifier = {
+				amount_of_banners = 0.5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 	
 	
 		ink_age_rmo_3 = {
@@ -630,7 +832,7 @@ age_of_absolutism = {
 				}
 			}
 			modifier = {
-				global_spy_defence = 0.3
+				no_stability_loss_on_monarch_death = yes
 			}
 			ai_will_do = {
 				factor = 100
@@ -638,7 +840,10 @@ age_of_absolutism = {
 		}
 		ink_age_itr_3 = {
 			allow = {
-				tag = ITR
+				OR = {
+					tag = TRK
+					tag = ITR
+				}
 			}
 			modifier = {
 				leader_land_fire = 1
@@ -659,39 +864,41 @@ age_of_absolutism = {
 			}
 		}
 
-		ink_ai_3 = {
+		ink_age_us_3 = {
 			allow = {
-				AND = {
-					NOT = { is_subject_of = ITR }
-					NOT = { is_subject_of = TEK }
-					NOT = { is_subject_of = RMO }
-					NOT = { tag = ITR }
-					NOT = { tag = TEK }
-					NOT = { tag = RMO }
+				tag = UB1
+				OR = {
+					is_subject_of = ITR
+					is_subject_of = TRK
 				}
 			}
 			modifier = {
-				ae_impact = -0.3
-				discipline = 0.1
-				land_forcelimit_modifier = 0.30
-				manpower_recovery_speed = 0.30
-				naval_forcelimit_modifier = 0.30
-				flagship_cost = -0.75
-				diplomatic_upkeep = 3
-				governing_capacity = 350
-				global_unrest = -4
-				administrative_efficiency = 0.05
+				can_colony_boost_development = yes
+				global_colonial_growth = 25
 			}
 			ai_will_do = {
-				factor = 100
-				modifier = {
-					factor = 0
-					OR = {
-						is_subject_of = ITR
-						is_subject_of = TEK
-						is_subject_of = RMO
-					}
+				factor = 100				
+			}
+		}
+		ink_age_orders_3 = {
+			allow = {
+				is_subject_of = TEK
+				OR = {
+					tag = TK1
+					tag = TK2
+					tag = TK3
+					tag = TK4
+					tag = TK5
+					tag = TK6
+					tag = TK7
+					tag = TK8
 				}
+			}
+			modifier = {
+				siege_ability = 0.25
+			}
+			ai_will_do = {
+				factor = 100				
 			}
 		}
 	}
@@ -755,6 +962,11 @@ age_of_revolutions = {
 		obj_two_institutions = {
 			num_of_owned_and_controlled_institutions = 2
 		}
+
+		obj_hegemon = {
+			is_hegemon = yes
+		}
+			
 	}
 
 	abilities = {
@@ -837,6 +1049,57 @@ age_of_revolutions = {
 				}
 			}
 		}
+
+		ab_pru_military = {
+			allow = {
+				OR = {
+					tag = PRU
+					tag = GER
+				}
+			}
+			modifier = {
+				fire_damage_received = -0.2
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_gbr_fleet = {
+			allow = {
+				tag = GBR
+			}
+			modifier = {
+				naval_maintenance_modifier = -0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_russia_boost = {
+			allow = {
+				tag = RUS
+			}
+			modifier = {
+				governing_capacity_modifier = 0.33
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_austria_rep = {
+			allow = {
+				OR = {
+					tag = HAB
+					tag = HLR
+				}
+			}
+			modifier = {
+				diplomatic_reputation = 5
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 		ink_age_rmo_4 = {
 			allow = {
 				OR = {
@@ -853,7 +1116,10 @@ age_of_revolutions = {
 		}
 		ink_age_itr_4 = {
 			allow = {
-				tag = ITR
+				OR = {
+					tag = TRK
+					tag = ITR
+				}
 			}
 			modifier = {
 				vassal_forcelimit_bonus = 0.5
@@ -873,39 +1139,54 @@ age_of_revolutions = {
 				factor = 100
 			}
 		}
-		ink_ai_4 = {
+		ink_age_subjects_4 = {
 			allow = {
-				AND = {
-					NOT = { is_subject_of = ITR }
-					NOT = { is_subject_of = TEK }
-					NOT = { is_subject_of = RMO }
-					NOT = { tag = ITR }
-					NOT = { tag = TEK }
-					NOT = { tag = RMO }
+				OR = {
+					is_subject_of = ITR
+					is_subject_of = TRK
+					is_subject_of = TEK
+					is_subject_of = RMO
+					is_subject_of = ROM
 				}
 			}
 			modifier = {
-				ae_impact = -0.4
-				discipline = 0.1
-				land_forcelimit_modifier = 0.40
-				manpower_recovery_speed = 0.4
-				naval_forcelimit_modifier = 0.4
-				flagship_cost = -1
-				diplomatic_upkeep = 4
-				governing_capacity = 500
-				global_unrest = -4
-				administrative_efficiency = 0.1
+				movement_speed = 0.3
 			}
 			ai_will_do = {
 				factor = 100
-				modifier = {
-					factor = 0
-					OR = {
-						is_subject_of = ITR
-						is_subject_of = TEK
-						is_subject_of = RMO
+			}
+		}
+		ink_age_hostile_4 = {
+			allow = {
+				OR = {
+					ai_attitude = {
+						who = ITR
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = TRK
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = TEK
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = RMO
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = ROM
+						attitude = attitude_hostile
 					}
 				}
+			}
+			modifier = {
+				defensiveness = 0.2
+				hostile_attrition = 2
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 	}

@@ -5,7 +5,10 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 	ai = yes
 	
 	potential = {
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 		has_country_flag = religion_reformed_pr
 		NOT = { map_setup = map_setup_random }
 	}
@@ -102,6 +105,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 						NOT = { religion = ROOT }
 						NOT = { total_development = 200 }
 						NOT = { tag = ITR }
+						NOT = { tag = TRK }
 						NOT = { is_emperor = yes }
 					}
 					country_event = {
@@ -120,6 +124,7 @@ itr_religion_missions_pr = {		#Protestant/Reformed Missions
 						NOT = { religion = ROOT }
 						NOT = { total_development = 200 }
 						NOT = { tag = ITR }
+						NOT = { tag = TRK }
 						NOT = { is_emperor = yes }
 					}
 					country_event = {

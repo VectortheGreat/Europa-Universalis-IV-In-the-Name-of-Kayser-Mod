@@ -553,7 +553,7 @@ neo_turkic = {
 	graphical_culture = westerngfx
 	
 	neo_turkish3 = {
-		primary = ITR
+		primary = TEK
 		dynasty_names = {
 			"Osmanoglu" "Karamanoglu" "Menteseoglu" "Ramazanoglu" "Saruhanoglu"
 			"Dulkadiroglu" "Candaroglu" "Germiyanoglu" "Aydinoglu" "Eretnaoglu"

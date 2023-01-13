@@ -20,11 +20,19 @@ papal_election_threat = {
 	}
 
 	trigger = {	
-		ITR = {
-			is_papal_controller = no
+		OR = {
+			ITR = {
+				is_papal_controller = no
+			}
+			TRK = {
+				is_papal_controller = no
+			}
 		}
 		has_global_flag = itr_papal_triggered_modifier
-		PAP = { is_subject_of = ITR }
+		OR = {
+			PAP = { is_subject_of = TRK }
+			PAP = { is_subject_of = ITR }
+		}
 	}
 	monarch_lifespan = -0.40
 }
@@ -34,12 +42,20 @@ papal_election_support = {
 		tag = PAP
 	}
 
-	trigger = {	
-		ITR = {
-			is_papal_controller = yes
+	trigger = {			
+		OR = {
+			ITR = {
+				is_papal_controller = yes
+			}
+			TRK = {
+				is_papal_controller = no
+			}
 		}
 		has_global_flag = itr_papal_triggered_modifier
-		PAP = { is_subject_of = ITR }
+		OR = {
+			PAP = { is_subject_of = TRK }
+			PAP = { is_subject_of = ITR }
+		}
 	}
 	monarch_lifespan = 0.40
 }

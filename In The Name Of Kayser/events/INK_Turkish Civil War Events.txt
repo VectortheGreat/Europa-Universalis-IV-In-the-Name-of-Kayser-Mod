@@ -9,7 +9,7 @@ country_event = {		#Ankara Rebels
 	id = tcwevents.1
 	title = tcwevents.1_title
 	desc = tcwevents.1_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -56,7 +56,7 @@ country_event = {		#Hüdavengidar Rebels
 	id = tcwevents.2
 	title = tcwevents.2_title
 	desc = tcwevents.2_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -102,7 +102,7 @@ country_event = {		#Aydın Rebels
 	id = tcwevents.3
 	title = tcwevents.3_title
 	desc = tcwevents.3_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -148,7 +148,7 @@ country_event = {		#Germiyan Rebels
 	id = tcwevents.4
 	title = tcwevents.4_title
 	desc = tcwevents.4_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -194,7 +194,7 @@ country_event = {		#Bolu Rebels
 	id = tcwevents.5
 	title = tcwevents.5_title
 	desc = tcwevents.5_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -229,7 +229,7 @@ country_event = {		#Canik Rebels
 	id = tcwevents.6
 	title = tcwevents.6_title
 	desc = tcwevents.6_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -264,7 +264,7 @@ country_event = {		#Rum Rebels
 	id = tcwevents.7
 	title = tcwevents.7_title
 	desc = tcwevents.7_desc
-	picture = ink_soldiers_2_eventPicture
+	picture = ink_soldiers_eventPicture
 	
 	is_triggered_only = yes
 	
@@ -449,7 +449,12 @@ country_event = {		#Civil War Start
 		set_country_flag = ink_anatolian_union
 		add_truce_with = AN1
 		if = { 
-			limit = { tag = ITR }
+			limit = { 
+				OR = {
+					tag = ITR
+					tag = TRK
+				}
+			}
 			add_country_modifier = {
 				name = "ink_convert_balkans"
 				duration = 1860

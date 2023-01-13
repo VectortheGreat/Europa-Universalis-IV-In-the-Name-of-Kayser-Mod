@@ -4,7 +4,10 @@ itr_religion_missions_ct = {		#Catholic Missions
 	ai = yes
 	
 	potential = {	#Pozisyon problemini düzelt.
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 		has_country_flag = religion_reformed_ct
 		NOT = { map_setup = map_setup_random }
 	}
@@ -78,8 +81,10 @@ itr_religion_missions_ct = {		#Catholic Missions
 					limit = {
 						religion = catholic
 						NOT = { tag = ITR }
+						NOT = { tag = TRK }
 						NOT = { tag = PAP }
 						NOT = { is_subject_of = ITR }
+						NOT = { is_subject_of = TRK }
 					}
 					country_event = {
 						id = itest.4
@@ -119,6 +124,7 @@ itr_religion_missions_ct = {		#Catholic Missions
 						NOT = { religion = catholic }
 						NOT = { total_development = 200 }
 						NOT = { tag = ITR }
+						NOT = { tag = TRK }
 						NOT = { is_emperor = yes }
 					}
 					country_event = {

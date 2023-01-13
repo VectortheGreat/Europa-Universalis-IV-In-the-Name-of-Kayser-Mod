@@ -61,8 +61,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_ink_ai_1"
-		texturefile = "gfx/interface/ages/ink_ai_1.dds"
+		name = "GFX_ink_age_hostile_4"
+		texturefile = "gfx/interface/ages/ink_age_hostile_4.dds"
 	}
 	
 	spriteType = {
@@ -71,12 +71,63 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_ink_ai_3"
-		texturefile = "gfx/interface/ages/ink_ai_3.dds"
+		name = "GFX_ink_age_hun_1"
+		texturefile = "gfx/interface/ages/ink_age_hun_1.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_ink_ai_4"
-		texturefile = "gfx/interface/ages/ink_ai_4.dds"
+		name = "GFX_ink_age_mam_1"
+		texturefile = "gfx/interface/ages/ink_age_mam_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_age_marches_2"
+		texturefile = "gfx/interface/ages/ink_age_marches_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ink_age_orders_2"
+		texturefile = "gfx/interface/ages/ink_age_orders_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ink_age_orders_3"
+		texturefile = "gfx/interface/ages/ink_age_orders_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ink_age_subjects_1"
+		texturefile = "gfx/interface/ages/ink_age_subjects_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_age_subjects_4"
+		texturefile = "gfx/interface/ages/ink_age_subjects_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ink_age_us_3"
+		texturefile = "gfx/interface/ages/ink_age_us_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_win_turkish_civil_war"
+		texturefile = "gfx/interface/ages/obj_win_turkish_civil_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_defender_of_roman_catholic"
+		texturefile = "gfx/interface/ages/obj_defender_of_roman_catholic.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_conqueror_of_faith"
+		texturefile = "gfx/interface/ages/obj_conqueror_of_faith.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_peace_at_home"
+		texturefile = "gfx/interface/ages/obj_peace_at_home.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obj_hegemon"
+		texturefile = "gfx/interface/ages/obj_hegemon.dds"
 	}
 }

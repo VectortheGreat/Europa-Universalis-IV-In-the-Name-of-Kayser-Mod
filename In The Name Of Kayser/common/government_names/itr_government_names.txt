@@ -127,6 +127,7 @@ ink_revolutionary_names = {
 		OR = {
 			tag = RMO
 			tag = ITR
+			tag = TRK
 			tag = TEK
 		}
 	}

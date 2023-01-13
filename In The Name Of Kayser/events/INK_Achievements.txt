@@ -159,9 +159,17 @@ country_event = {	#von Habsburgs? Which duchy's dynasty?
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
-		ITR = {
-			is_emperor = yes
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+		OR = {
+			ITR = {
+				is_emperor = yes
+			}
+			TRK = {
+				is_emperor = yes
+			}
 		}
 		OR = {
 			HAB = {
@@ -196,7 +204,10 @@ country_event = {	#The Turks should not colonize(!)
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		calc_true_if = {
 			all_subject_country = {
 				is_colonial_nation = yes
@@ -235,9 +246,15 @@ country_event = {	#Pope-sama you should retire..
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
 		OR = {
-			PAP = { is_subject_of = ITR }
+			tag = TRK
+			tag = ITR
+		}
+		OR = {
+			OR = {
+				PAP = { is_subject_of = TRK }
+				PAP = { is_subject_of = ITR }
+			}
 			is_core = 118
 		}	
 	}
@@ -261,7 +278,10 @@ country_event = {	#Professional Mercenary Armies
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		army_professionalism = 1
 		num_of_mercenaries = 300
 	}
@@ -285,7 +305,10 @@ country_event = {	#Winged Siphais Arrived
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		controls = 257
 		OR = { 
 			war_with = POL

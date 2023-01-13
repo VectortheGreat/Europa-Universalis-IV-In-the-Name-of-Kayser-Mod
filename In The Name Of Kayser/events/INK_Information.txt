@@ -176,3 +176,92 @@ country_event = {	#The Eastern Knights Tips
 		name = inkachi2b	
 	}
 }
+
+country_event = {	#Turkish Empire or Imperium Turcicum
+	id = inkinfo.10
+	title = "inkinfo.10_title"
+	desc = "inkinfo.10_desc"
+	picture = WESTERNISATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkinfo.10a
+		change_tag = ITR
+			add_government_reform = magna_turcorum_dynastia
+			hidden_effect = {
+				add_historical_friend = PAP
+				add_historical_rival = HAB
+				add_historical_rival = VEN
+				add_historical_rival = MAM
+				HAB = { add_historical_rival = ITR }
+				VEN = { add_historical_rival = ITR }
+				MAM = { add_historical_rival = ITR }
+				PAP = { add_historical_friend = ITR }
+				change_graphical_culture = westerngfx
+				change_unit_type = western
+				change_technology_group = western
+				restore_country_name = yes
+				
+				if = {
+					limit = {
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
+				}
+			}
+			151 = {
+				move_capital_effect = yes
+				add_core = ITR
+				change_culture = ROOT 
+				change_religion = ROOT
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ITR_ideas }
+				}
+				country_event = { id = ideagroups.1 } #New Ideas
+			}
+			set_country_flag = third_rome
+			swap_non_generic_missions = yes
+	}
+	option = {
+		name = inkinfo.10b
+		change_tag = TRK
+			add_government_reform = turkish_government
+			hidden_effect = {
+				add_historical_friend = PAP
+				add_historical_rival = HAB
+				add_historical_rival = VEN
+				add_historical_rival = MAM
+				HAB = { add_historical_rival = TRK }
+				VEN = { add_historical_rival = TRK }
+				MAM = { add_historical_rival = TRK }
+				PAP = { add_historical_friend = TRK }
+				change_graphical_culture = westerngfx
+				restore_country_name = yes				
+				if = {
+					limit = {
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
+				}
+			}
+			151 = {
+				move_capital_effect = yes
+				add_core = TRK
+				change_culture = ROOT 
+				change_religion = ROOT
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ITR_ideas }
+				}
+				country_event = { id = ideagroups.1 } #New Ideas
+			}
+			set_country_flag = third_rome
+			swap_non_generic_missions = yes
+	}
+}

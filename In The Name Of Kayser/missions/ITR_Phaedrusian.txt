@@ -4,7 +4,10 @@ itr_religion_missions_isk = {		#Phaedrusian missions
 	ai = yes
 	
 	potential = {
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 		has_country_flag = religion_reformed_isk
 		NOT = { map_setup = map_setup_random }
 	}

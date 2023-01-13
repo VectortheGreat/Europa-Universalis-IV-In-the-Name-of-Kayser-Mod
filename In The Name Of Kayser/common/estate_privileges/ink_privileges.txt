@@ -7,12 +7,16 @@ ink_itr_mercenary = {	#Mercenary
 	is_valid = {
 		OR = {
 			tag = ITR
+			tag = TRK
 			tag = TUR
 		}
 	}
 	can_select = {
 		mission_completed = itr_military_mission_3
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 	}
 	on_granted = {
 		custom_tooltip = ink_mercenary_tt
@@ -43,10 +47,14 @@ ink_itr_hre_diplomat = {	#Holy Roman Empire Diplomats
 		OR = {
 			tag = ITR
 			tag = TUR
+			tag = TRK
 		}
 	}
 	can_select = {
-		tag = ITR
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
 		calc_true_if = {
 			amount = 2
 			all_elector = {
@@ -77,6 +85,7 @@ ink_tek_specialunit = {
 		OR = {
 			tag = TEK
 			tag = ITR
+			tag = TRK
 			tag = RMO
 			tag = TUR
 		}
