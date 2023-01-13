@@ -29,7 +29,10 @@ tek_sprite_pack = {
 itr_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = ITR
+		OR = {
+			tag = ITR
+			tag = TRK
+		}
 	}
 	
 	sprite_infantry = {
