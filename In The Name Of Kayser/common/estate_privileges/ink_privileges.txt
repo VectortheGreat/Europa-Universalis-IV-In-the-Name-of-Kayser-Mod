@@ -39,7 +39,7 @@ ink_itr_mercenary = {	#Mercenary
 ink_itr_hre_diplomat = {	#Holy Roman Empire Diplomats
 	icon = privilege_royal_authority
 	land_share = 0
-	max_absolutism = -10
+	max_absolutism = -15
 	loyalty = 0.10
 	influence = 0.20
 	is_valid = {
@@ -67,7 +67,7 @@ ink_itr_hre_diplomat = {	#Holy Roman Empire Diplomats
 	penalties = {
 	}
 	benefits = {
-		legitimate_subject_elector = 20
+		reasons_to_elect = 20
 		improve_relation_modifier = 0.2
 	}
 	ai_will_do = {
