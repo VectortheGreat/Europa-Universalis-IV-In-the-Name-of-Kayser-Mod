@@ -78,3 +78,64 @@ order_land_mechanic = {
 	}
 	ignore_coring_distance = yes
 }
+
+phaedrusian_believers_1 = {
+	potential = {
+		religion = phaedrusian
+	}
+
+	trigger = {	
+		is_defender_of_faith = yes
+		is_defender_of_faith_of_tier = 1
+	}
+	monthly_church_power = 0.02
+	relation_with_same_religion = 10
+}
+
+phaedrusian_believers_2 = {
+	potential = {
+		religion = phaedrusian
+	}
+
+	trigger = {	
+		is_defender_of_faith = yes
+		is_defender_of_faith_of_tier = 2
+	}
+		core_creation = -0.1
+}
+
+phaedrusian_believers_3 = {
+	potential = {
+		religion = phaedrusian
+	}
+
+	trigger = {	
+		is_defender_of_faith = yes
+		is_defender_of_faith_of_tier = 3
+	}
+	warscore_cost_vs_other_religion = -0.15
+}
+
+phaedrusian_believers_4 = {
+	potential = {
+		religion = phaedrusian
+	}
+
+	trigger = {	
+		is_defender_of_faith = yes
+		is_defender_of_faith_of_tier = 4
+	}
+	morale_damage = 0.025
+}
+
+phaedrusian_believers_5 = {
+	potential = {
+		religion = phaedrusian
+	}
+
+	trigger = {	
+		is_defender_of_faith = yes
+		is_defender_of_faith_of_tier = 5
+	}
+	max_absolutism = 15
+}

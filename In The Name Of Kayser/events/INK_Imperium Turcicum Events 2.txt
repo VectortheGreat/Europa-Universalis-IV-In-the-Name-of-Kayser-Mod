@@ -855,8 +855,14 @@ country_event = {		#Colonial Agreement for GBR cancel
 		tag = GBR
 		has_country_flag = colonial_agreement
 		OR = {
-			NOT = { is_subject_of = TRK }
-			NOT = { is_subject_of = ITR }
+			AND = {
+				NOT = { is_subject_of = ITR }
+				exists = ITR
+			}
+			AND = {
+				NOT = { is_subject_of = TRK }
+				exists = TRK
+			}
 		}
 	}
 	
@@ -1009,10 +1015,18 @@ country_event = {		#Papal State Agreement cancel
 			tag = ITR
 		}
 		has_country_flag = itr_papal_agreement
-		PAP = {
-			OR = {
-				NOT = { is_subject_of = ITR }
-				NOT = { is_subject_of = TRK }
+		OR = {
+			AND = {
+				PAP = {
+					NOT = { is_subject_of = ITR }
+				}
+				exists = ITR
+			}
+			AND = {
+				PAP = {
+					NOT = { is_subject_of = TRK }
+				}
+				exists = TRK
 			}
 		}
 	}
