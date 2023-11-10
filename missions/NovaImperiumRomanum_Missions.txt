@@ -1,22 +1,24 @@
 #Missions for Third Rome
-
 rmo_religion_missions = {
 	slot = 1
 	generic = no
-	ai = yes	
+	ai = yes
 	potential = {
 		OR = {
 			tag = RMO
 			tag = ROM
 		}
 		has_country_flag = third_rome
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	rmo_religion_mission_1 = {		#Balkan Volunteers
+	rmo_religion_mission_1 = {
+		#Balkan Volunteers
 		icon = balkan_volunteers
-		required_missions = { } 
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			OR = {
@@ -69,10 +71,12 @@ rmo_religion_missions = {
 			}
 		}
 	}
-	
-	rmo_religion_mission_2 = {		#Convert Anatolia
+	rmo_religion_mission_2 = {
+		#Convert Anatolia
 		icon = convert_anatolia
-		required_missions = { rmo_religion_mission_1 }
+		required_missions = {
+			rmo_religion_mission_1
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
@@ -86,66 +90,80 @@ rmo_religion_missions = {
 				province_id = 318
 				province_id = 331
 			}
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
-		trigger = { 
-			326 = {			#Ankara
+		trigger = {
+			326 = {
+				#Ankara
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			328 = {			#Sinop
+			328 = {
+				#Sinop
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			316 = {			#Kocaeli
+			316 = {
+				#Kocaeli
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			317 = {			#Hüdavendigar
+			317 = {
+				#Hüdavendigar
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			2297 = {	
+			2297 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			2298 = {		#Tekke
+			2298 = {
+				#Tekke
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			2301 = {		#Kayseri
+			2301 = {
+				#Kayseri
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			318 = {			#Sugla
+			318 = {
+				#Sugla
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			331 = {			#Erzurum
+			331 = {
+				#Erzurum
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "ink_1" 
+				name = "ink_1"
 				duration = 7300
 			}
 		}
 	}
-	
-	rmo_religion_mission_4 = { 		#Convert Roma
-		required_missions = { rmo_diplomatic_mission_3 }
+	rmo_religion_mission_4 = {
+		#Convert Roma
+		required_missions = {
+			rmo_diplomatic_mission_3
+		}
 		position = 4
 		icon = convert_roma
 		provinces_to_highlight = {
 			province_id = 118
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			118 = {
 				religion = ROOT
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -153,20 +171,25 @@ rmo_religion_missions = {
 			118 = {
 				add_building = cathedral
 			}
-			PAP = { set_papacy_active = no }
+			PAP = {
+				set_papacy_active = no
+			}
 		}
 	}
-	
-	rmo_religion_mission_5 = {		#Convert Holy Lands
+	rmo_religion_mission_5 = {
+		#Convert Holy Lands
 		icon = holy_lands
-		required_missions = { }
+		required_missions = {
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2313
 				province_id = 379
 			}
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			379 = {
@@ -179,7 +202,7 @@ rmo_religion_missions = {
 			}
 		}
 		effect = {
-			add_patriarch_authority = 0.10
+			add_patriarch_authority = 0.1
 			add_country_modifier = {
 				name = "ink_8"
 				duration = 3652
@@ -192,15 +215,21 @@ rmo_religion_missions = {
 			}
 		}
 	}
-	
-	rmo_religion_mission_6 = {		#Convert Alexandria
+	rmo_religion_mission_6 = {
+		#Convert Alexandria
 		icon = convert_alexandria
-		required_missions = { rmo_religion_mission_5 }
+		required_missions = {
+			rmo_religion_mission_5
+		}
 		position = 6
 		provinces_to_highlight = {
 			province_id = 358
-			NOT = { owned_by = ROOT }
-			NOT = { religion = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			358 = {
@@ -215,10 +244,12 @@ rmo_religion_missions = {
 			}
 		}
 	}
-	
-	rmo_religion_mission_7 = {		#Pentarchy
+	rmo_religion_mission_7 = {
+		#Pentarchy
 		icon = restore_pentarchy
-		required_missions = { rmo_religion_mission_6 }
+		required_missions = {
+			rmo_religion_mission_6
+		}
 		position = 7
 		provinces_to_highlight = {
 			OR = {
@@ -229,7 +260,9 @@ rmo_religion_missions = {
 				area = delta_area
 				area = bahari_area
 			}
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			cukurova_area = {
@@ -262,13 +295,14 @@ rmo_religion_missions = {
 				type = all
 				religion = ROOT
 			}
-			
 		}
 		effect = {
 			add_patriarch_authority = 0.1
 			hidden_effect = {
 				every_owned_province = {
-					limit = { religion = orthodox }
+					limit = {
+						religion = orthodox
+					}
 					add_province_modifier = {
 						name = "ink_restored_pentarchy"
 						duration = 5475
@@ -278,17 +312,21 @@ rmo_religion_missions = {
 			custom_tooltip = ink_restored_pentarchy_tt
 		}
 	}
-	
-	rmo_religion_mission_8 = {		#Convert Muslims
+	rmo_religion_mission_8 = {
+		#Convert Muslims
 		icon = convert_muslims
-		required_missions = { rmo_religion_mission_7 }
+		required_missions = {
+			rmo_religion_mission_7
+		}
 		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 385
 				province_id = 384
 			}
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			385 = {
@@ -308,7 +346,9 @@ rmo_religion_missions = {
 			}
 			hidden_effect = {
 				every_province = {
-					limit = { religion_group = muslim }
+					limit = {
+						religion_group = muslim
+					}
 					add_province_modifier = {
 						name = "ink_convert_muslim"
 						duration = -1
@@ -318,9 +358,11 @@ rmo_religion_missions = {
 			custom_tooltip = ink_convert_muslims_tt
 		}
 	}
-	rmo_culture_mission_1 = {		#Culture Mission 1
+	rmo_culture_mission_1 = {
+		#Culture Mission 1
 		icon = rmo_culture2
-		required_missions = { }
+		required_missions = {
+		}
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -328,7 +370,9 @@ rmo_religion_missions = {
 				culture = greek
 			}
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -337,14 +381,19 @@ rmo_religion_missions = {
 				any_province = {
 					OR = {
 						culture = turkish
-						culture = greek 
+						culture = greek
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
 		effect = {
-			country_event = { id = inkculture.4 }
+			country_event_with_insight = {
+				id = inkculture.4
+				insight_tooltip = rmo_turk_greek_tt
+			}
 			hidden_effect = {
 				every_province = {
 					remove_core = BYZ
@@ -353,9 +402,12 @@ rmo_religion_missions = {
 			custom_tooltip = ink_byzantium_lose_core_tt
 		}
 	}
-	rmo_culture_mission_2 = {		#Culture Mission 2
+	rmo_culture_mission_2 = {
+		#Culture Mission 2
 		icon = rmo_culture3
-		required_missions = { rmo_culture_mission_1 }
+		required_missions = {
+			rmo_culture_mission_1
+		}
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -363,7 +415,9 @@ rmo_religion_missions = {
 				culture = georgian
 			}
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -371,35 +425,49 @@ rmo_religion_missions = {
 				any_province = {
 					OR = {
 						culture = armenian
-						culture = georgian 
+						culture = georgian
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
 		effect = {
-			country_event = { id = inkculture.5 }
+			country_event_with_insight = {
+				id = inkculture.5
+				insight_tooltip = rmo_geo_armn_tt
+			}
 		}
 	}
-	
-	rmo_culture_mission_3 = {		#Culture Mission 3
+	rmo_culture_mission_3 = {
+		#Culture Mission 3
 		icon = rmo_culture1
-		required_missions = { rmo_culture_mission_2 }
+		required_missions = {
+			rmo_culture_mission_2
+		}
 		position = 10
 		provinces_to_highlight = {
 			culture = al_suryah_arabic
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			NOT = {
 				any_province = {
 					culture = al_suryah_arabic
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
 		effect = {
-			country_event = { id = inkculture.6 }
+			country_event_with_insight = {
+				id = inkculture.6
+				insight_tooltip = rmo_syriac_tt
+			}
 			add_country_modifier = {
 				name = "ink_neo_eroman_united"
 				duration = -1
@@ -411,35 +479,39 @@ rmo_religion_missions = {
 rmo_diplomatic_missions = {
 	slot = 2
 	generic = no
-	ai = yes	
+	ai = yes
 	potential = {
 		OR = {
 			tag = RMO
 			tag = ROM
 		}
 		has_country_flag = third_rome
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	rmo_diplomatic_mission_1 = {		#Royal Marrige
+	rmo_diplomatic_mission_1 = {
+		#Royal Marrige
 		icon = royal_marriage
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
-		
 		trigger = {
-			NOT = { exists = BYZ }
+			NOT = {
+				exists = BYZ
+			}
 			owns_core_province = 151
 		}
-		
 		effect = {
 			hidden_effect = {
 				remove_consort = yes
-				kill_heir = { } 
+				kill_heir = {
+				}
 			}
 			define_consort = {
 				name = "Helena"
-				dynasty = "Palaiologos" 
+				dynasty = "Palaiologos"
 				culture = greek
 				adm = 5
 				dip = 4
@@ -452,10 +524,12 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	
-	rmo_diplomatic_mission_2 = {		#Reclaim South Italy
+	rmo_diplomatic_mission_2 = {
+		#Reclaim South Italy
 		icon = expand_navy
-		required_missions = { rmo_diplomatic_mission_1 }
+		required_missions = {
+			rmo_diplomatic_mission_1
+		}
 		position = 2
 		trigger = {
 			dip_tech = 5
@@ -468,22 +542,34 @@ rmo_diplomatic_missions = {
 			}
 			naples_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			calabria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			apulia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -499,10 +585,12 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	
-	rmo_diplomatic_mission_3 = {		#Control Naples
+	rmo_diplomatic_mission_3 = {
+		#Control Naples
 		icon = control_naples
-		required_missions = { rmo_diplomatic_mission_2 }
+		required_missions = {
+			rmo_diplomatic_mission_2
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
@@ -525,7 +613,9 @@ rmo_diplomatic_missions = {
 		}
 		trigger = {
 			OR = {
-				NAP = {	is_subject_of = ROOT	}
+				NAP = {
+					is_subject_of = ROOT
+				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 6
 					OR = {
@@ -537,19 +627,25 @@ rmo_diplomatic_missions = {
 			}
 		}
 		effect = {
-			lazio_area = { 
+			lazio_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
-	rmo_diplomatic_mission_4 = {		#Mediterranean Claims
+	rmo_diplomatic_mission_4 = {
+		#Mediterranean Claims
 		icon = reclaim_mediterranean
-		required_missions = { rmo_administrative_mission_3 }
+		required_missions = {
+			rmo_administrative_mission_3
+		}
 		position = 4
 		provinces_to_highlight = {
 			OR = {
@@ -557,7 +653,9 @@ rmo_diplomatic_missions = {
 				province_id = 3003
 				province_id = 163
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 164
@@ -587,38 +685,62 @@ rmo_diplomatic_missions = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-		}	
+		}
 		effect = {
 			if = {
 				limit = {
 					exists = KNI
-					KNI  = { is_subject = no }
+					KNI = {
+						is_subject = no
+					}
 				}
 				vassalize = KNI
 			}
 			if = {
 				limit = {
 					exists = CYP
-					CYP  = { is_subject = no }
+					CYP = {
+						is_subject = no
+					}
 				}
 				vassalize = CYP
 			}
 			if = {
-				limit = { NOT = { KNI = { is_subject_of = ROOT } } }
+				limit = {
+					NOT = {
+						KNI = {
+							is_subject_of = ROOT
+						}
+					}
+				}
 				320 = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 			if = {
-				limit = { NOT = { CYP = { is_subject_of = ROOT } } }
+				limit = {
+					NOT = {
+						CYP = {
+							is_subject_of = ROOT
+						}
+					}
+				}
 				321 = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -629,10 +751,11 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	
-	rmo_diplomatic_mission_5 = {	#Prepare for the Crusade
+	rmo_diplomatic_mission_5 = {
+		#Prepare for the Crusade
 		icon = crusade
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -641,7 +764,9 @@ rmo_diplomatic_missions = {
 				area = rum_area
 				area = aydin_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			cukurova_area = {
@@ -660,7 +785,6 @@ rmo_diplomatic_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			
 		}
 		effect = {
 			add_country_modifier = {
@@ -669,45 +793,67 @@ rmo_diplomatic_missions = {
 			}
 			syria_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			palestine_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			syrian_desert_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			aleppo_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			trans_jordan_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
-		
 	}
-	rmo_diplomatic_mission_6 = {	#Conquer Holy Lands
+	rmo_diplomatic_mission_6 = {
+		#Conquer Holy Lands
 		icon = conquer_levant
-		required_missions = { rmo_diplomatic_mission_5 }
+		required_missions = {
+			rmo_diplomatic_mission_5
+		}
 		position = 6
 		provinces_to_highlight = {
 			OR = {
@@ -715,7 +861,9 @@ rmo_diplomatic_missions = {
 				area = syria_area
 				area = palestine_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			aleppo_area = {
@@ -735,37 +883,56 @@ rmo_diplomatic_missions = {
 			add_prestige = 15
 			bahari_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			delta_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			cyrenaica_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			gulf_of_arabia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	rmo_diplomatic_mission_7 = {	#Conquer Egypt
+	rmo_diplomatic_mission_7 = {
+		#Conquer Egypt
 		icon = conquer_egypt
-		required_missions = { rmo_diplomatic_mission_6 }
+		required_missions = {
+			rmo_diplomatic_mission_6
+		}
 		position = 7
 		provinces_to_highlight = {
 			OR = {
@@ -773,7 +940,9 @@ rmo_diplomatic_missions = {
 				area = delta_area
 				area = cyrenaica_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			bahari_area = {
@@ -796,22 +965,34 @@ rmo_diplomatic_missions = {
 			}
 			tunisia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			djerba_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			tripolitania_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -827,9 +1008,12 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	rmo_diplomatic_mission_8 = {	#Conquer Carthage
+	rmo_diplomatic_mission_8 = {
+		#Conquer Carthage
 		icon = tunis
-		required_missions = { rmo_diplomatic_mission_7 }
+		required_missions = {
+			rmo_diplomatic_mission_7
+		}
 		position = 8
 		provinces_to_highlight = {
 			OR = {
@@ -837,7 +1021,9 @@ rmo_diplomatic_missions = {
 				area = djerba_area
 				area = tripolitania_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			tunisia_area = {
@@ -859,9 +1045,11 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	rmo_diplomatic_mission_9 = {	#Conquer Italy
+	rmo_diplomatic_mission_9 = {
+		#Conquer Italy
 		icon = conquer_italy
-		required_missions = { }
+		required_missions = {
+		}
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -870,7 +1058,9 @@ rmo_diplomatic_missions = {
 				area = lazio_area
 				area = western_sicily_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			liguria_area = {
@@ -893,8 +1083,12 @@ rmo_diplomatic_missions = {
 		effect = {
 			iberia_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -904,14 +1098,19 @@ rmo_diplomatic_missions = {
 			}
 		}
 	}
-	rmo_diplomatic_mission_10 = {	#Conquer Iberia
+	rmo_diplomatic_mission_10 = {
+		#Conquer Iberia
 		icon = conquer_iberia
-		required_missions = { rmo_diplomatic_mission_9 }
+		required_missions = {
+			rmo_diplomatic_mission_9
+		}
 		position = 10
 		provinces_to_highlight = {
 			region = iberia_region
 			owner = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -924,21 +1123,30 @@ rmo_diplomatic_missions = {
 		effect = {
 			france_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	rmo_diplomatic_mission_11 = {	#Conquer France
+	rmo_diplomatic_mission_11 = {
+		#Conquer France
 		icon = conquer_france
-		required_missions = { rmo_diplomatic_mission_10 }
+		required_missions = {
+			rmo_diplomatic_mission_10
+		}
 		position = 11
 		provinces_to_highlight = {
 			region = france_region
 			owner = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -951,36 +1159,56 @@ rmo_diplomatic_missions = {
 		effect = {
 			home_counties_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			wessex_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			east_anglia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			east_midlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			yorkshire_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1002,13 +1230,16 @@ rmo_administrative_missions = {
 			tag = ROM
 		}
 		has_country_flag = third_rome
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	rmo_administrative_mission_1 = {		#End of Turkish Civil War
+	rmo_administrative_mission_1 = {
+		#End of Turkish Civil War
 		icon = civil_war
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1026,12 +1257,13 @@ rmo_administrative_missions = {
 					}
 				}
 			}
-			
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = ink_anatolian_union }
+					NOT = {
+						has_country_flag = ink_anatolian_union
+					}
 				}
 				add_country_modifier = {
 					name = "ink_124"
@@ -1040,7 +1272,8 @@ rmo_administrative_missions = {
 			}
 			else = {
 				hidden_effect = {
-					every_province {
+					every_province
+					{
 						limit = {
 							AND = {
 								region = anatolia_region
@@ -1066,37 +1299,56 @@ rmo_administrative_missions = {
 			}
 			kastamonu_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			karaman_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			morea_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			northern_greece_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	rmo_administrative_mission_2 = {		#Expand Imperial Borders
+	rmo_administrative_mission_2 = {
+		#Expand Imperial Borders
 		icon = hellenoturkism
-		required_missions = { rmo_administrative_mission_1 }
+		required_missions = {
+			rmo_administrative_mission_1
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
@@ -1104,7 +1356,9 @@ rmo_administrative_missions = {
 				area = morea_area
 				area = northern_greece_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			kastamonu_area = {
@@ -1138,21 +1392,27 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	
-	rmo_administrative_mission_3 = {		#Defeat Skanderbeg
+	rmo_administrative_mission_3 = {
+		#Defeat Skanderbeg
 		icon = skanderbeg
-		required_missions = { rmo_administrative_mission_2 }
+		required_missions = {
+			rmo_administrative_mission_2
+		}
 		position = 3
 		provinces_to_highlight = {
 			area = albania_area
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			albania_area = {
 				type = all
 				owned_by = ROOT
 			}
-			NOT = { exists = ALB } 
+			NOT = {
+				exists = ALB
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1167,17 +1427,21 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	
-	rmo_administrative_mission_4 = {		#Defeat Serbs
+	rmo_administrative_mission_4 = {
+		#Defeat Serbs
 		icon = defeat_serbs
-		required_missions = { rmo_administrative_mission_3 }
+		required_missions = {
+			rmo_administrative_mission_3
+		}
 		position = 4
 		provinces_to_highlight = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			serbia_area = {
@@ -1195,10 +1459,12 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	
-	rmo_administrative_mission_5 = {		#Conquer Balkans
+	rmo_administrative_mission_5 = {
+		#Conquer Balkans
 		icon = conquer_balkans
-		required_missions = { rmo_administrative_mission_4 }
+		required_missions = {
+			rmo_administrative_mission_4
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -1206,7 +1472,9 @@ rmo_administrative_missions = {
 				area = croatia_area
 				area = bosnia_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			east_adriatic_coast_area = {
@@ -1228,142 +1496,207 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	
-	rmo_administrative_mission_6 = {		#Revenge of 4th Crusade
+	rmo_administrative_mission_6 = {
+		#Revenge of 4th Crusade
 		icon = venice
-		required_missions = { rmo_administrative_mission_5 }
+		required_missions = {
+			rmo_administrative_mission_5
+		}
 		position = 6
 		provinces_to_highlight = {
 			area = venetia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			owns_or_non_sovereign_subject_of = 118
 		}
 		effect = {
 			lazio_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			lombardy_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			po_valley_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			piedmont_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			tuscany_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			liguria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			corsica_sardinia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			sicily_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			western_sicily_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			naples_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			calabria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			apulia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			central_italy_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	rmo_administrative_mission_7 = {		#Control Alpine mountains
+	rmo_administrative_mission_7 = {
+		#Control Alpine mountains
 		icon = alpine_wall
-		required_missions = { rmo_administrative_mission_6 }
+		required_missions = {
+			rmo_administrative_mission_6
+		}
 		position = 7
 		provinces_to_highlight = {
 			OR = {
 				area = lombardy_area
 				area = po_valley_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			po_valley_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1376,9 +1709,11 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	rmo_administrative_mission_8 = {		#All roads lead to Rome
+	rmo_administrative_mission_8 = {
+		#All roads lead to Rome
 		icon = all_roads
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -1386,7 +1721,9 @@ rmo_administrative_missions = {
 				region = anatolia_region
 				region = balkan_region
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			italy_region = {
@@ -1423,13 +1760,20 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	rmo_administrative_mission_9 = {		#Neither Holy Nor Roman
+	rmo_administrative_mission_9 = {
+		#Neither Holy Nor Roman
 		icon = neither_holy
-		required_missions = { rmo_administrative_mission_8 }
+		required_missions = {
+			rmo_administrative_mission_8
+		}
 		position = 10
 		trigger = {
-			NOT = { exists = HLR }
-			NOT = { hre_size = 1 }
+			NOT = {
+				exists = HLR
+			}
+			NOT = {
+				hre_size = 1
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -1438,16 +1782,19 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	rmo_administrative_mission_10 = {		#Multicultural Empire
+	rmo_administrative_mission_10 = {
+		#Multicultural Empire
 		icon = culture
-		required_missions = { rmo_administrative_mission_9 }
+		required_missions = {
+			rmo_administrative_mission_9
+		}
 		position = 11
 		trigger = {
 			if = {
 				limit = {
 					has_dlc = "Emperor"
 				}
-				is_hegemon = yes 
+				is_hegemon = yes
 			}
 			total_development = 2000
 			num_accepted_cultures = 6
@@ -1463,9 +1810,14 @@ rmo_administrative_missions = {
 			}
 		}
 	}
-	rmo_administrative_mission_11 = {		#True successor to Rome
+	rmo_administrative_mission_11 = {
+		#True successor to Rome
 		icon = roman_empire
-		required_missions = { rmo_administrative_mission_10 rmo_military_mission_10 rmo_diplomatic_mission_11 }
+		required_missions = {
+			rmo_administrative_mission_10
+			rmo_military_mission_10
+			rmo_diplomatic_mission_11
+		}
 		position = 12
 		provinces_to_highlight = {
 			OR = {
@@ -1473,7 +1825,9 @@ rmo_administrative_missions = {
 				province_id = 245
 				province_id = 134
 			}
-			NOT = { is_core = ROOT }
+			NOT = {
+				is_core = ROOT
+			}
 		}
 		trigger = {
 			owns_core_province = 236
@@ -1489,9 +1843,8 @@ rmo_administrative_missions = {
 				army_tradition = 90
 			}
 			manpower_percentage = 0.8
-			religious_unity = 0.90
+			religious_unity = 0.9
 			monthly_income = 1000
-			
 		}
 		effect = {
 			add_country_modifier = {
@@ -1512,13 +1865,16 @@ rmo_military_missions = {
 			tag = ROM
 		}
 		has_country_flag = third_rome
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	rmo_military_mission_1 = {		#We're all Orthodox!
+	rmo_military_mission_1 = {
+		#We're all Orthodox!
 		icon = we_are_all_orthodox
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			religious_unity = 0.9
@@ -1540,14 +1896,17 @@ rmo_military_missions = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "ink_4" 
+				name = "ink_4"
 				duration = 7300
 			}
 		}
 	}
-	rmo_military_mission_2 = {		#Elite Army
+	rmo_military_mission_2 = {
+		#Elite Army
 		icon = elite_army
-		required_missions = { rmo_military_mission_1 }
+		required_missions = {
+			rmo_military_mission_1
+		}
 		position = 2
 		trigger = {
 			mil_tech = 7
@@ -1568,10 +1927,12 @@ rmo_military_missions = {
 			}
 		}
 	}
-	
-	rmo_military_mission_3 = {		#Urban's Cannons
+	rmo_military_mission_3 = {
+		#Urban's Cannons
 		icon = urbans_cannon
-		required_missions = { rmo_military_mission_2 }
+		required_missions = {
+			rmo_military_mission_2
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
@@ -1586,43 +1947,55 @@ rmo_military_missions = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
-				army_professionalism = 0.20
+				army_professionalism = 0.2
 			}
 			else = {
 				army_tradition = 50
 			}
 			151 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_manpower_building_trigger = yes
 			}
 			146 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_manpower_building_trigger = yes
 			}
 			326 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_manpower_building_trigger = yes
 			}
 		}
 		effect = {
 			al_jazira_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			iraq_arabi_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			basra_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1632,19 +2005,21 @@ rmo_military_missions = {
 			}
 		}
 	}
-	
-	rmo_military_mission_4 = {		#Professional Training
+	rmo_military_mission_4 = {
+		#Professional Training
 		icon = training
-		required_missions = { rmo_military_mission_3 }
+		required_missions = {
+			rmo_military_mission_3
+		}
 		position = 4
 		trigger = {
-			num_of_owned_provinces_with = { 
+			num_of_owned_provinces_with = {
 				has_manpower_building_trigger = yes
-				value = 20  
+				value = 20
 			}
-			num_of_owned_provinces_with = { 
+			num_of_owned_provinces_with = {
 				has_manpower_building_trigger = yes
-				value = 20  
+				value = 20
 			}
 		}
 		effect = {
@@ -1654,10 +2029,12 @@ rmo_military_missions = {
 			}
 		}
 	}
-	
-	rmo_military_mission_5 = {		#Legionnaires
+	rmo_military_mission_5 = {
+		#Legionnaires
 		icon = legionnaires
-		required_missions = { rmo_military_mission_4 }
+		required_missions = {
+			rmo_military_mission_4
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -1666,7 +2043,9 @@ rmo_military_missions = {
 				area = naples_area
 				area = apulia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			AND = {
@@ -1675,7 +2054,7 @@ rmo_military_missions = {
 					limit = {
 						has_dlc = "Cradle of Civilization"
 					}
-					army_professionalism = 0.40
+					army_professionalism = 0.4
 				}
 				else = {
 					army_tradition = 60
@@ -1692,7 +2071,6 @@ rmo_military_missions = {
 					type = all
 					is_core = root
 				}
-				
 			}
 		}
 		effect = {
@@ -1702,17 +2080,19 @@ rmo_military_missions = {
 			}
 		}
 	}
-	
-	rmo_military_mission_6 = {		#Professional Army
+	rmo_military_mission_6 = {
+		#Professional Army
 		icon = pro_army
-		required_missions = { rmo_military_mission_5 }
+		required_missions = {
+			rmo_military_mission_5
+		}
 		position = 6
 		trigger = {
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
-				army_professionalism = 0.80
+				army_professionalism = 0.8
 			}
 			else = {
 				army_tradition = 80
@@ -1733,23 +2113,26 @@ rmo_military_missions = {
 			}
 		}
 	}
-	
-	rmo_military_mission_7 = {		#Expand the Navy
+	rmo_military_mission_7 = {
+		#Expand the Navy
 		icon = navy
-		required_missions = { }
+		required_missions = {
+		}
 		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 328
 				province_id = 330
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			navy_size = 50
-			num_of_owned_provinces_with = { 
+			num_of_owned_provinces_with = {
 				has_dock_building_trigger = yes
-				value = 5  
+				value = 5
 			}
 			owns_or_non_sovereign_subject_of = 328
 			owns_or_non_sovereign_subject_of = 330
@@ -1757,22 +2140,34 @@ rmo_military_missions = {
 		effect = {
 			crimea_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			azov_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			zaporizhia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1791,9 +2186,12 @@ rmo_military_missions = {
 			}
 		}
 	}
-	rmo_military_mission_8 = {		#Greek Fire
+	rmo_military_mission_8 = {
+		#Greek Fire
 		icon = greek_fire
-		required_missions = { rmo_military_mission_7 }
+		required_missions = {
+			rmo_military_mission_7
+		}
 		position = 9
 		provinces_to_highlight = {
 			OR = {
@@ -1827,9 +2225,12 @@ rmo_military_missions = {
 			}
 		}
 	}
-	rmo_military_mission_9 = {		#Sentinel of the east
+	rmo_military_mission_9 = {
+		#Sentinel of the east
 		icon = sentinel
-		required_missions = { rmo_military_mission_8 }
+		required_missions = {
+			rmo_military_mission_8
+		}
 		position = 10
 		provinces_to_highlight = {
 			OR = {
@@ -1844,19 +2245,19 @@ rmo_military_missions = {
 			num_of_galley = 75
 			num_of_heavy_ship = 20
 			341 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_shipyard_building_trigger = yes
 			}
 			358 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_shipyard_building_trigger = yes
 			}
 			126 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_shipyard_building_trigger = yes
 			}
 			321 = {
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 				has_shipyard_building_trigger = yes
 			}
 		}
@@ -1867,9 +2268,12 @@ rmo_military_missions = {
 			}
 		}
 	}
-	rmo_military_mission_10 = {		#Mare Nostrum 
+	rmo_military_mission_10 = {
+		#Mare Nostrum 
 		icon = mare_nostrum
-		required_missions = { rmo_military_mission_9 }
+		required_missions = {
+			rmo_military_mission_9
+		}
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -1898,7 +2302,9 @@ rmo_military_missions = {
 				area = imereti_area
 			}
 			has_port = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_all_provinces = {
@@ -1926,7 +2332,6 @@ rmo_military_missions = {
 					area = samtskhe_area
 					area = circassia_area
 					area = imereti_area
-					
 				}
 				has_port = yes
 			}
@@ -1950,13 +2355,16 @@ rmo_economic_missions = {
 			tag = ROM
 		}
 		has_country_flag = third_rome
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	rmo_economic_mission_1 = {		#Call Italian Scientists
+	rmo_economic_mission_1 = {
+		#Call Italian Scientists
 		icon = call_italians
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
 		provinces_to_highlight = {
 			owner = {
@@ -1966,7 +2374,7 @@ rmo_economic_missions = {
 			}
 		}
 		trigger = {
-			is_institution_enabled = renaissance 
+			is_institution_enabled = renaissance
 			any_known_country = {
 				capital_scope = {
 					region = italy_region
@@ -1984,13 +2392,18 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	rmo_economic_mission_2 = {		#Rebuild The Capital
+	rmo_economic_mission_2 = {
+		#Rebuild The Capital
 		icon = rebuild_capital
-		required_missions = { rmo_economic_mission_1 }
+		required_missions = {
+			rmo_economic_mission_1
+		}
 		position = 2
 		provinces_to_highlight = {
 			province_id = 151
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			is_at_war = no
@@ -2005,10 +2418,12 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	
-	rmo_economic_mission_3 = {		#The Great Library
+	rmo_economic_mission_3 = {
+		#The Great Library
 		icon = the_great_library
-		required_missions = { rmo_economic_mission_2 }
+		required_missions = {
+			rmo_economic_mission_2
+		}
 		position = 3
 		provinces_to_highlight = {
 			province_id = 151
@@ -2016,29 +2431,30 @@ rmo_economic_missions = {
 		trigger = {
 			151 = {
 				development = 40
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			151 = {
 				add_building = university
 			}
-			
 			set_country_flag = konstantinopolis_library_mission_flag
 			country_event = {
 				id = rtest.7
 			}
 		}
 	}
-	
-	rmo_economic_mission_31 = {		#Hagia Sophia
+	rmo_economic_mission_31 = {
+		#Hagia Sophia
 		icon = ayasofya
-		required_missions = { rmo_economic_mission_3 }
+		required_missions = {
+			rmo_economic_mission_3
+		}
 		position = 4
 		provinces_to_highlight = {
 			province_id = 151
 		}
-		trigger = {		
+		trigger = {
 			if = {
 				limit = {
 					has_dlc = "Leviathan"
@@ -2067,10 +2483,12 @@ rmo_economic_missions = {
 			add_prestige = 10
 		}
 	}
-	
-	rmo_economic_mission_4 = {		#Civilization is priority
+	rmo_economic_mission_4 = {
+		#Civilization is priority
 		icon = civilization
-		required_missions = { rmo_economic_mission_31 }
+		required_missions = {
+			rmo_economic_mission_31
+		}
 		position = 5
 		trigger = {
 			total_development = 1000
@@ -2100,13 +2518,13 @@ rmo_economic_missions = {
 				name = "ink_17"
 				duration = 7300
 			}
-			
 		}
 	}
-	
-	rmo_economic_mission_5 = {		#Improve Trade
+	rmo_economic_mission_5 = {
+		#Improve Trade
 		icon = improve_trade
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 6
 		provinces_to_highlight = {
 			OR = {
@@ -2119,15 +2537,15 @@ rmo_economic_missions = {
 		trigger = {
 			151 = {
 				province_has_center_of_trade_of_level = 3
-				has_trade_building_trigger = yes 
+				has_trade_building_trigger = yes
 			}
 			146 = {
 				province_has_center_of_trade_of_level = 3
-				has_trade_building_trigger = yes 
+				has_trade_building_trigger = yes
 			}
 			327 = {
 				province_has_center_of_trade_of_level = 3
-				has_trade_building_trigger = yes 
+				has_trade_building_trigger = yes
 			}
 		}
 		effect = {
@@ -2138,10 +2556,12 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	
-	rmo_economic_mission_6 = {		#Advanced Trade
+	rmo_economic_mission_6 = {
+		#Advanced Trade
 		icon = trade
-		required_missions = { rmo_economic_mission_5 }
+		required_missions = {
+			rmo_economic_mission_5
+		}
 		position = 7
 		trigger = {
 			trade_income_percentage = 0.35
@@ -2158,65 +2578,69 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	
-	rmo_economic_mission_7 = {	#National Wealth
+	rmo_economic_mission_7 = {
+		#National Wealth
 		icon = national_wealth
-		required_missions = { rmo_economic_mission_6 }
+		required_missions = {
+			rmo_economic_mission_6
+		}
 		position = 8
 		trigger = {
 			treasury = 5000
-			NOT = { num_of_loans = 1 } 
+			NOT = {
+				num_of_loans = 1
+			}
 		}
 		effect = {
-			thrace_area = { 
+			thrace_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			aydin_area = { 
+			aydin_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			hudavendigar_area = { 
+			hudavendigar_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			germiyan_area = { 
+			germiyan_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			ankara_area = { 
+			ankara_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			cukurova_area = { 
+			cukurova_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			macedonia_area = { 
+			macedonia_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			northern_greece_area = { 
+			northern_greece_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
 				}
 			}
-			aegean_archipelago_area = { 
+			aegean_archipelago_area = {
 				add_province_modifier = {
 					name = "ink_26"
 					duration = 1826
@@ -2224,9 +2648,11 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	rmo_economic_mission_8 = {		#Imperial projects
+	rmo_economic_mission_8 = {
+		#Imperial projects
 		icon = imperial_projects
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 9
 		trigger = {
 			dip_tech = 10
@@ -2237,15 +2663,18 @@ rmo_economic_missions = {
 			set_country_flag = ink_great_projects_0
 		}
 	}
-	
-	rmo_economic_mission_9 = {		#
+	rmo_economic_mission_9 = {
+		#
 		icon = ink_port
-		required_missions = { rmo_military_mission_8 rmo_economic_mission_8 }
+		required_missions = {
+			rmo_military_mission_8
+			rmo_economic_mission_8
+		}
 		position = 10
 		provinces_to_highlight = {
 			province_id = 146
 		}
-		trigger = {		
+		trigger = {
 			if = {
 				limit = {
 					has_dlc = "Leviathan"
@@ -2272,14 +2701,16 @@ rmo_economic_missions = {
 			}
 		}
 	}
-	
-	rmo_economic_mission_10 = {		#Coal Production
+	rmo_economic_mission_10 = {
+		#Coal Production
 		icon = coal
-		required_missions = { rmo_economic_mission_9 }
+		required_missions = {
+			rmo_economic_mission_9
+		}
 		position = 11
 		trigger = {
 			calc_true_if = {
-				all_owned_province = {					
+				all_owned_province = {
 					has_building = furnace
 				}
 				amount = 3
@@ -2292,4 +2723,4 @@ rmo_economic_missions = {
 			}
 		}
 	}
-}								
+}

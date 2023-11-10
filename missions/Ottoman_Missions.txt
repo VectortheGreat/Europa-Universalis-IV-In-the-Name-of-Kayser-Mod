@@ -1,27 +1,34 @@
 otto_slot_3 = {
 	slot = 3
-	generic = yes 
+	generic = yes
 	ai = yes
 	potential_on_load = {
 		tag = TUR
 	}
 	potential = {
 		tag = TUR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
-	
 	has_country_shield = yes
-	
 	otto_3 = {
 		icon = ayasofya
 		position = 1
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			exists = BYZ
 		}
 		effect = {
 			add_claim = 151
-			add_treasury = 1
+			capital_scope = {
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+				large_cast_bronze_mortar = ROOT
+			}
+			add_treasury = -50
 		}
 	}
 }

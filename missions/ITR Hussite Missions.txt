@@ -1,21 +1,24 @@
-itr_religion_missions_hus = {		#Hussite Missions
+itr_religion_missions_hus = {
+	#Hussite Missions
 	slot = 1
 	generic = no
 	ai = yes
-	
 	potential = {
 		OR = {
 			tag = ITR
 			tag = TRK
 		}
 		has_country_flag = religion_reformed_hus
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
-	itr_religion_mission_hus1 = {		#Bohemia
+	itr_religion_mission_hus1 = {
+		#Bohemia
 		icon = inkhussite
-		required_missions = { }
+		required_missions = {
+		}
 		position = 7
 		provinces_to_highlight = {
 			owned_by = BOH
@@ -34,7 +37,7 @@ itr_religion_missions_hus = {		#Hussite Missions
 								who = TRK
 								value = 180
 							}
-						}						
+						}
 					}
 				}
 				OR = {
@@ -42,7 +45,9 @@ itr_religion_missions_hus = {		#Hussite Missions
 						is_subject_of = ITR
 						is_subject_of = TRK
 					}
-					NOT = { exists = BOH }
+					NOT = {
+						exists = BOH
+					}
 				}
 			}
 		}
@@ -62,7 +67,9 @@ itr_religion_missions_hus = {		#Hussite Missions
 			if = {
 				BOH = {
 					limit = {
-						NOT = { religion = hussite }
+						NOT = {
+							religion = hussite
+						}
 					}
 					country_event = {
 						id = itest.14
@@ -71,20 +78,27 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 	}
-	itr_religion_mission_hus2 = {		#Bohemian Crown
+	itr_religion_mission_hus2 = {
+		#Bohemian Crown
 		icon = mission_empire
-		required_missions = { itr_religion_mission_hus1 }
+		required_missions = {
+			itr_religion_mission_hus1
+		}
 		position = 8
 		provinces_to_highlight = {
 			owned_by = BOH
 		}
 		trigger = {
 			BOH = {
-                OR = {
+				OR = {
 					has_female_heir = yes
 					has_heir = no
-					NOT = { heir_claim = 50 }
-					NOT = { exists = BOH }
+					NOT = {
+						heir_claim = 50
+					}
+					NOT = {
+						exists = BOH
+					}
 					OR = {
 						is_subject_of = ITR
 						is_subject_of = TRK
@@ -94,7 +108,9 @@ itr_religion_missions_hus = {		#Hussite Missions
 		}
 		effect = {
 			if = {
-				limit = { exists = BOH }
+				limit = {
+					exists = BOH
+				}
 				BOH = {
 					define_heir = {
 						male = yes
@@ -108,10 +124,11 @@ itr_religion_missions_hus = {		#Hussite Missions
 			}
 		}
 	}
-	
-	itr_religion_mission_hus3 = {		#Electors
+	itr_religion_mission_hus3 = {
+		#Electors
 		icon = inkelectors
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 9
 		trigger = {
 			OR = {
@@ -138,7 +155,9 @@ itr_religion_missions_hus = {		#Hussite Missions
 				}
 				hre_religion = protestant
 				hre_religion = reformed
-				NOT = { hre_size = 1 }
+				NOT = {
+					hre_size = 1
+				}
 			}
 		}
 		effect = {
@@ -153,17 +172,20 @@ itr_religion_missions_hus = {		#Hussite Missions
 				limit = {
 					hre_religion = catholic
 				}
-				country_event = {
+				country_event_with_insight = {
 					id = itest.23
+					effect_tooltip = "enable_hre_leagues = yes"
 				}
 			}
 			custom_tooltip = itr_hre_league_tt
 		}
 	}
-	
-	itr_religion_mission_hus4 = {		#Secure HRE
+	itr_religion_mission_hus4 = {
+		#Secure HRE
 		icon = securethehre
-		required_missions = { itr_religion_mission_hus3 }
+		required_missions = {
+			itr_religion_mission_hus3
+		}
 		position = 10
 		provinces_to_highlight = {
 			NOT = {
@@ -173,7 +195,10 @@ itr_religion_missions_hus = {		#Hussite Missions
 							alliance_with = ITR
 							alliance_with = TRK
 						}
-						has_opinion = { who = ROOT value = 200 }
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
 					}
 				}
 			}
@@ -200,23 +225,28 @@ itr_religion_missions_hus = {		#Hussite Missions
 								value = 200
 							}
 						}
-						
 					}
 				}
 				AND = {
-					NOT = { hre_size = 1 }
-					NOT = { exists = HLR }
+					NOT = {
+						hre_size = 1
+					}
+					NOT = {
+						exists = HLR
+					}
 				}
 			}
 		}
 		effect = {
-			every_elector = { 
-				limit = { 
+			every_elector = {
+				limit = {
 					has_opinion = {
 						who = ROOT
 						value = 200
 					}
-					NOT = { religion = catholic }
+					NOT = {
+						religion = catholic
+					}
 				}
 				country_event = {
 					id = itest.566
@@ -225,11 +255,21 @@ itr_religion_missions_hus = {		#Hussite Missions
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
-					NOT = { religion = ROOT }
-					NOT = { total_development = 150 }
-					NOT = { tag = TRK }
-					NOT = { tag = ITR }
-					NOT = { is_emperor = yes }
+					NOT = {
+						religion = ROOT
+					}
+					NOT = {
+						total_development = 150
+					}
+					NOT = {
+						tag = TRK
+					}
+					NOT = {
+						tag = ITR
+					}
+					NOT = {
+						is_emperor = yes
+					}
 				}
 				country_event = {
 					id = itest.566
@@ -238,18 +278,22 @@ itr_religion_missions_hus = {		#Hussite Missions
 			set_hre_religion = hussite
 		}
 	}
-	
-	itr_religion_mission_hus5 = {		#One Christian Sect
+	itr_religion_mission_hus5 = {
+		#One Christian Sect
 		icon = catholicsm
-		required_missions = { itr_religion_mission_hus4 }
+		required_missions = {
+			itr_religion_mission_hus4
+		}
 		position = 11
 		provinces_to_highlight = {
 			is_capital = yes
-			owner = { 
+			owner = {
 				capital_scope = {
 					continent = europe
 				}
-				NOT = { religion = ROOT } 
+				NOT = {
+					religion = ROOT
+				}
 			}
 		}
 		trigger = {
