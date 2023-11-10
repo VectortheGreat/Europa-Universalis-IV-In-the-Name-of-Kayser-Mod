@@ -1,0 +1,55 @@
+What would have happened if the Ottomans had become Christians after the fall of Constantinople? 
+
+[h1]About Mod  [/h1] 
+
+This mod is about the Ottoman Sultan Mehmed II becoming a Christian. After the Ottomans became Christians, you continue with 3 different scenarios. These scenarios are Orthodox(continuation of Byzantium), Catholic or Reformers(A new western diplomacy and colonial state), and Coptic or Nestorian(Crusader State).
+ 
+[h1] Scenario [/h1] 
+
+After conquering Constantinople, Mehmed.II visits Hagia Sophia one day. During his visit, he gets tired and returns to the Palace. He reaches his palace and sleeps. He saw Jesus in his dreams. He was very impressed by Jesus and Jesus wanted him to become a Christian. Mehmed.II accepts this. When he woke up, he thought about which Christian sect he will choose. You'll decide this. Of course, it won't be easy to become a Christian. There is a Turkish civil war disaster. This disaster will be quite difficult. 
+
+[h1] Nations [/h1] 
+
+There are 3 nations in the mod. These 3 Nations have mission trees and goals specific to them.  
+
+[img] https://imgur.com/RPaOwgN.png [/img]
+
+Nova Imperium Romanum: In order to establish this state, Byzantium must not exist and you must be orthodox. While creating this state, I was inspired by the Eastern Roman Empire. The purpose of this state is to re-establish the Roman Empire.Your start will be easier than with the other 2 nations because you start with 45% religious unity. It has more administrative bonuses than the other 3 nations. The number of content is less than in other states, but it has the best quality and most powerful content. Its contents:
+Nearly 52 missions, 24 events, 30 Government reforms, 4 age bonuses, 1 estate privilege, and the most powerful ideas.
+
+[img] https://imgur.com/e9sPbpB.png [/img]
+
+Imperium Turcicum: You have to be Catholic to establish this state. It will be a Latin-influenced state. I named this country which means "Turkish Empire" in Latin. The greatest powers of this state are diplomacy, colony, and mercenaries. But this state does not only have a catholic scenario. There are 5 reform paths. When Protestantism is triggered, reform troubles will begin. This sub-scenario is Catholic / Protestant / Reformed / Hussite / Anglican / Phaedrusian(new eastern reformed religion). Whichever path you choose, 5 new special missions will be added. Its contents:
+73 missions, 81 events, 30 government reforms, 4 age bonuses, 3 estate privileges, and 5 special mercenary companies.
+
+[img] https://imgur.com/PFDjgyv.png [/img]
+
+The Eastern Knights: You must be Coptic or Nestorian to establish this state. The beginning is more difficult than the others. The purpose of this state is to spread Christianity to the east. The greatest strength of this state is its military power. It usually extends to the east so I named it that way. It is a theocratic state and has the State General Mechanic. Its contents:
+56 missions, 30 events, 30 government reforms, 4 age bonuses, 1 estate privilege, 1 Crusade Mechanic and 1 new subject type.
+
+[h1] Monument List and Map [/h1] 
+
+[url=https://steamcommunity.com/workshop/filedetails/discussion/2444042439/3281443422918694367/] You can see them here [/url]
+
+[h1]Features [/h1] 
+[list]
+[*][strike]Unit models[/strike]
+[*][strike]Special Unit[/strike]
+[*][strike]New Culture Groups[/strike]
+[*][strike]Reform Paths for Imperium Turcicum[/strike]
+[*][strike]Crusade Mechanic for The Eastern Knights[/strike]
+[*][strike]New Christian Faiths[/strike]
+[*][strike]Monuments[/strike]
+[*][strike]Age Bonuses[/strike]
+[*][strike]More government reforms[/strike]
+[*][strike]More Events [/strike]
+[*][u]The Mod is completed, new content will no longer be added.[/u]
+[/list]
+
+This mod requires no DLC to play and I guess it is compatible with most mods. Please don't forget to report any problems. 
+
+[h1]Manual Download and Old Versions [/h1] 
+[url=https://github.com/VectortheGreat/In-the-name-of-Kayser--EU4-/tree/main] Manual Download & Last Version [/url]
+
+Check the other submod: 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452674961] Waifu Universalis Patch [/url]
