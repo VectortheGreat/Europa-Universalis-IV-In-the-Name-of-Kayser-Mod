@@ -1,0 +1,371 @@
+namespace = crusadeink
+normal_or_historical_nations = yes
+
+country_event = {	#Crusade Start
+	id = crusadeink.1
+	title = crusadeink.1_title
+	desc = crusadeink.1_desc
+	picture = ink_hagia_sophia_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = { 
+					has_country_flag = ink_crusader_target
+				}
+				save_global_event_target_as = crusader_target_country
+				set_global_flag = ink_crusade_mark_system
+				set_country_flag = ink_crusade_mark_system2
+			}
+			random_country = {
+				limit = { 
+					has_country_flag = ink_crusader
+				}
+				save_global_event_target_as = ink_crusader_country
+			}
+			add_country_modifier = { 
+				name = "ink_crusade_modifier"
+				duration = 18250 
+			}
+		}
+	}
+	
+	
+	option = {	#Call help
+		name = crusadeink.1a
+		add_dip_power = -5
+		set_global_flag = ink_crusade_help
+		set_country_flag = ink_crusade_war
+	}
+}
+
+country_event = {	#War plan
+	id = crusadeink.2
+	title = crusadeink.2_title
+	desc = crusadeink.2_desc
+	picture = ink_knights_II_eventPicture
+	
+	trigger = {
+		has_country_flag = ink_crusade_war
+		has_global_flag = ink_crusade_help
+	}
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = ink_crusade_help
+		}
+	}
+	option = {	#Call War
+		name = crusadeink.2a
+		ROOT = {
+			declare_war_with_cb = {
+				who = event_target:crusader_target_country	
+				casus_belli = cb_crusade
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = { 
+					religion = catholic
+					is_subject = no
+				}
+				country_event = { id = crusadeink.3 }
+			}
+		}
+	}
+	
+	option = {	#Request AID
+		name = crusadeink.2b
+		ROOT = {
+			declare_war_with_cb = {
+				who = event_target:crusader_target_country	
+				casus_belli = cb_crusade
+			}
+		}
+		country_event = { id = crusadeink.4 }
+	}
+}
+
+country_event = {	#War together
+	id = crusadeink.3
+	title = crusadeink.3_title
+	desc = crusadeink.3_desc
+	picture = ink_knights_V_eventPicture
+	is_triggered_only = yes
+	
+	option = {	#Not Join
+		name = crusadeink.1a
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1.5
+				war_exhaustion = 3
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 1.5
+				num_of_loans = 2
+			}
+			modifier = {
+				factor = 2
+				num_of_loans = 4
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					ROOT = {
+						has_opinion = {
+							who = FROM
+							value = 0
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1
+				government_rank = 1
+			}
+			modifier = {
+				factor = 2
+				government_rank = 1
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				capital_scope = {
+					region = scandinavia_region
+				}
+			}
+			modifier = {
+				factor = 2
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 2
+				is_enemy = FROM
+			}
+			modifier = {
+				factor = 2
+				is_excommunicated = yes
+			}
+			modifier = {
+				factor = 2
+				tag = PAP
+			}
+			modifier = {
+				factor = 1.5
+				border_distance = {
+					who = event_target:crusader_target_country
+					distance = 600
+				}
+			}
+		}
+	}
+	
+	option = {	#Join Crusade
+		name = crusadeink.1b
+		join_all_offensive_wars_of = FROM
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2
+				has_idea_group = religious_ideas
+			}
+			modifier = {
+				factor = 3
+				ROOT = {
+					has_opinion = {
+						who = FROM
+						value = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 6
+				ROOT = {
+					has_opinion = {
+						who = FROM
+						value = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				government_rank = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 0
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 0
+				is_enemy = FROM
+			}
+			modifier = {
+				factor = 10
+				alliance_with = FROM
+			}
+		}
+		
+	}
+}
+
+country_event = {	#Aid
+	id = crusadeink.4
+	title = crusadeink.4_title
+	desc = crusadeink.4_desc
+	picture = ECONOMY_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_variable = { 
+				which = ink_crusade_aid_toplam 
+				value = 0 
+			}
+			every_country = {
+				limit = {
+					religion = catholic
+				}
+				export_to_variable = {
+					which = ink_crusade_aid_toplam
+					value = monthly_income
+				}
+				multiply_variable = { 
+					which = ink_crusade_aid_toplam 
+					value = 1	#Mouth 
+				}
+				ROOT = {
+					change_variable = { 
+						which = ink_crusade_aid_toplam
+						which = PREV 
+					}
+				}
+				set_variable = { 
+					which = ink_crusade_aid_toplam 
+					value = 0
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = crusadeink.4a
+		custom_tooltip = crusade_aid_tt
+		while = {
+			limit = {
+				check_variable = { which = ink_crusade_aid_toplam value = 1 }
+			}
+			subtract_variable = { which = ink_crusade_aid_toplam value = 1 }
+			ROOT = { add_treasury = 1 }
+			every_country = {
+				limit = { religion = catholic }
+				add_treasury = -0.083
+			}
+		}
+		add_yearly_manpower = 0.1
+	}
+}
+
+country_event = {	#Crusade Won
+	id = crusadeink.5
+	title = crusadeink.5_title
+	desc = crusadeink.5_desc
+	picture = ink_knights_V_eventPicture
+	
+	immediate = {
+		hidden_effect = {
+			clear_global_event_targets = yes
+			clr_country_flag = ink_crusade_war
+			clr_global_flag = ink_crusade_mark_system
+			every_country = {
+				limit = { has_country_flag = ink_crusader_target }
+				clr_country_flag = ink_crusader_target
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {	#
+		name = crusadeink.5b
+		add_prestige = 20
+	}
+}
+
+country_event = {	#Crusade Lost
+	id = crusadeink.6
+	title = crusadeink.6_title
+	desc = crusadeink.6_desc
+	picture = ink_surrender_3_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clear_global_event_targets = yes
+			clr_country_flag = ink_crusade_war
+			clr_global_flag = ink_crusade_mark_system
+			every_country = {
+				limit = { has_country_flag = ink_crusader_target }
+				clr_country_flag = ink_crusader_target
+			}
+		}
+	}
+	
+	option = {	#
+		name = crusadeink.6b
+		add_prestige = -30
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {	#Crusade Active
+	id = crusadeink.7
+	title = crusadeink.7_title
+	desc = crusadeink.7_desc
+	picture = GREAT_BUILDING_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clear_global_event_target = crusader_target_country
+			clr_country_flag = ink_crusade_war
+			clr_global_flag = ink_crusade_mark_system
+		}
+	}
+	
+	option = {	#Deal with Pope
+		name = crusadeink.7a
+		set_country_flag = ink_has_crusade_active
+		white_peace = PAP
+		add_truce_with = PAP
+		custom_tooltip = crusade_agreement_tt
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {	#Roma belongs to us!
+		name = crusadeink.7b
+		add_prestige = 10
+		PAP = { set_papacy_active = no }
+		118 = {	
+			add_province_modifier = { 
+				name = "ink_convert_roma"
+				duration = 3652
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

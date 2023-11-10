@@ -1,0 +1,230 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_ITRgovernment"
+		texturefile = "gfx//interface//government_reform_icons//ITRgovernment.dds"
+	}
+	spriteType = {
+		name = "government_reform_RMOgovernment"
+		texturefile = "gfx//interface//government_reform_icons//RMOgovernment.dds"
+	}
+	spriteType = {
+		name = "government_reform_TEKgovernment"
+		texturefile = "gfx//interface//government_reform_icons//TEKgovernment.dds"
+	}
+	spriteType = {
+		name = "government_reform_military_traditions"
+		texturefile = "gfx//interface//government_reform_icons//military_traditions.dds"
+	}
+	spriteType = {
+		name = "government_reform_qualified_warriors"
+		texturefile = "gfx//interface//government_reform_icons//qualified_warriors.dds"
+	}
+	spriteType = {
+		name = "government_reform_advanced_military"
+		texturefile = "gfx//interface//government_reform_icons//advanced_military.dds"
+	}
+	spriteType = {
+		name = "government_reform_big_ships"
+		texturefile = "gfx//interface//government_reform_icons//big_ships.dds"
+	}
+	spriteType = {
+		name = "government_reform_qual_elections"
+		texturefile = "gfx//interface//government_reform_icons//qual_elections.dds"
+	}
+	spriteType = {
+		name = "government_reform_absolute_order"
+		texturefile = "gfx//interface//government_reform_icons//absolute_order.dds"
+	}
+	spriteType = {
+		name = "government_reform_european_missionaries"
+		texturefile = "gfx//interface//government_reform_icons//european_missionaries.dds"
+	}
+	spriteType = {
+		name = "government_reform_tolerance_infidel"
+		texturefile = "gfx//interface//government_reform_icons//tolerance_infidel.dds"
+	}
+	spriteType = {
+		name = "government_reform_strong_order"
+		texturefile = "gfx//interface//government_reform_icons//strong_order.dds"
+	}
+	spriteType = {
+		name = "government_reform_holy_order"
+		texturefile = "gfx//interface//government_reform_icons//holy_order.dds"
+	}
+	spriteType = {
+		name = "government_reform_great_order"
+		texturefile = "gfx//interface//government_reform_icons//great_order.dds"
+	}
+	spriteType = {
+		name = "government_reform_autho_theo"
+		texturefile = "gfx//interface//government_reform_icons//autho_theo.dds"
+	}
+	spriteType = {
+		name = "government_reform_trade_terror"
+		texturefile = "gfx//interface//government_reform_icons//trade_terror.dds"
+	}
+	spriteType = {
+		name = "government_reform_spread_faith"
+		texturefile = "gfx//interface//government_reform_icons//spread_faith.dds"
+	}
+	spriteType = {
+		name = "government_reform_diplo_order"
+		texturefile = "gfx//interface//government_reform_icons//diplo_order.dds"
+	}
+	spriteType = {
+		name = "government_reform_cultural_pressures"
+		texturefile = "gfx//interface//government_reform_icons//cultural_pressures.dds"
+	}
+	spriteType = {
+		name = "government_reform_advanced_castles"
+		texturefile = "gfx//interface//government_reform_icons//advanced_castles.dds"
+	}
+	spriteType = {
+		name = "government_reform_strengthen_levy"
+		texturefile = "gfx//interface//government_reform_icons//strengthen_levy.dds"
+	}
+	spriteType = {
+		name = "government_reform_nightmare_naval"
+		texturefile = "gfx//interface//government_reform_icons//nightmare_naval.dds"
+	}
+	spriteType = {
+		name = "government_reform_diplo_pol"
+		texturefile = "gfx//interface//government_reform_icons//diplo_pol.dds"
+	}
+	spriteType = {
+		name = "government_reform_focus_cannon"
+		texturefile = "gfx//interface//government_reform_icons//focus_cannon.dds"
+	}
+	spriteType = {
+		name = "government_reform_diplo_dev"
+		texturefile = "gfx//interface//government_reform_icons//diplo_dev.dds"
+	}
+	spriteType = {
+		name = "government_reform_holy_union"
+		texturefile = "gfx//interface//government_reform_icons//holy_union.dds"
+	}
+	spriteType = {
+		name = "government_reform_spoil_war"
+		texturefile = "gfx//interface//government_reform_icons//spoil_war.dds"
+	}
+	spriteType = {
+		name = "government_reform_military_empire"
+		texturefile = "gfx//interface//government_reform_icons//military_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_empire_civilization"
+		texturefile = "gfx//interface//government_reform_icons//empire_civilization.dds"
+	}
+	spriteType = {
+		name = "government_reform_religious_empire"
+		texturefile = "gfx//interface//government_reform_icons//religious_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_trade_empire"
+		texturefile = "gfx//interface//government_reform_icons//trade_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_hail_kayser"
+		texturefile = "gfx//interface//government_reform_icons//hail_kayser.dds"
+	}
+	spriteType = {
+		name = "government_reform_absolute_empire"
+		texturefile = "gfx//interface//government_reform_icons//absolute_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_free_thought"
+		texturefile = "gfx//interface//government_reform_icons//free_thought.dds"
+	}
+	spriteType = {
+		name = "government_reform_advanced_intelligence"
+		texturefile = "gfx//interface//government_reform_icons//advanced_intelligence.dds"
+	}
+	spriteType = {
+		name = "government_reform_colonial_empire"
+		texturefile = "gfx//interface//government_reform_icons//colonial_empire.dds"
+	}
+	spriteType = {
+		name = "government_reform_domestic_centralization"
+		texturefile = "gfx//interface//government_reform_icons//domestic_centralization.dds"
+	}
+	spriteType = {
+		name = "government_reform_war_addiction"
+		texturefile = "gfx//interface//government_reform_icons//war_addiction.dds"
+	}
+	spriteType = {
+		name = "government_reform_kaysers_popularity"
+		texturefile = "gfx//interface//government_reform_icons//kaysers_popularity.dds"
+	}
+	spriteType = {
+		name = "government_reform_holy_emperor"
+		texturefile = "gfx//interface//government_reform_icons//holy_emperor.dds"
+	}
+	spriteType = {
+		name = "government_reform_qualified_trade"
+		texturefile = "gfx//interface//government_reform_icons//qualified_trade.dds"
+	}
+	spriteType = {
+		name = "government_reform_focus_province"
+		texturefile = "gfx//interface//government_reform_icons//focus_province.dds"
+	}
+	spriteType = {
+		name = "government_reform_great_empire2"
+		texturefile = "gfx//interface//government_reform_icons//great_empire2.dds"
+	}
+	spriteType = {
+		name = "government_reform_great_empire1"
+		texturefile = "gfx//interface//government_reform_icons//great_empire1.dds"
+	}
+	spriteType = {
+		name = "government_reform_autho_king"
+		texturefile = "gfx//interface//government_reform_icons//autho_king.dds"
+	}
+	spriteType = {
+		name = "government_reform_side_merchant"
+		texturefile = "gfx//interface//government_reform_icons//side_merchant.dds"
+	}
+	spriteType = {
+		name = "government_reform_side_burea"
+		texturefile = "gfx//interface//government_reform_icons//side_burea.dds"
+	}
+	spriteType = {
+		name = "government_reform_side_knights"
+		texturefile = "gfx//interface//government_reform_icons//side_knights.dds"
+	}
+	spriteType = {
+		name = "government_reform_focus_production"
+		texturefile = "gfx//interface//government_reform_icons//focus_production.dds"
+	}
+	spriteType = {
+		name = "government_reform_gold_rush"
+		texturefile = "gfx//interface//government_reform_icons//gold_rush.dds"
+	}
+	spriteType = {
+		name = "government_reform_cultural_development"
+		texturefile = "gfx//interface//government_reform_icons//cultural_development.dds"
+	}
+	spriteType = {
+		name = "government_reform_trade_buildings"
+		texturefile = "gfx//interface//government_reform_icons//trade_buildings.dds"
+	}
+	spriteType = {
+		name = "government_reform_ink_national_buildings"
+		texturefile = "gfx//interface//government_reform_icons//ink_national_buildings.dds"
+	}
+	spriteType = {
+		name = "government_reform_burea_dev"
+		texturefile = "gfx//interface//government_reform_icons//burea_dev.dds"
+	}
+	spriteType = {
+		name = "government_reform_greedy_policies"
+		texturefile = "gfx//interface//government_reform_icons//greedy_policies.dds"
+	}
+	spriteType = {
+		name = "government_reform_anatolian_renaissance"
+		texturefile = "gfx//interface//government_reform_icons//anatolian_renaissance.dds"
+	}
+	spriteType = {
+		name = "government_reform_royal_taxes"
+		texturefile = "gfx//interface//government_reform_icons//royal_taxes.dds"
+	}
+}

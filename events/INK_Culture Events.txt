@@ -1,0 +1,570 @@
+namespace = inkculture
+normal_or_historical_nations = yes
+
+country_event = {	#Neo Turkic 1
+	id = inkculture.1
+	title = inkculture.1_title
+	desc = inkculture.1_desc
+	picture = ink_reform_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = turkish }
+				change_primary_culture = neo_turkish3
+				remove_accepted_culture = turkish
+			}
+			every_province = {
+				limit = { culture = turkish }
+				change_culture = neo_turkish3
+			}
+			every_country = {
+				limit = {
+					accepted_culture = turkish
+				}
+				remove_accepted_culture = turkish
+			}
+			every_province = {
+				limit = { culture = neo_turkish3 }
+				add_province_modifier = {
+					name = "ink_neo_turkic_tur_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = tek_turkish_tt
+	}
+}
+
+country_event = {	#Neo Turkic 2
+	id = inkculture.2
+	title = inkculture.2_title
+	desc = inkculture.2_desc
+	picture = ink_neo_turkic_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = azerbaijani }
+				change_primary_culture = neo_azerbaijani
+				remove_accepted_culture = azerbaijani
+			}
+			every_province = {
+				limit = { culture = azerbaijani }
+				change_culture = neo_azerbaijani
+			}
+			every_country = {
+				limit = { culture = crimean }
+				change_primary_culture = neo_crimean
+				remove_accepted_culture = crimean
+			}
+			every_province = {
+				limit = { culture = crimean }
+				change_culture = neo_crimean
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = azerbaijani
+						accepted_culture = crimean
+					}
+				}
+				remove_accepted_culture = azerbaijani
+				remove_accepted_culture = crimean
+			}
+			every_province = {
+				limit = { culture = neo_crimean }
+				add_province_modifier = {
+					name = "ink_neo_turkic_cri_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture = neo_azerbaijani }
+				add_province_modifier = {
+					name = "ink_neo_turkic_aze_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = tek_azer_crim_tt
+	}
+}
+
+country_event = {	#Neo Turkic 3
+	id = inkculture.3
+	title = inkculture.3_title
+	desc = inkculture.3_desc
+	picture = ink_neo_turkic2_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_province = {
+				limit = { culture = uzbehk }
+				change_culture = neo_uzbehk
+			}
+			every_province = {
+				limit = { culture = turkmeni }
+				change_culture = neo_turkmeni
+			}
+			every_province = {
+				limit = { culture = uyghur }
+				change_culture = neo_uyghur
+			}
+			every_province = {
+				limit = { culture = khazak }
+				change_culture = neo_khazak
+			}
+			every_province = {
+				limit = { culture = kirgiz }
+				change_culture = neo_kirgiz
+			}
+			every_country = {
+				limit = { culture = uzbehk }
+				change_primary_culture = neo_uzbehk
+				remove_accepted_culture = uzbehk
+			}
+			every_country = {
+				limit = { culture = uyghur }
+				change_primary_culture = neo_uyghur
+				remove_accepted_culture = uyghur
+			}
+			every_country = {
+				limit = { culture = khazak }
+				change_primary_culture = neo_khazak
+				remove_accepted_culture = khazak
+			}
+			every_country = {
+				limit = { culture = kirgiz }
+				change_primary_culture = neo_kirgiz
+				remove_accepted_culture = kirgiz
+			}
+			every_country = {
+				limit = { culture = turkmeni }
+				change_primary_culture = neo_turkmeni
+				remove_accepted_culture = turkmeni
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = uzbehk
+						accepted_culture = uyghur
+						accepted_culture = khazak
+						accepted_culture = kirgiz
+						accepted_culture = turkmeni
+					}
+				}
+				remove_accepted_culture = uzbehk
+				remove_accepted_culture = uyghur
+				remove_accepted_culture = khazak
+				remove_accepted_culture = kirgiz
+				remove_accepted_culture = turkmeni
+			}
+			every_province = {
+				limit = { OR = { culture = neo_turkmeni culture = neo_kirgiz culture = neo_khazak culture = neo_uyghur culture = neo_uzbehk } }
+				add_province_modifier = {
+					name = "ink_neo_turkic_altai_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = tek_altai_tt
+	}
+}
+
+country_event = {	#Neo Eastern Roman 1
+	id = inkculture.4
+	title = inkculture.4_title
+	desc = inkculture.4_desc
+	picture = ink_eastern_rome_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = turkish }
+				change_primary_culture = neo_turkish
+				remove_accepted_culture = turkish
+			}
+			every_province = {
+				limit = { culture = turkish }
+				change_culture = neo_turkish
+			}
+			every_country = {
+				limit = { culture = greek }
+				change_primary_culture = neo_greek
+				remove_accepted_culture = greek
+			}
+			every_province = {
+				limit = { culture = greek }
+				change_culture = neo_greek
+			}
+			every_province = {
+				limit = { culture = pontic_greek }
+				change_culture = neo_greek
+			}
+			every_province = {
+				limit = { culture = goths }
+				change_culture = neo_greek
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = turkish
+						accepted_culture = greek
+					}
+				}
+				remove_accepted_culture = turkish
+				remove_accepted_culture = greek
+			}
+			every_province = {
+				limit = { culture = neo_turkish }
+				add_province_modifier = {
+					name = "ink_neo_turkic_tur_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture = neo_greek }
+				add_province_modifier = {
+					name = "ink_neo_turkic_gre_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = rmo_turk_greek_tt
+	}
+}
+
+country_event = {	#Neo Eastern Roman 2
+	id = inkculture.5
+	title = inkculture.5_title
+	desc = inkculture.5_desc
+	picture = ink_eastern_rome_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = georgian }
+				change_primary_culture = neo_georgian
+				remove_accepted_culture = georgian
+			}
+			every_province = {
+				limit = { culture = georgian }
+				change_culture = neo_georgian
+			}
+			every_country = {
+				limit = { culture = armenian }
+				change_primary_culture = neo_armenian
+				remove_accepted_culture = armenian
+			}
+			every_province = {
+				limit = { culture = armenian }
+				change_culture = neo_armenian
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = georgian
+						accepted_culture = armenian
+					}
+				}
+				remove_accepted_culture = georgian
+				remove_accepted_culture = armenian
+			}
+			every_province = {
+				limit = { OR = { culture = neo_armenian culture = neo_georgian } }
+				add_province_modifier = {
+					name = "ink_neo_turkic_geoarm_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = rmo_geo_armn_tt
+	}
+}
+
+country_event = {	#Neo Eastern Roman 3
+	id = inkculture.6
+	title = inkculture.6_title
+	desc = inkculture.6_desc
+	picture = ink_eastern_rome_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = al_suryah_arabic }
+				change_primary_culture = neo_syriac
+				remove_accepted_culture = al_suryah_arabic
+			}
+			every_province = {
+				limit = { culture = al_suryah_arabic }
+				change_culture = neo_syriac
+			}
+			every_country = {
+				limit = {
+					accepted_culture = al_suryah_arabic
+				}
+				remove_accepted_culture = al_suryah_arabic
+			}
+			every_province = {
+				limit = { culture = neo_syriac }
+				add_province_modifier = {
+					name = "ink_neo_turkic_syr_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = rmo_syriac_tt
+	}
+}
+
+country_event = {	# Neo Balkan-Anatolian 1
+	id = inkculture.7
+	title = inkculture.7_title
+	desc = inkculture.7_desc
+	picture = ink_reform_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = turkish }
+				change_primary_culture = neo_turkish2
+				remove_accepted_culture = turkish
+			}
+			every_province = {
+				limit = { culture = turkish }
+				change_culture = neo_turkish2
+			}
+			every_country = {
+				limit = { culture = bulgarian }
+				change_primary_culture = neo_bulgarian
+				remove_accepted_culture = bulgarian
+			}
+			every_province = {
+				limit = { culture = bulgarian }
+				change_culture = neo_bulgarian
+			}
+			every_country = {
+				limit = { culture = greek }
+				change_primary_culture = neo_greek2
+				remove_accepted_culture = greek
+			}
+			every_province = {
+				limit = { culture = greek }
+				change_culture = neo_greek2
+			}
+			every_province = {
+				limit = { culture = pontic_greek }
+				change_culture = neo_greek2
+			}
+			every_province = {
+				limit = { culture = goths }
+				change_culture = neo_greek2
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = turkish
+						accepted_culture = greek
+						accepted_culture = bulgarian
+					}
+				}
+				remove_accepted_culture = turkish
+				remove_accepted_culture = greek
+				remove_accepted_culture = bulgarian
+			}
+			every_province = {
+				limit = { culture = neo_turkish2 }
+				add_province_modifier = {
+					name = "ink_neo_turkic_tur_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture = neo_greek2 }
+				add_province_modifier = {
+					name = "ink_neo_turkic_gre_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture = neo_bulgarian }
+				add_province_modifier = {
+					name = "ink_neo_turkic_bul_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = itr_tur_gre_bul_tt
+	}
+}
+
+country_event = {	# Neo Balkan-Anatolian 2
+	id = inkculture.8
+	title = inkculture.8_title
+	desc = inkculture.8_desc
+	picture = ink_reform_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = albanian }
+				change_primary_culture = neo_albanian
+				remove_accepted_culture = albanian
+			}
+			every_province = {
+				limit = { culture = albanian }
+				change_culture = neo_albanian
+			}
+			every_country = {
+				limit = { culture = serbian }
+				change_primary_culture = neo_serbian
+				remove_accepted_culture = serbian
+			}
+			every_province = {
+				limit = { culture = serbian }
+				change_culture = neo_serbian
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = albanian
+						accepted_culture = serbian
+					}
+				}
+				remove_accepted_culture = albanian
+				remove_accepted_culture = serbian
+			}
+			every_province = {
+				limit = { OR = { culture = neo_albanian culture = neo_serbian } }
+				add_province_modifier = {
+					name = "ink_neo_turkic_albser_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = itr_alb_ser_tt
+	}
+}
+
+country_event = {	# Neo Balkan-Anatolian 3
+	id = inkculture.9
+	title = inkculture.9_title
+	desc = inkculture.9_desc
+	picture = ink_reform_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = inkculture.1a
+		hidden_effect = {
+			every_country = {
+				limit = { culture = croatian }
+				change_primary_culture = neo_croatian
+				remove_accepted_culture = croatian
+			}
+			every_province = {
+				limit = { culture = croatian }
+				change_culture = neo_croatian
+			}
+			every_country = {
+				limit = { culture = slovene }
+				change_primary_culture = neo_slovene
+				remove_accepted_culture = slovene
+			}
+			every_province = {
+				limit = { culture = slovene }
+				change_culture = neo_slovene
+			}
+			every_country = {
+				limit = { culture = bosnian }
+				change_primary_culture = neo_bosnian
+				remove_accepted_culture = bosnian
+			}
+			every_province = {
+				limit = { culture = bosnian }
+				change_culture = neo_bosnian
+			}
+			every_country = {
+				limit = {
+					OR = {
+						accepted_culture = croatian
+						accepted_culture = slovene
+						accepted_culture = bosnian
+					}
+				}
+				remove_accepted_culture = croatian
+				remove_accepted_culture = slovene
+				remove_accepted_culture = bosnian
+			}
+			every_province = {
+				limit = { OR = { culture = neo_bosnian culture = neo_slovene culture = neo_croatian } }
+				add_province_modifier = {
+					name = "ink_neo_turkic_slav_pr"
+					duration = -1
+				}
+			}
+			every_province = {
+				limit = { culture_group = ROOT has_province_modifier = estate_church_united_faith_and_culture }
+				remove_province_modifier = estate_church_united_faith_and_culture
+			}
+		}
+		custom_tooltip = itr_slav_tt
+	}
+}

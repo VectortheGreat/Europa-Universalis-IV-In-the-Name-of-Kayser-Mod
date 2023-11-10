@@ -1,0 +1,275 @@
+ink_turkish_monarchy = {
+	rank = {
+		1 = BEYLIK
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = BEY
+		2 = KRAL
+		3 = KAYSER
+	}
+	
+	ruler_female = {
+		1 = HATUN
+		2 = SULTAN_fem
+		3 = QUEEN
+	}
+	
+	heir_male = {
+		1 = PRINCE
+		2 = PRINCE
+		3 = PRINCE
+	}
+	heir_female = {
+		1 = PRINCESS
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+	
+	consort_male = {
+		1 = BEY
+		2 = KRAL
+		3 = KAYSER
+	}
+	consort_female = {
+		1 = HATUN
+		2 = QUEEN
+		3 = QUEEN
+	}
+	
+	trigger = {
+		OR = {
+			primary_culture = turkish
+			primary_culture = neo_turkish
+			primary_culture = neo_turkish2
+			primary_culture = neo_turkish3
+		}
+		government = monarchy
+	}
+}
+
+ink_turkish_theocracy = {
+	rank = {
+		1 = BEYLIK
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = BEY
+		2 = KRAL
+		3 = SUPREME_LEADER
+	}
+	
+	ruler_female = {
+		1 = HATUN
+		2 = SULTAN_fem
+		3 = SUPREME_LEADER_fem
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	
+	consort_male = {
+		1 = BEY
+		2 = KRAL
+		3 = SUPREME_LEADER
+	}
+	consort_female = {
+		1 = HATUN
+		2 = QUEEN
+		3 = QUEEN
+	}
+	
+	trigger = {
+		government = theocracy
+		OR = {
+			primary_culture = turkish
+			primary_culture = neo_turkish
+			primary_culture = neo_turkish2
+			primary_culture = neo_turkish3
+		}
+	}
+}
+
+ink_revolutionary_names = {
+	rank = {
+		1 = INK_REVOLUTIONARY_REPUBLIC
+		2 = INK_REVOLUTIONARY_REPUBLIC
+		3 = INK_REVOLUTIONARY_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = SUPREME_LEADER
+		2 = SUPREME_LEADER
+		3 = SUPREME_LEADER
+	}
+	
+	ruler_female = {
+		1 = SUPREME_LEADER_fem
+		2 = SUPREME_LEADER_fem
+		3 = SUPREME_LEADER_fem
+	}
+	
+	trigger = {
+		is_revolutionary_republic_trigger = yes
+		OR = {
+			tag = RMO
+			tag = ITR
+			tag = TRK
+			tag = TEK
+		}
+	}
+}
+
+usa_beylik = {
+	rank = {
+		1 = BEYLIK
+		2 = BEYLIK
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = BEY
+		2 = BEY
+		3 = KAYSER
+	}
+	
+	ruler_female = {
+		1 = HATUN
+		2 = HATUN
+		3 = QUEEN
+	}
+	
+	heir_male = {
+		1 = BEY
+		2 = BEY
+		3 = BEY
+	}
+	heir_female = {
+		1 = HATUN
+		2 = HATUN
+		3 = PRINCESS
+	}
+	
+	consort_male = {
+		1 = BEY
+		2 = BEY
+		3 = KAYSER
+	}
+	consort_female = {
+		1 = HATUN
+		2 = HATUN
+		3 = QUEEN
+	}
+	
+	trigger = {
+		tag = UB1
+	}
+}
+
+turkish_monarchy = {
+	rank = {
+		1 = BEYLIK
+		2 = SULTANATE
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = BEY
+		2 = SULTAN
+		3 = PADISHAH
+	}
+	
+	ruler_female = {
+		1 = HATUN
+		2 = SULTAN_fem
+		3 = PADISHAH
+	}
+	
+	heir_male = {
+		1 = VALI_AHAD
+		2 = VALI_AHAD
+		3 = VALI_AHAD
+	}
+	heir_female = {
+		1 = VALI_AHAD
+		2 = VALI_AHAD
+		3 = VALI_AHAD
+	}
+	
+	consort_male = {
+		1 = BEY
+		2 = SULTAN_CONSORT
+		3 = PADISHAH_CONSORT
+	}
+	consort_female = {
+		1 = HATUN
+		2 = HASEKI_SULTAN
+		3 = HASEKI_SULTAN
+	}
+	
+	trigger = {
+		government = tribal
+		always = no
+	}
+}
+
+orthodox_theocracy = {
+	rank = {
+		1 = METROPOLIS
+		2 = GREAT_METROPOLIS
+		3 = PATRIARCHATE
+	}
+	
+	ruler_male = {
+		1 = BISHOP
+		2 = ARCHBISHOP
+		3 = PATRIARCH
+	}
+	
+	ruler_female = {
+		1 = BISHOP_fem
+		2 = ARCHBISHOP_fem
+		3 = MATRIARCH
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+	
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	
+	trigger = {
+		OR = {
+			religion = orthodox
+			religion = coptic
+		}
+		government = theocracy
+		NOT = { 
+			OR = {
+				primary_culture = turkish
+				primary_culture = neo_turkish
+				primary_culture = neo_turkish2
+				primary_culture = neo_turkish3
+			}
+		}
+	}
+}

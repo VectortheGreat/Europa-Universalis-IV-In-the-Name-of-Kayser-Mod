@@ -1,0 +1,367 @@
+country_decisions = {
+	annex_armenia = {
+		major = yes
+		provinces_to_highlight = {
+			region = caucasia_region
+			TK1 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK1 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK1 = {
+				caucasia_region = {
+					type = all
+					owned_by = TK1
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK1 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK1
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_india = {
+		major = yes
+		provinces_to_highlight = {
+			OR = {
+				region = west_india_region
+				region = hindusthan_region
+			}
+			TK2 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK2 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK2 = {
+				west_india_region = {
+					type = all
+					owned_by = TK2
+				}
+				hindusthan_region = {
+					type = all
+					owned_by = TK2
+				}
+			}
+			treasury = 4000
+			prestige = -50
+			TK2 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK2
+			add_treasury = -4000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_persia = {
+		major = yes
+		provinces_to_highlight = {
+			region = persia_region
+			TK3 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK3 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK3 = {
+				persia_region = {
+					type = all
+					owned_by = TK3
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK3 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK3
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_central_asia = {
+		major = yes
+		provinces_to_highlight = {
+			region = central_asia_region
+			TK4 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK4 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK4 = {
+				central_asia_region = {
+					type = all
+					owned_by = TK4
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK4 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK4
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_order_egypt = {
+		major = yes
+		provinces_to_highlight = {
+			region = egypt_region
+			TK5 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK5 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK5 = {
+				egypt_region = {
+					type = all
+					owned_by = TK5
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK5 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK5
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_burma = {
+		major = yes
+		provinces_to_highlight = {
+			OR = {
+				region = west_india_region
+				region = hindusthan_region
+			}
+			TK6 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK6 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK6 = {
+				burma_region = {
+					type = all
+					owned_by = TK6
+				}
+				indo_china_region = {
+					type = all
+					owned_by = TK6
+				}
+			}
+			treasury = 3000
+			prestige = -50
+			TK6 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK6
+			add_treasury = -3000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_china = {
+		major = yes
+		provinces_to_highlight = {
+			region = south_china_region
+			TK7 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK7 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK7 = {
+				south_china_region = {
+					type = all
+					owned_by = TK7
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK7 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK7
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+	
+	annex_japan = {
+		major = yes
+		provinces_to_highlight = {
+			region = japan_region
+			TK8 = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		potential = {
+			tag = TEK
+			has_country_flag = tek_crusader_subjects
+			TK8 = { is_subject_of = TEK }
+		}
+		allow = {
+			TK8 = {
+				japan_region = {
+					type = all
+					owned_by = TK8
+				}
+			}
+			treasury = 2000
+			prestige = -50
+			TK8 = {
+				NOT = { liberty_desire = 50 }
+				custom_trigger_tooltip = {
+					tooltip = tek_annex_fraction_tt
+					NOT = {
+						development_of_overlord_fraction = 0.40
+					}
+				}
+			}
+			NOT = {	has_country_modifier = ink_annexed_crusader_subject }
+		}
+		effect = {
+			inherit = TK8
+			add_treasury = -2000
+			add_prestige = -50
+			add_country_modifier = {
+				name = "ink_annexed_crusader_subject"
+				duration = 3650
+			}
+		}
+	}
+}

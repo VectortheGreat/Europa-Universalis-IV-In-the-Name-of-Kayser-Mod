@@ -1,0 +1,509 @@
+on_war_won = {	
+	FROM = { country_event = { id = flavor_cri.6 } }
+	ROOT = { country_event = { id = tributary_events.32 } }
+	if = {
+		limit = {
+			has_country_flag = can_gain_legendary_pirates_flag
+			NOT = { has_ruler_flag = historical_pirate }
+			has_government_attribute = is_pirate_republic_reform
+			FROM = { total_development = ROOT }
+		}
+		random = {
+			chance = 5
+			country_event = {
+				id = pirates.25
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			is_part_of_hre = yes
+			FROM  = { is_part_of_hre = yes }
+		}
+		ROOT = { save_global_event_target_as = hre_winner }
+		FROM = { save_global_event_target_as = hre_loser }
+		random_known_country = {
+			limit = {
+				has_reform = free_city
+				NOT = {
+					prestige = 40
+				}
+				NOT = {
+					has_country_modifier = fc_treatyconference_timer
+				}
+			}
+			add_country_modifier = {
+				name = fc_treatyconference_timer
+				duration = 3650
+				hidden = yes
+			}
+			country_event = {
+				id = free_cities.7
+				days = 7
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			tag = MLO
+			NOT = { has_country_flag = emp_mlo_won_war_with_swiss_mercs }
+			any_hired_mercenary_company = {
+				home_province = {
+					OR = {
+						area = switzerland_area
+						area = romandie_area
+					}
+				}
+			}
+		}
+		set_country_flag = emp_mlo_won_war_with_swiss_mercs
+	}
+	
+	if = {
+		limit = {
+			is_hiring_condottiere_from = SWI
+		}
+		SWI = { set_country_flag = won_condottiere_war }
+		if = {
+			limit = {
+				tag = PAP
+			}
+			SWI = {
+				set_country_flag = hired_to_pope
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			primary_culture = melanesian
+			NOT = { has_country_modifier = warlord_mod }
+		}
+		FROM = {
+			country_event = {
+				id = polynesian.17
+			}
+		}
+	}
+	if = {
+		limit = {
+			ROOT = { 
+				tag = SWE
+				has_country_modifier = swe_vasa_leads_the_rebellion
+				is_subject = no
+			}
+			FROM = { tag = DAN }
+		}
+		country_event = {
+			id = flavor_swe.111
+		}
+	}
+	if = {
+		limit = {
+			ROOT = { 
+				tag = SWE
+				has_country_modifier = swe_any_vasa_leads_the_rebellion
+				is_subject = no
+			}
+			FROM = { tag = DAN }
+		}
+		country_event = {
+			id = flavor_swe.105
+		}
+	}
+	if = {
+		limit = {
+			ROOT = { 
+				tag = SWE
+				has_country_flag = swe_declared_independence_war
+				is_subject = no
+			}
+			FROM = { tag = DAN }
+		}
+		country_event = {
+			id = flavor_swe.121
+		}
+	}
+	if = {	#Crusade failed(target won the war)
+		limit = {
+			ROOT = {
+				has_country_flag = ink_crusade_mark_system2	#Crusade target
+			}
+		}
+		clr_country_flag = ink_crusade_mark_system2
+		FROM = {
+			country_event = {
+				id = crusadeink.6
+			}
+		}
+		clear_global_event_targets = yes
+	}
+}
+
+# country
+# root = loser country, from = winner country
+on_war_lost = {
+ROOT = { country_event = { id = flavor_cri.6 } }
+	ROOT = { country_event = { id = tributary_events.32 } }
+	if = {
+        limit = {
+            government = republic
+            is_lesser_in_union = yes
+		}
+		change_government_to_monarchy = yes
+    }
+	if = {
+		limit = {
+			FROM = { is_emperor = yes }
+			NOT = { has_country_flag = reined_in_for_shadow_kingdom }
+			NOT = { has_global_flag = italians_leave_hre }
+			is_emperor = no
+			is_part_of_hre = yes
+			OR = {
+				capital_scope = { region = italy_region }
+				AND = {
+					culture_group = latin
+					any_owned_province = {
+						region = italy_region
+					}
+				}
+			}
+		}
+		set_country_flag = reined_in_for_shadow_kingdom
+	}
+	add_country_modifier = {
+		name = just_lost_war_timer
+		duration = 10
+		hidden = yes
+	}
+	
+	if = {	#Crusade won
+		limit = {
+			ROOT = {
+				has_country_flag = ink_crusade_mark_system2	#Crusade target
+			}
+		}
+		clr_country_flag = ink_crusade_mark_system2
+		FROM = {
+			country_event = {
+				id = crusadeink.5
+			}
+		}
+		clear_global_event_targets = yes
+	}
+	
+}
+
+on_mercenary_recruited = {
+	if = {
+		limit = {
+			FROM = { has_not_free_mercs_trait = yes }
+			is_not_free_merc_company = yes
+			OR = {
+				FROM = { NOT = { has_country_flag = oyo_cavalry_do_not_consume_ap } }
+				ROOT = { NOT = { mercenary_company = merc_oyo_cavalry } }
+			}
+			FROM = { NOT = { has_country_flag = itr_nopenalty_for_mercenary } }
+		}
+		if = {
+			limit = {
+				FROM = { 
+					OR = {
+						has_country_flag = fifty_percent_merc_army_professionalism_cost 
+						has_country_modifier = pol_cheap_ap_mercs_modifier
+					}
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.025
+			}
+		}
+		else = {
+			FROM = {
+				add_army_professionalism = -0.05
+			}
+		}
+	}
+}
+on_country_creation = {
+	if = {
+		limit = {
+			tag = PAP
+		}
+		change_government = theocracy
+		change_religion = catholic
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+	if = {
+		limit = {
+			FROM = { has_reform = religious_permanent_revolution_reform }
+			NOT = { tag = PAP }
+		}
+		change_religion = FROM
+		adopt_reform_progress = FROM
+		add_country_modifier = {
+			name = global_holy_war_released_modifier
+			duration = 3650
+			hidden = yes
+		}
+		capital_scope = {
+			change_religion = FROM
+		}
+	}
+	if = {
+		limit = { NOT = { is_year = 1445 } }
+		set_country_flag = released_in_1444
+	}
+	if = {
+		limit = {
+			FROM = { tag = RMO }
+		}
+		change_country_color = { color = { 114 0 45 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			FROM = { tag = ITR }
+		}
+		change_country_color = { color = { 118 58 109 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			FROM = { tag = TRK }
+		}
+		change_country_color = { color = { 114 0 22 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			FROM = { tag = TEK }
+		}
+		change_country_color = { color = { 105 106 130 } }
+		set_country_flag = ink_changed_country_color
+	}
+	
+	if = {
+		limit = {
+			tag = TEK
+			NOT = {
+				has_reform = the_great_temple_government
+			}
+			NOT = { has_country_flag = ink_government_fix1 }
+		}
+		add_government_reform = the_great_temple_government
+		set_country_flag = ink_government_fix1
+	}
+	else_if = {
+		limit = {
+			tag = ITR
+			NOT = {
+				has_reform = magna_turcorum_dynastia
+			}
+			NOT = { has_country_flag = ink_government_fix2 }
+		}
+		add_government_reform = magna_turcorum_dynastia
+		set_country_flag = ink_government_fix2
+	}
+	else_if = {
+		limit = {
+			tag = TRK
+			NOT = {
+				has_reform = turkish_government
+			}
+			NOT = { has_country_flag = ink_government_fix2 }
+		}
+		add_government_reform = turkish_government
+		set_country_flag = ink_government_fix2
+	}
+	else_if = {
+		limit = {
+			tag = RMO
+			NOT = {
+				has_reform = turkish_government
+			}
+			NOT = { has_country_flag = ink_government_fix3 }
+		}
+		add_government_reform = turkish_government
+		set_country_flag = ink_government_fix3
+	}
+}
+
+on_startup = {
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		LXA = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = lxa_loyalty_flag }
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -10
+				}
+				set_country_flag = lxa_loyalty_flag
+			}
+		}
+	}
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
+	if = {
+		limit = {
+			is_emperor_of_china = yes
+		}
+		save_global_event_target_as = EmperorOfChina
+	}
+	events = {
+		muslim_school_events.20 #Pick School
+		flavor_got.1 #Event for Gotland to select their mission tree
+		flavor_mng.42 #Event for the starting situation of the Ming 
+		#flavor_fra.15000 #Make the French Revolution happen if starting in 1789
+		flavor_mos.1 #Event regarding the Tatar Yoke
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			has_country_modifier = tur_janissary
+		}
+		remove_country_modifier = tur_janissary
+	}
+	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = new_flavour_bav_13_has_been_triggered }
+			OR = {
+				tag = UBV
+				tag = LBV
+				tag = ING
+			}
+		}
+		set_country_flag = new_flavour_bav_13_has_been_triggered
+		country_event = { id = new_flavour_bav.13 days = 90 } #better not to allow almost instant DOWs
+	}
+	if = {
+		limit = {
+			tag = FRA
+			started_in = 1789.7.14
+			NOT = { is_year = 1790 }
+			NOT = { has_disaster = french_revolution }
+		}
+		add_disaster_progress = {
+			value = 100
+			disaster = french_revolution
+		}
+	}
+	if = {
+		limit = {
+			exists = SUK
+		}
+		SUK = {
+			set_ruler_flag = suk_monarch_flag
+		}
+		AYU = {
+			set_country_flag = ayu_monarch_flag
+		}
+	}
+	#if = {
+	#	limit = {
+	#		OR = {
+	#			primary_culture = norse
+	#			AND = {
+	#				culture_group = scandinavian
+	#				religion = norse_pagan_reformed
+	#			}
+	#		}
+	#		NOT = { has_idea_group = norse_ideas }
+	#		is_playing_custom_nation = no
+	#	}
+	#	country_event = { id = ideagroups.1 } #Swap Ideas
+	#}
+	if = {
+		limit = { 
+			has_dlc = "Domination" 
+			tag = FRA 
+			NOT = { is_year = 1445 } 
+		}
+		country_event = { id = flavor_fra.206 }
+	}
+	if = {
+		limit = {
+			NOT = { has_global_flag = end_of_the_tatar_yoke }
+			owns = 466
+			is_year = 1480
+		}
+		set_global_flag = end_of_the_tatar_yoke
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = rise_of_the_ottomans
+				has_country_modifier = zenith_of_the_ottomans
+				has_country_modifier = twilight_of_the_ottomans
+				has_country_modifier = decline_of_the_ottomans
+			}
+		}
+		remove_country_modifier = rise_of_the_ottomans
+		remove_country_modifier = zenith_of_the_ottomans
+		remove_country_modifier = twilight_of_the_ottomans
+		remove_country_modifier = decline_of_the_ottomans
+	}
+	if = {
+		limit = {
+			has_government_mechanic = ottoman_decadence_mechanic
+			current_age = age_of_discovery
+		}
+		add_country_modifier = {
+			name = rise_of_the_ottomans
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
+	if = {
+		limit = {
+			has_government_mechanic = ottoman_decadence_mechanic
+			current_age = age_of_reformation
+		}
+		add_country_modifier = {
+			name = zenith_of_the_ottomans
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
+	if = {
+		limit = {
+			has_government_mechanic = ottoman_decadence_mechanic
+			current_age = age_of_absolutism
+		}
+		add_country_modifier = {
+			name = twilight_of_the_ottomans
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
+	if = {
+		limit = {
+			has_government_mechanic = ottoman_decadence_mechanic
+			current_age = age_of_revolutions
+		}
+		add_country_modifier = {
+			name = decline_of_the_ottomans
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
+	TUR = {
+		country_event = { id = inkinfo.1 }
+	}
+}
+
+on_monthly_pulse = {
+	ink_subject_color_effect = yes
+	ink_subject_free_color_effect = yes
+}

@@ -1,0 +1,99 @@
+graphical_culture = westerngfx
+
+color = { 29 57 89 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Joneid #0" = 30
+	"Haidar #0" = 30
+	"Tamâshp #0" = 20
+	"Safi #0" = 15
+	"Hosayn #0" = 10
+	"Nâder #0 Shâh" = 10
+	"'Âdel #0 Shâh" = 10
+	"Ebrâhim #0" = 10
+	"Shâh Rukh #0" = 10
+	"Nâder Mirza #0" = 5
+	"Karim #0 Khân" = 10
+	"Ja'far #0" = 10
+	"Najm-e #0" = 0
+	"Hatem #0" = 0
+	"Shahqoli #0" = 0
+	"Ebrahim #0" = 0
+	"Allahyar #0" = 0
+	"Abdol #0" = 0
+	"Hamid #0" = 0
+	"Farid #0" = 0
+	
+	"Atiya #0" = -1
+	"Pari #0" = -1
+	"Khayr al-Nisa #0" = -1
+	"Tajlu #0" = -1
+	"Dilaram #0" = -1
+	"Shahbanu #0" = -1
+	"Razia #0" = -1
+	"Maryam #0" = -1
+}
+
+leader_names = {
+	Sabiri
+	Jalili
+	Azizi
+	Shahy
+	Daei
+	Qazai
+	Dalwand
+	Ahrari
+	Fatemi
+	Sabet
+	Ansari
+}
+
+ship_names = {
+	Abathur "Adamn Kasia" "Aesma Daeva" Agas
+	Ahriman Ahura "Ahura Mazda" Ahurani Airyaman
+	"Aka Manah" Aladdin Allatum Amashaspan Ameratat
+	"Amesha Spentas" Anahita "Angra Mainyu" Anjuman
+	"Apam-natat" Apaosa Aredvi Arishtat Armaiti Arsaces
+	"Asha vahista" Asman "Asto Vidatu" "Astvat-Ereta"
+	Atar "Azi Dahaka" Baga Bahram Burijas Bushyasta Buyasta
+	Camros Daena Daevas Ahaka Dahhak Dena Dev Diwe Drug
+	Drvaspa Frashegird Fravashis Gandarewa "Gao-kerena"
+	Gayomard Gayomart "Geus-Tasan" "Geus-Urvan" Haoma
+	Haurvatat Humay Hvar Hvarekhshaeta Indar Indra Izha
+	Jamshid Jeh Karshipta Kavi Khara "Khshathra vairya"
+	Kundrav Mah Mahre Mahrianag Manu Manuchihir Mao 
+	Mashyane Mashye Menog Mithra Nairyosangha Nanghaithya
+	Neriosang Ormazd Peris Peshdadians Rapithwin Rashnu
+	Rustam Saurva Simurgh "Spenta Mainyu" Sraosa Srosh
+	Tawrich Thunaupa Tistrya Tushnamatay Vanant Vata
+	Verethragna "Vohu Manah" Vouruskasha Yam Yasht Yazata
+	Yezidi Yima Zal Zam "Zam-Armatay" Zarathustra Zarich
+	"Zend-Avesta" Zurvan
+}

@@ -1,0 +1,91 @@
+graphical_culture = westerngfx
+
+color = { 23 41 61 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Qânsawh #0" = 40
+	"Tûmân Bay #0" = 40
+	"Inâl #0" = 20
+	"Khusqadam #1" = 20
+	"Barsbay #0" = 20
+	"Jaqmaq #0" = 20
+	"Qâyit Bay #0" = 20
+	"Timurbughâ #0" = 20
+	"'Uthman #0" = 20
+	"Yalbay #0" = 20
+	"Jânbulât #0" = 20
+	"Yûsuf #0" = 20
+	"Barqûq #1" = 15
+	"Baybars #2" = 10
+	"Sha'bân #2" = 10
+	"Isma'îl #1" = 10
+	"Kûjûk #1" = 10
+	"Sâlih #1" = 10
+	"Basir #0" = 0
+	"Fadl #0" = 0
+	"Ghayth #0" = 0
+	"Hatim #0" = 0
+	"Ilyas #0" = 0
+	"Jabir #0" = 0
+	"Nadim #0" = 0
+	"Nizar #0" = 0
+	"Qasim #0" = 0
+	"Sa'di #0" = 0
+	"Sayyid #0" = 0
+	"Yunus #0" = 0
+	
+	"Shahira #0" = -1
+	"Yusra #0" = -1
+	"Asma #0" = -1
+}
+
+leader_names = {
+	Aybak
+	Baibars
+	Bay
+	Bey
+	Bugha
+	Inâl
+	Kansur
+	Sayfuddin
+	Zangi
+}
+
+ship_names = {
+	"Zaher Barqooq" "Farag Ben Barqooq"
+	"Ben Barqooq" "Muyaid Sheikh" "Ahmen Muyaid" 
+	"Zaher Tatar" "Nasser Muhamed" "Ashraf Barsbay"
+	"Aziz Gamal" "Nahr an-Nil" "Al-Farafirah"
+	"Ad-Däkhilah" "Al-Kharijah" "Al-Ali" "Al-Bahriyah"
+	Rahman Rahim Malik Quddus Salam Mu'min Muhaymin
+	Aziz Jabbar Mutakabbir Khaliq Bari Musawwir 
+	Ghaffar Qahhar Wahhab Razzaq Fattah Alim Qabid
+	Basit Khafid Rafi Mu'izz Mudhill Sami Basir Hakam Adl
+}

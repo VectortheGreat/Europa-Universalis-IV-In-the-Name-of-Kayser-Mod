@@ -1,0 +1,254 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "ink_4th_crusade_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_4th_crusade_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_anti_habsburg_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_anti_habsburg_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_I_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_I_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_battle_II_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_II_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_III_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_III_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_IV_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_IV_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_battle_V_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_V_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_VI_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_VI_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_VII_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_VII_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_battle_VIII_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_battle_VIII_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_city_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_city_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_clergy_2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_clergy_2_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_clergy_3_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_clergy_3_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_clergy_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_clergy_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_defeat_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_defeat_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_discover_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_discover_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_eastern_rome_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_eastern_rome_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_hagia_sophia_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_hagia_sophia_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_holy_lands_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_holy_lands_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_holy_order_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_holy_order_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_knights_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_knights_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_knights_II_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_knights_II_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_knights_III_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_knights_III_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_knights_IV_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_knights_IV_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_knights_V_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_knights_V_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_konstantinopolis_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_konstantinopolis_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "INK_MEHMED_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/INK_MEHMED_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_missionary_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_missionary_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_neo_turkic_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_neo_turkic_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_neo_turkic2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_neo_turkic2_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_orders_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_orders_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_pope_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_pope_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_pope2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_pope2_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_raid_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_raid_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	
+	spriteType = {
+		name = "ink_reform_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_reform_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_roman_reconquest_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_roman_reconquest_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_soldiers_2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_soldiers_2_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_soldiers_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_soldiers_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "ink_surender_2_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_surender_2_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_surrender_3_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_surrender_3_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "ink_surrender_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_surrender_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "ink_church_cross_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_INK/ink_church_cross_eventPicture.dds"
+		alwaystransparent = yes
+	}
+}

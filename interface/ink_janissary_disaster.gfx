@@ -1,0 +1,8 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_disaster_janissary_disaster"
+  texturefile = "gfx//interface//disasters//janissary_disaster.dds"
+  noOfFrames = 3
+  loadType = "INGAME"
+ }
+}

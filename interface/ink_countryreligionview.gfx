@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_nestorianism_aspects_icon"
+		texturefile = "gfx/interface/nestorianism_aspects_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_bless_ruler_icon"
+		texturefile = "gfx/interface/ink_bless_ruler.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_dyophysitism_icon"
+		texturefile = "gfx/interface/ink_dyophysitism.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_eastern_merchants_icon"
+		texturefile = "gfx/interface/ink_eastern_merchants.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_nesto_enforce_icon"
+		texturefile = "gfx/interface/ink_nesto_enforce.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_rel_order_icon"
+		texturefile = "gfx/interface/ink_rel_order.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_support_government_icon"
+		texturefile = "gfx/interface/ink_support_government.dds"
+	}
+	spriteType = {
+		name = "GFX_ink_faithful_army"
+		texturefile = "gfx/interface/ink_faithful_army.dds"
+	}
+}

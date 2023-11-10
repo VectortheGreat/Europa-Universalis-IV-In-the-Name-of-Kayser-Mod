@@ -1,0 +1,15 @@
+rajput_regiment = {
+	infantry_power = 0.10
+	shock_damage_received = -0.10
+	fire_damage_received = -0.10
+	recover_army_morale_speed = -0.50
+	reinforce_cost_modifier = 0.5
+	reinforce_speed = -0.5
+}
+
+large_colonial_nation2 = {
+	merchants = 4
+	global_trade_power = 0.10
+	naval_forcelimit = 40
+	land_forcelimit = 20
+}

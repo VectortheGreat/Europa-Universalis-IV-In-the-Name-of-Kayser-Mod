@@ -1,0 +1,678 @@
+defined_text = {
+    name = GetINKCivilWar
+	
+    text = {
+        localisation_key = ink_cl_civil_war_on
+		trigger = {
+			has_country_flag = civilwar_start_custom_loc
+		}
+	}
+	text = {
+		localisation_key = ink_cl_civil_war_off
+		trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+	text = {
+		localisation_key = ink_cl_civil_war
+		trigger = {
+			OR = {
+				NOT = {
+					has_country_flag = ink_anatolian_union
+					has_country_flag = civilwar_start_custom_loc
+				}
+			}
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKSpecialUnitEstatePrivilege
+	
+    text = {
+        localisation_key = ink_cl_special_unit_estate_rmo
+        trigger = {
+			OR = { tag = RMO tag = ROM }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_special_unit_estate_itr
+        trigger = {
+			OR = {
+				tag = TRK
+				tag = ITR
+			}
+		}
+	}
+	text = {
+		localisation_key = ink_cl_special_unit_estate_tek
+		trigger = {
+			tag = TEK
+		}
+	}
+	text = {
+		localisation_key = ink_cl_special_unit_estate_tur
+		trigger = {
+			tag = TUR
+		}
+	}
+}
+
+defined_text = {
+	name = GetINKEnslaveMission
+	
+	text = {
+		localisation_key = ink_cl_enslave_on
+		trigger = {
+			has_country_flag = end_of_turkish_civil_war
+		}
+	}
+	text = {
+		localisation_key = ink_cl_enslave_off
+		trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+	text = {
+		localisation_key = ink_cl_enslave
+		trigger = {
+			NOT = {
+				has_country_flag = ink_anatolian_union
+				has_country_flag = end_of_turkish_civil_war
+			}
+		}
+	}
+}	
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexArmenia
+	
+    text = {
+        localisation_key = ink_cl_cs_crimea_no
+        trigger = {
+			NOT = { has_country_flag = tek_crimea_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_crimea_yes
+        trigger = {
+			has_country_flag = tek_crimea_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexIndia
+	
+	text = {
+        localisation_key = ink_cl_cs_india_no
+        trigger = {
+			NOT = { has_country_flag = tek_india_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_india_yes
+        trigger = {
+			has_country_flag = tek_india_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexPersia
+	
+	text = {
+        localisation_key = ink_cl_cs_khorosan_no
+        trigger = {
+			NOT = { has_country_flag = tek_khorosan_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_khorosan_yes
+        trigger = {
+			has_country_flag = tek_khorosan_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexTurkistan
+	
+	text = {
+        localisation_key = ink_cl_cs_mongolia_no
+        trigger = {
+			NOT = { has_country_flag = tek_mongolia_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_mongolia_yes
+        trigger = {
+			has_country_flag = tek_mongolia_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexEgypt
+	
+	text = {
+        localisation_key = ink_cl_cs_north_africa_no
+        trigger = {
+			NOT = { has_country_flag = tek_north_africa_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_north_africa_yes
+        trigger = {
+			has_country_flag = tek_north_africa_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexBurma
+	
+	text = {
+        localisation_key = ink_cl_cs_malaya_no
+        trigger = {
+			NOT = { has_country_flag = tek_malaya_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_malaya_yes
+        trigger = {
+			has_country_flag = tek_malaya_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexChina
+	
+	text = {
+        localisation_key = ink_cl_cs_north_china_no
+        trigger = {
+			NOT = { has_country_flag = tek_north_china_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_north_china_yes
+        trigger = {
+			has_country_flag = tek_north_china_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexJapan
+	
+	text = {
+        localisation_key = ink_cl_cs_korea_no
+        trigger = {
+			NOT = { has_country_flag = tek_korea_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_korea_yes
+        trigger = {
+			has_country_flag = tek_korea_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKEnslaveMission
+	
+    text = {
+        localisation_key = ink_cl_enslave_on
+        trigger = {
+			has_country_flag = end_of_turkish_civil_war
+		}
+	}
+    text = {
+        localisation_key = ink_cl_enslave_off
+        trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+	text = {
+		localisation_key = ink_cl_enslave
+		trigger = {
+			NOT = {
+				has_country_flag = ink_anatolian_union
+				has_country_flag = end_of_turkish_civil_war
+			}
+		}
+	}
+}	
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostArmenia
+	
+	text = {
+        localisation_key = ink_cl_cs_crimea_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_crimea_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_crimea_yes_cst
+        trigger = {
+			has_country_flag = tek_crimea_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostIndia
+	
+    text = {
+        localisation_key = ink_cl_cs_india_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_india_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_india_yes_cst
+        trigger = {
+			has_country_flag = tek_india_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostPersia
+	
+	text = {
+        localisation_key = ink_cl_cs_khorosan_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_khorosan_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_khorosan_yes_cst
+        trigger = {
+			has_country_flag = tek_khorosan_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostTurkistan
+	
+	text = {
+        localisation_key = ink_cl_cs_mongolia_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_mongolia_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_mongolia_yes_cst
+        trigger = {
+			has_country_flag = tek_mongolia_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostEgypt
+	
+	text = {
+        localisation_key = ink_cl_cs_north_africa_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_north_africa_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_north_africa_yes_cst
+        trigger = {
+			has_country_flag = tek_north_africa_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostBurma
+	
+    text = {
+        localisation_key = ink_cl_cs_malaya_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_malaya_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_malaya_yes_cst
+        trigger = {
+			has_country_flag = tek_malaya_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostChina
+	
+    text = {
+        localisation_key = ink_cl_cs_north_china_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_north_china_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_north_china_yes_cst
+        trigger = {
+			has_country_flag = tek_north_china_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetCrusaderSubjectAnnexCostJapan
+	
+    text = {
+        localisation_key = ink_cl_cs_korea_no_cst
+        trigger = {
+			NOT = { has_country_flag = tek_korea_claimed }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_cs_korea_yes_cst
+        trigger = {
+			has_country_flag = tek_korea_claimed
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement1
+	
+    text = {
+        localisation_key = ink_cl_achi_off1
+        trigger = {
+			NOT = { has_country_flag = tek_achi_del_1 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on1
+        trigger = {
+			has_country_flag = tek_achi_del_1
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement2
+	text = {
+        localisation_key = ink_cl_achi_off2
+        trigger = {
+			NOT = { has_country_flag = tek_achi_del_2 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on2
+        trigger = {
+			has_country_flag = tek_achi_del_2
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement3
+	text = {
+        localisation_key = ink_cl_achi_off3
+        trigger = {
+			NOT = { has_country_flag = tek_achi_del_3 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on3
+        trigger = {
+			has_country_flag = tek_achi_del_3
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement4
+	text = {
+        localisation_key = ink_cl_achi_off4
+        trigger = {
+			NOT = { has_country_flag = tek_achi_del_4 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on4
+        trigger = {
+			has_country_flag = tek_achi_del_4
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement5
+	text = {
+        localisation_key = ink_cl_achi_off5
+        trigger = {
+			NOT = { has_country_flag = tek_achi_del_5 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on5
+        trigger = {
+			has_country_flag = tek_achi_del_5
+		}
+	}
+}
+
+#
+
+defined_text = {
+    name = GetINKAchievement6
+	
+    text = {
+        localisation_key = ink_cl_achi_off6
+        trigger = {
+			NOT = { has_country_flag = itr_achi_del_1 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on6
+        trigger = {
+			has_country_flag = itr_achi_del_1
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement7
+	text = {
+        localisation_key = ink_cl_achi_off7
+        trigger = {
+			NOT = { has_country_flag = itr_achi_del_2 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on7
+        trigger = {
+			has_country_flag = itr_achi_del_2
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement8
+	text = {
+        localisation_key = ink_cl_achi_off8
+        trigger = {
+			NOT = { has_country_flag = itr_achi_del_3 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on8
+        trigger = {
+			has_country_flag = itr_achi_del_3
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement9
+	text = {
+        localisation_key = ink_cl_achi_off9
+        trigger = {
+			NOT = { has_country_flag = itr_achi_del_4 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on9
+        trigger = {
+			has_country_flag = itr_achi_del_4
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement10
+	text = {
+        localisation_key = ink_cl_achi_off10
+        trigger = {
+			NOT = { has_country_flag = itr_achi_del_5 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on10
+        trigger = {
+			has_country_flag = itr_achi_del_5
+		}
+	}
+}
+
+#
+
+defined_text = {
+    name = GetINKAchievement11
+	
+    text = {
+        localisation_key = ink_cl_achi_off11
+        trigger = {
+			NOT = { has_country_flag = rmo_achi_del_1 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on11
+        trigger = {
+			has_country_flag = rmo_achi_del_1
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement12
+	text = {
+        localisation_key = ink_cl_achi_off12
+        trigger = {
+			NOT = { has_country_flag = rmo_achi_del_2 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on12
+        trigger = {
+			has_country_flag = rmo_achi_del_2
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement13
+	text = {
+        localisation_key = ink_cl_achi_off13
+        trigger = {
+			NOT = { has_country_flag = rmo_achi_del_3 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on13
+        trigger = {
+			has_country_flag = rmo_achi_del_3
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement14
+	text = {
+        localisation_key = ink_cl_achi_off14
+        trigger = {
+			NOT = { has_country_flag = rmo_achi_del_4 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on14
+        trigger = {
+			has_country_flag = rmo_achi_del_4
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKAchievement15
+	text = {
+        localisation_key = ink_cl_achi_off15
+        trigger = {
+			NOT = { has_country_flag = rmo_achi_del_5 }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_achi_on15
+        trigger = {
+			has_country_flag = rmo_achi_del_5
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKCivilWarEndEventTitle
+	text = {
+        localisation_key = ink_cl_civil_war_event_not_abandoned_title
+        trigger = {
+			NOT = { has_country_flag = ink_anatolian_union }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_civil_war_event_abandoned_title
+        trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKCivilWarEndEventDesc
+	text = {
+        localisation_key = ink_cl_civil_war_event_not_abandoned_desc
+        trigger = {
+			NOT = { has_country_flag = ink_anatolian_union }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_civil_war_event_abandoned_desc
+        trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+}
+
+defined_text = {
+    name = GetINKCivilWarEndEventOption
+	text = {
+        localisation_key = ink_cl_civil_war_event_not_abandoned_option
+        trigger = {
+			NOT = { has_country_flag = ink_anatolian_union }
+		}
+	}
+    text = {
+        localisation_key = ink_cl_civil_war_event_abandoned_option
+        trigger = {
+			has_country_flag = ink_anatolian_union
+		}
+	}
+}

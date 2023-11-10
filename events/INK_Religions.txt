@@ -1,0 +1,546 @@
+namespace = inkrel
+normal_or_historical_nations = yes
+
+country_event = { #Antioch
+	id = inkrel.1
+	title = "inkrel.1_title"
+	desc = "inkrel.1_desc"
+	picture = ink_holy_lands_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = TRK
+			tag = RMO
+		}
+		2313 = {
+			OR = {
+				owned_by = TEK
+				owned_by = RMO
+				owned_by = ITR
+				owned_by = TRK
+				owner = { 
+					AND = {
+						religion_group = christian
+						OR = {
+							is_subject_of = TEK
+							is_subject_of = RMO
+							is_subject_of = ITR
+							is_subject_of = TRK
+						}
+					}
+				}
+			}
+		}
+		religion_group = christian
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrel.a
+		if = {
+			limit = {
+				2313 = { NOT = { religion_group = christian } }
+			}
+			2313 = {
+				add_province_modifier = { 
+					name = "ink_holy_lands_missionary"
+					duration = 3652
+				}
+			}
+		}
+		else = {
+			add_prestige = 5
+		}
+	}
+}
+
+country_event = { #Jerusalem
+	id = inkrel.2
+	title = "inkrel.2_title"
+	desc = "inkrel.2_desc"
+	picture = ink_holy_lands_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = TRK
+			tag = RMO
+		}
+		379 = {
+			OR = {
+				owned_by = TEK
+				owned_by = RMO
+				owned_by = ITR
+				owned_by = TRK
+				owner = { 
+					AND = {
+						religion_group = christian
+						OR = {
+							is_subject_of = TEK
+							is_subject_of = RMO
+							is_subject_of = TRK
+							is_subject_of = ITR
+						}
+					}
+				}
+			}
+		}
+		religion_group = christian
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrel.a
+		ai_chance = { factor = 35 }
+		if = {
+			limit = {
+				379 = { NOT = { religion_group = christian } }
+			}
+			add_province_modifier = { 
+				name = "ink_holy_lands_missionary"
+				duration = 3652
+			}
+		}
+		else = {
+			add_prestige = 5
+		}
+	}
+}
+
+country_event = { #Alexanderia
+	id = inkrel.3
+	title = "inkrel.3_title"
+	desc = "inkrel.3_desc"
+	picture = ink_holy_lands_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = TRK
+			tag = RMO
+		}
+		358 = {
+			OR = {
+				owned_by = TEK
+				owned_by = RMO
+				owned_by = ITR
+				owned_by = TRK
+				owner = {
+					religion_group = christian
+					OR = {
+						is_subject_of = TEK
+						is_subject_of = RMO
+						is_subject_of = TRK
+						is_subject_of = ITR
+					}
+				}
+			}
+		}
+		religion_group = christian
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = inkrel.a
+		if = {
+			limit = {
+				358 = { NOT = { religion_group = christian } }
+			}
+			add_province_modifier = { 
+				name = "ink_holy_lands_missionary"
+				duration = 3652
+			}
+		}	
+	}
+}
+
+country_event = { #Christian Turks
+	id = inkrel.4
+	title = "inkrel.4_title"
+	desc = "inkrel.4_desc"
+	picture = ink_battle_V_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = {
+			any_province = {
+				OR = {
+					culture = turkish
+					culture = neo_turkish
+					culture = neo_turkish2
+					culture = neo_turkish3
+				}
+				NOT = { religion_group = christian }
+			}
+		}
+		OR = { tag = RMO tag = TEK tag = ITR tag = TRK }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = inkre4.a
+		ai_chance = { factor = 35 }
+		every_province = {
+			limit = { culture = ROOT }
+			add_province_modifier = { 
+				name = "ink_turkish_union"
+				duration = 7300
+			}
+		}
+	}
+}
+
+country_event = { #Roma
+	id = inkrel.5
+	title = "inkrel.5_title"
+	desc = "inkrel.5_desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = TRK
+			tag = RMO
+		}
+		OR = {
+			118 = {
+				OR = {
+					owned_by = TEK
+					owned_by = RMO
+					owned_by = ITR
+					owned_by = TRK
+				}
+				NOT = { religion = ROOT }
+			}
+			any_subject_country = {
+				owns = 118
+				NOT = { religion = catholic }
+			}
+		}
+		NOT = { religion = catholic }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = inkrel.a
+		ai_chance = { factor = 35 }
+		if = {
+			limit = {
+				118 = { religion = catholic }
+			}
+			add_province_modifier = { 
+				name = "ink_holy_lands_missionary"
+				duration = 3652
+			}
+		}
+		else = {
+			add_prestige = 5
+		}
+	}
+}
+country_event = { #Orthodox Roman Empire
+	id = inkrel.6
+	title = "inkrel.6_title"
+	desc = "inkrel.6_desc"
+	picture = ink_church_cross_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RMO
+		religion = orthodox
+		patriarch_authority = 0.75
+		118 = { religion = orthodox }
+		NOT = {
+			any_country = {
+				religion = catholic
+				is_great_power = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	option = {
+		name = inkre6.a
+		ai_chance = { factor = 35 }
+		add_province_modifier = { 
+			name = "ink_religious_leader"
+			duration = 3652
+		}
+		PAP = { set_papacy_active = no }
+	}
+}
+
+country_event = { #Excommunicate Rival
+	id = inkrel.7
+	title = "inkrel.7_title"
+	desc = "inkrel.7_desc"
+	picture = ink_pope_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+		religion = catholic
+		is_papal_controller = yes
+		NOT = { has_country_flag = ink_exco_rival_used }
+		any_rival_country = {
+			OR = {
+				war_with = ITR
+				war_with = TRK
+			}
+			religion = catholic
+			NOT = {	
+				has_opinion = {
+					who = PAP
+					value = 100
+				}
+				alliance_with = PAP			
+			}
+		}
+		OR = {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = inkre7.a
+		ai_chance = { factor = 100 }
+		every_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_rival = ITR
+						war_with = ITR
+						religion = catholic
+					}
+					AND = {
+						is_rival = TRK
+						war_with = TRK
+						religion = catholic
+					}
+				}				
+			}
+			excommunicate = THIS
+		}
+		add_papal_influence = -50
+		set_country_flag = ink_exco_rival_used
+	}
+	option = {
+		name = inkre7.b
+		ai_chance = { factor = 0 }
+		add_prestige = 5
+	}
+}
+
+
+
+country_event = { #Chaldean Catholics
+	id = inkrel.8
+	title = "inkrel.8_title"
+	desc = "inkrel.8_desc"
+	picture = ink_clergy_3_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TEK
+		religion = nestorianism
+		is_year = 1552
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {	#Heresy!
+		name = inkre8.a
+		ai_chance = { factor = 35 }
+		if = {
+			limit = {
+				owns = 418
+			}
+			add_church_power = 50
+			418 = { 
+				change_religion = catholic
+				add_province_modifier = { 
+					name = "ink_chaldean_rebel"
+					duration = 3652
+				}
+			}
+			PAP = {
+				add_opinion = {
+					who = TEK
+					modifier = ink_anti_chaldean
+				}
+			}
+		}
+		else = {
+			add_core = 418
+			add_church_power = -25
+			418 = { 
+				change_religion = catholic
+				add_province_modifier = { 
+					name = "ink_chaldean_rebel"
+					duration = 3652
+				}
+			}
+		}
+	}
+	option = {	#Not a big problem
+		name = inkre8.b
+		ai_chance = { factor = 35 }
+		if = {
+			limit = {
+				owns = 418
+			}
+			add_church_power = -50
+			418 = { 
+				change_religion = catholic
+				add_province_modifier = { 
+					name = "ink_chaldean_tolerance"
+					duration = 3652
+				}
+			}
+			PAP = {
+				add_opinion = {
+					who = TEK
+					modifier = ink_tolerance_chaldean
+				}
+				
+			}
+		}
+		else = {
+			add_church_power = -50
+			418 = { 
+				change_religion = catholic
+				add_province_modifier = { 
+					name = "ink_chaldean_tolerance"
+					duration = 3652
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Steal ducats from Curia
+	id = inkrel.9
+	title = "inkrel.9_title"
+	desc = "inkrel.9_desc"
+	picture = ink_pope2_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+		religion = catholic
+		is_papal_controller = yes
+		num_of_loans = 10
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {	#
+		name = inkre9.a
+		ai_chance = { factor = 35 }
+		add_curia_treasury = -1000
+		add_treasury = 1000
+		add_papal_influence = -30
+		if = {
+			limit = {
+				exists = ITR
+			}
+			ITR = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_thief
+				}
+				
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_thief
+				}
+				
+			}
+		}
+	}
+	option = {	#It's a sin
+		name = inkre9.b
+		ai_chance = { factor = 35 }
+		add_papal_influence = 40
+		if = {
+			limit = {
+				exists = ITR
+			}
+			ITR = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_honest
+				}
+				
+			}
+		}
+		else_if = {
+			limit = {
+				exists = TRK
+			}
+			TRK = {
+				add_opinion = {
+					who = PAP
+					modifier = ink_honest
+				}
+				
+			}
+		}
+	}
+}
+

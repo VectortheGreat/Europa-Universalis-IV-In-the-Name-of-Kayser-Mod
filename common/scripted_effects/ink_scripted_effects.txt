@@ -1,0 +1,69 @@
+ink_subject_color_effect = {
+	if = {
+		limit = {
+			is_subject_of = RMO
+			NOT = { has_country_flag = ink_changed_country_color }
+		}
+		change_country_color = { color = { 109 0 45 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			is_subject_of = ITR
+			NOT = { has_country_flag = ink_changed_country_color }
+		}
+		change_country_color = { color = { 108 58 109 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			is_subject_of = TRK
+			NOT = { has_country_flag = ink_changed_country_color }
+		}
+		change_country_color = { color = { 104 0 22 } }
+		set_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			is_subject_of = TEK
+			NOT = { has_country_flag = ink_changed_country_color }
+		}
+		change_country_color = { color = { 100 106 130 } }
+		set_country_flag = ink_changed_country_color
+	}
+}
+ink_subject_free_color_effect = {
+	if = {
+		limit = {
+			NOT = { is_subject_of = RMO }
+			has_country_flag = ink_changed_country_color 
+		}
+		restore_country_color = yes
+		remove_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			NOT = { is_subject_of = ITR }
+			has_country_flag = ink_changed_country_color 
+		}
+		restore_country_color = yes
+		remove_country_flag = ink_changed_country_color
+	}
+	else_if = {
+		limit = {
+			NOT = { is_subject_of = TRK }
+			has_country_flag = ink_changed_country_color 
+		}
+		restore_country_color = yes
+		remove_country_flag = ink_changed_country_color
+		
+	}
+	else_if = {
+		limit = {
+			NOT = { is_subject_of = TEK }
+			has_country_flag = ink_changed_country_color 
+		}
+		restore_country_color = yes
+		remove_country_flag = ink_changed_country_color
+	}
+}

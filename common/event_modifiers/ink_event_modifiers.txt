@@ -1,0 +1,225 @@
+ink_000 = {
+	local_missionary_strength = 0.10
+}
+
+ink_001 = {		#+
+	local_unrest = -4
+	local_friendly_movement_speed = 0.2
+	min_local_autonomy = 60
+	supply_limit_modifier = -0.25
+}
+ink_002 = {		#-
+	local_unrest = 5
+	local_friendly_movement_speed = -0.2
+	supply_limit_modifier = +0.25
+	local_manpower_modifier = 0.35
+	
+}
+
+ink_003 = {
+	global_tax_modifier = 0.15
+}
+
+ink_004 = {
+	local_unrest = -2
+}
+
+ink_005 = {
+	global_missionary_strength = 0.03
+}
+
+ink_006 = {	#Removed
+	unrest_catholic_provinces  = 2
+}
+
+ink_007 = {	#Removed
+	tolerance_own = 2
+	tolerance_heretic = -2
+	global_religious_conversion_resistance = 0.20
+}
+ink_008 = {	#banned from curia
+	papal_influence = -100
+}
+ink_009 = {	#converted to protestant
+	church_power_modifier = 0.15
+}
+ink_010 = { #converted reformed
+	monthly_fervor_increase = 0.3
+}
+ink_011 = {	#Heretics Rise
+	global_unrest = 5
+}
+ink_012 = {	#Papal blessing
+	land_morale = 0.10
+}
+ink_013 = {	#Crush Heretics
+	global_heretic_missionary_strength = 0.03
+	tolerance_heretic = -3
+	land_morale = 0.05
+}
+ink_014 = {	#Tolerance Heretics
+	tolerance_heretic = 3
+	global_heretic_missionary_strength = -0.03
+	religious_unity = 0.25
+}
+ink_015 = {	#Reformation in the Hre
+	diplomatic_reputation = 2
+}
+ink_016 = {	#We have savior
+	land_morale = 0.10
+	land_maintenance_modifier = -0.10
+}
+ink_pr1 = {	#hüdavengidar
+	local_missionary_strength = 0.10
+}
+ink_pr2 = {	#reform zeal
+	local_missionary_strength = -1
+}
+
+ink_crusader_subject_modifier = {
+	global_missionary_strength = 0.05
+	missionaries = 1
+	development_cost = -0.2
+	cb_on_religious_enemies = yes
+}
+
+ink_crusade_modifier = {
+	diplomatic_reputation = 1
+}
+
+ink_convert_roma = {
+	local_missionary_strength = 0.03
+}
+ink_nesto_dyophysitism = {
+	tolerance_own = 2
+	global_missionary_strength  = 0.015
+}
+ink_nesto_support_government = {
+	reform_progress_growth = 0.1
+	legitimacy = 1
+	devotion = 1
+	republican_tradition = 1
+}
+ink_nesto_trade_support = {
+	trade_steering = 0.2
+	trade_company_investment_cost = -0.15
+}
+ink_nesto_faithful_army = {
+	manpower_in_true_faith_provinces= 0.10
+	shock_damage_received = -0.10
+}
+ink_estate_culture = {
+	local_tax_modifier = 0.2
+	local_unrest = -2
+	local_manpower_modifier = 0.15
+}
+
+ink_special_unit = {
+	is_rajput_modifier = yes
+	special_unit_forcelimit = 1
+}
+
+ink_holy_lands_missionary = {
+	local_missionary_strength = 0.05
+}
+
+ink_turkish_union = {
+	local_tax_modifier = 0.10
+	local_manpower_modifier = 0.10
+}
+
+ink_religious_leader = {
+	tolerance_own = 2
+}
+
+ink_crushed_infidels = {
+	diplomatic_reputation = 2
+}
+
+ink_chaldean_rebel = {
+	local_unrest = 5
+	local_missionary_strength = 0.03
+}
+
+ink_chaldean_tolerance = {
+	local_unrest = -5
+	local_missionary_strength = -0.05
+}
+
+ink_conquer_islands = {
+	galley_power = 0.33
+	galley_cost = -0.33
+}
+
+ink_make_konstantinopolis_great_again = {
+	local_development_cost = -0.3
+	local_manpower_modifier = 1
+	allowed_num_of_buildings = 1
+	local_tax_modifier = 0.33
+}
+
+ink_roma_capital = {
+	local_development_cost = -0.15
+	local_tax_modifier = 0.2
+	local_religious_conversion_resistance = 1
+	allowed_num_of_buildings = 1
+}
+
+
+ink_roman_reconquest = {
+	local_core_creation = -0.25
+	local_unrest = -2
+}
+ink_roman_reconquest_no_core = {
+	local_tax_modifier = 0.1
+	local_manpower_modifier = 0.25
+}
+ink_muslims_fallen = {
+	local_defensiveness = -0.2
+	local_unrest = 2
+}
+ink_annexed_crusader_subject = {
+	diplomatic_reputation = -5
+}
+
+ink_neo_turkic_tur_pr = {
+	local_governing_cost = -0.15
+}
+ink_neo_turkic_aze_pr = {
+	garrison_growth = 0.2
+}
+ink_neo_turkic_cri_pr = {
+	local_tax_modifier = 0.2
+}
+ink_neo_turkic_altai_pr = {
+	local_friendly_movement_speed = 0.25
+}
+
+ink_neo_turkic_gre_pr = {
+	local_development_cost = -0.1
+}
+ink_neo_turkic_geoarm_pr = {
+	local_defensiveness = 0.15
+	local_hostile_attrition = 3
+}
+ink_neo_turkic_syr_pr = {
+	province_trade_power_modifier = 0.2
+}
+
+ink_neo_turkic_bul_pr = {
+	allowed_num_of_buildings = 1
+}
+ink_neo_turkic_albser_pr = {
+	local_manpower_modifier = 0.2
+}
+ink_neo_turkic_slav_pr = {
+	local_production_efficiency = 0.2
+}
+ink_convert_balkans = {
+	global_heretic_missionary_strength = 0.015
+	missionaries = 1
+}
+ink_hold_army = {
+	land_forcelimit = 15
+}
+

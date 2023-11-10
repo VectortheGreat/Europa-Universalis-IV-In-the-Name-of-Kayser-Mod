@@ -1,0 +1,212 @@
+ink_itr_mercenary = {	#Mercenary
+	icon = privilege_promote_purbias
+	land_share = 0
+	max_absolutism = -10
+	loyalty = 0.15
+	influence = 0.15
+	is_valid = {
+		OR = {
+			tag = ITR
+			tag = TRK
+			tag = TUR
+		}
+	}
+	can_select = {
+		mission_completed = itr_military_mission_3
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+	}
+	on_granted = {
+		custom_tooltip = ink_mercenary_tt
+		set_country_flag = itr_nopenalty_for_mercenary
+	}
+	on_revoked = {
+		clr_country_flag = itr_nopenalty_for_mercenary
+	}
+	penalties = {
+	}
+	benefits = {
+		mercenary_discipline = 0.05
+		global_manpower_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 20
+	}
+}
+
+ink_itr_hre_diplomat = {	#Holy Roman Empire Diplomats
+	icon = privilege_royal_authority
+	land_share = 0
+	max_absolutism = -15
+	loyalty = 0.10
+	influence = 0.20
+	is_valid = {
+		government = monarchy
+		OR = {
+			tag = ITR
+			tag = TUR
+			tag = TRK
+		}
+	}
+	can_select = {
+		OR = {
+			tag = TRK
+			tag = ITR
+		}
+		calc_true_if = {
+			amount = 2
+			all_elector = {
+				preferred_emperor = ROOT
+			}
+		}
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		reasons_to_elect = 20
+		improve_relation_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 20
+	}
+}
+
+ink_tek_specialunit = {
+	icon = privilege_supply_arms
+	land_share = 0
+	max_absolutism = 0
+	loyalty = 0.10
+	influence = 0.20
+	is_valid = {
+		OR = {
+			tag = TEK
+			tag = ITR
+			tag = TRK
+			tag = RMO
+			tag = TUR
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = ink_special_unit_estate_privilege_tt
+			OR = {
+				mission_completed = rmo_military_mission_2
+				mission_completed = itr_military_mission_2
+				mission_completed = tek_military_mission_2
+			}
+		}
+	}
+	on_granted = {
+		capital_scope = {
+			rajput_infantry = ROOT
+			rajput_infantry = ROOT
+			rajput_infantry = ROOT
+			rajput_infantry = ROOT
+			rajput_infantry = ROOT
+		}
+		add_manpower = -5
+	}
+	penalties = {
+	}
+	benefits = {
+		special_unit_forcelimit = 0.10
+	}
+	mechanics = {
+		enables_rajput_regiments
+	}
+	ai_will_do = {
+		factor = 20
+	}
+}
+
+estate_dhimmi_guaranteed_autonomy = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	loyalty = 0.2
+	influence = 0.05
+	is_valid = {
+		any_owned_province = {
+			NOT = { religion_group = root }
+		}
+		NOT = { has_unlocked_estate_privilege = { estate_privilege = estate_dhimmi_guarantee_of_traditions } }
+		NOT = { tag = TUR }
+	}
+	on_granted = {
+		custom_tooltip = estate_dhimmi_guaranteed_autonomy_effect_tooltip
+		hidden_effect = {
+			set_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { religion_group = root }
+			}
+			add_province_modifier = {
+				name = estate_dhimmi_guaranteed_autonomy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_dhimmi_guaranteed_autonomy_revoke_effect_tooltip
+		hidden_effect = {
+			clr_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_dhimmi_guaranteed_autonomy_revoke_effect_tooltip
+		hidden_effect = {
+			clr_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
+	}
+}

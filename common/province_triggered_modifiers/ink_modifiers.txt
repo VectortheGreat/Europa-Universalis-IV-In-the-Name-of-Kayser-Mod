@@ -1,0 +1,56 @@
+###########################################
+# Konstantinopolis Library
+adm_konstantinopolis_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			tag = ROOT
+		}
+	}
+	adm_tech_cost_modifier = -0.05
+	development_cost = -0.1
+}
+
+dip_konstantinopolis_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			tag = ROOT
+		}
+	}
+	dip_tech_cost_modifier = -0.05
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 1
+}
+
+mil_konstantinopolis_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			tag = ROOT
+		}
+	}
+	
+	mil_tech_cost_modifier = -0.05
+	army_tradition_decay = -0.01
+}
+
+# Holy Order
+holy_order = {
+	potential = {
+		owner = {
+			tag = TEK
+		}
+	}
+	trigger = {
+		religion_group = christian
+	}
+	manpower_in_true_faith_provinces = 0.10
+	global_heathen_missionary_strength = 0.02
+}
