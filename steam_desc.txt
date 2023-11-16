@@ -49,7 +49,7 @@ The Eastern Knights: You must be Coptic or Nestorian to establish this state. Th
 This mod requires no DLC to play and I guess it is compatible with most mods. Please don't forget to report any problems. 
 
 [h1]Manual Download and Old Versions [/h1] 
-[url=https://github.com/VectortheGreat/In-the-name-of-Kayser--EU4-/tree/main] Manual Download & Last Version [/url]
+[url=https://github.com/VectortheGreat/In-the-name-of-Kayser--EU4-] Manual Download & Last Version [/url]
 
 Check the other submod: 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452674961] Waifu Universalis Patch [/url]

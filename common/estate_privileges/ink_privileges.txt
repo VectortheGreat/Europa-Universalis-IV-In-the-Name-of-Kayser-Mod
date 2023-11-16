@@ -1,4 +1,5 @@
-ink_itr_mercenary = {	#Mercenary
+ink_itr_mercenary = {
+	#Mercenary
 	icon = privilege_promote_purbias
 	land_share = 0
 	max_absolutism = -10
@@ -29,19 +30,20 @@ ink_itr_mercenary = {	#Mercenary
 	}
 	benefits = {
 		mercenary_discipline = 0.05
-		global_manpower_modifier = -0.10
+		global_manpower_modifier = -0.1
 	}
 	ai_will_do = {
 		factor = 20
 	}
 }
 
-ink_itr_hre_diplomat = {	#Holy Roman Empire Diplomats
+ink_itr_hre_diplomat = {
+	#Holy Roman Empire Diplomats
 	icon = privilege_royal_authority
 	land_share = 0
 	max_absolutism = -15
-	loyalty = 0.10
-	influence = 0.20
+	loyalty = 0.1
+	influence = 0.2
 	is_valid = {
 		government = monarchy
 		OR = {
@@ -79,8 +81,8 @@ ink_tek_specialunit = {
 	icon = privilege_supply_arms
 	land_share = 0
 	max_absolutism = 0
-	loyalty = 0.10
-	influence = 0.20
+	loyalty = 0.1
+	influence = 0.2
 	is_valid = {
 		OR = {
 			tag = TEK
@@ -113,7 +115,9 @@ ink_tek_specialunit = {
 	penalties = {
 	}
 	benefits = {
-		special_unit_forcelimit = 0.10
+		can_recruit_rajputs = yes
+		allowed_rajput_fraction = 0.25
+		special_unit_forcelimit = 0.25
 	}
 	mechanics = {
 		enables_rajput_regiments
@@ -130,10 +134,18 @@ estate_dhimmi_guaranteed_autonomy = {
 	influence = 0.05
 	is_valid = {
 		any_owned_province = {
-			NOT = { religion_group = root }
+			NOT = {
+				religion_group = root
+			}
 		}
-		NOT = { has_unlocked_estate_privilege = { estate_privilege = estate_dhimmi_guarantee_of_traditions } }
-		NOT = { tag = TUR }
+		NOT = {
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_dhimmi_guarantee_of_traditions
+			}
+		}
+		NOT = {
+			tag = TUR
+		}
 	}
 	on_granted = {
 		custom_tooltip = estate_dhimmi_guaranteed_autonomy_effect_tooltip
@@ -144,7 +156,9 @@ estate_dhimmi_guaranteed_autonomy = {
 	on_granted_province = {
 		if = {
 			limit = {
-				NOT = { religion_group = root }
+				NOT = {
+					religion_group = root
+				}
 			}
 			add_province_modifier = {
 				name = estate_dhimmi_guaranteed_autonomy_mod
@@ -196,7 +210,9 @@ estate_dhimmi_guaranteed_autonomy = {
 			factor = 0
 			NOT = {
 				any_owned_province = {
-					NOT = { religion_group = ROOT }
+					NOT = {
+						religion_group = ROOT
+					}
 				}
 			}
 		}
