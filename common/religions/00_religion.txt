@@ -422,6 +422,7 @@ christian = {
 			taborite_resurgence_aspect
 			orphan_hetmans_aspect
 			freedom_to_preach_aspect
+			rekindle_the_hussite_wars_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		heretic = {
@@ -958,7 +959,7 @@ christian = {
 		}
 		icon = 14
 		country = {
-			defensiveness = 0.1
+			defensiveness = 0.15
 			tolerance_own = 1
 		}
 		country_as_secondary = {
@@ -1916,7 +1917,7 @@ eastern = {
 		icon = 10
 		country = {
 			land_morale = 0.1
-			tolerance_heathen = 2
+			tolerance_heretic = 2
 		}
 		province = {
 			local_missionary_strength = -0.02
@@ -2670,6 +2671,7 @@ pagan = {
 		}
 		authority = yes
 		religious_reforms = yes
+		require_reformed_for_institution_development = yes
 		reform_tooltip = INTI_REFORM_TOOLTIP
 		heretic = {
 			INTI_HERETIC
@@ -2697,6 +2699,7 @@ pagan = {
 		doom = yes
 		declare_war_in_regency = yes
 		religious_reforms = yes
+		require_reformed_for_institution_development = yes
 		reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		heretic = {
 			NAHUATL_HERETIC
@@ -2712,15 +2715,16 @@ pagan = {
 		icon = 19
 		country = {
 			tolerance_own = 1
-			advisor_pool = 1
+			same_religion_advisor_cost = -0.1
 		}
 		country_as_secondary = {
-			advisor_pool = 1
+			same_religion_advisor_cost = -0.1
 			stability_cost_modifier = -0.1
 		}
 		province = {
 			local_missionary_strength = 0.02
 		}
+		require_reformed_for_institution_development = yes
 		religious_reforms = yes
 		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
 		heretic = {
@@ -2950,13 +2954,6 @@ zoroastrian_group = {
 	defender_of_faith = yes
 	zoroastrian = {
 		icon = 26
-		allowed_center_conversion = {
-			sunni
-			shiite
-			orthodox
-			coptic
-			hinduism
-		}
 		color = {
 			127
 			178
@@ -2972,6 +2969,13 @@ zoroastrian_group = {
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
+		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			orthodox
+			coptic
+			hinduism
 		}
 		holy_sites = {
 			2212
